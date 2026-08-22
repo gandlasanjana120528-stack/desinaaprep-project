@@ -1,8 +1,10 @@
 import { Measurement, State, Sector, Reference, Infographic } from "@/types";
+import { UP_MEASUREMENTS } from "@/lib/upData";
+import { JHARKHAND_MEASUREMENTS } from "@/lib/jharkhandData";
 
-// ─── Sample Measurements ──────────────────────────────────────────────────────
+// ─── Base Sample Measurements ──────────────────────────────────────────────────
 
-export const SAMPLE_MEASUREMENTS: Measurement[] = [
+const BASE_SAMPLE_MEASUREMENTS: Measurement[] = [
   {
     id: "1",
     slug: "angula",
@@ -151,6 +153,12 @@ export const SAMPLE_MEASUREMENTS: Measurement[] = [
   }
 ];
 
+export const SAMPLE_MEASUREMENTS: Measurement[] = [
+  ...BASE_SAMPLE_MEASUREMENTS,
+  ...UP_MEASUREMENTS,
+  ...JHARKHAND_MEASUREMENTS
+];
+
 // ─── Sample States ────────────────────────────────────────────────────────────
 
 export const INDIAN_STATES: State[] = [
@@ -181,24 +189,78 @@ export const INDIAN_STATES: State[] = [
   { id: "mh", slug: "maharashtra", name: "Maharashtra", capital: "Mumbai", region: "West India", language: "Marathi", measurement_count: 52 },
   { id: "gj", slug: "gujarat", name: "Gujarat", capital: "Gandhinagar", region: "West India", language: "Gujarati", measurement_count: 44 },
   { id: "rj", slug: "rajasthan", name: "Rajasthan", capital: "Jaipur", region: "North India", language: "Rajasthani", measurement_count: 39 },
-  { id: "up", slug: "uttar-pradesh", name: "Uttar Pradesh", capital: "Lucknow", region: "North India", language: "Hindi", measurement_count: 61 },
+  {
+    id: "up",
+    slug: "uttar-pradesh",
+    name: "Uttar Pradesh",
+    capital: "Lucknow",
+    region: "North India",
+    language: "Hindi",
+    description: "Uttar Pradesh possesses a vast repertoire of traditional measurement systems documented across 13 distinct sectors including Trade & Commerce, Textile & Handloom (Banarasi silk), Medicine (Ayurveda), Architecture (Mughal & Vastu), Distance, Land Survey, Currency, and Agriculture.",
+    measurement_count: 88,
+    districts: [
+      { id: "vns", slug: "varanasi", name: "Varanasi (Kashi)", state_id: "up", measurement_count: 28 },
+      { id: "agr", slug: "agra", name: "Agra", state_id: "up", measurement_count: 22 },
+      { id: "lko", slug: "lucknow", name: "Lucknow", state_id: "up", measurement_count: 18 },
+      { id: "pry", slug: "prayagraj", name: "Prayagraj", state_id: "up", measurement_count: 12 },
+      { id: "mth", slug: "mathura", name: "Mathura", state_id: "up", measurement_count: 8 }
+    ]
+  },
   { id: "pb", slug: "punjab", name: "Punjab", capital: "Chandigarh", region: "North India", language: "Punjabi", measurement_count: 29 },
   { id: "wb", slug: "west-bengal", name: "West Bengal", capital: "Kolkata", region: "East India", language: "Bengali", measurement_count: 48 },
   { id: "od", slug: "odisha", name: "Odisha", capital: "Bhubaneswar", region: "East India", language: "Odia", measurement_count: 33 },
-  { id: "kl", slug: "kerala", name: "Kerala", capital: "Thiruvananthapuram", region: "South India", language: "Malayalam", measurement_count: 41 }
+  { id: "kl", slug: "kerala", name: "Kerala", capital: "Thiruvananthapuram", region: "South India", language: "Malayalam", measurement_count: 41 },
+  { id: "tr", slug: "tripura", name: "Tripura", capital: "Agartala", region: "Northeast India", language: "Bengali / Kokborok", measurement_count: 14 },
+  { id: "br", slug: "bihar", name: "Bihar", capital: "Patna", region: "East India", language: "Hindi / Maithili", measurement_count: 32 },
+  { id: "mp", slug: "madhya-pradesh", name: "Madhya Pradesh", capital: "Bhopal", region: "Central India", language: "Hindi", measurement_count: 35 },
+  { id: "as", slug: "assam", name: "Assam", capital: "Dispur", region: "Northeast India", language: "Assamese", measurement_count: 22 },
+  { id: "hr", slug: "haryana", name: "Haryana", capital: "Chandigarh", region: "North India", language: "Haryanvi / Hindi", measurement_count: 25 },
+  { id: "hp", slug: "himachal-pradesh", name: "Himachal Pradesh", capital: "Shimla", region: "North India", language: "Hindi / Pahari", measurement_count: 20 },
+  { id: "jk", slug: "jammu-and-kashmir", name: "Jammu and Kashmir", capital: "Srinagar / Jammu", region: "North India", language: "Dogri / Kashmiri", measurement_count: 18 },
+  {
+    id: "jh",
+    slug: "jharkhand",
+    name: "Jharkhand",
+    capital: "Ranchi",
+    region: "East India",
+    language: "Hindi / Nagpuri / Sadri / Santhali",
+    description: "Jharkhand possesses a rich heritage of traditional measurement systems documented across 13 major sectors including Trade & Commerce, Textile & Handloom (GI-certified Tussar silk), Medicine (Ayurveda), Construction & Architecture, Transportation & Distance, Land Measurement (Dhurki, Dhur, Katha, Bigha), Livestock & Dairy, Household & Daily Life, Gold & Jewellery (Santhal Rajohar silver units), Seed & Crop Agriculture, Currency & Money, Storage & Transportation, and Religious & Cultural Sectors.",
+    measurement_count: 100,
+    districts: [
+      { id: "rnc", slug: "ranchi", name: "Ranchi", state_id: "jh", measurement_count: 18 },
+      { id: "jsr", slug: "jamshedpur", name: "Jamshedpur (East Singhbhum)", state_id: "jh", measurement_count: 14 },
+      { id: "dnb", slug: "dhanbad", name: "Dhanbad", state_id: "jh", measurement_count: 12 },
+      { id: "hzb", slug: "hazaribagh", name: "Hazaribagh", state_id: "jh", measurement_count: 10 },
+      { id: "dmk", slug: "dumka", name: "Dumka", state_id: "jh", measurement_count: 9 },
+      { id: "dgh", slug: "deoghar", name: "Deoghar", state_id: "jh", measurement_count: 8 }
+    ]
+  },
+  { id: "ct", slug: "chhattisgarh", name: "Chhattisgarh", capital: "Raipur", region: "Central India", language: "Chhattisgarhi / Hindi", measurement_count: 21 },
+  { id: "ga", slug: "goa", name: "Goa", capital: "Panaji", region: "West India", language: "Konkani", measurement_count: 15 },
+  { id: "ut", slug: "uttarakhand", name: "Uttarakhand", capital: "Dehradun", region: "North India", language: "Garhwali / Kumaoni", measurement_count: 24 },
+  { id: "mn", slug: "manipur", name: "Manipur", capital: "Imphal", region: "Northeast India", language: "Meitei", measurement_count: 12 },
+  { id: "ml", slug: "meghalaya", name: "Meghalaya", capital: "Shillong", region: "Northeast India", language: "Khasi / Garo", measurement_count: 11 },
+  { id: "mz", slug: "mizoram", name: "Mizoram", capital: "Aizawl", region: "Northeast India", language: "Mizo", measurement_count: 10 },
+  { id: "nl", slug: "nagaland", name: "Nagaland", capital: "Kohima", region: "Northeast India", language: "English / Nagamese", measurement_count: 9 },
+  { id: "sk", slug: "sikkim", name: "Sikkim", capital: "Gangtok", region: "Northeast India", language: "Nepali / Bhutia", measurement_count: 10 }
 ];
 
 // ─── Sectors ──────────────────────────────────────────────────────────────────
 
 export const SECTORS: Sector[] = [
-  { id: "agri", slug: "agriculture", name: "Agriculture", icon: "Wheat", description: "Grain measures, land units, and irrigation systems", measurement_count: 84 },
-  { id: "trade", slug: "trade-commerce", name: "Trade & Commerce", icon: "Store", description: "Weight and volume units for market trade", measurement_count: 67 },
-  { id: "currency", slug: "currency-money", name: "Currency & Money", icon: "Coins", description: "Coin weights, monetary denominations, and exchange rates", measurement_count: 48 },
-  { id: "arch", slug: "architecture", name: "Architecture", icon: "Building2", description: "Length measures for temple, home and urban planning", measurement_count: 72 },
-  { id: "med", slug: "medicine", name: "Medicine", icon: "Stethoscope", description: "Ayurvedic drug measures and dosage units", measurement_count: 39 },
-  { id: "textile", slug: "textile-handloom", name: "Textile & Handloom", icon: "Scissors", description: "Length and count units for fabric and weaving", measurement_count: 31 },
-  { id: "hh", slug: "household", name: "Household", icon: "Home", description: "Daily-use volume and weight measures", measurement_count: 45 },
-  { id: "storage", slug: "storage-transport", name: "Storage & Transport", icon: "Package", description: "Bulk storage and cartage measures", measurement_count: 28 }
+  { id: "trade", slug: "trade-commerce", name: "Trade & Commerce", icon: "Store", description: "Weight and volume units for bazaar, mandi, and commercial trade", measurement_count: 67 },
+  { id: "textile", slug: "textile-handloom", name: "Textile & Handloom", icon: "Scissors", description: "Length and count units for Banarasi silk, brocade, and loom weaving", measurement_count: 31 },
+  { id: "med", slug: "medicine", name: "Medicine (Ayurveda)", icon: "Stethoscope", description: "Ayurvedic drug measures, dosage units, and herbo-mineral preparations", measurement_count: 39 },
+  { id: "arch", slug: "architecture", name: "Construction & Architecture", icon: "Building2", description: "Length measures for temple, fort, home and urban planning", measurement_count: 72 },
+  { id: "trans-dist", slug: "transportation-distance", name: "Transportation & Distance", icon: "Compass", description: "Stage distance, Kos Minar road markers, and travel units", measurement_count: 24 },
+  { id: "land", slug: "land-measurement", name: "Land Measurement", icon: "Map", description: "Bigha, Biswa, Dhur, Jarib chain, and survey revenue units", measurement_count: 45 },
+  { id: "dairy", slug: "livestock-dairy", name: "Livestock & Dairy", icon: "Milk", description: "Milk, ghee, and khoya measures used by gwalas and dairy mandis", measurement_count: 18 },
+  { id: "hh", slug: "household", name: "Household & Daily Life", icon: "Home", description: "Everyday cooking, handful, pinch, and utility vessel volume units", measurement_count: 45 },
+  { id: "gold", slug: "gold-jewellery", name: "Gold & Jewellery", icon: "Gem", description: "Sunar gold, silver, gem weighing scales (Ratti, Tola, Suvarna)", measurement_count: 35 },
+  { id: "agri", slug: "agriculture", name: "Seed & Crop (Agriculture)", icon: "Wheat", description: "Seed sowing quantities, grain harvest measures, and crop yield units", measurement_count: 84 },
+  { id: "currency", slug: "currency-money", name: "Currency & Money", icon: "Coins", description: "Mughal Dam, Rupee, Damri, Paisa, and monetary denominations", measurement_count: 48 },
+  { id: "storage", slug: "storage-transport", name: "Storage & Transportation", icon: "Package", description: "Bulk granary storage, cartload, and warehouse consignment measures", measurement_count: 28 },
+  { id: "relig", slug: "religious-cultural", name: "Religious & Cultural", icon: "Sparkles", description: "Panchang ritual time, Ghati, Pal, Muhurta, and sacred geography units", measurement_count: 30 }
 ];
 
 // ─── References ───────────────────────────────────────────────────────────────

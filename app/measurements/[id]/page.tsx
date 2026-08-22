@@ -21,26 +21,46 @@ export default function MeasurementDetailPage() {
 
     async function fetchData() {
       try {
-        const docRef = doc(db, "measurements", slug);
-        const snap = await getDoc(docRef);
+        let measurement: Measurement | null = null;
 
-        if (!snap.exists()) {
+        try {
+          const docRef = doc(db, "measurements", slug);
+          const snap = await getDoc(docRef);
+          if (snap.exists()) {
+            measurement = { id: snap.id, ...snap.data() } as Measurement;
+          }
+        } catch (e) {
+          console.warn("Firestore fetch error, falling back to local dataset:", e);
+        }
+
+        if (!measurement) {
+          const { SAMPLE_MEASUREMENTS } = await import("@/lib/data");
+          measurement =
+            SAMPLE_MEASUREMENTS.find(
+              (item) => item.slug === slug || item.id === slug
+            ) || null;
+        }
+
+        if (!measurement) {
           setNotFound(true);
           return;
         }
 
-        const measurement = { id: snap.id, ...snap.data() } as Measurement;
         setM(measurement);
 
-        // Fetch related measurements by category
-        const relatedSnap = await getDocs(
-          query(collection(db, "measurements"), where("category", "==", measurement.category), limit(4))
-        );
-        const relatedData: Measurement[] = [];
-        relatedSnap.forEach((d) => {
-          if (d.id !== slug) relatedData.push({ id: d.id, ...d.data() } as Measurement);
-        });
-        setRelated(relatedData.slice(0, 3));
+        // Fetch related measurements
+        try {
+          const { SAMPLE_MEASUREMENTS } = await import("@/lib/data");
+          const localRelated = SAMPLE_MEASUREMENTS.filter(
+            (item) =>
+              item.category === measurement!.category &&
+              item.slug !== measurement!.slug &&
+              item.id !== measurement!.id
+          ).slice(0, 3);
+          setRelated(localRelated);
+        } catch (e) {
+          console.error("Error fetching related measurements:", e);
+        }
       } catch (err) {
         console.error("Error fetching measurement:", err);
         setNotFound(true);
