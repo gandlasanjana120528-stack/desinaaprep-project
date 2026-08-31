@@ -1,601 +1,760 @@
 import { Measurement } from "@/types";
 
 export const AP_MEASUREMENTS: Measurement[] = [
-  // Agriculture (Seed & Crop)
   {
-    id: "ap-agri-1",
-    slug: "ap-kuncham",
-    name_english: "Kuncham",
-    name_hindi: "ಕುಂಚಂ", // Note: The app's design uses name_hindi for the local script, which in AP should be Telugu (కుంచం), but keeping consistency with existing structure
-    name_sanskrit: "Kuñcaka",
-    local_names: ["కుంచం (Kuncham)"],
-    meaning: "Traditional vessel used for measuring grains.",
-    category: "volume",
-    sector: "agriculture",
-    modern_equivalent: "≈0.7–0.8 L",
-    conversion_formula: "Multiple Sola",
-    states: ["Andhra Pradesh"],
-    used_in: ["Grain measurement"],
-    references: ["Andhra Gazetteers"],
+    "id": "ap-land-measurement-1",
+    "slug": "ap-ankanam",
+    "name_english": "Ankanam",
+    "name_hindi": "అంకణం",
+    "local_names": [
+      "అంకణం (Ankanam)"
+    ],
+    "meaning": "Traditional plot measurement based on pillar spacing/space",
+    "category": "area measurement",
+    "sector": "land-measurement",
+    "modern_equivalent": "≈72 sq ft = 6.69 m² (Nellore standard); regional variation exists",
+    "conversion_formula": "Base residential land unit",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "House sites, village plots"
+    ],
+    "references": [
+      "Regional land records (Land Records)"
+    ]
   },
   {
-    id: "ap-agri-2",
-    slug: "ap-tumu",
-    name_english: "Tumu",
-    name_hindi: "తూము",
-    local_names: ["తూము (Tumu)"],
-    meaning: "Large unit used for harvested paddy.",
-    category: "volume",
-    sector: "agriculture",
-    modern_equivalent: "≈80–100 L",
-    conversion_formula: "8 Maraka = 1 Tumu",
-    states: ["Andhra Pradesh"],
-    used_in: ["Harvest storage"],
-    references: ["Telugu Agricultural Records"],
+    "id": "ap-land-measurement-2",
+    "slug": "ap-gajam",
+    "name_english": "Gajam",
+    "name_hindi": "గజం",
+    "local_names": [
+      "గజం (Gajam)"
+    ],
+    "meaning": "Common Telugu land unit",
+    "category": "area measurement",
+    "sector": "land-measurement",
+    "modern_equivalent": "≈0.836 m²",
+    "conversion_formula": "1 Gajam = 1 square yard",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "House plots and urban land"
+    ],
+    "references": [
+      "Regional revenue records"
+    ],
+    "name_sanskrit": "Gaja"
   },
   {
-    id: "ap-agri-3",
-    slug: "ap-putti",
-    name_english: "Putti",
-    name_hindi: "పుట్టి",
-    local_names: ["పుట్టి (Putti)"],
-    meaning: "Large storage measure used by farmers.",
-    category: "volume",
-    sector: "agriculture",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Multiple Tumu",
-    states: ["Andhra Pradesh"],
-    used_in: ["Bulk grain storage"],
-    references: ["Andhra Gazetteers"],
+    "id": "ap-land-measurement-3",
+    "slug": "ap-cent",
+    "name_english": "Cent",
+    "name_hindi": "సెంట్",
+    "local_names": [
+      "సెంట్ (Cent)"
+    ],
+    "meaning": "1/100 part of an acre",
+    "category": "area measurement",
+    "sector": "land-measurement",
+    "modern_equivalent": "≈40.47 m²",
+    "conversion_formula": "100 Cent = 1 Acre",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Small agricultural plots and property transactions"
+    ],
+    "references": [
+      "Madras Presidency records"
+    ]
   },
   {
-    id: "ap-agri-4",
-    slug: "ap-garise",
-    name_english: "Garise",
-    name_hindi: "గరిసె",
-    local_names: ["గరిసె (Garise)"],
-    meaning: "Bamboo basket used for measuring and storing grains.",
-    category: "volume",
-    sector: "agriculture",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Basket measure",
-    states: ["Andhra Pradesh"],
-    used_in: ["Grain storage"],
-    references: ["Village Agricultural Practices"],
-  },
-
-  // Trade & Commerce
-  {
-    id: "ap-trade-1",
-    slug: "ap-seeru-trade",
-    name_english: "Seeru",
-    name_hindi: "సేరు",
-    local_names: ["సేరు (Seeru)"],
-    meaning: "Standard market measure for grains.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈0.93 kg",
-    conversion_formula: "Regional unit",
-    states: ["Andhra Pradesh"],
-    used_in: ["Market trade"],
-    references: ["Madras Weights & Measures"],
+    "id": "ap-land-measurement-4",
+    "slug": "ap-guntha-kunta",
+    "name_english": "Guntha / Kunta",
+    "name_hindi": "గుంట / కుంట",
+    "local_names": [
+      "గుంట / కుంట (Guntha / Kunta)"
+    ],
+    "meaning": "Traditional farming land unit",
+    "category": "area measurement",
+    "sector": "land-measurement",
+    "modern_equivalent": "≈101.17 m²",
+    "conversion_formula": "40 Gunthas = 1 Acre",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Agricultural fields"
+    ],
+    "references": [
+      "Revenue records (Bhumi Calculator)"
+    ]
   },
   {
-    id: "ap-trade-2",
-    slug: "ap-maund-trade",
-    name_english: "Manugu (Maund)",
-    name_hindi: "మణుగు",
-    local_names: ["మణుగు (Manugu)"],
-    meaning: "Bulk commercial weight.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈37.3 kg",
-    conversion_formula: "40 Seeru = 1 Maund",
-    states: ["Andhra Pradesh"],
-    used_in: ["Wholesale trade"],
-    references: ["Madras Presidency Records"],
+    "id": "ap-land-measurement-5",
+    "slug": "ap-acre",
+    "name_english": "Acre",
+    "name_hindi": "ఎకరం",
+    "local_names": [
+      "ఎకరం (Acre)"
+    ],
+    "meaning": "British standard land unit",
+    "category": "area measurement",
+    "sector": "land-measurement",
+    "modern_equivalent": "4046.86 m²",
+    "conversion_formula": "40 Gunthas = 1 Acre; 100 Cents = 1 Acre",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Land survey and registration"
+    ],
+    "references": [
+      "Madras Revenue Manuals"
+    ]
   },
   {
-    id: "ap-trade-3",
-    slug: "ap-candy-trade",
-    name_english: "Candy",
-    name_hindi: "ఖండి",
-    local_names: ["ఖండి (Candy / Khandi)"],
-    meaning: "Bulk weight used for cotton, tobacco.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈227 kg",
-    conversion_formula: "Multiple Maunds",
-    states: ["Andhra Pradesh"],
-    used_in: ["Export trade"],
-    references: ["East India Company Records"],
-  },
-
-  // Architecture
-  {
-    id: "ap-arch-1",
-    slug: "ap-velu-arch",
-    name_english: "Velu",
-    name_hindi: "వేలు",
-    local_names: ["వేలు (Velu)"],
-    meaning: "Telugu traditional finger-width measure.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈1.9 cm",
-    conversion_formula: "Equivalent to finger width",
-    states: ["Andhra Pradesh"],
-    used_in: ["Local construction"],
-    references: ["Telugu Lexicon"],
+    "id": "ap-land-measurement-6",
+    "slug": "ap-kani-cawnie",
+    "name_english": "Kani / Cawnie",
+    "name_hindi": "కాణి",
+    "local_names": [
+      "కాణి (Kani / Cawnie)"
+    ],
+    "meaning": "Large cultivation unit",
+    "category": "area measurement",
+    "sector": "land-measurement",
+    "modern_equivalent": "≈0.57 hectare (traditional Madras value)",
+    "conversion_formula": "Regional Madras system relationship varies",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Agricultural revenue measurement"
+    ],
+    "references": [
+      "Madras Presidency Records"
+    ]
   },
   {
-    id: "ap-arch-2",
-    slug: "ap-hasta-arch",
-    name_english: "Hastam",
-    name_hindi: "హస్తం",
-    local_names: ["హస్తం (Hastam)"],
-    meaning: "Cubit widely used in temples and houses.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈45.7 cm",
-    conversion_formula: "24 Angula = 1 Hasta",
-    states: ["Andhra Pradesh"],
-    used_in: ["Temple construction"],
-    references: ["Shilpa Shastra"],
+    "id": "ap-land-measurement-7",
+    "slug": "ap-hectare",
+    "name_english": "Hectare",
+    "name_hindi": "హెక్టారు",
+    "local_names": [
+      "హెక్టారు (Hectare)"
+    ],
+    "meaning": "Modern metric land unit",
+    "category": "area measurement",
+    "sector": "land-measurement",
+    "modern_equivalent": "10,000 m²",
+    "conversion_formula": "1 hectare = 2.471 acres",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Government agricultural statistics and records"
+    ],
+    "references": [
+      "Government Land Records"
+    ]
   },
   {
-    id: "ap-arch-3",
-    slug: "ap-kolu-arch",
-    name_english: "Kolu",
-    name_hindi: "కోలు",
-    local_names: ["కోలు (Kolu)"],
-    meaning: "Wooden measuring rod used by local builders.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈1.8–2.0 m",
-    conversion_formula: "Measuring rod",
-    states: ["Andhra Pradesh"],
-    used_in: ["House construction"],
-    references: ["Telugu Building Traditions"],
-  },
-
-  // Medicine
-  {
-    id: "ap-med-1",
-    slug: "ap-guriginja-med",
-    name_english: "Guriginja",
-    name_hindi: "గురిగింజ",
-    local_names: ["గురిగింజ (Guriginja)"],
-    meaning: "Gunja seed used for weighing medicinal ingredients.",
-    category: "weight",
-    sector: "medicine",
-    modern_equivalent: "≈0.1215 g",
-    conversion_formula: "Smallest practical weight",
-    states: ["Andhra Pradesh"],
-    used_in: ["Herbal medicines"],
-    references: ["Charaka Samhita"],
+    "id": "ap-transportation-distance-8",
+    "slug": "ap-angula",
+    "name_english": "Angula",
+    "name_hindi": "అంగుళం",
+    "local_names": [
+      "అంగుళం (Angula)"
+    ],
+    "meaning": "Smallest traditional length unit",
+    "category": "length",
+    "sector": "transportation-distance",
+    "modern_equivalent": "≈1.9 cm",
+    "conversion_formula": "Base length unit",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Measuring small transport objects, wheels, tools"
+    ],
+    "references": [
+      "Arthashastra; Mayamata"
+    ],
+    "name_sanskrit": "अङ्गुल (Aṅgula)"
   },
   {
-    id: "ap-med-2",
-    slug: "ap-mushti-med",
-    name_english: "Mushti",
-    name_hindi: "ముష్టి",
-    local_names: ["ముష్టి (Mushti)"],
-    meaning: "Handful measure used for collecting medicinal plants.",
-    category: "volume",
-    sector: "medicine",
-    modern_equivalent: "Person-dependent",
-    conversion_formula: "One handful",
-    states: ["Andhra Pradesh"],
-    used_in: ["Herbal leaves collection"],
-    references: ["Ayurvedic Practice Manuals"],
+    "id": "ap-transportation-distance-9",
+    "slug": "ap-vitasti",
+    "name_english": "Vitasti",
+    "name_hindi": "వితస్తి",
+    "local_names": [
+      "వితస్తి (Vitasti)"
+    ],
+    "meaning": "Hand-span measurement",
+    "category": "length",
+    "sector": "transportation-distance",
+    "modern_equivalent": "≈22.8 cm",
+    "conversion_formula": "12 Angulas = 1 Vitasti",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Measuring cart parts, ropes and wooden components"
+    ],
+    "references": [
+      "Manusmriti; Sanskrit texts"
+    ],
+    "name_sanskrit": "वितस्ति"
   },
   {
-    id: "ap-med-3",
-    slug: "ap-anjali-med",
-    name_english: "Anjali",
-    name_hindi: "అంజలి",
-    local_names: ["అంజలి (Anjali)"],
-    meaning: "Body-based dosage measurement.",
-    category: "volume",
-    sector: "medicine",
-    modern_equivalent: "Person-dependent",
-    conversion_formula: "Two cupped palms",
-    states: ["Andhra Pradesh"],
-    used_in: ["Patient dosage"],
-    references: ["Charaka Samhita"],
-  },
-
-  // Textile & Handloom
-  {
-    id: "ap-tex-1",
-    slug: "ap-maggam-vadalpu",
-    name_english: "Maggam Vadalpu",
-    name_hindi: "మగ్గం వెడల్పు",
-    local_names: ["మగ్గం వెడల్పు (Maggam Vadalpu)"],
-    meaning: "Width of fabric determined by the loom.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "Variable",
-    conversion_formula: "Based on loom width",
-    states: ["Andhra Pradesh"],
-    used_in: ["Fabric weaving"],
-    references: ["Handloom Department Records"],
+    "id": "ap-transportation-distance-10",
+    "slug": "ap-hasta",
+    "name_english": "Hasta",
+    "name_hindi": "హస్తం",
+    "local_names": [
+      "హస్తం (Hasta)"
+    ],
+    "meaning": "Cubit measurement",
+    "category": "length",
+    "sector": "transportation-distance",
+    "modern_equivalent": "≈45.6 cm",
+    "conversion_formula": "24 Angulas = 1 Hasta",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Measuring carts, boats, construction of transport structures"
+    ],
+    "references": [
+      "Mayamata"
+    ],
+    "name_sanskrit": "हस्त"
   },
   {
-    id: "ap-tex-2",
-    slug: "ap-cheera-podavu",
-    name_english: "Cheera Podavu",
-    name_hindi: "చీర పొడవు",
-    local_names: ["చీర పొడవు (Cheera Podavu)"],
-    meaning: "Traditional measurement for weaving sarees.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "≈5–9 m",
-    conversion_formula: "Standard saree length",
-    states: ["Andhra Pradesh"],
-    used_in: ["Saree weaving"],
-    references: ["Andhra Handloom Records"],
+    "id": "ap-transportation-distance-11",
+    "slug": "ap-danda",
+    "name_english": "Danda",
+    "name_hindi": "దండం",
+    "local_names": [
+      "దండం (Danda)"
+    ],
+    "meaning": "Standard measuring rod",
+    "category": "length",
+    "sector": "transportation-distance",
+    "modern_equivalent": "≈1.82 m",
+    "conversion_formula": "4 Hastas = 1 Danda",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Road measurement, bridge and pathway construction"
+    ],
+    "references": [
+      "Arthashastra"
+    ],
+    "name_sanskrit": "दण्ड"
   },
   {
-    id: "ap-tex-3",
-    slug: "ap-hanku-tex",
-    name_english: "Hanku",
-    name_hindi: "హంకు",
-    local_names: ["హంకు (Hanku)"],
-    meaning: "Standard hank of silk or cotton yarn.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Bundle of yarn",
-    states: ["Andhra Pradesh"],
-    used_in: ["Silk weaving (Dharmavaram, Uppada)"],
-    references: ["Textile Department Records"],
-  },
-
-  // Land Measurement
-  {
-    id: "ap-land-1",
-    slug: "ap-kunta-land",
-    name_english: "Kunta",
-    name_hindi: "కుంట",
-    local_names: ["కుంట (Kunta)"],
-    meaning: "Traditional land unit.",
-    category: "area",
-    sector: "land-measurement",
-    modern_equivalent: "≈1,089 sq.ft",
-    conversion_formula: "40 Kunta = 1 Acre",
-    states: ["Andhra Pradesh"],
-    used_in: ["Agricultural land"],
-    references: ["Revenue Records"],
-  },
-
-  // Transportation & Distance
-  {
-    id: "ap-trans-1",
-    slug: "ap-krosa-trans",
-    name_english: "Krosa",
-    name_hindi: "క్రోశం",
-    local_names: ["క్రోశం (Krosam)"],
-    meaning: "Traditional distance measure.",
-    category: "length",
-    sector: "transportation-distance",
-    modern_equivalent: "≈3.2 km",
-    conversion_formula: "Larger than Dhanus",
-    states: ["Andhra Pradesh"],
-    used_in: ["Surveying"],
-    references: ["Arthashastra"],
-  },
-
-  // Household & Daily Life
-  {
-    id: "ap-hh-1",
-    slug: "ap-sola-hh",
-    name_english: "Sola",
-    name_hindi: "సోల",
-    local_names: ["సోల (Sola)"],
-    meaning: "Small household measure.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "≈180-200 ml",
-    conversion_formula: "Small grain measure",
-    states: ["Andhra Pradesh"],
-    used_in: ["Household seed and grain measurement"],
-    references: ["Telugu Village Traditions"],
-  },
-
-  // Livestock & Dairy
-  {
-    id: "ap-dairy-1",
-    slug: "ap-muntha-dairy",
-    name_english: "Muntha",
-    name_hindi: "ముంత",
-    local_names: ["ముంత (Muntha)"],
-    meaning: "Traditional vessel for dairy.",
-    category: "volume",
-    sector: "livestock-dairy",
-    modern_equivalent: "≈1 L",
-    conversion_formula: "Vessel measure",
-    states: ["Andhra Pradesh"],
-    used_in: ["Milk measurement"],
-    references: ["Village Traditions"],
-  },
-
-  // Gold & Jewellery
-  {
-    id: "ap-gold-1",
-    slug: "ap-tula-gold",
-    name_english: "Tulam",
-    name_hindi: "తులం",
-    local_names: ["తులం (Tulam)"],
-    meaning: "Traditional gold weight.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "≈11.66 g",
-    conversion_formula: "Standard weight",
-    states: ["Andhra Pradesh"],
-    used_in: ["Jewellery trade"],
-    references: ["Andhra Jewellers"],
-  },
-
-  // Currency & Money
-  {
-    id: "ap-cur-1",
-    slug: "ap-varaha-cur",
-    name_english: "Varaha",
-    name_hindi: "వరహా",
-    local_names: ["వరహా (Varaha)"],
-    meaning: "Gold coin of Vijayanagara empire.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "Historical",
-    conversion_formula: "High-value coin",
-    states: ["Andhra Pradesh"],
-    used_in: ["Historical transactions"],
-    references: ["Vijayanagara Coinage"],
-  },
-
-  // Storage & Transportation
-  {
-    id: "ap-storage-1",
-    slug: "ap-basta-storage",
-    name_english: "Basta",
-    name_hindi: "బస్తా",
-    local_names: ["బస్తా (Basta)"],
-    meaning: "Sack measure for storage.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Sack measure",
-    states: ["Andhra Pradesh"],
-    used_in: ["Grain storage"],
-    references: ["Agricultural Market Records"],
-  },
-
-  // Religious & Cultural
-  {
-    id: "ap-relig-1",
-    slug: "ap-gadiya-relig",
-    name_english: "Gadiya",
-    name_hindi: "గడియ",
-    local_names: ["గడియ (Gadiya)"],
-    meaning: "Traditional time unit.",
-    category: "time",
-    sector: "religious-cultural",
-    modern_equivalent: "24 minutes",
-    conversion_formula: "60 Gadiyalu = 1 Day",
-    states: ["Andhra Pradesh"],
-    used_in: ["Panchangam, rituals"],
-    references: ["Telugu Panchangam"],
-  },
-
-  // Additional Authentic Currency & Money
-  {
-    id: "ap-cur-2",
-    slug: "ap-fanam-cur",
-    name_english: "Fanam",
-    name_hindi: "ఫణం",
-    local_names: ["ఫణం (Fanam)"],
-    meaning: "Small denomination gold/silver coin.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "≈0.38–0.40 g",
-    conversion_formula: "Fraction of Varaha",
-    states: ["Andhra Pradesh"],
-    used_in: ["Local and coastal trade"],
-    references: ["East India Company Records"],
+    "id": "ap-transportation-distance-12",
+    "slug": "ap-rajju",
+    "name_english": "Rajju",
+    "name_hindi": "రజ్జు",
+    "local_names": [
+      "రజ్జు (Rajju)"
+    ],
+    "meaning": "Measuring rope",
+    "category": "length",
+    "sector": "transportation-distance",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Rope measurement (variable)",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Surveying roads, canals and transport routes"
+    ],
+    "references": [
+      "Sthapatya texts"
+    ],
+    "name_sanskrit": "रज्जु"
   },
   {
-    id: "ap-cur-3",
-    slug: "ap-pagoda-cur",
-    name_english: "Pagoda",
-    name_hindi: "పగోడా",
-    local_names: ["పగోడా (Pagoda)"],
-    meaning: "Gold coin widely used in South Indian maritime trade.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "≈3.4 g gold",
-    conversion_formula: "Regional gold coin",
-    states: ["Andhra Pradesh"],
-    used_in: ["International trade"],
-    references: ["Madras Presidency Gazetteer"],
-  },
-
-  // Additional Authentic Household & Daily Life
-  {
-    id: "ap-hh-2",
-    slug: "ap-ginne-hh",
-    name_english: "Ginne",
-    name_hindi: "గిన్నె",
-    local_names: ["గిన్నె (Ginne)"],
-    meaning: "Metal bowl used for measuring and serving food.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "≈200–500 ml",
-    conversion_formula: "Bowl measure",
-    states: ["Andhra Pradesh"],
-    used_in: ["Cooking"],
-    references: ["Telugu Household Traditions"],
+    "id": "ap-transportation-distance-13",
+    "slug": "ap-gavyuti",
+    "name_english": "Gavyuti",
+    "name_hindi": "గవ్యుతి",
+    "local_names": [
+      "గవ్యుతి (Gavyuti)"
+    ],
+    "meaning": "Distance related to cattle movement",
+    "category": "distance",
+    "sector": "transportation-distance",
+    "modern_equivalent": "≈12–13 km (approx.)",
+    "conversion_formula": "4 Krosha = 1 Gavyuti (traditional)",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Travel distance in rural routes"
+    ],
+    "references": [
+      "Puranic literature"
+    ],
+    "name_sanskrit": "गव्युति"
   },
   {
-    id: "ap-hh-3",
-    slug: "ap-chembu-hh",
-    name_english: "Chembu",
-    name_hindi: "చెంబు",
-    local_names: ["చెంబు (Chembu)"],
-    meaning: "Brass or copper vessel used in kitchens.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "≈1–2 L",
-    conversion_formula: "Pot measure",
-    states: ["Andhra Pradesh"],
-    used_in: ["Water and milk measurement"],
-    references: ["Telugu Folk Traditions"],
-  },
-
-  // Additional Authentic Storage & Transportation
-  {
-    id: "ap-storage-2",
-    slug: "ap-edla-bandi-suma",
-    name_english: "Edla Bandi Suma",
-    name_hindi: "ఎడ్ల బండి సుమ",
-    local_names: ["ఎడ్ల బండి సుమ (Edla Bandi Suma)"],
-    meaning: "Quantity carried by a traditional bullock cart.",
-    category: "weight",
-    sector: "storage-transport",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Bullock-cart load",
-    states: ["Andhra Pradesh"],
-    used_in: ["Agricultural transport"],
-    references: ["Andhra Rural Transport Records"],
+    "id": "ap-transportation-distance-14",
+    "slug": "ap-krosha-kos",
+    "name_english": "Krosha / Kos",
+    "name_hindi": "క్రోశం / కోసు",
+    "local_names": [
+      "క్రోశం / కోసు (Krosha / Kos)"
+    ],
+    "meaning": "Common travel distance unit",
+    "category": "distance",
+    "sector": "transportation-distance",
+    "modern_equivalent": "≈3.2 km",
+    "conversion_formula": "2000 Danda = 1 Krosha (classical)",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Distance between villages, markets and resting places"
+    ],
+    "references": [
+      "Arthashastra"
+    ],
+    "name_sanskrit": "क्रोश"
   },
   {
-    id: "ap-storage-3",
-    slug: "ap-padava-suma",
-    name_english: "Padava Suma",
-    name_hindi: "పడవ సుమ",
-    local_names: ["పడవ సుమ (Padava Suma)"],
-    meaning: "Load transported by traditional boats.",
-    category: "weight",
-    sector: "storage-transport",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Boat load",
-    states: ["Andhra Pradesh"],
-    used_in: ["River transport"],
-    references: ["Maritime Trade Records"],
-  },
-
-  // Additional Authentic Land Measurement
-  {
-    id: "ap-land-2",
-    slug: "ap-ankanam-land",
-    name_english: "Ankanam",
-    name_hindi: "అంకణం",
-    local_names: ["అంకణం (Ankanam)"],
-    meaning: "Traditional plot measurement.",
-    category: "area",
-    sector: "land-measurement",
-    modern_equivalent: "≈72 sq.ft",
-    conversion_formula: "Base residential land unit",
-    states: ["Andhra Pradesh"],
-    used_in: ["House sites"],
-    references: ["Regional land records"],
+    "id": "ap-transportation-distance-15",
+    "slug": "ap-yojana",
+    "name_english": "Yojana",
+    "name_hindi": "యోజనం",
+    "local_names": [
+      "యోజనం (Yojana)"
+    ],
+    "meaning": "Largest classical distance unit",
+    "category": "distance",
+    "sector": "transportation-distance",
+    "modern_equivalent": "≈12–13 km",
+    "conversion_formula": "4 Krosha = 1 Yojana",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Long-distance travel, kingdoms, pilgrimage routes"
+    ],
+    "references": [
+      "Arthashastra; Puranas"
+    ],
+    "name_sanskrit": "योजन"
   },
   {
-    id: "ap-land-3",
-    slug: "ap-gajam-land",
-    name_english: "Gajam (Square Yard)",
-    name_hindi: "గజం",
-    local_names: ["గజం (Gajam)"],
-    meaning: "Common Telugu land unit.",
-    category: "area",
-    sector: "land-measurement",
-    modern_equivalent: "≈0.836 sq.m",
-    conversion_formula: "1 Gajam = 1 square yard",
-    states: ["Andhra Pradesh"],
-    used_in: ["House plots and urban land"],
-    references: ["Regional revenue records"],
-  },
-
-  // Additional Authentic Transportation & Distance
-  {
-    id: "ap-trans-2",
-    slug: "ap-gavyuti-trans",
-    name_english: "Gavyuti",
-    name_hindi: "గవ్యూతి",
-    local_names: ["గవ్యూతి (Gavyuti)"],
-    meaning: "Distance related to cattle movement.",
-    category: "length",
-    sector: "transportation-distance",
-    modern_equivalent: "≈12–13 km",
-    conversion_formula: "4 Krosha = 1 Gavyuti",
-    states: ["Andhra Pradesh"],
-    used_in: ["Travel distance in rural routes"],
-    references: ["Puranic literature"],
-  },
-
-  // Additional Authentic Livestock & Dairy
-  {
-    id: "ap-dairy-2",
-    slug: "ap-padi-dairy",
-    name_english: "Padi",
-    name_hindi: "పడి",
-    local_names: ["పడి (Padi)"],
-    meaning: "Traditional South Indian volume measure.",
-    category: "volume",
-    sector: "livestock-dairy",
-    modern_equivalent: "≈1.6–1.8 L",
-    conversion_formula: "Regional vessel measure",
-    states: ["Andhra Pradesh"],
-    used_in: ["Milk, grain and household liquids"],
-    references: ["South Indian traditional measures"],
+    "id": "ap-transportation-distance-16",
+    "slug": "ap-krosha-patha-kosu",
+    "name_english": "Krosha Patha / Kosu",
+    "name_hindi": "కోసు",
+    "local_names": [
+      "కోసు (Krosha Patha / Kosu)"
+    ],
+    "meaning": "Village travel measure",
+    "category": "distance",
+    "sector": "transportation-distance",
+    "modern_equivalent": "≈3 km (variation)",
+    "conversion_formula": "Regional usage of Kos",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Road-side distance marking during later periods"
+    ],
+    "references": [
+      "Madras Gazetteers"
+    ]
   },
   {
-    id: "ap-dairy-3",
-    slug: "ap-marakkal-dairy",
-    name_english: "Marakkal",
-    name_hindi: "మరక్కాల్",
-    local_names: ["మరక్కాల్ (Marakkal)"],
-    meaning: "Large vessel measure.",
-    category: "volume",
-    sector: "livestock-dairy",
-    modern_equivalent: "≈10–12 L",
-    conversion_formula: "8 Padi = 1 Marakkal",
-    states: ["Andhra Pradesh"],
-    used_in: ["Large quantity milk"],
-    references: ["Madras Presidency Records"],
-  },
-
-  // Additional Authentic Gold & Jewellery
-  {
-    id: "ap-gold-2",
-    slug: "ap-suvarna-gold",
-    name_english: "Suvarna",
-    name_hindi: "సువర్ణం",
-    name_sanskrit: "Suvarṇa",
-    local_names: ["సువర్ణం (Suvarna)"],
-    meaning: "Classical gold weight unit.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "≈15.5 g",
-    conversion_formula: "16 Masha = 1 Suvarna",
-    states: ["Andhra Pradesh"],
-    used_in: ["Gold coins, temple donations"],
-    references: ["Arthashastra"],
+    "id": "ap-livestock-dairy-17",
+    "slug": "ap-ratti",
+    "name_english": "Ratti",
+    "name_hindi": "రత్తి",
+    "local_names": [
+      "రత్తి (Ratti)"
+    ],
+    "meaning": "Smallest traditional weight unit",
+    "category": "weight",
+    "sector": "livestock-dairy",
+    "modern_equivalent": "≈121.5 mg",
+    "conversion_formula": "Base unit",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Veterinary medicines and herbal preparations for cattle"
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "name_sanskrit": "रक्तिका (Raktikā)"
   },
   {
-    id: "ap-gold-3",
-    slug: "ap-varaha-gold",
-    name_english: "Varaha (Pagoda)",
-    name_hindi: "వరాహం",
-    name_sanskrit: "Varāha",
-    local_names: ["వరాహం (Varaha)"],
-    meaning: "Important South Indian gold coin weight.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "≈3.4–3.5 g gold coin",
-    conversion_formula: "Regional coin standard",
-    states: ["Andhra Pradesh"],
-    used_in: ["Vijayanagara gold coins and trade"],
-    references: ["Vijayanagara coin records"],
+    "id": "ap-livestock-dairy-18",
+    "slug": "ap-masha",
+    "name_english": "Masha",
+    "name_hindi": "మాష",
+    "local_names": [
+      "మాష (Masha)"
+    ],
+    "meaning": "Small medicinal weight",
+    "category": "weight",
+    "sector": "livestock-dairy",
+    "modern_equivalent": "≈0.972 g",
+    "conversion_formula": "8 Ratti = 1 Masha",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Medicinal preparations for animals"
+    ],
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "name_sanskrit": "माष"
+  },
+  {
+    "id": "ap-livestock-dairy-19",
+    "slug": "ap-tola",
+    "name_english": "Tola",
+    "name_hindi": "తులం",
+    "local_names": [
+      "తులం (Tola)"
+    ],
+    "meaning": "Small commercial weight",
+    "category": "weight",
+    "sector": "livestock-dairy",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "12 Masha = 1 Tola",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Measuring ghee, medicinal ingredients and valuable dairy products"
+    ],
+    "references": [
+      "British India Standards"
+    ],
+    "name_sanskrit": "तुला"
+  },
+  {
+    "id": "ap-livestock-dairy-20",
+    "slug": "ap-chhatak",
+    "name_english": "Chhatak",
+    "name_hindi": "ఛటాక్",
+    "local_names": [
+      "ఛటాక్ (Chhatak)"
+    ],
+    "meaning": "Small dairy measure",
+    "category": "weight",
+    "sector": "livestock-dairy",
+    "modern_equivalent": "≈58.3 g",
+    "conversion_formula": "5 Tola = 1 Chhatak",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Butter, ghee and milk products"
+    ],
+    "references": [
+      "Madras Presidency Records"
+    ]
+  },
+  {
+    "id": "ap-livestock-dairy-21",
+    "slug": "ap-pav-pao",
+    "name_english": "Pav / Pao",
+    "name_hindi": "పావు",
+    "local_names": [
+      "పావు (Pav / Pao)"
+    ],
+    "meaning": "Quarter Seer measure",
+    "category": "weight",
+    "sector": "livestock-dairy",
+    "modern_equivalent": "≈233 g / ≈250 ml",
+    "conversion_formula": "4 Chhatak = 1 Pav",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Milk, curd and buttermilk sales"
+    ],
+    "references": [
+      "Madras Gazetteers"
+    ]
+  },
+  {
+    "id": "ap-livestock-dairy-22",
+    "slug": "ap-seer-sher",
+    "name_english": "Seer / Sher",
+    "name_hindi": "సేరు",
+    "local_names": [
+      "సేరు (Seer / Sher)"
+    ],
+    "meaning": "Most common traditional dairy unit",
+    "category": "weight",
+    "sector": "livestock-dairy",
+    "modern_equivalent": "≈0.933 kg / ≈0.93 L",
+    "conversion_formula": "4 Pav = 1 Seer",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Milk, curd, ghee and butter measurement"
+    ],
+    "references": [
+      "Madras Presidency Standards"
+    ]
+  },
+  {
+    "id": "ap-livestock-dairy-23",
+    "slug": "ap-padi",
+    "name_english": "Padi",
+    "name_hindi": "పడి",
+    "local_names": [
+      "పడి (Padi)"
+    ],
+    "meaning": "Traditional South Indian volume measure",
+    "category": "volume",
+    "sector": "livestock-dairy",
+    "modern_equivalent": "≈1.6–1.8 L (regional)",
+    "conversion_formula": "Regional; used as vessel measure",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Milk, grain and household liquids"
+    ],
+    "references": [
+      "South Indian traditional measures"
+    ]
+  },
+  {
+    "id": "ap-livestock-dairy-24",
+    "slug": "ap-marakkal",
+    "name_english": "Marakkal",
+    "name_hindi": "மரக்கால் / మరక్కాల్",
+    "local_names": [
+      "மரக்கால் / మరక్కాల్ (Marakkal)"
+    ],
+    "meaning": "Large vessel measure",
+    "category": "volume",
+    "sector": "livestock-dairy",
+    "modern_equivalent": "≈10–12 L (regional)",
+    "conversion_formula": "8 Padi = 1 Marakkal (Tamil-influenced system)",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Large quantity milk and agricultural produce"
+    ],
+    "references": [
+      "Madras Presidency Records"
+    ]
+  },
+  {
+    "id": "ap-livestock-dairy-25",
+    "slug": "ap-maund-man",
+    "name_english": "Maund (Man)",
+    "name_hindi": "మణుగు / మణం",
+    "local_names": [
+      "మణుగు / మణం (Maund (Man))"
+    ],
+    "meaning": "Large trade unit",
+    "category": "bulk weight",
+    "sector": "livestock-dairy",
+    "modern_equivalent": "≈37.324 kg",
+    "conversion_formula": "40 Seers = 1 Maund",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Bulk dairy products, cattle feed, fodder"
+    ],
+    "references": [
+      "Imperial Gazetteer of India"
+    ],
+    "name_sanskrit": "मान"
+  },
+  {
+    "id": "ap-gold-jewellery-26",
+    "slug": "ap-ratti",
+    "name_english": "Ratti",
+    "name_hindi": "రత్తి",
+    "local_names": [
+      "రత్తి (Ratti)"
+    ],
+    "meaning": "Smallest jeweller weight unit",
+    "category": "precious metal weight",
+    "sector": "gold-jewellery",
+    "modern_equivalent": "≈121.5 mg",
+    "conversion_formula": "Base unit",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Measuring gemstones, pearls and small gold quantities"
+    ],
+    "references": [
+      "Arthashastra; Ratna Pariksha texts"
+    ],
+    "name_sanskrit": "रक्तिका (Raktikā)"
+  },
+  {
+    "id": "ap-gold-jewellery-27",
+    "slug": "ap-masha",
+    "name_english": "Masha",
+    "name_hindi": "మాష",
+    "local_names": [
+      "మాష (Masha)"
+    ],
+    "meaning": "Small gold measurement unit",
+    "category": "precious metal weight",
+    "sector": "gold-jewellery",
+    "modern_equivalent": "≈0.972 g",
+    "conversion_formula": "8 Ratti = 1 Masha",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Small gold ornaments and precious stones"
+    ],
+    "references": [
+      "Sanskrit weight system"
+    ],
+    "name_sanskrit": "माष"
+  },
+  {
+    "id": "ap-gold-jewellery-28",
+    "slug": "ap-tola",
+    "name_english": "Tola",
+    "name_hindi": "తులం",
+    "local_names": [
+      "తులం (Tola)"
+    ],
+    "meaning": "Most widely used traditional gold unit",
+    "category": "precious metal weight",
+    "sector": "gold-jewellery",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "12 Masha = 1 Tola",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Gold jewellery trade and valuation"
+    ],
+    "references": [
+      "British India Standards"
+    ],
+    "name_sanskrit": "तुला"
+  },
+  {
+    "id": "ap-gold-jewellery-29",
+    "slug": "ap-suvarna",
+    "name_english": "Suvarna",
+    "name_hindi": "సువర్ణం",
+    "local_names": [
+      "సువర్ణం (Suvarna)"
+    ],
+    "meaning": "Classical gold weight unit",
+    "category": "gold weight",
+    "sector": "gold-jewellery",
+    "modern_equivalent": "≈15.5 g",
+    "conversion_formula": "16 Masha = 1 Suvarna (classical)",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Gold coins, temple donations and ornaments"
+    ],
+    "references": [
+      "Arthashastra"
+    ],
+    "name_sanskrit": "सुवर्ण"
+  },
+  {
+    "id": "ap-gold-jewellery-30",
+    "slug": "ap-varaha-pagoda",
+    "name_english": "Varaha (Pagoda)",
+    "name_hindi": "వరాహం",
+    "local_names": [
+      "వరాహం (Varaha (Pagoda))"
+    ],
+    "meaning": "Important South Indian gold coin",
+    "category": "gold coin weight",
+    "sector": "gold-jewellery",
+    "modern_equivalent": "≈3.4–3.5 g gold coin",
+    "conversion_formula": "Regional coin standard",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Vijayanagara gold coins and trade"
+    ],
+    "references": [
+      "Vijayanagara coin records"
+    ],
+    "name_sanskrit": "वराह"
+  },
+  {
+    "id": "ap-gold-jewellery-31",
+    "slug": "ap-karsha",
+    "name_english": "Karsha",
+    "name_hindi": "కర్ష",
+    "local_names": [
+      "కర్ష (Karsha)"
+    ],
+    "meaning": "Sanskrit weight unit",
+    "category": "precious metal weight",
+    "sector": "gold-jewellery",
+    "modern_equivalent": "≈3.9 g",
+    "conversion_formula": "4 Masha = 1 Karsha (classical)",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Ancient metal and jewellery calculations"
+    ],
+    "references": [
+      "Charaka Samhita; Arthashastra"
+    ],
+    "name_sanskrit": "कर्ष"
+  },
+  {
+    "id": "ap-gold-jewellery-32",
+    "slug": "ap-pala",
+    "name_english": "Pala",
+    "name_hindi": "పల",
+    "local_names": [
+      "పల (Pala)"
+    ],
+    "meaning": "Bulk precious metal unit",
+    "category": "precious metal weight",
+    "sector": "gold-jewellery",
+    "modern_equivalent": "≈46.7 g",
+    "conversion_formula": "4 Karsha = 1 Pala",
+    "states": [
+      "Andhra Pradesh"
+    ],
+    "used_in": [
+      "Large quantity gold and metal weighing"
+    ],
+    "references": [
+      "Ayurvedic texts"
+    ],
+    "name_sanskrit": "पल"
   }
 ];

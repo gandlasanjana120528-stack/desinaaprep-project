@@ -205,7 +205,7 @@ export const INDIAN_STATES: State[] = [
   { id: "tn", slug: "tamil-nadu", name: "Tamil Nadu", capital: "Chennai", region: "South India", language: "Tamil", measurement_count: 55 },
   { id: "ka", slug: "karnataka", name: "Karnataka", capital: "Bengaluru", region: "South India", language: "Kannada", measurement_count: 47 },
   { id: "mh", slug: "maharashtra", name: "Maharashtra", capital: "Mumbai", region: "West India", language: "Marathi", measurement_count: 52 },
-  { id: "gj", slug: "gujarat", name: "Gujarat", capital: "Gandhinagar", region: "West India", language: "Gujarati", measurement_count: 44 },
+  { id: "gj", slug: "gujarat", name: "Gujarat", capital: "Gandhinagar", region: "West India", language: "Gujarati", description: "Gujarat has a rich heritage of traditional measurement systems spanning 12 distinct sectors including Agriculture, Trade & Commerce, Architecture, Medicine (Ayurveda), Textile & Handloom, Currency & Money, Household & Daily Life, Storage & Transportation, Land Measurement, Transportation & Distance, Livestock & Dairy, and Gold & Jewellery.", measurement_count: 220 },
   { id: "rj", slug: "rajasthan", name: "Rajasthan", capital: "Jaipur", region: "North India", language: "Rajasthani", measurement_count: 39 },
   {
     id: "up",
