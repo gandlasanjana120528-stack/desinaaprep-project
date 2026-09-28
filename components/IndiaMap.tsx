@@ -80,83 +80,69 @@ export default function IndiaMap() {
 
   return (
     <div className="w-full">
-
       <div className="w-full flex justify-center">
-
         <svg
           className="w-full max-w-[650px] h-auto"
           viewBox="0 0 450 550"
           preserveAspectRatio="xMidYMid meet"
         >
+          {INDIA_MAP_DATA.map((state) => {
+            const isSelected = selectedState === state.id;
+            const isHovered = hoveredState === state.id;
 
-         {INDIA_MAP_DATA.map((state) => {
-  const isSelected = selectedState === state.id;
-  const isHovered = hoveredState === state.id;
+            return (
+              <path
+                key={state.id}
+                d={state.d}
+                fill={stateColors[state.id] || "#60708A"}
+                stroke={
+                  isSelected
+                    ? "#F59E0B"
+                    : isHovered
+                    ? "#FFFFFF"
+                    : "#111827"
+                }
+                strokeWidth={
+                  isSelected
+                    ? 3
+                    : isHovered
+                    ? 2.5
+                    : 0.8
+                }
+                strokeLinejoin="round"
+                className="cursor-pointer transition-all duration-200"
+                style={{
+                  opacity:
+                    selectedState && !isSelected
+                      ? 0.75
+                      : 1,
 
-  return (
-    <path
-      key={state.id}
-      d={state.d}
-      fill={stateColors[state.id] || "#60708A"}
+                  filter:
+                    isSelected || isHovered
+                      ? "drop-shadow(0px 0px 6px rgba(255,255,255,0.7))"
+                      : "none",
 
-      stroke={
-        isSelected
-          ? "#F59E0B"
-          : isHovered
-          ? "#FFFFFF"
-          : "#111827"
-      }
+                  transform:
+                    isHovered && !isSelected
+                      ? "scale(1.01)"
+                      : "scale(1)",
 
-      strokeWidth={
-        isSelected
-          ? 3
-          : isHovered
-          ? 2.5
-          : 0.8
-      }
-
-      strokeLinejoin="round"
-
-      className="cursor-pointer transition-all duration-200"
-
-      style={{
-        opacity:
-          selectedState && !isSelected
-            ? 0.75
-            : 1,
-
-        filter:
-          isSelected || isHovered
-            ? "drop-shadow(0px 0px 6px rgba(255,255,255,0.7))"
-            : "none",
-
-        transform:
-          isHovered && !isSelected
-            ? "scale(1.01)"
-            : "scale(1)",
-
-        transformOrigin: "center",
-      }}
-
-      onMouseEnter={() => {
-        setHoveredState(state.id);
-      }}
-
-      onMouseLeave={() => {
-        setHoveredState(null);
-      }}
-
-      onClick={() => handleStateClick(state)}
-    >
-      <title>{state.title}</title>
-    </path>
-  );
-})}
-
+                  transformOrigin: "center",
+                }}
+                onMouseEnter={() => {
+                  setHoveredState(state.id);
+                }}
+                onMouseLeave={() => {
+                  setHoveredState(null);
+                }}
+                onClick={() => handleStateClick(state)}
+              >
+                <title>{state.title}</title>
+              </path>
+            );
+          })}
         </svg>
-
       </div>
-
     </div>
   );
 }

@@ -80,3 +80,14 @@ desinaap/
 | `/admin/settings` | App configuration |
 
 ## Developed as part of the Indian Knowledge Systems (IKS) Internship
+
+## Images for measurements
+
+Images are configured in `lib/measurementImages.ts`:
+
+1. Fixed Wikimedia Commons photos (`IMAGE_BY_NAME`) – exact files with credit.
+2. Otherwise the lead photo of the unit's Wikipedia article is fetched automatically (`WIKI_TITLES`).
+3. Otherwise a representative image for the sector is shown (labelled "Representative image").
+
+Every photo is credited and linked to its Commons / Wikipedia page. To add your own photo,
+put it in `public/images/` and add `name: { src: "/images/file.jpg", alt: "...", credit: "..." }` to `IMAGE_BY_NAME`.

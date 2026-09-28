@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
 import { Search, Filter, LayoutGrid, List, X } from "lucide-react";
-import { CATEGORIES, SECTORS, getCategoryColor } from "@/lib/data";
+import { CATEGORIES, SECTORS, SAMPLE_MEASUREMENTS, getCategoryColor } from "@/lib/data";
 import MeasurementCard from "@/components/measurements/MeasurementCard";
 import Link from "next/link";
 import { Measurement } from "@/types";
@@ -12,7 +12,7 @@ import { collection, getDocs } from "firebase/firestore";
 const PER_PAGE = 12;
 
 export default function MeasurementsPage() {
-  const [measurements, setMeasurements] = useState<Measurement[]>([]);
+  const [measurements, setMeasurements] = useState<Measurement[]>(SAMPLE_MEASUREMENTS);
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("");
@@ -22,21 +22,30 @@ export default function MeasurementsPage() {
   const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
+    // Local dataset is shown immediately. Firestore data (if any) is merged in
+    // afterwards, with a timeout so a missing/mock Firebase never blocks the page.
+    let cancelled = false;
     async function fetchMeasurements() {
       try {
-        const querySnapshot = await getDocs(collection(db, "measurements"));
-        const data: Measurement[] = [];
-        querySnapshot.forEach((doc) => {
-          data.push({ id: doc.id, ...doc.data() } as Measurement);
-        });
-        setMeasurements(data);
+        const snap = await Promise.race([
+          getDocs(collection(db, "measurements")),
+          new Promise<null>((resolve) => setTimeout(() => resolve(null), 4000)),
+        ]);
+        if (!snap || cancelled) return;
+        const remote: Measurement[] = [];
+        snap.forEach((d) => remote.push({ id: d.id, ...d.data() } as Measurement));
+        if (remote.length === 0) return;
+        const seen = new Set(SAMPLE_MEASUREMENTS.map((m) => m.slug || m.id));
+        const extra = remote.filter((m) => !seen.has(m.slug || m.id));
+        if (extra.length > 0) setMeasurements([...SAMPLE_MEASUREMENTS, ...extra]);
       } catch (error) {
-        console.error("Error fetching measurements:", error);
+        console.error("Firestore unavailable, using local dataset:", error);
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     }
     fetchMeasurements();
+    return () => { cancelled = true; };
   }, []);
 
   const fuse = useMemo(() => new Fuse(measurements, {
@@ -189,7 +198,11 @@ export default function MeasurementsPage() {
           <button onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1}
             className="px-3 py-1.5 text-sm border border-[#E8DED1] rounded disabled:opacity-40 hover:border-[#6F4E37] transition-colors"
           >← Prev</button>
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+          {(() => {
+            const size = Math.min(5, totalPages);
+            const start = Math.min(Math.max(1, page - Math.floor(size / 2)), totalPages - size + 1);
+            return Array.from({ length: size }, (_, i) => start + i);
+          })().map((p) => (
             <button key={p} onClick={() => setPage(p)}
               className={`w-8 h-8 text-sm rounded transition-colors ${p === page ? "bg-[#6F4E37] text-white" : "border border-[#E8DED1] hover:border-[#6F4E37]"}`}
             >{p}</button>
@@ -197,6 +210,7 @@ export default function MeasurementsPage() {
           <button onClick={() => setPage(p => Math.min(totalPages, p + 1))} disabled={page === totalPages}
             className="px-3 py-1.5 text-sm border border-[#E8DED1] rounded disabled:opacity-40 hover:border-[#6F4E37] transition-colors"
           >Next →</button>
+          <span className="hidden sm:inline ml-2 text-xs text-[#A09080]">Page {page} of {totalPages}</span>
         </div>
       )}
     </div>

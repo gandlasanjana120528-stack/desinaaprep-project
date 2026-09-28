@@ -15,12 +15,15 @@ export interface Measurement {
   historical_context?: string;
   modern_equivalent?: string;
   conversion_formula?: string;
-  states: string[];
+  states?: string[];
   districts?: string[];
   used_in?: string[];
   hierarchy?: MeasurementHierarchyItem[];
   references?: string[];
   tags?: string[];
+  image_url?: string;
+  image_alt?: string;
+  image_credit?: string;
   created_at?: string;
   updated_at?: string;
 }
@@ -34,7 +37,10 @@ export type MeasurementCategory =
   | "currency"
   | "count"
   | "temperature"
-  | "other";
+  | "distance"
+  | "area measurement"
+  | "other"
+  | (string & {});
 
 export interface MeasurementHierarchyItem {
   name: string;
@@ -83,15 +89,67 @@ export interface Sector {
   references?: string[];
 }
 
+export interface FlowchartNode {
+  id: string;
+  name: string;
+  vernacular?: string;
+  script?: string;
+  relation_text?: string;
+  multiplier?: number;
+  metric_equiv?: string;
+  desc?: string;
+  category_level?: "micro" | "anatomical" | "tool" | "cadastral" | "macro" | "cosmic" | "standard";
+  badge?: string;
+  historical_note?: string;
+}
+
+export interface FlowchartConnection {
+  from: string;
+  to: string;
+  label: string;
+  formula?: string;
+}
+
+export interface InfographicCalculatorUnit {
+  id: string;
+  name: string;
+  factor_to_base: number;
+  symbol: string;
+  metric_unit: string;
+  metric_factor: number;
+}
+
+export interface InfographicTheme {
+  primary: string;
+  light: string;
+  accent: string;
+  border: string;
+  badge: string;
+  gradient: string;
+}
+
 export interface Infographic {
   id: string;
   title: string;
+  subtitle?: string;
   description?: string;
   category: string;
-  image_url?: string;
   sector?: string;
   state?: string;
+  period?: string;
+  historical_source?: string;
+  image_url?: string;
+  icon_emoji?: string;
   tags?: string[];
+  theme?: InfographicTheme;
+  nodes?: FlowchartNode[];
+  connections?: FlowchartConnection[];
+  conversion_table?: Array<{ from: string; to: string; ratio: string; notes?: string }>;
+  key_insights?: string[];
+  calculator?: {
+    base_unit_id: string;
+    units: InfographicCalculatorUnit[];
+  };
   created_at?: string;
 }
 

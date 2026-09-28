@@ -8,6 +8,7 @@ import { ArrowLeft, MapPin, BookOpen, ChevronRight, Scale, Layers } from "lucide
 import { db } from "@/lib/firebase/client";
 import { collection, doc, getDoc, getDocs, query, where, limit } from "firebase/firestore";
 import { Measurement } from "@/types";
+import { MeasurementFigure } from "@/components/measurements/MeasurementImage";
 
 export default function MeasurementDetailPage() {
   const params = useParams();
@@ -202,6 +203,7 @@ export default function MeasurementDetailPage() {
 
         {/* ── Sidebar ── */}
         <div className="space-y-6">
+          <MeasurementFigure m={m} />
           {/* Quick Facts */}
           <div className="bg-white border border-[#E8DED1] rounded-lg p-5">
             <h3 className="font-semibold text-[#2E2A26] mb-4">Quick Facts</h3>

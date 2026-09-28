@@ -2,10 +2,12 @@ import Link from "next/link";
 import { Measurement } from "@/types";
 import { getCategoryColor } from "@/lib/data";
 import { ArrowRight, MapPin } from "lucide-react";
+import { MeasurementThumb } from "./MeasurementImage";
 
 export default function MeasurementCard({ m }: { m: Measurement }) {
   return (
-    <div className="bg-white border border-[#E8DED1] rounded-lg p-5 hover:border-[#B88646] hover:shadow-md transition-all group">
+    <div className="bg-white border border-[#E8DED1] rounded-lg p-5 hover:border-[#B88646] hover:shadow-md transition-all group overflow-hidden">
+      <MeasurementThumb m={m} />
       <div className="flex items-start justify-between mb-3">
         <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${getCategoryColor(m.category)}`}>
           {m.category}

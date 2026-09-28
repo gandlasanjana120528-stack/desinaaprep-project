@@ -2,2086 +2,3239 @@ import { Measurement } from "@/types";
 
 export const CHHATTISGARH_MEASUREMENTS: Measurement[] = [
   {
-    "id": "ct-agriculture-1",
-    "slug": "ct-ratti",
-    "name_english": "Ratti",
-    "name_hindi": "रत्ती",
-    "local_names": [
-      "रत्ती (Ratti)"
-    ],
-    "meaning": "Smallest traditional seed weight",
-    "category": "seed weight",
-    "sector": "agriculture",
-    "modern_equivalent": "≈121.5 mg",
-    "conversion_formula": "Base Unit",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Measuring valuable seeds and medicinal plants"
-    ],
-    "references": [
-      "Charaka Samhita; Arthashastra"
-    ],
-    "name_sanskrit": "रक्तिका (Raktikā)"
-  },
-  {
-    "id": "ct-agriculture-2",
-    "slug": "ct-masha",
-    "name_english": "Masha",
-    "name_hindi": "माशा",
-    "local_names": [
-      "माशा (Masha)"
-    ],
-    "meaning": "Small agricultural weight",
-    "category": "seed weight",
-    "sector": "agriculture",
-    "modern_equivalent": "≈0.972 g",
-    "conversion_formula": "8 Ratti = 1 Masha",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Seed and herbal measurement"
-    ],
-    "references": [
-      "Sushruta Samhita"
-    ],
-    "name_sanskrit": "माष"
-  },
-  {
-    "id": "ct-agriculture-3",
-    "slug": "ct-tola",
-    "name_english": "Tola",
-    "name_hindi": "तोला",
-    "local_names": [
-      "तोला (Tola)"
-    ],
-    "meaning": "Standard traditional weight",
-    "category": "weight",
-    "sector": "agriculture",
-    "modern_equivalent": "≈11.66 g",
-    "conversion_formula": "12 Masha = 1 Tola",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Measuring costly seeds and produce"
-    ],
-    "references": [
-      "British India Standards"
-    ],
-    "name_sanskrit": "तुला"
-  },
-  {
-    "id": "ct-agriculture-4",
-    "slug": "ct-chhatak",
-    "name_english": "Chhatak",
-    "name_hindi": "छटाक",
-    "local_names": [
-      "छटाक (Chhatak)"
-    ],
-    "meaning": "Small grain measure",
-    "category": "grain weight",
-    "sector": "agriculture",
-    "modern_equivalent": "≈58.3 g",
-    "conversion_formula": "5 Tola = 1 Chhatak",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Retail grain and seed trade"
-    ],
-    "references": [
-      "Central Provinces Gazetteers"
-    ]
-  },
-  {
-    "id": "ct-agriculture-5",
-    "slug": "ct-pav-pao",
-    "name_english": "Pav (Pao)",
-    "name_hindi": "पाव",
-    "local_names": [
-      "पाव (Pav (Pao))"
-    ],
-    "meaning": "Quarter Seer",
-    "category": "grain weight",
-    "sector": "agriculture",
-    "modern_equivalent": "≈233 g",
-    "conversion_formula": "4 Chhatak = 1 Pav",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Grain and pulse measurement"
-    ],
-    "references": [
-      "Chhattisgarh District Gazetteers"
-    ]
-  },
-  {
-    "id": "ct-agriculture-6",
-    "slug": "ct-adha-seer",
-    "name_english": "Adha Seer",
-    "name_hindi": "आधा सेर",
-    "local_names": [
-      "आधा सेर (Adha Seer)"
-    ],
-    "meaning": "Half Seer",
-    "category": "grain weight",
-    "sector": "agriculture",
-    "modern_equivalent": "≈466 g",
-    "conversion_formula": "2 Pav = 1 Half Seer",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Agricultural markets"
-    ],
-    "references": [
-      "Revenue Settlement Reports"
-    ]
-  },
-  {
-    "id": "ct-agriculture-7",
-    "slug": "ct-seer",
-    "name_english": "Seer",
-    "name_hindi": "सेर",
-    "local_names": [
-      "सेर (Seer)"
-    ],
-    "meaning": "Standard village grain unit",
-    "category": "grain measure",
-    "sector": "agriculture",
-    "modern_equivalent": "≈0.933 kg",
-    "conversion_formula": "2 Half Seer = 1 Seer",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Principal grain and seed measure"
-    ],
-    "references": [
-      "Imperial Gazetteer of India"
-    ]
-  },
-  {
-    "id": "ct-agriculture-8",
-    "slug": "ct-pasri",
-    "name_english": "Pasri",
-    "name_hindi": "पसरी",
-    "local_names": [
-      "पसरी (Pasri)"
-    ],
-    "meaning": "Regional grain measure",
-    "category": "grain capacity",
-    "sector": "agriculture",
-    "modern_equivalent": "≈4.66 kg (Regional)",
-    "conversion_formula": "Usually 5 Seers = 1 Pasri (Regional)",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Grain storage and seed distribution"
-    ],
-    "references": [
-      "Chhattisgarh Gazetteers"
-    ]
-  },
-  {
-    "id": "ct-agriculture-9",
-    "slug": "ct-maund-man",
-    "name_english": "Maund (Man)",
-    "name_hindi": "मन",
-    "local_names": [
-      "मन (Maund (Man))"
-    ],
-    "meaning": "Standard wholesale agricultural unit",
-    "category": "bulk weight",
-    "sector": "agriculture",
-    "modern_equivalent": "≈37.324 kg",
-    "conversion_formula": "40 Seers = 1 Maund",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Wholesale grain trade"
-    ],
-    "references": [
-      "Government Historical Standards"
-    ],
-    "name_sanskrit": "मान"
-  },
-  {
-    "id": "ct-agriculture-10",
-    "slug": "ct-khandi",
-    "name_english": "Khandi",
-    "name_hindi": "खंडी",
-    "local_names": [
-      "खंडी (Khandi)"
-    ],
-    "meaning": "Largest traditional agricultural unit",
-    "category": "bulk storage",
-    "sector": "agriculture",
-    "modern_equivalent": "≈746 kg (Regional)",
-    "conversion_formula": "≈20 Maunds = 1 Khandi (Regional)",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Bulk grain storage and transport"
-    ],
-    "references": [
-      "Central Provinces Revenue Manuals"
-    ],
-    "name_sanskrit": "खण्डी"
-  },
-  {
-    "id": "ct-trade-commerce-11",
-    "slug": "ct-ratti",
-    "name_english": "Ratti",
-    "name_hindi": "रत्ती",
-    "local_names": [
-      "रत्ती (Ratti)"
-    ],
-    "meaning": "Smallest commercial weight",
-    "category": "commercial weight",
-    "sector": "trade-commerce",
-    "modern_equivalent": "≈121.5 mg",
-    "conversion_formula": "Base Unit",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Gems, spices, medicinal products"
-    ],
-    "references": [
-      "Arthashastra; Charaka Samhita"
-    ],
-    "name_sanskrit": "रक्तिका (Raktikā)"
-  },
-  {
-    "id": "ct-trade-commerce-12",
-    "slug": "ct-masha",
-    "name_english": "Masha",
-    "name_hindi": "माशा",
-    "local_names": [
-      "माशा (Masha)"
-    ],
-    "meaning": "Small market weight",
-    "category": "commercial weight",
-    "sector": "trade-commerce",
-    "modern_equivalent": "≈0.972 g",
-    "conversion_formula": "8 Ratti = 1 Masha",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Herbs, spices, perfumes"
-    ],
-    "references": [
-      "Arthashastra"
-    ],
-    "name_sanskrit": "माष"
-  },
-  {
-    "id": "ct-trade-commerce-13",
-    "slug": "ct-tola",
-    "name_english": "Tola",
-    "name_hindi": "तोला",
-    "local_names": [
-      "तोला (Tola)"
-    ],
-    "meaning": "Standard commercial weight",
-    "category": "commercial weight",
-    "sector": "trade-commerce",
-    "modern_equivalent": "≈11.66 g",
-    "conversion_formula": "12 Masha = 1 Tola",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Gold, silver, spices"
-    ],
-    "references": [
-      "British India Standards"
-    ],
-    "name_sanskrit": "तुला"
-  },
-  {
-    "id": "ct-trade-commerce-14",
-    "slug": "ct-chhatak",
-    "name_english": "Chhatak",
-    "name_hindi": "छटाक",
-    "local_names": [
-      "छटाक (Chhatak)"
-    ],
-    "meaning": "Small retail weight",
-    "category": "market weight",
-    "sector": "trade-commerce",
-    "modern_equivalent": "≈58.3 g",
-    "conversion_formula": "5 Tola = 1 Chhatak",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Grocery items and grain"
-    ],
-    "references": [
-      "Central Provinces Gazetteers"
-    ]
-  },
-  {
-    "id": "ct-trade-commerce-15",
-    "slug": "ct-pav-pao",
-    "name_english": "Pav (Pao)",
-    "name_hindi": "पाव",
-    "local_names": [
-      "पाव (Pav (Pao))"
-    ],
-    "meaning": "Quarter Seer",
-    "category": "market weight",
-    "sector": "trade-commerce",
-    "modern_equivalent": "≈233 g",
-    "conversion_formula": "4 Chhatak = 1 Pav",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Rice, wheat, pulses, jaggery"
-    ],
-    "references": [
-      "Chhattisgarh District Gazetteers"
-    ]
-  },
-  {
-    "id": "ct-trade-commerce-16",
-    "slug": "ct-adha-seer",
-    "name_english": "Adha Seer",
-    "name_hindi": "आधा सेर",
-    "local_names": [
-      "आधा सेर (Adha Seer)"
-    ],
-    "meaning": "Half Seer",
-    "category": "market weight",
-    "sector": "trade-commerce",
-    "modern_equivalent": "≈466 g",
-    "conversion_formula": "2 Pav = 1 Half Seer",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Grocery trade"
-    ],
-    "references": [
-      "Revenue Settlement Reports"
-    ]
-  },
-  {
-    "id": "ct-trade-commerce-17",
-    "slug": "ct-seer",
-    "name_english": "Seer",
-    "name_hindi": "सेर",
-    "local_names": [
-      "सेर (Seer)"
-    ],
-    "meaning": "Standard market unit",
-    "category": "commercial weight",
-    "sector": "trade-commerce",
-    "modern_equivalent": "≈0.933 kg",
-    "conversion_formula": "2 Half Seer = 1 Seer",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Grain, oil, jaggery, cotton"
-    ],
-    "references": [
-      "Imperial Gazetteer of India"
-    ]
-  },
-  {
-    "id": "ct-trade-commerce-18",
-    "slug": "ct-pasri",
-    "name_english": "Pasri",
-    "name_hindi": "पसरी",
-    "local_names": [
-      "पसरी (Pasri)"
-    ],
-    "meaning": "Regional grain measure",
-    "category": "grain capacity",
-    "sector": "trade-commerce",
-    "modern_equivalent": "≈4.66 kg (Regional)",
-    "conversion_formula": "Usually 5 Seers = 1 Pasri (Regional)",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Grain and paddy trade"
-    ],
-    "references": [
-      "Chhattisgarh Gazetteers"
-    ]
-  },
-  {
-    "id": "ct-trade-commerce-19",
-    "slug": "ct-maund-man",
-    "name_english": "Maund (Man)",
-    "name_hindi": "मन",
-    "local_names": [
-      "मन (Maund (Man))"
-    ],
-    "meaning": "Principal wholesale unit",
-    "category": "wholesale weight",
-    "sector": "trade-commerce",
-    "modern_equivalent": "≈37.324 kg",
-    "conversion_formula": "40 Seers = 1 Maund",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Wholesale grain, cotton and salt"
-    ],
-    "references": [
-      "Government Historical Standards"
-    ],
-    "name_sanskrit": "मान"
-  },
-  {
-    "id": "ct-trade-commerce-20",
-    "slug": "ct-khandi",
-    "name_english": "Khandi",
-    "name_hindi": "खंडी",
-    "local_names": [
-      "खंडी (Khandi)"
-    ],
-    "meaning": "Warehouse and transport unit",
-    "category": "bulk commercial weight",
-    "sector": "trade-commerce",
-    "modern_equivalent": "≈746 kg (Regional)",
-    "conversion_formula": "≈20 Maunds = 1 Khandi (Regional)",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Bulk grain, rice and forest produce"
-    ],
-    "references": [
-      "Central Provinces Revenue Manuals"
-    ],
-    "name_sanskrit": "खण्डी"
-  },
-  {
-    "id": "ct-textile-handloom-21",
-    "slug": "ct-angula",
+    "id": "cg-trans-1",
+    "slug": "cg-trans-angula-1",
     "name_english": "Angula",
-    "name_hindi": "अंगुल",
-    "local_names": [
-      "अंगुल (Angula)"
-    ],
-    "meaning": "Finger-width measure",
-    "category": "length",
-    "sector": "textile-handloom",
-    "modern_equivalent": "≈1.9 cm",
-    "conversion_formula": "Base Unit",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Measuring thread width, cloth borders"
-    ],
-    "references": [
-      "Arthashastra; Mayamata"
-    ],
-    "name_sanskrit": "अङ्गुल"
-  },
-  {
-    "id": "ct-textile-handloom-22",
-    "slug": "ct-vitasti",
-    "name_english": "Vitasti",
-    "name_hindi": "वितस्ति",
-    "local_names": [
-      "वितस्ति (Vitasti)"
-    ],
-    "meaning": "Span measure",
-    "category": "length",
-    "sector": "textile-handloom",
-    "modern_equivalent": "≈22.8 cm",
-    "conversion_formula": "12 Angula = 1 Vitasti",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Measuring woven fabric"
-    ],
-    "references": [
-      "Manasara"
-    ],
-    "name_sanskrit": "वितस्ति"
-  },
-  {
-    "id": "ct-textile-handloom-23",
-    "slug": "ct-hasta",
-    "name_english": "Hasta",
-    "name_hindi": "हस्त",
-    "local_names": [
-      "हस्त (Hasta)"
-    ],
-    "meaning": "Cubit",
-    "category": "length",
-    "sector": "textile-handloom",
-    "modern_equivalent": "≈45.6 cm",
-    "conversion_formula": "24 Angula = 1 Hasta",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Measuring cloth length"
-    ],
-    "references": [
-      "Mayamata"
-    ],
-    "name_sanskrit": "हस्त"
-  },
-  {
-    "id": "ct-textile-handloom-24",
-    "slug": "ct-gaz-gaj",
-    "name_english": "Gaz (Gaj)",
-    "name_hindi": "गज़",
-    "local_names": [
-      "गज़ (Gaz (Gaj))"
-    ],
-    "meaning": "Standard cloth measure",
-    "category": "length",
-    "sector": "textile-handloom",
-    "modern_equivalent": "≈0.9144 m",
-    "conversion_formula": "≈2 Hasta = 1 Gaz",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Cloth trade"
-    ],
-    "references": [
-      "British India Standards"
-    ],
-    "name_sanskrit": "गज"
-  },
-  {
-    "id": "ct-textile-handloom-25",
-    "slug": "ct-danda",
-    "name_english": "Danda",
-    "name_hindi": "डंडा",
-    "local_names": [
-      "डंडा (Danda)"
-    ],
-    "meaning": "Long measuring rod",
-    "category": "length",
-    "sector": "textile-handloom",
-    "modern_equivalent": "≈1.82 m",
-    "conversion_formula": "4 Hasta = 1 Danda",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Loom measurement"
-    ],
-    "references": [
-      "Arthashastra"
-    ],
-    "name_sanskrit": "दण्ड"
-  },
-  {
-    "id": "ct-textile-handloom-26",
-    "slug": "ct-rajju",
-    "name_english": "Rajju",
-    "name_hindi": "रज्जु",
-    "local_names": [
-      "रज्जु (Rajju)"
-    ],
-    "meaning": "Measuring rope",
-    "category": "length",
-    "sector": "textile-handloom",
-    "modern_equivalent": "Variable",
-    "conversion_formula": "Variable rope measure",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Measuring long cloth and warp threads"
-    ],
-    "references": [
-      "Central Provinces Gazetteers"
-    ],
-    "name_sanskrit": "रज्जु"
-  },
-  {
-    "id": "ct-medicine-27",
-    "slug": "ct-ratti",
-    "name_english": "Ratti",
-    "name_hindi": "रत्ती",
-    "local_names": [
-      "रत्ती (Ratti)"
-    ],
-    "meaning": "Smallest medicinal weight",
-    "category": "medicinal weight",
-    "sector": "medicine",
-    "modern_equivalent": "≈121.5 mg",
-    "conversion_formula": "Base Unit",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Measuring potent herbs, minerals and medicines"
-    ],
-    "references": [
-      "Charaka Samhita"
-    ],
-    "name_sanskrit": "रक्तिका (Raktikā)"
-  },
-  {
-    "id": "ct-medicine-28",
-    "slug": "ct-masha",
-    "name_english": "Masha",
-    "name_hindi": "माशा",
-    "local_names": [
-      "माशा (Masha)"
-    ],
-    "meaning": "Standard small medicinal weight",
-    "category": "medicinal weight",
-    "sector": "medicine",
-    "modern_equivalent": "≈0.972 g",
-    "conversion_formula": "8 Ratti = 1 Masha",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Herbal powders and tablets"
-    ],
-    "references": [
-      "Sushruta Samhita"
-    ],
-    "name_sanskrit": "माष"
-  },
-  {
-    "id": "ct-medicine-29",
-    "slug": "ct-karsha",
-    "name_english": "Karsha",
-    "name_hindi": "कर्ष",
-    "local_names": [
-      "कर्ष (Karsha)"
-    ],
-    "meaning": "Standard Ayurvedic dosage unit",
-    "category": "medicinal weight",
-    "sector": "medicine",
-    "modern_equivalent": "≈11.66 g",
-    "conversion_formula": "12 Masha = 1 Karsha",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Herbal formulations and decoctions"
-    ],
-    "references": [
-      "Charaka Samhita"
-    ],
-    "name_sanskrit": "कर्ष"
-  },
-  {
-    "id": "ct-medicine-30",
-    "slug": "ct-pala",
-    "name_english": "Pala",
-    "name_hindi": "पल",
-    "local_names": [
-      "पल (Pala)"
-    ],
-    "meaning": "Medium medicinal weight",
-    "category": "medicinal weight",
-    "sector": "medicine",
-    "modern_equivalent": "≈46.7 g",
-    "conversion_formula": "4 Karsha = 1 Pala",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Preparation of churna, leha and ghrita"
-    ],
-    "references": [
-      "Ashtanga Hridaya"
-    ],
-    "name_sanskrit": "पल"
-  },
-  {
-    "id": "ct-medicine-31",
-    "slug": "ct-prastha",
-    "name_english": "Prastha",
-    "name_hindi": "प्रस्थ",
-    "local_names": [
-      "प्रस्थ (Prastha)"
-    ],
-    "meaning": "Standard liquid measure",
-    "category": "volume",
-    "sector": "medicine",
-    "modern_equivalent": "≈768 ml",
-    "conversion_formula": "16 Pala = 1 Prastha",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Measuring medicinal liquids"
-    ],
-    "references": [
-      "Charaka Samhita"
-    ],
-    "name_sanskrit": "प्रस्थ"
-  },
-  {
-    "id": "ct-medicine-32",
-    "slug": "ct-adhaka",
-    "name_english": "Adhaka",
-    "name_hindi": "आढ़क",
-    "local_names": [
-      "आढ़क (Adhaka)"
-    ],
-    "meaning": "Large liquid measure",
-    "category": "volume",
-    "sector": "medicine",
-    "modern_equivalent": "≈3.07 L",
-    "conversion_formula": "4 Prastha = 1 Adhaka",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Bulk medicinal preparations"
-    ],
-    "references": [
-      "Sushruta Samhita"
-    ],
-    "name_sanskrit": "आढक"
-  },
-  {
-    "id": "ct-medicine-33",
-    "slug": "ct-drona",
-    "name_english": "Drona",
-    "name_hindi": "द्रोण",
-    "local_names": [
-      "द्रोण (Drona)"
-    ],
-    "meaning": "Bulk medicinal volume",
-    "category": "volume",
-    "sector": "medicine",
-    "modern_equivalent": "≈12.3 L",
-    "conversion_formula": "4 Adhaka = 1 Drona",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Storage of medicinal liquids and herbs"
-    ],
-    "references": [
-      "Charaka Samhita"
-    ],
-    "name_sanskrit": "द्रोण"
-  },
-  {
-    "id": "ct-architecture-34",
-    "slug": "ct-angula",
-    "name_english": "Angula",
-    "name_hindi": "अंगुल",
-    "local_names": [
-      "अंगुल (Angula)"
-    ],
-    "meaning": "Smallest architectural unit",
-    "category": "length",
-    "sector": "architecture",
-    "modern_equivalent": "≈1.9 cm",
-    "conversion_formula": "Base Unit",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Measuring stones, bricks, carvings"
-    ],
-    "references": [
-      "Mayamata; Mānasāra"
-    ],
-    "name_sanskrit": "अङ्गुल"
-  },
-  {
-    "id": "ct-architecture-35",
-    "slug": "ct-vitasti",
-    "name_english": "Vitasti",
-    "name_hindi": "वितस्ति",
-    "local_names": [
-      "वितस्ति (Vitasti)"
-    ],
-    "meaning": "Span measurement",
-    "category": "length",
-    "sector": "architecture",
-    "modern_equivalent": "≈22.8 cm",
-    "conversion_formula": "12 Angula = 1 Vitasti",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Measuring wooden beams and doors"
-    ],
-    "references": [
-      "Mānasāra"
-    ],
-    "name_sanskrit": "वितस्ति"
-  },
-  {
-    "id": "ct-architecture-36",
-    "slug": "ct-hasta",
-    "name_english": "Hasta",
-    "name_hindi": "हस्त",
-    "local_names": [
-      "हस्त (Hasta)"
-    ],
-    "meaning": "Cubit",
-    "category": "length",
-    "sector": "architecture",
-    "modern_equivalent": "≈45.6 cm",
-    "conversion_formula": "24 Angula = 1 Hasta",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Measuring walls, pillars and rooms"
-    ],
-    "references": [
-      "Mayamata"
-    ],
-    "name_sanskrit": "हस्त"
-  },
-  {
-    "id": "ct-architecture-37",
-    "slug": "ct-danda",
-    "name_english": "Danda",
-    "name_hindi": "डंडा",
-    "local_names": [
-      "डंडा (Danda)"
-    ],
-    "meaning": "Measuring rod",
-    "category": "length",
-    "sector": "architecture",
-    "modern_equivalent": "≈1.82 m",
-    "conversion_formula": "4 Hasta = 1 Danda",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Layout of buildings and roads"
-    ],
-    "references": [
-      "Arthashastra"
-    ],
-    "name_sanskrit": "दण्ड"
-  },
-  {
-    "id": "ct-architecture-38",
-    "slug": "ct-rajju",
-    "name_english": "Rajju",
-    "name_hindi": "रज्जु",
-    "local_names": [
-      "रज्जु (Rajju)"
-    ],
-    "meaning": "Measuring rope",
-    "category": "length",
-    "sector": "architecture",
-    "modern_equivalent": "Variable",
-    "conversion_formula": "Variable rope measure",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Site layout and land alignment"
-    ],
-    "references": [
-      "Samarāṅgaṇa Sūtradhāra"
-    ],
-    "name_sanskrit": "रज्जु"
-  },
-  {
-    "id": "ct-architecture-39",
-    "slug": "ct-krosha",
-    "name_english": "Krosha",
-    "name_hindi": "कोस",
-    "local_names": [
-      "कोस (Krosha)"
-    ],
-    "meaning": "Long-distance measure",
-    "category": "distance",
-    "sector": "architecture",
-    "modern_equivalent": "≈3.2 km",
-    "conversion_formula": "2000 Danda = 1 Krosha",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Distance between settlements and construction sites"
-    ],
-    "references": [
-      "Arthashastra"
-    ],
-    "name_sanskrit": "क्रोश"
-  },
-  {
-    "id": "ct-architecture-40",
-    "slug": "ct-yojana",
-    "name_english": "Yojana",
-    "name_hindi": "योजन",
-    "local_names": [
-      "योजन (Yojana)"
-    ],
-    "meaning": "Largest traditional distance unit",
-    "category": "distance",
-    "sector": "architecture",
-    "modern_equivalent": "≈12.8 km",
-    "conversion_formula": "4 Krosha = 1 Yojana",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Planning roads and large public works"
-    ],
-    "references": [
-      "Arthashastra; Puranas"
-    ],
-    "name_sanskrit": "योजन"
-  },
-  {
-    "id": "ct-transportation-distance-41",
-    "slug": "ct-angula",
-    "name_english": "Angula",
-    "name_hindi": "अंगुल",
-    "local_names": [
-      "अंगुल (Angula)"
-    ],
-    "meaning": "Smallest traditional length",
     "category": "length",
     "sector": "transportation-distance",
-    "modern_equivalent": "≈1.9 cm",
-    "conversion_formula": "Base Unit",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "अङ्गुल",
+    "local_names": [
+      "अंगुल"
+    ],
+    "name_hindi": "अंगुल",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈1.9 cm",
+    "conversion_formula": "Base Unit",
+    "meaning": "Smallest traditional length",
+    "historical_context": "Measuring small objects, wheel parts",
     "used_in": [
       "Measuring small objects, wheel parts"
     ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Arthashastra"
     ],
-    "name_sanskrit": "अङ्गुल"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "transportation-distance",
+      "angula",
+      "length"
+    ]
   },
   {
-    "id": "ct-transportation-distance-42",
-    "slug": "ct-vitasti",
+    "id": "cg-trans-2",
+    "slug": "cg-trans-vitasti-2",
     "name_english": "Vitasti",
-    "name_hindi": "वितस्ति",
-    "local_names": [
-      "वितस्ति (Vitasti)"
-    ],
-    "meaning": "Span measurement",
     "category": "length",
     "sector": "transportation-distance",
-    "modern_equivalent": "≈22.8 cm",
-    "conversion_formula": "12 Angula = 1 Vitasti",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "वितस्ति",
+    "local_names": [
+      "वितस्ति"
+    ],
+    "name_hindi": "वितस्ति",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈22.8 cm",
+    "conversion_formula": "12 Angula = 1 Vitasti",
+    "meaning": "Span measurement",
+    "historical_context": "Measuring wooden carts and equipment",
     "used_in": [
       "Measuring wooden carts and equipment"
     ],
+    "historical_period": "Ancient–Medieval",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Manusmriti"
     ],
-    "name_sanskrit": "वितस्ति"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "transportation-distance",
+      "vitasti",
+      "length"
+    ]
   },
   {
-    "id": "ct-transportation-distance-43",
-    "slug": "ct-hasta",
+    "id": "cg-trans-3",
+    "slug": "cg-trans-hasta-3",
     "name_english": "Hasta",
-    "name_hindi": "हस्त",
-    "local_names": [
-      "हस्त (Hasta)"
-    ],
-    "meaning": "Cubit",
     "category": "length",
     "sector": "transportation-distance",
-    "modern_equivalent": "≈45.6 cm",
-    "conversion_formula": "24 Angula = 1 Hasta",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "हस्त",
+    "local_names": [
+      "हस्त"
+    ],
+    "name_hindi": "हस्त",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈45.6 cm",
+    "conversion_formula": "24 Angula = 1 Hasta",
+    "meaning": "Cubit",
+    "historical_context": "Measuring bullock carts and transport equipment",
     "used_in": [
       "Measuring bullock carts and transport equipment"
     ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Mayamata"
     ],
-    "name_sanskrit": "हस्त"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "transportation-distance",
+      "hasta",
+      "length"
+    ]
   },
   {
-    "id": "ct-transportation-distance-44",
-    "slug": "ct-danda",
+    "id": "cg-trans-4",
+    "slug": "cg-trans-danda-4",
     "name_english": "Danda",
-    "name_hindi": "डंडा",
-    "local_names": [
-      "डंडा (Danda)"
-    ],
-    "meaning": "Standard measuring rod",
     "category": "length",
     "sector": "transportation-distance",
-    "modern_equivalent": "≈1.82 m",
-    "conversion_formula": "4 Hasta = 1 Danda",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "दण्ड",
+    "local_names": [
+      "डंडा"
+    ],
+    "name_hindi": "डंडा",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈1.82 m",
+    "conversion_formula": "4 Hasta = 1 Danda",
+    "meaning": "Standard measuring rod",
+    "historical_context": "Measuring roads and pathways",
     "used_in": [
       "Measuring roads and pathways"
     ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Arthashastra"
     ],
-    "name_sanskrit": "दण्ड"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "transportation-distance",
+      "danda",
+      "length"
+    ]
   },
   {
-    "id": "ct-transportation-distance-45",
-    "slug": "ct-rajju",
+    "id": "cg-trans-5",
+    "slug": "cg-trans-rajju-5",
     "name_english": "Rajju",
-    "name_hindi": "रज्जु",
-    "local_names": [
-      "रज्जु (Rajju)"
-    ],
-    "meaning": "Measuring rope",
     "category": "length",
     "sector": "transportation-distance",
-    "modern_equivalent": "Variable",
-    "conversion_formula": "Variable rope measure",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "रज्जु",
+    "local_names": [
+      "रज्जु"
+    ],
+    "name_hindi": "रज्जु",
+    "measurement_type": "Length",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Variable rope measure",
+    "meaning": "Measuring rope",
+    "historical_context": "Surveying roads, bridges, and ferries",
     "used_in": [
       "Surveying roads, bridges, and ferries"
     ],
+    "historical_period": "Ancient–Colonial",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Central Provinces Survey Records"
     ],
-    "name_sanskrit": "रज्जु"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "transportation-distance",
+      "rajju",
+      "length"
+    ]
   },
   {
-    "id": "ct-transportation-distance-46",
-    "slug": "ct-krosha-kos",
+    "id": "cg-trans-6",
+    "slug": "cg-trans-krosha-kos-6",
     "name_english": "Krosha (Kos)",
-    "name_hindi": "कोस",
-    "local_names": [
-      "कोस (Krosha (Kos))"
-    ],
-    "meaning": "Standard travel distance",
-    "category": "distance",
+    "category": "length",
     "sector": "transportation-distance",
-    "modern_equivalent": "≈3.2 km",
-    "conversion_formula": "2000 Danda = 1 Krosha",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "क्रोश",
+    "local_names": [
+      "कोस"
+    ],
+    "name_hindi": "कोस",
+    "measurement_type": "Distance",
+    "modern_equivalent": "≈3.2 km",
+    "conversion_formula": "2000 Danda = 1 Krosha",
+    "meaning": "Standard travel distance",
+    "historical_context": "Measuring travel distance between villages",
     "used_in": [
       "Measuring travel distance between villages"
     ],
+    "historical_period": "Ancient–Colonial",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Arthashastra"
     ],
-    "name_sanskrit": "क्रोश"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "transportation-distance",
+      "krosha-kos",
+      "length"
+    ]
   },
   {
-    "id": "ct-transportation-distance-47",
-    "slug": "ct-yojana",
+    "id": "cg-trans-7",
+    "slug": "cg-trans-yojana-7",
     "name_english": "Yojana",
-    "name_hindi": "योजन",
-    "local_names": [
-      "योजन (Yojana)"
-    ],
-    "meaning": "Largest traditional distance unit",
-    "category": "distance",
+    "category": "length",
     "sector": "transportation-distance",
-    "modern_equivalent": "≈12.8 km",
-    "conversion_formula": "4 Krosha = 1 Yojana",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "योजन",
+    "local_names": [
+      "योजन"
+    ],
+    "name_hindi": "योजन",
+    "measurement_type": "Distance",
+    "modern_equivalent": "≈12.8 km",
+    "conversion_formula": "4 Krosha = 1 Yojana",
+    "meaning": "Largest traditional distance unit",
+    "historical_context": "Long-distance routes, military movement",
     "used_in": [
       "Long-distance routes, military movement"
     ],
+    "historical_period": "Ancient–Medieval",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
-      "Arthashastra; Puranas"
+      "Arthashastra",
+      "Puranas"
     ],
-    "name_sanskrit": "योजन"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "transportation-distance",
+      "yojana",
+      "length"
+    ]
   },
   {
-    "id": "ct-land-measurement-48",
-    "slug": "ct-square-gaj",
+    "id": "cg-land-1",
+    "slug": "cg-land-square-gaj-1",
     "name_english": "Square Gaj",
-    "name_hindi": "वर्ग गज़",
-    "local_names": [
-      "वर्ग गज़ (Square Gaj)"
-    ],
-    "meaning": "Smallest commonly used area unit",
-    "category": "land area",
+    "category": "area",
     "sector": "land-measurement",
-    "modern_equivalent": "≈0.8361 m²",
-    "conversion_formula": "Base Unit",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "गज",
+    "local_names": [
+      "वर्ग गज़"
+    ],
+    "name_hindi": "वर्ग गज़",
+    "measurement_type": "Land Area",
+    "modern_equivalent": "≈0.8361 m²",
+    "conversion_formula": "Base Unit",
+    "meaning": "Smallest commonly used area unit",
+    "historical_context": "Measuring house plots and small land parcels",
     "used_in": [
       "Measuring house plots and small land parcels"
     ],
+    "historical_period": "Mughal–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Imperial Gazetteer of India"
     ],
-    "name_sanskrit": "गज"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "land-measurement",
+      "square-gaj",
+      "area"
+    ]
   },
   {
-    "id": "ct-land-measurement-49",
-    "slug": "ct-biswansi",
+    "id": "cg-land-2",
+    "slug": "cg-land-biswansi-2",
     "name_english": "Biswansi",
-    "name_hindi": "बिसवांसी",
-    "local_names": [
-      "बिसवांसी (Biswansi)"
-    ],
-    "meaning": "Smallest agricultural subdivision",
-    "category": "land area",
+    "category": "area",
     "sector": "land-measurement",
-    "modern_equivalent": "Regional Variation",
-    "conversion_formula": "20 Biswansi = 1 Biswa",
+    "origin": "Raipur, Bilaspur",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "बिसवांसी"
+    ],
+    "name_hindi": "बिसवांसी",
+    "measurement_type": "Land Area",
+    "modern_equivalent": "Regional Variation",
+    "conversion_formula": "20 Biswansi = 1 Biswa",
+    "meaning": "Smallest agricultural subdivision",
+    "historical_context": "Small revenue subdivision",
     "used_in": [
       "Small revenue subdivision"
     ],
+    "historical_period": "Mughal–British",
+    "region_applicable": "Raipur, Bilaspur",
     "references": [
       "Settlement Reports"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "land-measurement",
+      "biswansi",
+      "area"
     ]
   },
   {
-    "id": "ct-land-measurement-50",
-    "slug": "ct-biswa",
+    "id": "cg-land-3",
+    "slug": "cg-land-biswa-3",
     "name_english": "Biswa",
-    "name_hindi": "बिस्वा",
-    "local_names": [
-      "बिस्वा (Biswa)"
-    ],
-    "meaning": "Revenue land subdivision",
-    "category": "land area",
+    "category": "area",
     "sector": "land-measurement",
-    "modern_equivalent": "Regional Variation",
-    "conversion_formula": "20 Biswa = 1 Bigha",
+    "origin": "Raipur, Durg, Bilaspur",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "बिस्वा"
+    ],
+    "name_hindi": "बिस्वा",
+    "measurement_type": "Land Area",
+    "modern_equivalent": "Regional Variation",
+    "conversion_formula": "20 Biswa = 1 Bigha",
+    "meaning": "Revenue land subdivision",
+    "historical_context": "Agricultural land records",
     "used_in": [
       "Agricultural land records"
     ],
+    "historical_period": "Mughal–British",
+    "region_applicable": "Raipur, Durg, Bilaspur",
     "references": [
       "Chhattisgarh District Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "land-measurement",
+      "biswa",
+      "area"
     ]
   },
   {
-    "id": "ct-land-measurement-51",
-    "slug": "ct-bigha",
+    "id": "cg-land-4",
+    "slug": "cg-land-bigha-4",
     "name_english": "Bigha",
-    "name_hindi": "बीघा",
-    "local_names": [
-      "बीघा (Bigha)"
-    ],
-    "meaning": "Principal traditional land unit",
-    "category": "land area",
+    "category": "area",
     "sector": "land-measurement",
-    "modern_equivalent": "≈0.25–0.67 hectare (district dependent)",
-    "conversion_formula": "20 Biswa = 1 Bigha",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "बीघा"
+    ],
+    "name_hindi": "बीघा",
+    "measurement_type": "Land Area",
+    "modern_equivalent": "≈0.25–0.67 hectare (district dependent)",
+    "conversion_formula": "20 Biswa = 1 Bigha",
+    "meaning": "Principal traditional land unit",
+    "historical_context": "Agricultural fields and land revenue",
     "used_in": [
       "Agricultural fields and land revenue"
     ],
+    "historical_period": "Mughal–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Central Provinces Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "land-measurement",
+      "bigha",
+      "area"
     ]
   },
   {
-    "id": "ct-land-measurement-52",
-    "slug": "ct-acre",
+    "id": "cg-land-5",
+    "slug": "cg-land-acre-5",
     "name_english": "Acre",
-    "name_hindi": "एकड़",
-    "local_names": [
-      "एकड़ (Acre)"
-    ],
-    "meaning": "British standard land unit",
-    "category": "land area",
+    "category": "area",
     "sector": "land-measurement",
-    "modern_equivalent": "4046.86 m²",
-    "conversion_formula": "1 Acre = 4840 Square Yards",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "एकड़"
+    ],
+    "name_hindi": "एकड़",
+    "measurement_type": "Land Area",
+    "modern_equivalent": "4046.86 m²",
+    "conversion_formula": "1 Acre = 4840 Square Yards",
+    "meaning": "British standard land unit",
+    "historical_context": "Land surveys and revenue administration",
     "used_in": [
       "Land surveys and revenue administration"
     ],
+    "historical_period": "British–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "British Revenue Records"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "land-measurement",
+      "acre",
+      "area"
     ]
   },
   {
-    "id": "ct-land-measurement-53",
-    "slug": "ct-hectare",
+    "id": "cg-land-6",
+    "slug": "cg-land-hectare-6",
     "name_english": "Hectare",
-    "name_hindi": "हेक्टेयर",
-    "local_names": [
-      "हेक्टेयर (Hectare)"
-    ],
-    "meaning": "Official metric land unit",
-    "category": "land area",
+    "category": "area",
     "sector": "land-measurement",
-    "modern_equivalent": "10,000 m²",
-    "conversion_formula": "1 Hectare = 2.471 Acres",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "हेक्टेयर"
+    ],
+    "name_hindi": "हेक्टेयर",
+    "measurement_type": "Land Area",
+    "modern_equivalent": "10,000 m²",
+    "conversion_formula": "1 Hectare = 2.471 Acres",
+    "meaning": "Official metric land unit",
+    "historical_context": "Modern land records",
     "used_in": [
       "Modern land records"
     ],
+    "historical_period": "1958–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Government of India"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "land-measurement",
+      "hectare",
+      "area"
     ]
   },
   {
-    "id": "ct-livestock-dairy-54",
-    "slug": "ct-ratti",
+    "id": "cg-dairy-1",
+    "slug": "cg-dairy-ratti-1",
     "name_english": "Ratti",
-    "name_hindi": "रत्ती",
-    "local_names": [
-      "रत्ती (Ratti)"
-    ],
-    "meaning": "Smallest traditional weight",
     "category": "weight",
     "sector": "livestock-dairy",
-    "modern_equivalent": "≈121.5 mg",
-    "conversion_formula": "Base Unit",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "रक्तिका (Raktikā)",
+    "local_names": [
+      "रत्ती"
+    ],
+    "name_hindi": "रत्ती",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈121.5 mg",
+    "conversion_formula": "Base Unit",
+    "meaning": "Smallest traditional weight",
+    "historical_context": "Veterinary medicines and herbal preparations",
     "used_in": [
       "Veterinary medicines and herbal preparations"
     ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Charaka Samhita"
     ],
-    "name_sanskrit": "रक्तिका (Raktikā)"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "livestock-dairy",
+      "ratti",
+      "weight"
+    ]
   },
   {
-    "id": "ct-livestock-dairy-55",
-    "slug": "ct-masha",
+    "id": "cg-dairy-2",
+    "slug": "cg-dairy-masha-2",
     "name_english": "Masha",
-    "name_hindi": "माशा",
-    "local_names": [
-      "माशा (Masha)"
-    ],
-    "meaning": "Small medicinal weight",
     "category": "weight",
     "sector": "livestock-dairy",
-    "modern_equivalent": "≈0.972 g",
-    "conversion_formula": "8 Ratti = 1 Masha",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "माष",
+    "local_names": [
+      "माशा"
+    ],
+    "name_hindi": "माशा",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.972 g",
+    "conversion_formula": "8 Ratti = 1 Masha",
+    "meaning": "Small medicinal weight",
+    "historical_context": "Measuring veterinary medicines",
     "used_in": [
       "Measuring veterinary medicines"
     ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Sushruta Samhita"
     ],
-    "name_sanskrit": "माष"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "livestock-dairy",
+      "masha",
+      "weight"
+    ]
   },
   {
-    "id": "ct-livestock-dairy-56",
-    "slug": "ct-tola",
+    "id": "cg-dairy-3",
+    "slug": "cg-dairy-tola-3",
     "name_english": "Tola",
-    "name_hindi": "तोला",
-    "local_names": [
-      "तोला (Tola)"
-    ],
-    "meaning": "Standard dairy weight",
     "category": "weight",
     "sector": "livestock-dairy",
-    "modern_equivalent": "≈11.66 g",
-    "conversion_formula": "12 Masha = 1 Tola",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "तुला",
+    "local_names": [
+      "तोला"
+    ],
+    "name_hindi": "तोला",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "12 Masha = 1 Tola",
+    "meaning": "Standard dairy weight",
+    "historical_context": "Ghee, butter, medicinal ingredients",
     "used_in": [
       "Ghee, butter, medicinal ingredients"
     ],
+    "historical_period": "Mughal–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "British India Standards"
     ],
-    "name_sanskrit": "तुला"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "livestock-dairy",
+      "tola",
+      "weight"
+    ]
   },
   {
-    "id": "ct-livestock-dairy-57",
-    "slug": "ct-chhatak",
+    "id": "cg-dairy-4",
+    "slug": "cg-dairy-chhatak-4",
     "name_english": "Chhatak",
-    "name_hindi": "छटाक",
-    "local_names": [
-      "छटाक (Chhatak)"
-    ],
-    "meaning": "Small dairy measure",
     "category": "weight",
     "sector": "livestock-dairy",
-    "modern_equivalent": "≈58.3 g",
-    "conversion_formula": "5 Tola = 1 Chhatak",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "छटाक"
+    ],
+    "name_hindi": "छटाक",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈58.3 g",
+    "conversion_formula": "5 Tola = 1 Chhatak",
+    "meaning": "Small dairy measure",
+    "historical_context": "Butter, ghee, cheese",
     "used_in": [
       "Butter, ghee, cheese"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Central Provinces Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "livestock-dairy",
+      "chhatak",
+      "weight"
     ]
   },
   {
-    "id": "ct-livestock-dairy-58",
-    "slug": "ct-pav-pao",
+    "id": "cg-dairy-5",
+    "slug": "cg-dairy-pav-pao-5",
     "name_english": "Pav (Pao)",
-    "name_hindi": "पाव",
-    "local_names": [
-      "पाव (Pav (Pao))"
-    ],
-    "meaning": "Quarter Seer",
     "category": "weight",
     "sector": "livestock-dairy",
-    "modern_equivalent": "≈233 g / ≈250 ml",
-    "conversion_formula": "4 Chhatak = 1 Pav",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "पाव"
+    ],
+    "name_hindi": "पाव",
+    "measurement_type": "Weight / Capacity",
+    "modern_equivalent": "≈233 g / ≈250 ml",
+    "conversion_formula": "4 Chhatak = 1 Pav",
+    "meaning": "Quarter Seer",
+    "historical_context": "Milk and curd",
     "used_in": [
       "Milk and curd"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Chhattisgarh District Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "livestock-dairy",
+      "pav-pao",
+      "weight"
     ]
   },
   {
-    "id": "ct-livestock-dairy-59",
-    "slug": "ct-adha-seer",
+    "id": "cg-dairy-6",
+    "slug": "cg-dairy-adha-seer-6",
     "name_english": "Adha Seer",
-    "name_hindi": "आधा सेर",
-    "local_names": [
-      "आधा सेर (Adha Seer)"
-    ],
-    "meaning": "Half Seer",
     "category": "weight",
     "sector": "livestock-dairy",
-    "modern_equivalent": "≈466 g / ≈500 ml",
-    "conversion_formula": "2 Pav = 1 Half Seer",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "आधा सेर"
+    ],
+    "name_hindi": "आधा सेर",
+    "measurement_type": "Weight / Capacity",
+    "modern_equivalent": "≈466 g / ≈500 ml",
+    "conversion_formula": "2 Pav = 1 Half Seer",
+    "meaning": "Half Seer",
+    "historical_context": "Milk, curd, buttermilk",
     "used_in": [
       "Milk, curd, buttermilk"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Revenue Settlement Reports"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "livestock-dairy",
+      "adha-seer",
+      "weight"
     ]
   },
   {
-    "id": "ct-livestock-dairy-60",
-    "slug": "ct-seer",
+    "id": "cg-dairy-7",
+    "slug": "cg-dairy-seer-7",
     "name_english": "Seer",
-    "name_hindi": "सेर",
-    "local_names": [
-      "सेर (Seer)"
-    ],
-    "meaning": "Standard dairy unit",
     "category": "weight",
     "sector": "livestock-dairy",
-    "modern_equivalent": "≈0.933 kg / ≈0.93 L",
-    "conversion_formula": "2 Half Seer = 1 Seer",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "सेर"
+    ],
+    "name_hindi": "सेर",
+    "measurement_type": "Weight / Capacity",
+    "modern_equivalent": "≈0.933 kg / ≈0.93 L",
+    "conversion_formula": "2 Half Seer = 1 Seer",
+    "meaning": "Standard dairy unit",
+    "historical_context": "Milk, ghee, butter, fodder",
     "used_in": [
       "Milk, ghee, butter, fodder"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Imperial Gazetteer of India"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "livestock-dairy",
+      "seer",
+      "weight"
     ]
   },
   {
-    "id": "ct-livestock-dairy-61",
-    "slug": "ct-maund-man",
+    "id": "cg-dairy-8",
+    "slug": "cg-dairy-maund-man-8",
     "name_english": "Maund (Man)",
-    "name_hindi": "मन",
-    "local_names": [
-      "मन (Maund (Man))"
-    ],
-    "meaning": "Principal bulk dairy unit",
-    "category": "bulk weight",
+    "category": "weight",
     "sector": "livestock-dairy",
-    "modern_equivalent": "≈37.324 kg",
-    "conversion_formula": "40 Seers = 1 Maund",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "मान",
+    "local_names": [
+      "मन"
+    ],
+    "name_hindi": "मन",
+    "measurement_type": "Bulk Weight",
+    "modern_equivalent": "≈37.324 kg",
+    "conversion_formula": "40 Seers = 1 Maund",
+    "meaning": "Principal bulk dairy unit",
+    "historical_context": "Bulk cattle feed and fodder",
     "used_in": [
       "Bulk cattle feed and fodder"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Government Historical Standards"
     ],
-    "name_sanskrit": "मान"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "livestock-dairy",
+      "maund-man",
+      "weight"
+    ]
   },
   {
-    "id": "ct-household-62",
-    "slug": "ct-ratti",
+    "id": "cg-hh-1",
+    "slug": "cg-hh-ratti-1",
     "name_english": "Ratti",
-    "name_hindi": "रत्ती",
-    "local_names": [
-      "रत्ती (Ratti)"
-    ],
-    "meaning": "Smallest household weight",
     "category": "weight",
     "sector": "household",
-    "modern_equivalent": "≈121.5 mg",
-    "conversion_formula": "Base Unit",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "रक्तिका (Raktikā)",
+    "local_names": [
+      "रत्ती"
+    ],
+    "name_hindi": "रत्ती",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈121.5 mg",
+    "conversion_formula": "Base Unit",
+    "meaning": "Smallest household weight",
+    "historical_context": "Measuring spices and medicines",
     "used_in": [
       "Measuring spices and medicines"
     ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Charaka Samhita"
     ],
-    "name_sanskrit": "रक्तिका (Raktikā)"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "household",
+      "ratti",
+      "weight"
+    ]
   },
   {
-    "id": "ct-household-63",
-    "slug": "ct-masha",
+    "id": "cg-hh-2",
+    "slug": "cg-hh-masha-2",
     "name_english": "Masha",
-    "name_hindi": "माशा",
-    "local_names": [
-      "माशा (Masha)"
-    ],
-    "meaning": "Small household weight",
     "category": "weight",
     "sector": "household",
-    "modern_equivalent": "≈0.972 g",
-    "conversion_formula": "8 Ratti = 1 Masha",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "माष",
+    "local_names": [
+      "माशा"
+    ],
+    "name_hindi": "माशा",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.972 g",
+    "conversion_formula": "8 Ratti = 1 Masha",
+    "meaning": "Small household weight",
+    "historical_context": "Measuring spices and herbal ingredients",
     "used_in": [
       "Measuring spices and herbal ingredients"
     ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Sushruta Samhita"
     ],
-    "name_sanskrit": "माष"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "household",
+      "masha",
+      "weight"
+    ]
   },
   {
-    "id": "ct-household-64",
-    "slug": "ct-tola",
+    "id": "cg-hh-3",
+    "slug": "cg-hh-tola-3",
     "name_english": "Tola",
-    "name_hindi": "तोला",
-    "local_names": [
-      "तोला (Tola)"
-    ],
-    "meaning": "Standard household weight",
     "category": "weight",
     "sector": "household",
-    "modern_equivalent": "≈11.66 g",
-    "conversion_formula": "12 Masha = 1 Tola",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "तुला",
+    "local_names": [
+      "तोला"
+    ],
+    "name_hindi": "तोला",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "12 Masha = 1 Tola",
+    "meaning": "Standard household weight",
+    "historical_context": "Measuring ghee, spices and valuable ingredients",
     "used_in": [
       "Measuring ghee, spices and valuable ingredients"
     ],
+    "historical_period": "Mughal–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "British India Standards"
     ],
-    "name_sanskrit": "तुला"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "household",
+      "tola",
+      "weight"
+    ]
   },
   {
-    "id": "ct-household-65",
-    "slug": "ct-chhatak",
+    "id": "cg-hh-4",
+    "slug": "cg-hh-chhatak-4",
     "name_english": "Chhatak",
-    "name_hindi": "छटाक",
-    "local_names": [
-      "छटाक (Chhatak)"
-    ],
-    "meaning": "Small domestic measure",
     "category": "weight",
     "sector": "household",
-    "modern_equivalent": "≈58.3 g",
-    "conversion_formula": "5 Tola = 1 Chhatak",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "छटाक"
+    ],
+    "name_hindi": "छटाक",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈58.3 g",
+    "conversion_formula": "5 Tola = 1 Chhatak",
+    "meaning": "Small domestic measure",
+    "historical_context": "Sugar, flour, pulses",
     "used_in": [
       "Sugar, flour, pulses"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Central Provinces Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "household",
+      "chhatak",
+      "weight"
     ]
   },
   {
-    "id": "ct-household-66",
-    "slug": "ct-pav-pao",
+    "id": "cg-hh-5",
+    "slug": "cg-hh-pav-pao-5",
     "name_english": "Pav (Pao)",
-    "name_hindi": "पाव",
-    "local_names": [
-      "पाव (Pav (Pao))"
-    ],
-    "meaning": "Quarter Seer",
     "category": "weight",
     "sector": "household",
-    "modern_equivalent": "≈233 g",
-    "conversion_formula": "4 Chhatak = 1 Pav",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "पाव"
+    ],
+    "name_hindi": "पाव",
+    "measurement_type": "Weight / Capacity",
+    "modern_equivalent": "≈233 g",
+    "conversion_formula": "4 Chhatak = 1 Pav",
+    "meaning": "Quarter Seer",
+    "historical_context": "Rice, wheat flour, edible oil",
     "used_in": [
       "Rice, wheat flour, edible oil"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Chhattisgarh District Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "household",
+      "pav-pao",
+      "weight"
     ]
   },
   {
-    "id": "ct-household-67",
-    "slug": "ct-adha-seer",
+    "id": "cg-hh-6",
+    "slug": "cg-hh-adha-seer-6",
     "name_english": "Adha Seer",
-    "name_hindi": "आधा सेर",
-    "local_names": [
-      "आधा सेर (Adha Seer)"
-    ],
-    "meaning": "Half Seer",
     "category": "weight",
     "sector": "household",
-    "modern_equivalent": "≈466 g",
-    "conversion_formula": "2 Pav = 1 Half Seer",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "आधा सेर"
+    ],
+    "name_hindi": "आधा सेर",
+    "measurement_type": "Weight / Capacity",
+    "modern_equivalent": "≈466 g",
+    "conversion_formula": "2 Pav = 1 Half Seer",
+    "meaning": "Half Seer",
+    "historical_context": "Cereals, pulses, oil",
     "used_in": [
       "Cereals, pulses, oil"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Revenue Settlement Reports"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "household",
+      "adha-seer",
+      "weight"
     ]
   },
   {
-    "id": "ct-household-68",
-    "slug": "ct-seer",
+    "id": "cg-hh-7",
+    "slug": "cg-hh-seer-7",
     "name_english": "Seer",
-    "name_hindi": "सेर",
-    "local_names": [
-      "सेर (Seer)"
-    ],
-    "meaning": "Principal household measure",
     "category": "weight",
     "sector": "household",
-    "modern_equivalent": "≈0.933 kg / ≈0.93 L",
-    "conversion_formula": "2 Half Seer = 1 Seer",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "सेर"
+    ],
+    "name_hindi": "सेर",
+    "measurement_type": "Weight / Capacity",
+    "modern_equivalent": "≈0.933 kg / ≈0.93 L",
+    "conversion_formula": "2 Half Seer = 1 Seer",
+    "meaning": "Principal household measure",
+    "historical_context": "Rice, wheat, pulses, milk, oil",
     "used_in": [
       "Rice, wheat, pulses, milk, oil"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Imperial Gazetteer of India"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "household",
+      "seer",
+      "weight"
     ]
   },
   {
-    "id": "ct-household-69",
-    "slug": "ct-maund-man",
+    "id": "cg-hh-8",
+    "slug": "cg-hh-maund-man-8",
     "name_english": "Maund (Man)",
-    "name_hindi": "मन",
-    "local_names": [
-      "मन (Maund (Man))"
-    ],
-    "meaning": "Bulk storage unit",
-    "category": "bulk weight",
+    "category": "weight",
     "sector": "household",
-    "modern_equivalent": "≈37.324 kg",
-    "conversion_formula": "40 Seers = 1 Maund",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "मान",
+    "local_names": [
+      "मन"
+    ],
+    "name_hindi": "मन",
+    "measurement_type": "Bulk Weight",
+    "modern_equivalent": "≈37.324 kg",
+    "conversion_formula": "40 Seers = 1 Maund",
+    "meaning": "Bulk storage unit",
+    "historical_context": "Household grain storage",
     "used_in": [
       "Household grain storage"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Government Historical Standards"
     ],
-    "name_sanskrit": "मान"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "household",
+      "maund-man",
+      "weight"
+    ]
   },
   {
-    "id": "ct-gold-jewellery-70",
-    "slug": "ct-ratti",
+    "id": "cg-gold-1",
+    "slug": "cg-gold-ratti-1",
     "name_english": "Ratti",
-    "name_hindi": "रत्ती",
-    "local_names": [
-      "रत्ती (Ratti)"
-    ],
-    "meaning": "Smallest traditional jewellery weight",
-    "category": "precious metal weight",
+    "category": "weight",
     "sector": "gold-jewellery",
-    "modern_equivalent": "≈121.5 mg",
-    "conversion_formula": "Base Unit",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "रक्तिका (Raktikā)",
+    "local_names": [
+      "रत्ती"
+    ],
+    "name_hindi": "रत्ती",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "≈121.5 mg",
+    "conversion_formula": "Base Unit",
+    "meaning": "Smallest traditional jewellery weight",
+    "historical_context": "Weighing gemstones, pearls and gold",
     "used_in": [
       "Weighing gemstones, pearls and gold"
     ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
-      "Arthashastra; Charaka Samhita"
+      "Arthashastra",
+      "Charaka Samhita"
     ],
-    "name_sanskrit": "रक्तिका (Raktikā)"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "gold-jewellery",
+      "ratti",
+      "weight"
+    ]
   },
   {
-    "id": "ct-gold-jewellery-71",
-    "slug": "ct-masha",
+    "id": "cg-gold-2",
+    "slug": "cg-gold-masha-2",
     "name_english": "Masha",
-    "name_hindi": "माशा",
-    "local_names": [
-      "माशा (Masha)"
-    ],
-    "meaning": "Standard small jewellery weight",
-    "category": "precious metal weight",
+    "category": "weight",
     "sector": "gold-jewellery",
-    "modern_equivalent": "≈0.972 g",
-    "conversion_formula": "8 Ratti = 1 Masha",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "माष",
+    "local_names": [
+      "माशा"
+    ],
+    "name_hindi": "माशा",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "≈0.972 g",
+    "conversion_formula": "8 Ratti = 1 Masha",
+    "meaning": "Standard small jewellery weight",
+    "historical_context": "Gold ornaments and silver articles",
     "used_in": [
       "Gold ornaments and silver articles"
     ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Sushruta Samhita"
     ],
-    "name_sanskrit": "माष"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "gold-jewellery",
+      "masha",
+      "weight"
+    ]
   },
   {
-    "id": "ct-gold-jewellery-72",
-    "slug": "ct-tola",
+    "id": "cg-gold-3",
+    "slug": "cg-gold-tola-3",
     "name_english": "Tola",
-    "name_hindi": "तोला",
-    "local_names": [
-      "तोला (Tola)"
-    ],
-    "meaning": "Principal jewellery unit",
-    "category": "precious metal weight",
+    "category": "weight",
     "sector": "gold-jewellery",
-    "modern_equivalent": "≈11.66 g",
-    "conversion_formula": "12 Masha = 1 Tola",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "तुला",
+    "local_names": [
+      "तोला"
+    ],
+    "name_hindi": "तोला",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "12 Masha = 1 Tola",
+    "meaning": "Principal jewellery unit",
+    "historical_context": "Standard unit for gold and silver trade",
     "used_in": [
       "Standard unit for gold and silver trade"
     ],
+    "historical_period": "Mughal–Present",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "British India Standards"
     ],
-    "name_sanskrit": "तुला"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "gold-jewellery",
+      "tola",
+      "weight"
+    ]
   },
   {
-    "id": "ct-gold-jewellery-73",
-    "slug": "ct-karsha",
+    "id": "cg-gold-4",
+    "slug": "cg-gold-karsha-4",
     "name_english": "Karsha",
-    "name_hindi": "कर्ष",
-    "local_names": [
-      "कर्ष (Karsha)"
-    ],
-    "meaning": "Classical Sanskrit weight unit",
-    "category": "precious metal weight",
+    "category": "weight",
     "sector": "gold-jewellery",
-    "modern_equivalent": "≈11.66 g",
-    "conversion_formula": "≈1 Tola (Traditional Ayurvedic Standard)",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "कर्ष",
+    "local_names": [
+      "कर्ष"
+    ],
+    "name_hindi": "कर्ष",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "≈1 Tola (Traditional Ayurvedic Standard)",
+    "meaning": "Classical Sanskrit weight unit",
+    "historical_context": "Ancient weighing of precious metals and medicinal metals",
     "used_in": [
       "Ancient weighing of precious metals and medicinal metals"
     ],
+    "historical_period": "Ancient–Medieval",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Charaka Samhita"
     ],
-    "name_sanskrit": "कर्ष"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "gold-jewellery",
+      "karsha",
+      "weight"
+    ]
   },
   {
-    "id": "ct-gold-jewellery-74",
-    "slug": "ct-suvarna",
+    "id": "cg-gold-5",
+    "slug": "cg-gold-suvarna-5",
     "name_english": "Suvarna",
-    "name_hindi": "सुवर्ण",
-    "local_names": [
-      "सुवर्ण (Suvarna)"
-    ],
-    "meaning": "Ancient gold weight standard",
-    "category": "gold weight",
+    "category": "weight",
     "sector": "gold-jewellery",
-    "modern_equivalent": "≈15.5 g",
-    "conversion_formula": "≈16 Masha = 1 Suvarna (classical texts)",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "सुवर्ण",
+    "local_names": [
+      "सुवर्ण"
+    ],
+    "name_hindi": "सुवर्ण",
+    "measurement_type": "Gold Weight",
+    "modern_equivalent": "≈15.5 g",
+    "conversion_formula": "≈16 Masha = 1 Suvarna (classical texts)",
+    "meaning": "Ancient gold weight standard",
+    "historical_context": "Gold coins and ornaments",
     "used_in": [
       "Gold coins and ornaments"
     ],
+    "historical_period": "Ancient–Medieval",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Arthashastra"
     ],
-    "name_sanskrit": "सुवर्ण"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "gold-jewellery",
+      "suvarna",
+      "weight"
+    ]
   },
   {
-    "id": "ct-gold-jewellery-75",
-    "slug": "ct-pala",
+    "id": "cg-gold-6",
+    "slug": "cg-gold-pala-6",
     "name_english": "Pala",
-    "name_hindi": "पल",
-    "local_names": [
-      "पल (Pala)"
-    ],
-    "meaning": "Large traditional weight",
-    "category": "bulk precious metal weight",
+    "category": "weight",
     "sector": "gold-jewellery",
-    "modern_equivalent": "≈46.7 g",
-    "conversion_formula": "4 Karsha = 1 Pala",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "पल",
+    "local_names": [
+      "पल"
+    ],
+    "name_hindi": "पल",
+    "measurement_type": "Bulk Precious Metal Weight",
+    "modern_equivalent": "≈46.7 g",
+    "conversion_formula": "4 Karsha = 1 Pala",
+    "meaning": "Large traditional weight",
+    "historical_context": "Bulk weighing of precious metals",
     "used_in": [
       "Bulk weighing of precious metals"
     ],
+    "historical_period": "Ancient",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Charaka Samhita"
     ],
-    "name_sanskrit": "पल"
-  },
-  {
-    "id": "ct-currency-money-76",
-    "slug": "ct-cowrie",
-    "name_english": "Cowrie",
-    "name_hindi": "कौड़ी",
-    "local_names": [
-      "कौड़ी (Cowrie)"
-    ],
-    "meaning": "Smallest traditional medium of exchange",
-    "category": "currency",
-    "sector": "currency-money",
-    "modern_equivalent": "Shell Currency",
-    "conversion_formula": "Base Unit",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Daily village transactions"
-    ],
-    "references": [
-      "Arthashastra; Imperial Gazetteer"
-    ],
-    "name_sanskrit": "कपर्दिका (Kapardikā)"
-  },
-  {
-    "id": "ct-currency-money-77",
-    "slug": "ct-dam",
-    "name_english": "Dam",
-    "name_hindi": "दाम",
-    "local_names": [
-      "दाम (Dam)"
-    ],
-    "meaning": "Copper coin used during Mughal administration",
-    "category": "coin",
-    "sector": "currency-money",
-    "modern_equivalent": "Copper Coin",
-    "conversion_formula": "Variable (Mughal Period)",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Small market purchases"
-    ],
-    "references": [
-      "Ain-i-Akbari"
-    ],
-    "name_sanskrit": "दाम"
-  },
-  {
-    "id": "ct-currency-money-78",
-    "slug": "ct-paisa-pice",
-    "name_english": "Paisa (Pice)",
-    "name_hindi": "पैसा",
-    "local_names": [
-      "पैसा (Paisa (Pice))"
-    ],
-    "meaning": "Small denomination coin",
-    "category": "currency",
-    "sector": "currency-money",
-    "modern_equivalent": "Copper Coin",
-    "conversion_formula": "4 Pice = 1 Anna",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Local market trade"
-    ],
-    "references": [
-      "British India Coinage Records"
-    ],
-    "name_sanskrit": "पैस"
-  },
-  {
-    "id": "ct-currency-money-79",
-    "slug": "ct-anna",
-    "name_english": "Anna",
-    "name_hindi": "आना",
-    "local_names": [
-      "आना (Anna)"
-    ],
-    "meaning": "Standard fractional currency",
-    "category": "currency",
-    "sector": "currency-money",
-    "modern_equivalent": "1/16 Rupee",
-    "conversion_formula": "16 Anna = 1 Rupee",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Trade and taxation"
-    ],
-    "references": [
-      "British India Monetary System"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "gold-jewellery",
+      "pala",
+      "weight"
     ]
   },
   {
-    "id": "ct-currency-money-80",
-    "slug": "ct-rupee",
-    "name_english": "Rupee",
-    "name_hindi": "रुपया",
-    "local_names": [
-      "रुपया (Rupee)"
-    ],
-    "meaning": "Principal currency unit",
-    "category": "currency",
-    "sector": "currency-money",
-    "modern_equivalent": "Standard Monetary Unit",
-    "conversion_formula": "1 Rupee = 16 Anna = 64 Pice",
+    "id": "cg-agri-1",
+    "slug": "cg-agri-ratti-1",
+    "name_english": "Ratti",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
-    "used_in": [
-      "Trade, revenue and salaries"
-    ],
-    "references": [
-      "Sher Shah Suri Coinage; British India"
-    ],
-    "name_sanskrit": "रूप्य"
-  },
-  {
-    "id": "ct-currency-money-81",
-    "slug": "ct-mohur",
-    "name_english": "Mohur",
-    "name_hindi": "मोहर",
+    "created_at": "2024-01-01",
+    "name_sanskrit": "रक्तिका (Raktikā)",
     "local_names": [
-      "मोहर (Mohur)"
+      "रत्ती"
     ],
-    "meaning": "High-value gold coin",
-    "category": "gold coin",
-    "sector": "currency-money",
-    "modern_equivalent": "Gold Coin",
-    "conversion_formula": "Variable (High-value coin)",
-    "states": [
-      "Chhattisgarh"
-    ],
-    "used_in": [
-      "Royal payments and large transactions"
-    ],
-    "references": [
-      "British India Coin Catalogue"
-    ],
-    "name_sanskrit": "मोहुर"
-  },
-  {
-    "id": "ct-transportation-distance-82",
-    "slug": "ct-chhatak",
-    "name_english": "Chhatak",
-    "name_hindi": "छटाक",
-    "local_names": [
-      "छटाक (Chhatak)"
-    ],
-    "meaning": "Smallest storage unit",
-    "category": "storage weight",
-    "sector": "transportation-distance",
-    "modern_equivalent": "≈58.3 g",
+    "name_hindi": "रत्ती",
+    "measurement_type": "Seed Weight",
+    "modern_equivalent": "≈121.5 mg",
     "conversion_formula": "Base Unit",
+    "meaning": "Smallest traditional seed weight",
+    "historical_context": "Measuring valuable seeds and medicinal plants",
+    "used_in": [
+      "Measuring valuable seeds and medicinal plants"
+    ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Charaka Samhita",
+      "Arthashastra"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "agriculture",
+      "ratti",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-agri-2",
+    "slug": "cg-agri-masha-2",
+    "name_english": "Masha",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
-    "used_in": [
-      "Measuring small quantities of grains and spices"
+    "created_at": "2024-01-01",
+    "name_sanskrit": "माष",
+    "local_names": [
+      "माशा"
     ],
+    "name_hindi": "माशा",
+    "measurement_type": "Seed Weight",
+    "modern_equivalent": "≈0.972 g",
+    "conversion_formula": "8 Ratti = 1 Masha",
+    "meaning": "Small agricultural weight",
+    "historical_context": "Seed and herbal measurement",
+    "used_in": [
+      "Seed and herbal measurement"
+    ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "agriculture",
+      "masha",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-agri-3",
+    "slug": "cg-agri-tola-3",
+    "name_english": "Tola",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "तुला",
+    "local_names": [
+      "तोला"
+    ],
+    "name_hindi": "तोला",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "12 Masha = 1 Tola",
+    "meaning": "Standard traditional weight",
+    "historical_context": "Measuring costly seeds and produce",
+    "used_in": [
+      "Measuring costly seeds and produce"
+    ],
+    "historical_period": "Mughal–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "British India Standards"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "agriculture",
+      "tola",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-agri-4",
+    "slug": "cg-agri-chhatak-4",
+    "name_english": "Chhatak",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "छटाक"
+    ],
+    "name_hindi": "छटाक",
+    "measurement_type": "Grain Weight",
+    "modern_equivalent": "≈58.3 g",
+    "conversion_formula": "5 Tola = 1 Chhatak",
+    "meaning": "Small grain measure",
+    "historical_context": "Retail grain and seed trade",
+    "used_in": [
+      "Retail grain and seed trade"
+    ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Central Provinces Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "agriculture",
+      "chhatak",
+      "weight"
     ]
   },
   {
-    "id": "ct-transportation-distance-83",
-    "slug": "ct-pav-pao",
+    "id": "cg-agri-5",
+    "slug": "cg-agri-pav-pao-5",
     "name_english": "Pav (Pao)",
-    "name_hindi": "पाव",
-    "local_names": [
-      "पाव (Pav (Pao))"
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
     ],
-    "meaning": "Quarter Seer",
-    "category": "storage weight",
-    "sector": "transportation-distance",
+    "created_at": "2024-01-01",
+    "local_names": [
+      "पाव"
+    ],
+    "name_hindi": "पाव",
+    "measurement_type": "Grain Weight",
     "modern_equivalent": "≈233 g",
     "conversion_formula": "4 Chhatak = 1 Pav",
-    "states": [
-      "Chhattisgarh"
-    ],
+    "meaning": "Quarter Seer",
+    "historical_context": "Grain and pulse measurement",
     "used_in": [
-      "Household grain and pulse storage"
+      "Grain and pulse measurement"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Chhattisgarh District Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "agriculture",
+      "pav-pao",
+      "weight"
     ]
   },
   {
-    "id": "ct-transportation-distance-84",
-    "slug": "ct-adha-seer",
+    "id": "cg-agri-6",
+    "slug": "cg-agri-adha-seer-6",
     "name_english": "Adha Seer",
-    "name_hindi": "आधा सेर",
-    "local_names": [
-      "आधा सेर (Adha Seer)"
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
     ],
-    "meaning": "Half Seer",
-    "category": "storage weight",
-    "sector": "transportation-distance",
+    "created_at": "2024-01-01",
+    "local_names": [
+      "आधा सेर"
+    ],
+    "name_hindi": "आधा सेर",
+    "measurement_type": "Grain Weight",
     "modern_equivalent": "≈466 g",
     "conversion_formula": "2 Pav = 1 Half Seer",
-    "states": [
-      "Chhattisgarh"
-    ],
+    "meaning": "Half Seer",
+    "historical_context": "Agricultural markets",
     "used_in": [
-      "Grain and oil storage"
+      "Agricultural markets"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Revenue Settlement Reports"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "agriculture",
+      "adha-seer",
+      "weight"
     ]
   },
   {
-    "id": "ct-transportation-distance-85",
-    "slug": "ct-seer",
+    "id": "cg-agri-7",
+    "slug": "cg-agri-seer-7",
     "name_english": "Seer",
-    "name_hindi": "सेर",
-    "local_names": [
-      "सेर (Seer)"
+    "category": "other",
+    "sector": "agriculture",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
     ],
-    "meaning": "Principal storage measure",
-    "category": "storage weight",
-    "sector": "transportation-distance",
+    "created_at": "2024-01-01",
+    "local_names": [
+      "सेर"
+    ],
+    "name_hindi": "सेर",
+    "measurement_type": "Grain Measure",
     "modern_equivalent": "≈0.933 kg",
     "conversion_formula": "2 Half Seer = 1 Seer",
-    "states": [
-      "Chhattisgarh"
-    ],
+    "meaning": "Standard village grain unit",
+    "historical_context": "Principal grain and seed measure",
     "used_in": [
-      "Standard grain storage unit"
+      "Principal grain and seed measure"
     ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Imperial Gazetteer of India"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "agriculture",
+      "seer",
+      "other"
     ]
   },
   {
-    "id": "ct-transportation-distance-86",
-    "slug": "ct-pasri",
+    "id": "cg-agri-8",
+    "slug": "cg-agri-pasri-8",
     "name_english": "Pasri",
-    "name_hindi": "पसरी",
-    "local_names": [
-      "पसरी (Pasri)"
+    "category": "volume",
+    "sector": "agriculture",
+    "origin": "Raipur, Bilaspur",
+    "states": [
+      "Chhattisgarh"
     ],
-    "meaning": "Intermediate storage unit",
-    "category": "grain capacity",
-    "sector": "transportation-distance",
+    "created_at": "2024-01-01",
+    "local_names": [
+      "पसरी"
+    ],
+    "name_hindi": "पसरी",
+    "measurement_type": "Grain Capacity",
     "modern_equivalent": "≈4.66 kg (Regional)",
     "conversion_formula": "Usually 5 Seers = 1 Pasri (Regional)",
-    "states": [
-      "Chhattisgarh"
-    ],
+    "meaning": "Regional grain measure",
+    "historical_context": "Grain storage and seed distribution",
     "used_in": [
-      "Paddy and grain storage"
+      "Grain storage and seed distribution"
     ],
+    "historical_period": "Colonial",
+    "region_applicable": "Raipur, Bilaspur",
     "references": [
       "Chhattisgarh Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "agriculture",
+      "pasri",
+      "volume"
     ]
   },
   {
-    "id": "ct-transportation-distance-87",
-    "slug": "ct-maund-man",
+    "id": "cg-agri-9",
+    "slug": "cg-agri-maund-man-9",
     "name_english": "Maund (Man)",
-    "name_hindi": "मन",
-    "local_names": [
-      "मन (Maund (Man))"
-    ],
-    "meaning": "Standard bulk storage unit",
-    "category": "bulk weight",
-    "sector": "transportation-distance",
-    "modern_equivalent": "≈37.324 kg",
-    "conversion_formula": "40 Seers = 1 Maund",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Entire Chhattisgarh",
     "states": [
       "Chhattisgarh"
     ],
-    "used_in": [
-      "Wholesale grain storage and transport"
+    "created_at": "2024-01-01",
+    "name_sanskrit": "मान",
+    "local_names": [
+      "मन"
     ],
+    "name_hindi": "मन",
+    "measurement_type": "Bulk Weight",
+    "modern_equivalent": "≈37.324 kg",
+    "conversion_formula": "40 Seers = 1 Maund",
+    "meaning": "Standard wholesale agricultural unit",
+    "historical_context": "Wholesale grain trade",
+    "used_in": [
+      "Wholesale grain trade"
+    ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
     "references": [
       "Government Historical Standards"
     ],
-    "name_sanskrit": "मान"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "agriculture",
+      "maund-man",
+      "weight"
+    ]
   },
   {
-    "id": "ct-transportation-distance-88",
-    "slug": "ct-khandi",
+    "id": "cg-agri-10",
+    "slug": "cg-agri-khandi-10",
     "name_english": "Khandi",
-    "name_hindi": "खंडी",
-    "local_names": [
-      "खंडी (Khandi)"
-    ],
-    "meaning": "Largest traditional storage unit",
-    "category": "bulk capacity",
-    "sector": "transportation-distance",
-    "modern_equivalent": "≈746 kg (Regional)",
-    "conversion_formula": "≈20 Maunds = 1 Khandi (Regional)",
+    "category": "other",
+    "sector": "agriculture",
+    "origin": "Bastar, Raipur",
     "states": [
       "Chhattisgarh"
     ],
-    "used_in": [
-      "Bulk storage of rice, grain and forest produce"
+    "created_at": "2024-01-01",
+    "name_sanskrit": "खण्डी",
+    "local_names": [
+      "खंडी"
     ],
+    "name_hindi": "खंडी",
+    "measurement_type": "Bulk Storage",
+    "modern_equivalent": "≈746 kg (Regional)",
+    "conversion_formula": "≈20 Maunds = 1 Khandi (Regional)",
+    "meaning": "Largest traditional agricultural unit",
+    "historical_context": "Bulk grain storage and transport",
+    "used_in": [
+      "Bulk grain storage and transport"
+    ],
+    "historical_period": "Medieval–Colonial",
+    "region_applicable": "Bastar, Raipur",
     "references": [
       "Central Provinces Revenue Manuals"
     ],
-    "name_sanskrit": "खण्डी"
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "agriculture",
+      "khandi",
+      "other"
+    ]
+  },
+  {
+    "id": "cg-curr-1",
+    "slug": "cg-curr-cowrie-1",
+    "name_english": "Cowrie",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "कपर्दिका (Kapardikā)",
+    "local_names": [
+      "कौड़ी"
+    ],
+    "name_hindi": "कौड़ी",
+    "measurement_type": "Currency",
+    "modern_equivalent": "Shell Currency",
+    "conversion_formula": "Base Unit",
+    "meaning": "Smallest traditional medium of exchange",
+    "historical_context": "Daily village transactions",
+    "used_in": [
+      "Daily village transactions"
+    ],
+    "historical_period": "Ancient–18th Century",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Arthashastra",
+      "Imperial Gazetteer"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "currency-money",
+      "cowrie",
+      "currency"
+    ]
+  },
+  {
+    "id": "cg-curr-2",
+    "slug": "cg-curr-dam-2",
+    "name_english": "Dam",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "दाम",
+    "local_names": [
+      "दाम"
+    ],
+    "name_hindi": "दाम",
+    "measurement_type": "Coin",
+    "modern_equivalent": "Copper Coin",
+    "conversion_formula": "Variable (Mughal Period)",
+    "meaning": "Copper coin used during Mughal administration",
+    "historical_context": "Small market purchases",
+    "used_in": [
+      "Small market purchases"
+    ],
+    "historical_period": "Mughal Period",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Ain-i-Akbari"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "currency-money",
+      "dam",
+      "currency"
+    ]
+  },
+  {
+    "id": "cg-curr-3",
+    "slug": "cg-curr-paisa-pice-3",
+    "name_english": "Paisa (Pice)",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "पैस",
+    "local_names": [
+      "पैसा"
+    ],
+    "name_hindi": "पैसा",
+    "measurement_type": "Currency",
+    "modern_equivalent": "Copper Coin",
+    "conversion_formula": "4 Pice = 1 Anna",
+    "meaning": "Small denomination coin",
+    "historical_context": "Local market trade",
+    "used_in": [
+      "Local market trade"
+    ],
+    "historical_period": "British Period",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "British India Coinage Records"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "currency-money",
+      "paisa-pice",
+      "currency"
+    ]
+  },
+  {
+    "id": "cg-curr-4",
+    "slug": "cg-curr-anna-4",
+    "name_english": "Anna",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "आना"
+    ],
+    "name_hindi": "आना",
+    "measurement_type": "Currency",
+    "modern_equivalent": "1/16 Rupee",
+    "conversion_formula": "16 Anna = 1 Rupee",
+    "meaning": "Standard fractional currency",
+    "historical_context": "Trade and taxation",
+    "used_in": [
+      "Trade and taxation"
+    ],
+    "historical_period": "British Period",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "British India Monetary System"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "currency-money",
+      "anna",
+      "currency"
+    ]
+  },
+  {
+    "id": "cg-curr-5",
+    "slug": "cg-curr-rupee-5",
+    "name_english": "Rupee",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "रूप्य",
+    "local_names": [
+      "रुपया"
+    ],
+    "name_hindi": "रुपया",
+    "measurement_type": "Currency",
+    "modern_equivalent": "Standard Monetary Unit",
+    "conversion_formula": "1 Rupee = 16 Anna = 64 Pice",
+    "meaning": "Principal currency unit",
+    "historical_context": "Trade, revenue and salaries",
+    "used_in": [
+      "Trade, revenue and salaries"
+    ],
+    "historical_period": "Mughal–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Sher Shah Suri Coinage",
+      "British India"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "currency-money",
+      "rupee",
+      "currency"
+    ]
+  },
+  {
+    "id": "cg-curr-6",
+    "slug": "cg-curr-mohur-6",
+    "name_english": "Mohur",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "मोहुर",
+    "local_names": [
+      "मोहर"
+    ],
+    "name_hindi": "मोहर",
+    "measurement_type": "Gold Coin",
+    "modern_equivalent": "Gold Coin",
+    "conversion_formula": "Variable (High-value coin)",
+    "meaning": "High-value gold coin",
+    "historical_context": "Royal payments and large transactions",
+    "used_in": [
+      "Royal payments and large transactions"
+    ],
+    "historical_period": "Mughal–British",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "British India Coin Catalogue"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "currency-money",
+      "mohur",
+      "currency"
+    ]
+  },
+  {
+    "id": "cg-storage-1",
+    "slug": "cg-storage-chhatak-1",
+    "name_english": "Chhatak",
+    "category": "weight",
+    "sector": "storage-transport",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "छटाक"
+    ],
+    "name_hindi": "छटाक",
+    "measurement_type": "Storage Weight",
+    "modern_equivalent": "≈58.3 g",
+    "conversion_formula": "Base Unit",
+    "meaning": "Smallest storage unit",
+    "historical_context": "Measuring small quantities of grains and spices",
+    "used_in": [
+      "Measuring small quantities of grains and spices"
+    ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Central Provinces Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "storage-transport",
+      "chhatak",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-storage-2",
+    "slug": "cg-storage-pav-pao-2",
+    "name_english": "Pav (Pao)",
+    "category": "weight",
+    "sector": "storage-transport",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "पाव"
+    ],
+    "name_hindi": "पाव",
+    "measurement_type": "Storage Weight",
+    "modern_equivalent": "≈233 g",
+    "conversion_formula": "4 Chhatak = 1 Pav",
+    "meaning": "Quarter Seer",
+    "historical_context": "Household grain and pulse storage",
+    "used_in": [
+      "Household grain and pulse storage"
+    ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Chhattisgarh District Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "storage-transport",
+      "pav-pao",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-storage-3",
+    "slug": "cg-storage-adha-seer-3",
+    "name_english": "Adha Seer",
+    "category": "weight",
+    "sector": "storage-transport",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "आधा सेर"
+    ],
+    "name_hindi": "आधा सेर",
+    "measurement_type": "Storage Weight",
+    "modern_equivalent": "≈466 g",
+    "conversion_formula": "2 Pav = 1 Half Seer",
+    "meaning": "Half Seer",
+    "historical_context": "Grain and oil storage",
+    "used_in": [
+      "Grain and oil storage"
+    ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Revenue Settlement Reports"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "storage-transport",
+      "adha-seer",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-storage-4",
+    "slug": "cg-storage-seer-4",
+    "name_english": "Seer",
+    "category": "weight",
+    "sector": "storage-transport",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "सेर"
+    ],
+    "name_hindi": "सेर",
+    "measurement_type": "Storage Weight",
+    "modern_equivalent": "≈0.933 kg",
+    "conversion_formula": "2 Half Seer = 1 Seer",
+    "meaning": "Principal storage measure",
+    "historical_context": "Standard grain storage unit",
+    "used_in": [
+      "Standard grain storage unit"
+    ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Imperial Gazetteer of India"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "storage-transport",
+      "seer",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-storage-5",
+    "slug": "cg-storage-pasri-5",
+    "name_english": "Pasri",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Raipur, Bilaspur",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "पसरी"
+    ],
+    "name_hindi": "पसरी",
+    "measurement_type": "Grain Capacity",
+    "modern_equivalent": "≈4.66 kg (Regional)",
+    "conversion_formula": "Usually 5 Seers = 1 Pasri (Regional)",
+    "meaning": "Intermediate storage unit",
+    "historical_context": "Paddy and grain storage",
+    "used_in": [
+      "Paddy and grain storage"
+    ],
+    "historical_period": "Colonial",
+    "region_applicable": "Raipur, Bilaspur",
+    "references": [
+      "Chhattisgarh Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "storage-transport",
+      "pasri",
+      "volume"
+    ]
+  },
+  {
+    "id": "cg-storage-6",
+    "slug": "cg-storage-maund-man-6",
+    "name_english": "Maund (Man)",
+    "category": "weight",
+    "sector": "storage-transport",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "मान",
+    "local_names": [
+      "मन"
+    ],
+    "name_hindi": "मन",
+    "measurement_type": "Bulk Weight",
+    "modern_equivalent": "≈37.324 kg",
+    "conversion_formula": "40 Seers = 1 Maund",
+    "meaning": "Standard bulk storage unit",
+    "historical_context": "Wholesale grain storage and transport",
+    "used_in": [
+      "Wholesale grain storage and transport"
+    ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Government Historical Standards"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "storage-transport",
+      "maund-man",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-storage-7",
+    "slug": "cg-storage-khandi-7",
+    "name_english": "Khandi",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Bastar, Raipur",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "खण्डी",
+    "local_names": [
+      "खंडी"
+    ],
+    "name_hindi": "खंडी",
+    "measurement_type": "Bulk Capacity",
+    "modern_equivalent": "≈746 kg (Regional)",
+    "conversion_formula": "≈20 Maunds = 1 Khandi (Regional)",
+    "meaning": "Largest traditional storage unit",
+    "historical_context": "Bulk storage of rice, grain and forest produce",
+    "used_in": [
+      "Bulk storage of rice, grain and forest produce"
+    ],
+    "historical_period": "Medieval–Colonial",
+    "region_applicable": "Bastar, Raipur",
+    "references": [
+      "Central Provinces Revenue Manuals"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "storage-transport",
+      "khandi",
+      "volume"
+    ]
+  },
+  {
+    "id": "cg-trade-1",
+    "slug": "cg-trade-ratti-1",
+    "name_english": "Ratti",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "रक्तिका (Raktikā)",
+    "local_names": [
+      "रत्ती"
+    ],
+    "name_hindi": "रत्ती",
+    "measurement_type": "Commercial Weight",
+    "modern_equivalent": "≈121.5 mg",
+    "conversion_formula": "Base Unit",
+    "meaning": "Smallest commercial weight",
+    "historical_context": "Gems, spices, medicinal products",
+    "used_in": [
+      "Gems, spices, medicinal products"
+    ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Arthashastra",
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "trade-commerce",
+      "ratti",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-trade-2",
+    "slug": "cg-trade-masha-2",
+    "name_english": "Masha",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "माष",
+    "local_names": [
+      "माशा"
+    ],
+    "name_hindi": "माशा",
+    "measurement_type": "Commercial Weight",
+    "modern_equivalent": "≈0.972 g",
+    "conversion_formula": "8 Ratti = 1 Masha",
+    "meaning": "Small market weight",
+    "historical_context": "Herbs, spices, perfumes",
+    "used_in": [
+      "Herbs, spices, perfumes"
+    ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Arthashastra"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "trade-commerce",
+      "masha",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-trade-3",
+    "slug": "cg-trade-tola-3",
+    "name_english": "Tola",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "तुला",
+    "local_names": [
+      "तोला"
+    ],
+    "name_hindi": "तोला",
+    "measurement_type": "Commercial Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "12 Masha = 1 Tola",
+    "meaning": "Standard commercial weight",
+    "historical_context": "Gold, silver, spices",
+    "used_in": [
+      "Gold, silver, spices"
+    ],
+    "historical_period": "Mughal–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "British India Standards"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "trade-commerce",
+      "tola",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-trade-4",
+    "slug": "cg-trade-chhatak-4",
+    "name_english": "Chhatak",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "छटाक"
+    ],
+    "name_hindi": "छटाक",
+    "measurement_type": "Market Weight",
+    "modern_equivalent": "≈58.3 g",
+    "conversion_formula": "5 Tola = 1 Chhatak",
+    "meaning": "Small retail weight",
+    "historical_context": "Grocery items and grain",
+    "used_in": [
+      "Grocery items and grain"
+    ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Central Provinces Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "trade-commerce",
+      "chhatak",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-trade-5",
+    "slug": "cg-trade-pav-pao-5",
+    "name_english": "Pav (Pao)",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "पाव"
+    ],
+    "name_hindi": "पाव",
+    "measurement_type": "Market Weight",
+    "modern_equivalent": "≈233 g",
+    "conversion_formula": "4 Chhatak = 1 Pav",
+    "meaning": "Quarter Seer",
+    "historical_context": "Rice, wheat, pulses, jaggery",
+    "used_in": [
+      "Rice, wheat, pulses, jaggery"
+    ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Chhattisgarh District Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "trade-commerce",
+      "pav-pao",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-trade-6",
+    "slug": "cg-trade-adha-seer-6",
+    "name_english": "Adha Seer",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "आधा सेर"
+    ],
+    "name_hindi": "आधा सेर",
+    "measurement_type": "Market Weight",
+    "modern_equivalent": "≈466 g",
+    "conversion_formula": "2 Pav = 1 Half Seer",
+    "meaning": "Half Seer",
+    "historical_context": "Grocery trade",
+    "used_in": [
+      "Grocery trade"
+    ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Revenue Settlement Reports"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "trade-commerce",
+      "adha-seer",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-trade-7",
+    "slug": "cg-trade-seer-7",
+    "name_english": "Seer",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "सेर"
+    ],
+    "name_hindi": "सेर",
+    "measurement_type": "Commercial Weight",
+    "modern_equivalent": "≈0.933 kg",
+    "conversion_formula": "2 Half Seer = 1 Seer",
+    "meaning": "Standard market unit",
+    "historical_context": "Grain, oil, jaggery, cotton",
+    "used_in": [
+      "Grain, oil, jaggery, cotton"
+    ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Imperial Gazetteer of India"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "trade-commerce",
+      "seer",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-trade-8",
+    "slug": "cg-trade-pasri-8",
+    "name_english": "Pasri",
+    "category": "volume",
+    "sector": "trade-commerce",
+    "origin": "Raipur, Bilaspur",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "local_names": [
+      "पसरी"
+    ],
+    "name_hindi": "पसरी",
+    "measurement_type": "Grain Capacity",
+    "modern_equivalent": "≈4.66 kg (Regional)",
+    "conversion_formula": "Usually 5 Seers = 1 Pasri (Regional)",
+    "meaning": "Regional grain measure",
+    "historical_context": "Grain and paddy trade",
+    "used_in": [
+      "Grain and paddy trade"
+    ],
+    "historical_period": "Colonial",
+    "region_applicable": "Raipur, Bilaspur",
+    "references": [
+      "Chhattisgarh Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "trade-commerce",
+      "pasri",
+      "volume"
+    ]
+  },
+  {
+    "id": "cg-trade-9",
+    "slug": "cg-trade-maund-man-9",
+    "name_english": "Maund (Man)",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "मान",
+    "local_names": [
+      "मन"
+    ],
+    "name_hindi": "मन",
+    "measurement_type": "Wholesale Weight",
+    "modern_equivalent": "≈37.324 kg",
+    "conversion_formula": "40 Seers = 1 Maund",
+    "meaning": "Principal wholesale unit",
+    "historical_context": "Wholesale grain, cotton and salt",
+    "used_in": [
+      "Wholesale grain, cotton and salt"
+    ],
+    "historical_period": "Mughal–1958",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Government Historical Standards"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "trade-commerce",
+      "maund-man",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-trade-10",
+    "slug": "cg-trade-khandi-10",
+    "name_english": "Khandi",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Bastar, Raipur",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "खण्डी",
+    "local_names": [
+      "खंडी"
+    ],
+    "name_hindi": "खंडी",
+    "measurement_type": "Bulk Commercial Weight",
+    "modern_equivalent": "≈746 kg (Regional)",
+    "conversion_formula": "≈20 Maunds = 1 Khandi (Regional)",
+    "meaning": "Warehouse and transport unit",
+    "historical_context": "Bulk grain, rice and forest produce",
+    "used_in": [
+      "Bulk grain, rice and forest produce"
+    ],
+    "historical_period": "Medieval–Colonial",
+    "region_applicable": "Bastar, Raipur",
+    "references": [
+      "Central Provinces Revenue Manuals"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "trade-commerce",
+      "khandi",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-textile-1",
+    "slug": "cg-textile-angula-1",
+    "name_english": "Angula",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "अङ्गुल",
+    "local_names": [
+      "अंगुल"
+    ],
+    "name_hindi": "अंगुल",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈1.9 cm",
+    "conversion_formula": "Base Unit",
+    "meaning": "Finger-width measure",
+    "historical_context": "Measuring thread width, cloth borders",
+    "used_in": [
+      "Measuring thread width, cloth borders"
+    ],
+    "historical_period": "Vedic–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Arthashastra",
+      "Mayamata"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "textile-handloom",
+      "angula",
+      "length"
+    ]
+  },
+  {
+    "id": "cg-textile-2",
+    "slug": "cg-textile-vitasti-2",
+    "name_english": "Vitasti",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "वितस्ति",
+    "local_names": [
+      "वितस्ति"
+    ],
+    "name_hindi": "वितस्ति",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈22.8 cm",
+    "conversion_formula": "12 Angula = 1 Vitasti",
+    "meaning": "Span measure",
+    "historical_context": "Measuring woven fabric",
+    "used_in": [
+      "Measuring woven fabric"
+    ],
+    "historical_period": "Ancient–Medieval",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Manasara"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "textile-handloom",
+      "vitasti",
+      "length"
+    ]
+  },
+  {
+    "id": "cg-textile-3",
+    "slug": "cg-textile-hasta-3",
+    "name_english": "Hasta",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "हस्त",
+    "local_names": [
+      "हस्त"
+    ],
+    "name_hindi": "हस्त",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈45.6 cm",
+    "conversion_formula": "24 Angula = 1 Hasta",
+    "meaning": "Cubit",
+    "historical_context": "Measuring cloth length",
+    "used_in": [
+      "Measuring cloth length"
+    ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Mayamata"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "textile-handloom",
+      "hasta",
+      "length"
+    ]
+  },
+  {
+    "id": "cg-textile-4",
+    "slug": "cg-textile-gaz-gaj-4",
+    "name_english": "Gaz (Gaj)",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "गज",
+    "local_names": [
+      "गज़"
+    ],
+    "name_hindi": "गज़",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈0.9144 m",
+    "conversion_formula": "≈2 Hasta = 1 Gaz",
+    "meaning": "Standard cloth measure",
+    "historical_context": "Cloth trade",
+    "used_in": [
+      "Cloth trade"
+    ],
+    "historical_period": "Mughal–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "British India Standards"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "textile-handloom",
+      "gaz-gaj",
+      "length"
+    ]
+  },
+  {
+    "id": "cg-textile-5",
+    "slug": "cg-textile-danda-5",
+    "name_english": "Danda",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "दण्ड",
+    "local_names": [
+      "डंडा"
+    ],
+    "name_hindi": "डंडा",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈1.82 m",
+    "conversion_formula": "4 Hasta = 1 Danda",
+    "meaning": "Long measuring rod",
+    "historical_context": "Loom measurement",
+    "used_in": [
+      "Loom measurement"
+    ],
+    "historical_period": "Ancient–Medieval",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Arthashastra"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "textile-handloom",
+      "danda",
+      "length"
+    ]
+  },
+  {
+    "id": "cg-textile-6",
+    "slug": "cg-textile-rajju-6",
+    "name_english": "Rajju",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Raipur, Bastar",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "रज्जु",
+    "local_names": [
+      "रज्जु"
+    ],
+    "name_hindi": "रज्जु",
+    "measurement_type": "Length",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Variable rope measure",
+    "meaning": "Measuring rope",
+    "historical_context": "Measuring long cloth and warp threads",
+    "used_in": [
+      "Measuring long cloth and warp threads"
+    ],
+    "historical_period": "Ancient–Colonial",
+    "region_applicable": "Raipur, Bastar",
+    "references": [
+      "Central Provinces Gazetteers"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "textile-handloom",
+      "rajju",
+      "length"
+    ]
+  },
+  {
+    "id": "cg-med-1",
+    "slug": "cg-med-ratti-1",
+    "name_english": "Ratti",
+    "category": "weight",
+    "sector": "medicine",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "रक्तिका (Raktikā)",
+    "local_names": [
+      "रत्ती"
+    ],
+    "name_hindi": "रत्ती",
+    "measurement_type": "Medicinal Weight",
+    "modern_equivalent": "≈121.5 mg",
+    "conversion_formula": "Base Unit",
+    "meaning": "Smallest medicinal weight",
+    "historical_context": "Measuring potent herbs, minerals and medicines",
+    "used_in": [
+      "Measuring potent herbs, minerals and medicines"
+    ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "medicine",
+      "ratti",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-med-2",
+    "slug": "cg-med-masha-2",
+    "name_english": "Masha",
+    "category": "weight",
+    "sector": "medicine",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "माष",
+    "local_names": [
+      "माशा"
+    ],
+    "name_hindi": "माशा",
+    "measurement_type": "Medicinal Weight",
+    "modern_equivalent": "≈0.972 g",
+    "conversion_formula": "8 Ratti = 1 Masha",
+    "meaning": "Standard small medicinal weight",
+    "historical_context": "Herbal powders and tablets",
+    "used_in": [
+      "Herbal powders and tablets"
+    ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "medicine",
+      "masha",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-med-3",
+    "slug": "cg-med-karsha-3",
+    "name_english": "Karsha",
+    "category": "weight",
+    "sector": "medicine",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "कर्ष",
+    "local_names": [
+      "कर्ष"
+    ],
+    "name_hindi": "कर्ष",
+    "measurement_type": "Medicinal Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "12 Masha = 1 Karsha",
+    "meaning": "Standard Ayurvedic dosage unit",
+    "historical_context": "Herbal formulations and decoctions",
+    "used_in": [
+      "Herbal formulations and decoctions"
+    ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "medicine",
+      "karsha",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-med-4",
+    "slug": "cg-med-pala-4",
+    "name_english": "Pala",
+    "category": "weight",
+    "sector": "medicine",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "पल",
+    "local_names": [
+      "पल"
+    ],
+    "name_hindi": "पल",
+    "measurement_type": "Medicinal Weight",
+    "modern_equivalent": "≈46.7 g",
+    "conversion_formula": "4 Karsha = 1 Pala",
+    "meaning": "Medium medicinal weight",
+    "historical_context": "Preparation of churna, leha and ghrita",
+    "used_in": [
+      "Preparation of churna, leha and ghrita"
+    ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Ashtanga Hridaya"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "medicine",
+      "pala",
+      "weight"
+    ]
+  },
+  {
+    "id": "cg-med-5",
+    "slug": "cg-med-prastha-5",
+    "name_english": "Prastha",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "प्रस्थ",
+    "local_names": [
+      "प्रस्थ"
+    ],
+    "name_hindi": "प्रस्थ",
+    "measurement_type": "Volume",
+    "modern_equivalent": "≈768 ml",
+    "conversion_formula": "16 Pala = 1 Prastha",
+    "meaning": "Standard liquid measure",
+    "historical_context": "Measuring medicinal liquids",
+    "used_in": [
+      "Measuring medicinal liquids"
+    ],
+    "historical_period": "Ancient–Medieval",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "medicine",
+      "prastha",
+      "volume"
+    ]
+  },
+  {
+    "id": "cg-med-6",
+    "slug": "cg-med-adhaka-6",
+    "name_english": "Adhaka",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "आढक",
+    "local_names": [
+      "आढ़क"
+    ],
+    "name_hindi": "आढ़क",
+    "measurement_type": "Volume",
+    "modern_equivalent": "≈3.07 L",
+    "conversion_formula": "4 Prastha = 1 Adhaka",
+    "meaning": "Large liquid measure",
+    "historical_context": "Bulk medicinal preparations",
+    "used_in": [
+      "Bulk medicinal preparations"
+    ],
+    "historical_period": "Ancient–Medieval",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "medicine",
+      "adhaka",
+      "volume"
+    ]
+  },
+  {
+    "id": "cg-med-7",
+    "slug": "cg-med-drona-7",
+    "name_english": "Drona",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "द्रोण",
+    "local_names": [
+      "द्रोण"
+    ],
+    "name_hindi": "द्रोण",
+    "measurement_type": "Volume",
+    "modern_equivalent": "≈12.3 L",
+    "conversion_formula": "4 Adhaka = 1 Drona",
+    "meaning": "Bulk medicinal volume",
+    "historical_context": "Storage of medicinal liquids and herbs",
+    "used_in": [
+      "Storage of medicinal liquids and herbs"
+    ],
+    "historical_period": "Ancient–Medieval",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "medicine",
+      "drona",
+      "volume"
+    ]
+  },
+  {
+    "id": "cg-arch-1",
+    "slug": "cg-arch-angula-1",
+    "name_english": "Angula",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "अङ्गुल",
+    "local_names": [
+      "अंगुल"
+    ],
+    "name_hindi": "अंगुल",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈1.9 cm",
+    "conversion_formula": "Base Unit",
+    "meaning": "Smallest architectural unit",
+    "historical_context": "Measuring stones, bricks, carvings",
+    "used_in": [
+      "Measuring stones, bricks, carvings"
+    ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Mayamata",
+      "Mānasāra"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "architecture",
+      "angula",
+      "length"
+    ]
+  },
+  {
+    "id": "cg-arch-2",
+    "slug": "cg-arch-vitasti-2",
+    "name_english": "Vitasti",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "वितस्ति",
+    "local_names": [
+      "वितस्ति"
+    ],
+    "name_hindi": "वितस्ति",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈22.8 cm",
+    "conversion_formula": "12 Angula = 1 Vitasti",
+    "meaning": "Span measurement",
+    "historical_context": "Measuring wooden beams and doors",
+    "used_in": [
+      "Measuring wooden beams and doors"
+    ],
+    "historical_period": "Ancient–Medieval",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Mānasāra"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "architecture",
+      "vitasti",
+      "length"
+    ]
+  },
+  {
+    "id": "cg-arch-3",
+    "slug": "cg-arch-hasta-3",
+    "name_english": "Hasta",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "हस्त",
+    "local_names": [
+      "हस्त"
+    ],
+    "name_hindi": "हस्त",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈45.6 cm",
+    "conversion_formula": "24 Angula = 1 Hasta",
+    "meaning": "Cubit",
+    "historical_context": "Measuring walls, pillars and rooms",
+    "used_in": [
+      "Measuring walls, pillars and rooms"
+    ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Mayamata"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "architecture",
+      "hasta",
+      "length"
+    ]
+  },
+  {
+    "id": "cg-arch-4",
+    "slug": "cg-arch-danda-4",
+    "name_english": "Danda",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "दण्ड",
+    "local_names": [
+      "डंडा"
+    ],
+    "name_hindi": "डंडा",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈1.82 m",
+    "conversion_formula": "4 Hasta = 1 Danda",
+    "meaning": "Measuring rod",
+    "historical_context": "Layout of buildings and roads",
+    "used_in": [
+      "Layout of buildings and roads"
+    ],
+    "historical_period": "Ancient–Present",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Arthashastra"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "architecture",
+      "danda",
+      "length"
+    ]
+  },
+  {
+    "id": "cg-arch-5",
+    "slug": "cg-arch-rajju-5",
+    "name_english": "Rajju",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "रज्जु",
+    "local_names": [
+      "रज्जु"
+    ],
+    "name_hindi": "रज्जु",
+    "measurement_type": "Length",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Variable rope measure",
+    "meaning": "Measuring rope",
+    "historical_context": "Site layout and land alignment",
+    "used_in": [
+      "Site layout and land alignment"
+    ],
+    "historical_period": "Ancient–Colonial",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Samarāṅgaṇa Sūtradhāra"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "architecture",
+      "rajju",
+      "length"
+    ]
+  },
+  {
+    "id": "cg-arch-6",
+    "slug": "cg-arch-krosha-6",
+    "name_english": "Krosha",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "क्रोश",
+    "local_names": [
+      "कोस"
+    ],
+    "name_hindi": "कोस",
+    "measurement_type": "Distance",
+    "modern_equivalent": "≈3.2 km",
+    "conversion_formula": "2000 Danda = 1 Krosha",
+    "meaning": "Long-distance measure",
+    "historical_context": "Distance between settlements and construction sites",
+    "used_in": [
+      "Distance between settlements and construction sites"
+    ],
+    "historical_period": "Ancient–Medieval",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Arthashastra"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "architecture",
+      "krosha",
+      "length"
+    ]
+  },
+  {
+    "id": "cg-arch-7",
+    "slug": "cg-arch-yojana-7",
+    "name_english": "Yojana",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Entire Chhattisgarh",
+    "states": [
+      "Chhattisgarh"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "योजन",
+    "local_names": [
+      "योजन"
+    ],
+    "name_hindi": "योजन",
+    "measurement_type": "Distance",
+    "modern_equivalent": "≈12.8 km",
+    "conversion_formula": "4 Krosha = 1 Yojana",
+    "meaning": "Largest traditional distance unit",
+    "historical_context": "Planning roads and large public works",
+    "used_in": [
+      "Planning roads and large public works"
+    ],
+    "historical_period": "Ancient",
+    "region_applicable": "Entire Chhattisgarh",
+    "references": [
+      "Arthashastra",
+      "Puranas"
+    ],
+    "tags": [
+      "chhattisgarh",
+      "traditional-units",
+      "architecture",
+      "yojana",
+      "length"
+    ]
   }
 ];

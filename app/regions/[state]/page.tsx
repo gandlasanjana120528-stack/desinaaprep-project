@@ -1,7 +1,13 @@
-import { INDIAN_STATES, SAMPLE_MEASUREMENTS, SECTORS } from "@/lib/data";
+import {
+  INDIAN_STATES,
+  SAMPLE_MEASUREMENTS,
+  SECTORS,
+} from "@/lib/data";
+
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { MapPin, Building2 } from "lucide-react";
+
 import StateSectorView from "@/components/measurements/StateSectorView";
 
 export default async function StatePage({
@@ -10,15 +16,66 @@ export default async function StatePage({
   params: Promise<{ state: string }>;
 }) {
   const { state: stateSlug } = await params;
+  const decodedStateSlug = decodeURIComponent(stateSlug).toLowerCase().trim();
+  
+  const STATE_ALIASES: Record<string, string> = {
+    "gujarath": "gujarat",
+    "uttarkhand": "uttarakhand",
+    "uttara-khand": "uttarakhand",
+    "himachal": "himachal-pradesh",
+    "wb": "west-bengal",
+    "up": "uttar-pradesh",
+    "mp": "madhya-pradesh",
+    "ap": "andhra-pradesh",
+    "ts": "telangana",
+    "tn": "tamil-nadu",
+    "tamilnadu": "tamil-nadu",
+    "orissa": "odisha",
+    "jk": "jammu-and-kashmir",
+    "rj": "rajasthan",
+    "maharastra": "maharashtra",
+    "andhra pradesh": "andhra-pradesh",
+    "andhra": "andhra-pradesh",
+    "ka": "karnataka",
+    "mz": "mizoram",
+    "chattisgarh": "chhattisgarh",
+    "ct": "chhattisgarh",
+    "cg": "chhattisgarh",
+    "jammu and kashmir": "jammu-and-kashmir",
+    "jammu-kashmir": "jammu-and-kashmir",
+    "jammu": "jammu-and-kashmir",
+    "kashmir": "jammu-and-kashmir",
+  };
 
-  const state = INDIAN_STATES.find((s) => s.slug === stateSlug);
+  const normalizedSlug = STATE_ALIASES[decodedStateSlug] || STATE_ALIASES[decodedStateSlug.replace(/\s+/g, "-")] || decodedStateSlug;
+
+  const state = INDIAN_STATES.find(
+    (s) =>
+      s.slug.toLowerCase() === decodedStateSlug ||
+      s.name.toLowerCase() === decodedStateSlug ||
+      s.slug.toLowerCase() === normalizedSlug ||
+      s.name.toLowerCase() === normalizedSlug ||
+      s.slug.toLowerCase() === decodedStateSlug.replace(/\s+/g, "-") ||
+      s.name.toLowerCase() === decodedStateSlug.replace(/-/g, " ") ||
+      s.slug.toLowerCase() === normalizedSlug.replace(/\s+/g, "-") ||
+      s.name.toLowerCase() === normalizedSlug.replace(/-/g, " ")
+  );
 
   if (!state) {
     notFound();
   }
 
   const stateMeasurements = SAMPLE_MEASUREMENTS.filter((m) =>
-    m.states?.includes(state.name)
+    m.states?.some(
+      (s) =>
+        s.toLowerCase() === state.name.toLowerCase() ||
+        s.toLowerCase() === state.slug.toLowerCase()
+    )
+  );
+
+  const stateSectorSlugs = new Set(stateMeasurements.map((m) => m.sector));
+  const activeStateSectors = SECTORS.filter(
+    (s) => stateSectorSlugs.has(s.slug) || stateSectorSlugs.has(s.id)
   );
 
   return (
@@ -26,13 +83,19 @@ export default async function StatePage({
 
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-sm text-[#8B7355] mb-8">
-        <Link href="/" className="hover:text-[#6F4E37]">
+        <Link
+          href="/"
+          className="hover:text-[#6F4E37]"
+        >
           Home
         </Link>
 
         <span>/</span>
 
-        <Link href="/regions" className="hover:text-[#6F4E37]">
+        <Link
+          href="/regions"
+          className="hover:text-[#6F4E37]"
+        >
           Regions
         </Link>
 
@@ -73,13 +136,17 @@ export default async function StatePage({
           </div>
 
           <div className="text-right">
+
             <div className="font-serif text-3xl font-bold text-[#B88646]">
-              {state.measurement_count || stateMeasurements.length || 0}
+              {state.measurement_count ||
+                stateMeasurements.length ||
+                0}
             </div>
 
             <div className="text-xs text-[#C8B8A2]">
               measurements documented
             </div>
+
           </div>
 
         </div>
@@ -115,41 +182,38 @@ export default async function StatePage({
           </section>
 
           {/* Districts */}
-          {state.districts && state.districts.length > 0 && (
+          {state.districts &&
+            state.districts.length > 0 && (
+              <section className="mb-10">
 
-            <section className="mb-10">
+                <h2 className="font-serif text-xl font-bold text-[#2E2A26] mb-5">
+                  Districts
+                </h2>
 
-              <h2 className="font-serif text-xl font-bold text-[#2E2A26] mb-5">
-                Districts
-              </h2>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                  {state.districts.map((district) => (
+                    <Link
+                      key={district.id}
+                      href={`/regions/${state.slug}/${district.slug}`}
+                      className="bg-white border border-[#E8DED1] rounded-lg p-3 hover:border-[#6F4E37] hover:shadow-sm transition-all group"
+                    >
 
-                {state.districts.map((district) => (
+                      <div className="font-medium text-sm text-[#2E2A26] group-hover:text-[#6F4E37]">
+                        {district.name}
+                      </div>
 
-                  <Link
-                    key={district.id}
-                    href={`/regions/${state.slug}/${district.slug}`}
-                    className="bg-white border border-[#E8DED1] rounded-lg p-3 hover:border-[#6F4E37] hover:shadow-sm transition-all group"
-                  >
+                      <div className="text-xs text-[#A09080] mt-1">
+                        {district.measurement_count || 0} units
+                      </div>
 
-                    <div className="font-medium text-sm text-[#2E2A26] group-hover:text-[#6F4E37]">
-                      {district.name}
-                    </div>
+                    </Link>
+                  ))}
 
-                    <div className="text-xs text-[#A09080] mt-1">
-                      {district.measurement_count || 0} units
-                    </div>
+                </div>
 
-                  </Link>
-
-                ))}
-
-              </div>
-
-            </section>
-
-          )}
+              </section>
+            )}
 
         </div>
 
@@ -184,7 +248,10 @@ export default async function StatePage({
                 },
                 {
                   label: "Measurements",
-                  value: state.measurement_count || 0,
+                  value:
+                    state.measurement_count ||
+                    stateMeasurements.length ||
+                    0,
                 },
               ].map(({ label, value }) => (
 
@@ -222,7 +289,7 @@ export default async function StatePage({
 
             <div className="flex flex-wrap gap-2">
 
-              {SECTORS.slice(0, 5).map((sector) => (
+              {(activeStateSectors.length > 0 ? activeStateSectors : SECTORS.slice(0, 5)).map((sector) => (
 
                 <Link
                   key={sector.id}

@@ -1,52 +1,66 @@
 import { NextRequest, NextResponse } from "next/server";
+import Groq from "groq-sdk";
 import { SAMPLE_MEASUREMENTS } from "@/lib/data";
 
-// ── Normalise for fuzzy matching ─────────────────────────────────────────────
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY || "dummy-key-for-build" });
+
+// ── Normalise text for fuzzy matching ─────────────────────────────────────────
 function norm(s: string) {
-  return s.toLowerCase().replace(/[^a-z0-9]/g, " ").trim();
+  return s.toLowerCase().replace(/[^a-z0-9\s]/g, " ").trim();
 }
 
-// ── Find matching measurement from local data ─────────────────────────────────
-function findMeasurement(question: string) {
+const STOP_WORDS = new Set(["what", "who", "where", "how", "why", "is", "are", "do", "does", "in", "the", "a", "an", "of", "and", "or", "to", "for", "with", "units", "used", "measurements", "traditional"]);
+
+// ── Find measurements relevant to the question ────────────────────────────────
+function findRelevantMeasurements(question: string, limit = 15) {
   const q = norm(question);
-  return SAMPLE_MEASUREMENTS.find((m) => {
+  const words = q.split(/\s+/).filter((w) => w.length > 2 && !STOP_WORDS.has(w));
+
+  const scored = SAMPLE_MEASUREMENTS.map((m) => {
     const candidates = [
       m.name_english,
+      m.name_hindi ?? "",
       m.name_sanskrit ?? "",
       m.name_telugu ?? "",
-      m.name_hindi ?? "",
-      m.slug,
       ...(m.local_names ?? []),
       ...(m.tags ?? []),
-    ];
-    return candidates.some((c) => c && q.includes(norm(c)) && norm(c).length > 1);
-  }) ?? null;
+      ...(m.states ?? []),
+      m.category,
+      m.sector,
+      ...(m.used_in ?? []),
+    ].map(norm);
+
+    const score = words.reduce((acc, word) => {
+      return acc + (candidates.some((c) => c.includes(word)) ? 1 : 0);
+    }, 0);
+
+    return { m, score };
+  });
+
+  // Sort by relevance, take top N
+  return scored
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((x) => x.m);
 }
 
-// ── Build Gemini Prompt ───────────────────────────────────────────────────────
-function buildPrompt(question: string, m: typeof SAMPLE_MEASUREMENTS[0] | null) {
-  const system = m
-    ? `You are DESINAAP Assistant — a warm, friendly guide to India's traditional measurement systems.
-The user asked about a real unit from the database. Use ONLY the data below. Never invent values.
-
-Unit: ${m.name_english}${m.name_sanskrit ? ` (${m.name_sanskrit} / ${m.name_telugu ?? ""})` : ""}
-Meaning: ${m.meaning ?? ""}
-Modern Equivalent: ${m.modern_equivalent ?? "not recorded"}
-Conversion: ${m.conversion_formula ?? ""}
-Historical Context: ${m.historical_context ?? ""}
-Also known as: ${(m.local_names ?? []).join(", ")}
-Used in: ${(m.used_in ?? []).join(", ")}
-
-If this is a body-based unit (fingers, hands, arm span, etc.), enthusiastically describe the hand or body gesture and invite the user to physically try it themselves. Keep the reply warm, conversational, and to 2–4 sentences.`
-    : `You are DESINAAP Assistant — a warm, friendly expert on India's traditional measurement systems (Angula, Hasta, Vitasti, Mana, Tola, Khanduga, and more).
-If asked about a measurement unit, give an accurate, friendly answer. For body-based measurements, describe the hand gesture and encourage the user to try it.
-If it's a greeting or small talk, reply warmly and invite them to ask about a traditional measurement.
-Never fabricate measurement values. Keep replies to 2–4 sentences.`;
-
-  return `${system}\n\nUser Question: ${question}`;
+// ── Format a measurement for the prompt ──────────────────────────────────────
+function formatUnit(m: (typeof SAMPLE_MEASUREMENTS)[0]): string {
+  const parts = [
+    `• ${m.name_english}${m.name_hindi ? ` (${m.name_hindi})` : ""}${m.name_sanskrit ? ` / ${m.name_sanskrit}` : ""}`,
+    m.local_names?.length ? `  Also: ${m.local_names.join(", ")}` : "",
+    `  Category: ${m.category} | Sector: ${m.sector}`,
+    m.states?.length ? `  States: ${m.states.join(", ")}` : "",
+    m.meaning ? `  Meaning: ${m.meaning}` : "",
+    m.modern_equivalent ? `  ≈ ${m.modern_equivalent}` : "",
+    m.conversion_formula ? `  Conversion: ${m.conversion_formula}` : "",
+    m.used_in?.length ? `  Used in: ${m.used_in.join(", ")}` : "",
+  ].filter(Boolean);
+  return parts.join("\n");
 }
 
-// ── POST /api/chat ────────────────────────────────────────────────────────────
+// ── POST /api/chat ─────────────────────────────────────────────────────────────
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -56,40 +70,43 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ reply: "Please ask me something!" });
     }
 
-    // Delay artificially to simulate network and show off the "thinking" animation
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // Find relevant units for context
+    const relevantUnits = findRelevantMeasurements(question, 20); // Get up to 20 units
+    const contextBlock =
+      relevantUnits.length > 0
+        ? `## Relevant measurements from database:\n${relevantUnits.map(formatUnit).join("\n\n")}`
+        : `## Note: No specific unit matched the question. Answer generally based on your knowledge of traditional Indian measurements.`;
 
-    const match = findMeasurement(question);
+    const systemPrompt = `You are DESINAAP Assistant — a warm, knowledgeable expert on India's traditional measurement systems.
 
-    if (match) {
-      // Mocked rich response for a matched measurement
-      let reply = `The **${match.name_english}**${match.name_sanskrit ? ` (${match.name_sanskrit})` : ""} is a traditional unit of ${match.category}. `;
-      if (match.meaning) reply += `${match.meaning}. `;
-      if (match.modern_equivalent) reply += `In modern terms, it's roughly ${match.modern_equivalent}. `;
-      
-      // Add fake gesture suggestion for body-based units
-      if (["angula", "hasta", "vitasti"].includes(match.slug)) {
-        reply += `\n\n🤌 *Try it yourself:* Use your own body to see how long one ${match.name_english} is!`;
-      }
-      
-      return NextResponse.json({ reply: reply.trim() });
-    }
+${contextBlock}
 
-    // Small-talk / fallback response
-    const fallbackReplies = [
-      "Hello! I'm the DESINAAP Assistant. I know all about traditional Indian measurements like Angula, Hasta, and Tola. What would you like to know?",
-      "I might not know the answer to that specific question, but you can ask me about traditional Indian units of length, volume, or weight!",
-      "I'm still learning! Try asking me about 'Angula', 'Hasta', or 'Mana' to see what I can do."
-    ];
-    const randomFallback = fallbackReplies[Math.floor(Math.random() * fallbackReplies.length)];
+## GUIDELINES
+- Use ONLY the data above when citing specific values — never fabricate numbers
+- If no data matches, say you don't know rather than hallucinating
+- Keep responses to 2–5 sentences, or a short bullet list when listing multiple units
+- Use simple, friendly language with occasional emojis (📏 ⚖️ 🌾 🏺)`;
 
-    return NextResponse.json({ reply: randomFallback });
+    const completion = await groq.chat.completions.create({
+      model: "qwen/qwen3.6-27b",
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: question },
+      ],
+      temperature: 0.6,
+      max_tokens: 1500,
+    });
+
+    let rawReply = completion.choices[0]?.message?.content?.trim() ?? "I couldn't generate a response — please try again!";
+    
+    // Strip <think>...</think> block if present
+    rawReply = rawReply.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+
+    return NextResponse.json({ reply: rawReply });
   } catch (err) {
-    console.error("[chat] Unexpected error:", err);
+    console.error("[chat] Groq API error:", err);
     return NextResponse.json({
       reply: "Something went wrong on my end — please try again in a bit!",
     });
   }
 }
-
-

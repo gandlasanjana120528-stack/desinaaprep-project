@@ -2,8 +2,8 @@ import { Measurement } from "@/types";
 
 export const UP_MEASUREMENTS: Measurement[] = [
   {
-    "id": "101",
-    "slug": "ratti-trade-commerce-up",
+    "id": "uttar-pradesh-1388",
+    "slug": "ratti-trade-commerce-uttar-pradesh",
     "name_english": "Ratti",
     "name_sanskrit": "रत्ति (Ratti / Raktika)",
     "name_hindi": "रत्ती",
@@ -15,6 +15,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "trade-commerce",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.1215 g",
     "conversion_formula": "Base / smallest unit",
     "states": [
@@ -37,8 +39,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "102",
-    "slug": "masha-trade-commerce-up",
+    "id": "uttar-pradesh-1389",
+    "slug": "masha-trade-commerce-uttar-pradesh",
     "name_english": "Masha",
     "name_sanskrit": "माष (Māṣa)",
     "name_hindi": "माशा",
@@ -50,6 +52,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "trade-commerce",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.97 g",
     "conversion_formula": "8 Ratti = 1 Masha",
     "states": [
@@ -72,8 +76,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "103",
-    "slug": "tola-trade-commerce-up",
+    "id": "uttar-pradesh-1390",
+    "slug": "tola-trade-commerce-uttar-pradesh",
     "name_english": "Tola",
     "name_sanskrit": "तोला (Tolā)",
     "name_hindi": "तोला",
@@ -85,6 +89,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "trade-commerce",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~11.66 g",
     "conversion_formula": "12 Masha = 1 Tola",
     "states": [
@@ -107,8 +113,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "104",
-    "slug": "chittak-chhatank-trade-commerce-up",
+    "id": "uttar-pradesh-1391",
+    "slug": "chittak-chhatank-trade-commerce-uttar-pradesh",
     "name_english": "Chittak (Chhatank)",
     "name_hindi": "छटांक",
     "local_names": [
@@ -119,6 +125,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "trade-commerce",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~58.3 g",
     "conversion_formula": "1/16 Seer = 1 Chittak",
     "states": [
@@ -142,8 +150,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "105",
-    "slug": "pav-pao-trade-commerce-up",
+    "id": "uttar-pradesh-1392",
+    "slug": "pav-pao-trade-commerce-uttar-pradesh",
     "name_english": "Pav (Pao)",
     "name_hindi": "पाव",
     "local_names": [
@@ -154,6 +162,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "trade-commerce",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~233 g",
     "conversion_formula": "1/4 Seer = 1 Pav",
     "states": [
@@ -177,8 +187,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "106",
-    "slug": "seer-trade-commerce-up",
+    "id": "uttar-pradesh-1393",
+    "slug": "seer-trade-commerce-uttar-pradesh",
     "name_english": "Seer",
     "name_sanskrit": "सेर (Sēra)",
     "name_hindi": "सेर",
@@ -190,6 +200,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "trade-commerce",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.933 kg",
     "conversion_formula": "16 Chittak = 1 Seer",
     "states": [
@@ -213,8 +225,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "107",
-    "slug": "maund-man-trade-commerce-up",
+    "id": "uttar-pradesh-1394",
+    "slug": "maund-man-trade-commerce-uttar-pradesh",
     "name_english": "Maund (Man)",
     "name_sanskrit": "मन (Māna)",
     "name_hindi": "मन",
@@ -226,6 +238,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "trade-commerce",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~37.32 kg",
     "conversion_formula": "40 Seer = 1 Maund",
     "states": [
@@ -249,8 +263,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "108",
-    "slug": "khandi-trade-commerce-up",
+    "id": "uttar-pradesh-1395",
+    "slug": "khandi-trade-commerce-uttar-pradesh",
     "name_english": "Khandi",
     "name_sanskrit": "खण्डिका (Khaṇḍikā)",
     "name_hindi": "खंडी",
@@ -262,6 +276,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "trade-commerce",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~326–560 kg (regionally variable)",
     "conversion_formula": "20 Maund ≈ 1 Khandi (regionally variable)",
     "states": [
@@ -284,8 +300,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "109",
-    "slug": "dam-trade-commerce-up",
+    "id": "uttar-pradesh-1396",
+    "slug": "dam-trade-commerce-uttar-pradesh",
     "name_english": "Dam",
     "name_hindi": "दाम",
     "local_names": [
@@ -296,6 +312,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "trade-commerce",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "historical_period": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "Copper coin, ~20.9 g; 40 Dam = 1 Rupee",
     "conversion_formula": "40 Dam = 1 Rupee (Akbar's standard)",
     "states": [
@@ -319,8 +337,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "110",
-    "slug": "rupaiya-rupee-trade-commerce-up",
+    "id": "uttar-pradesh-1397",
+    "slug": "rupaiya-rupee-trade-commerce-uttar-pradesh",
     "name_english": "Rupaiya (Rupee)",
     "name_sanskrit": "रूप्यकम् (Rūpyakam)",
     "name_hindi": "रुपया",
@@ -332,6 +350,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "trade-commerce",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "historical_period": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "~11.5 g silver; base unit of currency",
     "conversion_formula": "40 Dam = 1 Rupee",
     "states": [
@@ -354,8 +374,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "111",
-    "slug": "angul-textile-handloom-up",
+    "id": "uttar-pradesh-1398",
+    "slug": "angul-textile-handloom-uttar-pradesh",
     "name_english": "Angul",
     "name_sanskrit": "अङ्गुल (Aṅgula)",
     "name_hindi": "अंगुल",
@@ -367,6 +387,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "textile-handloom",
     "origin": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "modern_equivalent": "~1.9 cm",
     "conversion_formula": "Base unit; 16 Angul ≈ 1 Girah (approx.)",
     "states": [
@@ -389,8 +411,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "112",
-    "slug": "girah-textile-handloom-up",
+    "id": "uttar-pradesh-1399",
+    "slug": "girah-textile-handloom-uttar-pradesh",
     "name_english": "Girah",
     "name_hindi": "गिरह",
     "local_names": [
@@ -401,6 +423,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "textile-handloom",
     "origin": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "modern_equivalent": "~5.7 cm (1/16 Gaz)",
     "conversion_formula": "16 Girah = 1 Gaz",
     "states": [
@@ -424,8 +448,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "113",
-    "slug": "gaz-textile-handloom-up",
+    "id": "uttar-pradesh-1400",
+    "slug": "gaz-textile-handloom-uttar-pradesh",
     "name_english": "Gaz",
     "name_sanskrit": "गज (Gaja)",
     "name_hindi": "गज",
@@ -437,6 +461,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "textile-handloom",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.83–0.91 m (varied by era/region; Akbar's Ilahi Gaz ≈ 0.804–0.84 m)",
     "conversion_formula": "16 Girah = 1 Gaz",
     "states": [
@@ -460,8 +486,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "114",
-    "slug": "thaan-textile-handloom-up",
+    "id": "uttar-pradesh-1401",
+    "slug": "thaan-textile-handloom-uttar-pradesh",
     "name_english": "Thaan",
     "name_hindi": "थान",
     "local_names": [
@@ -472,6 +498,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "textile-handloom",
     "origin": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "historical_context": "Traditional, continuing to the present day",
+    "historical_period": "Traditional, continuing to the present day",
+    "region_applicable": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "modern_equivalent": "~9–14 m per bolt (varies by weave; Banarasi brocade thaan commonly ≈10 m)",
     "conversion_formula": "1 Thaan = full uncut loom-length of woven cloth",
     "states": [
@@ -495,8 +523,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "115",
-    "slug": "tola-textile-handloom-up",
+    "id": "uttar-pradesh-1402",
+    "slug": "tola-textile-handloom-uttar-pradesh",
     "name_english": "Tola",
     "name_sanskrit": "तोला (Tolā)",
     "name_hindi": "तोला",
@@ -508,6 +536,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "textile-handloom",
     "origin": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "modern_equivalent": "~11.66 g",
     "conversion_formula": "12 Masha = 1 Tola",
     "states": [
@@ -530,8 +560,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "116",
-    "slug": "ratti-medicine-ayurveda-up",
+    "id": "uttar-pradesh-1403",
+    "slug": "ratti-medicine-ayurveda-uttar-pradesh",
     "name_english": "Ratti",
     "name_sanskrit": "रत्ति / रक्तिका (Ratti / Raktikā)",
     "name_hindi": "रत्ती",
@@ -543,6 +573,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "medicine",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.1215 g",
     "conversion_formula": "Base / smallest unit",
     "states": [
@@ -565,8 +597,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "117",
-    "slug": "masha-medicine-ayurveda-up",
+    "id": "uttar-pradesh-1404",
+    "slug": "masha-medicine-ayurveda-uttar-pradesh",
     "name_english": "Masha",
     "name_sanskrit": "माष (Māṣa)",
     "name_hindi": "माशा",
@@ -578,6 +610,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "medicine",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.97 g",
     "conversion_formula": "8 Ratti = 1 Masha",
     "states": [
@@ -600,8 +634,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "118",
-    "slug": "karsha-medicine-ayurveda-up",
+    "id": "uttar-pradesh-1405",
+    "slug": "karsha-medicine-ayurveda-uttar-pradesh",
     "name_english": "Karsha",
     "name_sanskrit": "कर्ष (Karṣa)",
     "name_hindi": "कर्ष",
@@ -613,6 +647,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "medicine",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~12 g",
     "conversion_formula": "12 Masha = 1 Karsha",
     "states": [
@@ -635,8 +671,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "119",
-    "slug": "pala-medicine-ayurveda-up",
+    "id": "uttar-pradesh-1406",
+    "slug": "pala-medicine-ayurveda-uttar-pradesh",
     "name_english": "Pala",
     "name_sanskrit": "पल (Pala)",
     "name_hindi": "पल",
@@ -648,6 +684,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "medicine",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~48 g",
     "conversion_formula": "4 Karsha = 1 Pala",
     "states": [
@@ -670,8 +708,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "120",
-    "slug": "kudava-medicine-ayurveda-up",
+    "id": "uttar-pradesh-1407",
+    "slug": "kudava-medicine-ayurveda-uttar-pradesh",
     "name_english": "Kudava",
     "name_sanskrit": "कुडव (Kuḍava)",
     "name_hindi": "कुडव",
@@ -683,6 +721,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "medicine",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~192 ml",
     "conversion_formula": "4 Kudava = 1 Prastha",
     "states": [
@@ -705,8 +745,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "121",
-    "slug": "prastha-medicine-ayurveda-up",
+    "id": "uttar-pradesh-1408",
+    "slug": "prastha-medicine-ayurveda-uttar-pradesh",
     "name_english": "Prastha",
     "name_sanskrit": "प्रस्थ (Prastha)",
     "name_hindi": "प्रस्थ",
@@ -718,6 +758,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "medicine",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~768 ml",
     "conversion_formula": "4 Kudava = 1 Prastha",
     "states": [
@@ -740,8 +782,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "122",
-    "slug": "angul-medicine-ayurveda-up",
+    "id": "uttar-pradesh-1409",
+    "slug": "angul-medicine-ayurveda-uttar-pradesh",
     "name_english": "Angul",
     "name_sanskrit": "अङ्गुल (Aṅgula)",
     "name_hindi": "अंगुल",
@@ -753,6 +795,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "medicine",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~1.9 cm",
     "conversion_formula": "Base length unit",
     "states": [
@@ -775,8 +819,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "123",
-    "slug": "tola-medicine-ayurveda-up",
+    "id": "uttar-pradesh-1410",
+    "slug": "tola-medicine-ayurveda-uttar-pradesh",
     "name_english": "Tola",
     "name_sanskrit": "तोला (Tolā)",
     "name_hindi": "तोला",
@@ -788,6 +832,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "medicine",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~11.66 g",
     "conversion_formula": "12 Masha = 1 Tola",
     "states": [
@@ -810,8 +856,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "124",
-    "slug": "yava-construction-architecture-up",
+    "id": "uttar-pradesh-1411",
+    "slug": "yava-construction-architecture-uttar-pradesh",
     "name_english": "Yava",
     "name_sanskrit": "यव (Yava)",
     "name_hindi": "जौ",
@@ -823,6 +869,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "architecture",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~1.7–1.8 mm",
     "conversion_formula": "8 Yava = 1 Angula",
     "states": [
@@ -845,8 +893,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "125",
-    "slug": "angul-construction-architecture-up",
+    "id": "uttar-pradesh-1412",
+    "slug": "angul-construction-architecture-uttar-pradesh",
     "name_english": "Angul",
     "name_sanskrit": "अङ्गुल (Aṅgula)",
     "name_hindi": "अंगुल",
@@ -858,6 +906,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "architecture",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~1.763–1.9 cm",
     "conversion_formula": "8 Yava = 1 Angula",
     "states": [
@@ -880,8 +930,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "126",
-    "slug": "girah-construction-architecture-up",
+    "id": "uttar-pradesh-1413",
+    "slug": "girah-construction-architecture-uttar-pradesh",
     "name_english": "Girah",
     "name_hindi": "गिरह",
     "local_names": [
@@ -892,6 +942,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "architecture",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "~5.7 cm",
     "conversion_formula": "16 Girah = 1 Gaz",
     "states": [
@@ -915,8 +967,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "127",
-    "slug": "hath-hasta-construction-architecture-up",
+    "id": "uttar-pradesh-1414",
+    "slug": "hath-hasta-construction-architecture-uttar-pradesh",
     "name_english": "Hath (Hasta)",
     "name_sanskrit": "हस्त (Hasta)",
     "name_hindi": "हाथ",
@@ -928,6 +980,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "architecture",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~45.7 cm",
     "conversion_formula": "24 Angula = 1 Hasta",
     "states": [
@@ -950,8 +1004,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "128",
-    "slug": "gaz-ilahi-gaz-construction-architecture-up",
+    "id": "uttar-pradesh-1415",
+    "slug": "gaz-ilahi-gaz-construction-architecture-uttar-pradesh",
     "name_english": "Gaz (Ilahi Gaz)",
     "name_sanskrit": "गज (Gaja)",
     "name_hindi": "गज",
@@ -963,6 +1017,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "architecture",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "historical_period": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "Standardised by Akbar at ≈ 0.804–0.84 m (33 in.)",
     "conversion_formula": "16 Girah = 1 Gaz",
     "states": [
@@ -986,8 +1042,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "129",
-    "slug": "jarib-construction-architecture-up",
+    "id": "uttar-pradesh-1416",
+    "slug": "jarib-construction-architecture-uttar-pradesh",
     "name_english": "Jarib",
     "name_hindi": "जरीब",
     "local_names": [
@@ -998,6 +1054,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "architecture",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "historical_period": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "Measuring chain, standardised ≈ 55 Gaz (Akbar's Ilahi Jarib)",
     "conversion_formula": "1 Jarib = 55 Gaz (Akbar's revenue survey standard)",
     "states": [
@@ -1020,8 +1078,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "130",
-    "slug": "danda-construction-architecture-up",
+    "id": "uttar-pradesh-1417",
+    "slug": "danda-construction-architecture-uttar-pradesh",
     "name_english": "Danda",
     "name_sanskrit": "दण्ड (Daṇḍa)",
     "name_hindi": "डंडा",
@@ -1033,6 +1091,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "architecture",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~1.8–1.9 m",
     "conversion_formula": "4 Hasta = 1 Danda",
     "states": [
@@ -1055,8 +1115,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "131",
-    "slug": "gaz-transportation-distance-up",
+    "id": "uttar-pradesh-1418",
+    "slug": "gaz-transportation-distance-uttar-pradesh",
     "name_english": "Gaz",
     "name_sanskrit": "गज (Gaja)",
     "name_hindi": "गज",
@@ -1068,6 +1128,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "transportation-distance",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.83–0.91 m",
     "conversion_formula": "16 Girah = 1 Gaz",
     "states": [
@@ -1091,8 +1153,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "132",
-    "slug": "kos-krosha-transportation-distance-up",
+    "id": "uttar-pradesh-1419",
+    "slug": "kos-krosha-transportation-distance-uttar-pradesh",
     "name_english": "Kos (Krosha)",
     "name_sanskrit": "क्रोश (Krośa)",
     "name_hindi": "कोस",
@@ -1104,6 +1166,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "transportation-distance",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "~3.2 km (varied c. 1.9–3.9 km by era/region)",
     "conversion_formula": "1 Kos ≈ 2000 Danda (traditional)",
     "states": [
@@ -1126,8 +1190,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "133",
-    "slug": "manzil-transportation-distance-up",
+    "id": "uttar-pradesh-1420",
+    "slug": "manzil-transportation-distance-uttar-pradesh",
     "name_english": "Manzil",
     "name_hindi": "मंज़िल",
     "local_names": [
@@ -1138,6 +1202,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "transportation-distance",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "Variable — one day's march (typically several Kos)",
     "conversion_formula": "1 Manzil = a day's imperial march (several Kos)",
     "states": [
@@ -1160,8 +1226,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "134",
-    "slug": "yojana-transportation-distance-up",
+    "id": "uttar-pradesh-1421",
+    "slug": "yojana-transportation-distance-uttar-pradesh",
     "name_english": "Yojana",
     "name_sanskrit": "योजन (Yojana)",
     "name_hindi": "योजन",
@@ -1173,6 +1239,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "transportation-distance",
     "origin": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "historical_context": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "historical_period": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "region_applicable": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "modern_equivalent": "~12–14.5 km (varied by text/era)",
     "conversion_formula": "4 Kos = 1 Yojana",
     "states": [
@@ -1195,8 +1263,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "135",
-    "slug": "dhur-land-measurement-up",
+    "id": "uttar-pradesh-1422",
+    "slug": "dhur-land-measurement-uttar-pradesh",
     "name_english": "Dhur",
     "name_hindi": "धुर",
     "local_names": [
@@ -1207,6 +1275,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "land-measurement",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~16.9–68 sq ft (district-variable)",
     "conversion_formula": "20 Dhur = 1 Biswansi",
     "states": [
@@ -1230,8 +1300,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "136",
-    "slug": "biswansi-land-measurement-up",
+    "id": "uttar-pradesh-1423",
+    "slug": "biswansi-land-measurement-uttar-pradesh",
     "name_english": "Biswansi",
     "name_hindi": "बिसवांसी",
     "local_names": [
@@ -1242,6 +1312,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "land-measurement",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~68 sq ft (district-variable; 1/20 Biswa)",
     "conversion_formula": "20 Dhur = 1 Biswansi; 20 Biswansi = 1 Biswa",
     "states": [
@@ -1265,8 +1337,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "137",
-    "slug": "biswa-land-measurement-up",
+    "id": "uttar-pradesh-1424",
+    "slug": "biswa-land-measurement-uttar-pradesh",
     "name_english": "Biswa",
     "name_hindi": "बिस्वा",
     "local_names": [
@@ -1277,6 +1349,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "land-measurement",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~1,361 sq ft (Eastern UP standard; ~340 sq ft in parts of Western UP)",
     "conversion_formula": "20 Biswansi = 1 Biswa; 20 Biswa = 1 Bigha",
     "states": [
@@ -1300,8 +1374,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "138",
-    "slug": "katha-land-measurement-up",
+    "id": "uttar-pradesh-1425",
+    "slug": "katha-land-measurement-uttar-pradesh",
     "name_english": "Katha",
     "name_hindi": "कट्ठा",
     "local_names": [
@@ -1312,6 +1386,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "land-measurement",
     "origin": "Awadh region (Lucknow, Faizabad/Ayodhya, Gorakhpur, eastern UP)",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Awadh region (Lucknow, Faizabad/Ayodhya, Gorakhpur, eastern UP)",
     "modern_equivalent": "~720–1,361 sq ft (regionally variable)",
     "conversion_formula": "20 Dhur = 1 Katha (used as an alternative reckoning to Biswa in some districts)",
     "states": [
@@ -1335,8 +1411,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "139",
-    "slug": "bigha-kachha-land-measurement-up",
+    "id": "uttar-pradesh-1426",
+    "slug": "bigha-kachha-land-measurement-uttar-pradesh",
     "name_english": "Bigha (Kachha)",
     "name_hindi": "कच्चा बीघा",
     "local_names": [
@@ -1347,6 +1423,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "land-measurement",
     "origin": "Western Uttar Pradesh (Meerut, Muzaffarnagar, Bulandshahr, Saharanpur)",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Western Uttar Pradesh (Meerut, Muzaffarnagar, Bulandshahr, Saharanpur)",
     "modern_equivalent": "~6,806–9,075 sq ft (smaller Western-UP standard)",
     "conversion_formula": "5 Biswa = 1 Bigha (Western UP convention)",
     "states": [
@@ -1370,8 +1448,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "140",
-    "slug": "bigha-pucca-land-measurement-up",
+    "id": "uttar-pradesh-1427",
+    "slug": "bigha-pucca-land-measurement-uttar-pradesh",
     "name_english": "Bigha (Pucca)",
     "name_hindi": "पक्का बीघा",
     "local_names": [
@@ -1382,6 +1460,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "land-measurement",
     "origin": "Awadh region (Lucknow, Faizabad/Ayodhya, Gorakhpur, eastern UP)",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Awadh region (Lucknow, Faizabad/Ayodhya, Gorakhpur, eastern UP)",
     "modern_equivalent": "~27,225 sq ft ≈ 2,529 sq m (Eastern-UP/Awadh standard)",
     "conversion_formula": "20 Biswa = 1 Bigha (Eastern UP/Awadh convention)",
     "states": [
@@ -1405,8 +1485,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "141",
-    "slug": "jarib-land-measurement-up",
+    "id": "uttar-pradesh-1428",
+    "slug": "jarib-land-measurement-uttar-pradesh",
     "name_english": "Jarib",
     "name_hindi": "जरीब",
     "local_names": [
@@ -1417,6 +1497,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "land-measurement",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "historical_period": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "Standardised ≈ 55 Gaz under Akbar's Zabt system",
     "conversion_formula": "1 Jarib (Ilahi) = 55 Gaz; land area = Jarib² based grid",
     "states": [
@@ -1439,8 +1521,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "142",
-    "slug": "acre-land-measurement-up",
+    "id": "uttar-pradesh-1429",
+    "slug": "acre-land-measurement-uttar-pradesh",
     "name_english": "Acre",
     "name_sanskrit": "एकर (Ekara)",
     "name_hindi": "एकड़",
@@ -1452,6 +1534,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "land-measurement",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~43,560 sq ft / 4,046.86 sq m",
     "conversion_formula": "≈1.6 Pucca Bigha (Eastern UP)",
     "states": [
@@ -1474,8 +1558,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "143",
-    "slug": "hectare-land-measurement-up",
+    "id": "uttar-pradesh-1430",
+    "slug": "hectare-land-measurement-uttar-pradesh",
     "name_english": "Hectare",
     "name_sanskrit": "हेक्टेयर (Hekṭeyara)",
     "name_hindi": "हेक्टेयर",
@@ -1487,6 +1571,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "land-measurement",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "10,000 sq m / 2.471 Acres",
     "conversion_formula": "100 Are = 1 Hectare",
     "states": [
@@ -1509,8 +1595,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "144",
-    "slug": "seer-livestock-dairy-up",
+    "id": "uttar-pradesh-1431",
+    "slug": "seer-livestock-dairy-uttar-pradesh",
     "name_english": "Seer",
     "name_sanskrit": "सेर (Sēra)",
     "name_hindi": "सेर",
@@ -1522,6 +1608,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "livestock-dairy",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.933 kg / ~0.933 L",
     "conversion_formula": "16 Chittak = 1 Seer",
     "states": [
@@ -1545,8 +1633,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "145",
-    "slug": "dharri-livestock-dairy-up",
+    "id": "uttar-pradesh-1432",
+    "slug": "dharri-livestock-dairy-uttar-pradesh",
     "name_english": "Dharri",
     "name_hindi": "धड़ी",
     "local_names": [
@@ -1557,6 +1645,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "livestock-dairy",
     "origin": "Awadh region (Lucknow, Faizabad/Ayodhya, Gorakhpur, eastern UP)",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Awadh region (Lucknow, Faizabad/Ayodhya, Gorakhpur, eastern UP)",
     "modern_equivalent": "~2.3–2.5 kg (regionally variable; typically 2.5 Seer)",
     "conversion_formula": "2.5 Seer ≈ 1 Dharri (regional convention)",
     "states": [
@@ -1580,8 +1670,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "146",
-    "slug": "maund-man-livestock-dairy-up",
+    "id": "uttar-pradesh-1433",
+    "slug": "maund-man-livestock-dairy-uttar-pradesh",
     "name_english": "Maund (Man)",
     "name_sanskrit": "मन (Māna)",
     "name_hindi": "मन",
@@ -1593,6 +1683,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "livestock-dairy",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~37.32 kg",
     "conversion_formula": "40 Seer = 1 Maund",
     "states": [
@@ -1616,8 +1708,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "147",
-    "slug": "chutki-household-daily-life-up",
+    "id": "uttar-pradesh-1434",
+    "slug": "chutki-household-daily-life-uttar-pradesh",
     "name_english": "Chutki",
     "name_hindi": "चुटकी",
     "local_names": [
@@ -1628,6 +1720,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "household",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "Approx. pinch quantity (a few hundred mg to ~1 g)",
     "conversion_formula": "< Muthi",
     "states": [
@@ -1650,8 +1744,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "148",
-    "slug": "muthi-household-daily-life-up",
+    "id": "uttar-pradesh-1435",
+    "slug": "muthi-household-daily-life-uttar-pradesh",
     "name_english": "Muthi",
     "name_sanskrit": "मुष्टि (Muṣṭi)",
     "name_hindi": "मुट्ठी",
@@ -1663,6 +1757,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "household",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~50–100 g (adult fistful, varies by hand size)",
     "conversion_formula": "Several Chutki = 1 Muthi",
     "states": [
@@ -1685,8 +1781,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "149",
-    "slug": "chittak-chhatank-household-daily-life-up",
+    "id": "uttar-pradesh-1436",
+    "slug": "chittak-chhatank-household-daily-life-uttar-pradesh",
     "name_english": "Chittak (Chhatank)",
     "name_hindi": "छटांक",
     "local_names": [
@@ -1697,6 +1793,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "household",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~58.3 g",
     "conversion_formula": "1/16 Seer = 1 Chittak",
     "states": [
@@ -1720,8 +1818,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "150",
-    "slug": "adhaseer-household-daily-life-up",
+    "id": "uttar-pradesh-1437",
+    "slug": "adhaseer-household-daily-life-uttar-pradesh",
     "name_english": "Adhaseer",
     "name_hindi": "अधसेर",
     "local_names": [
@@ -1732,6 +1830,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "household",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.467 kg",
     "conversion_formula": "1/2 Seer",
     "states": [
@@ -1755,8 +1855,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "151",
-    "slug": "seer-household-daily-life-up",
+    "id": "uttar-pradesh-1438",
+    "slug": "seer-household-daily-life-uttar-pradesh",
     "name_english": "Seer",
     "name_sanskrit": "सेर (Sēra)",
     "name_hindi": "सेर",
@@ -1768,6 +1868,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "household",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.933 kg",
     "conversion_formula": "16 Chittak = 1 Seer",
     "states": [
@@ -1791,8 +1893,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "152",
-    "slug": "ghara-matka-household-daily-life-up",
+    "id": "uttar-pradesh-1439",
+    "slug": "ghara-matka-household-daily-life-uttar-pradesh",
     "name_english": "Ghara/Matka",
     "name_hindi": "घड़ा / मटका",
     "local_names": [
@@ -1803,6 +1905,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "household",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Traditional, undated (continuing folk usage)",
+    "historical_period": "Traditional, undated (continuing folk usage)",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~10–15 L (vessel-based, informal)",
     "conversion_formula": "Informal household water-storage unit",
     "states": [
@@ -1825,8 +1929,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "153",
-    "slug": "ratti-gold-jewellery-up",
+    "id": "uttar-pradesh-1440",
+    "slug": "ratti-gold-jewellery-uttar-pradesh",
     "name_english": "Ratti",
     "name_sanskrit": "रत्ति (Ratti / Raktikā)",
     "name_hindi": "रत्ती",
@@ -1838,6 +1942,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "gold-jewellery",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.1215 g",
     "conversion_formula": "Base gold/gem unit",
     "states": [
@@ -1860,8 +1966,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "154",
-    "slug": "masha-gold-jewellery-up",
+    "id": "uttar-pradesh-1441",
+    "slug": "masha-gold-jewellery-uttar-pradesh",
     "name_english": "Masha",
     "name_sanskrit": "माष (Māṣa)",
     "name_hindi": "माशा",
@@ -1873,6 +1979,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "gold-jewellery",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.972 g",
     "conversion_formula": "8 Ratti = 1 Masha",
     "states": [
@@ -1895,8 +2003,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "155",
-    "slug": "tola-gold-jewellery-up",
+    "id": "uttar-pradesh-1442",
+    "slug": "tola-gold-jewellery-uttar-pradesh",
     "name_english": "Tola",
     "name_sanskrit": "तोला (Tolā)",
     "name_hindi": "तोला",
@@ -1908,6 +2016,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "gold-jewellery",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~11.66 g",
     "conversion_formula": "12 Masha = 1 Tola",
     "states": [
@@ -1930,8 +2040,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "156",
-    "slug": "bhari-gold-jewellery-up",
+    "id": "uttar-pradesh-1443",
+    "slug": "bhari-gold-jewellery-uttar-pradesh",
     "name_english": "Bhari",
     "name_hindi": "भरी",
     "local_names": [
@@ -1942,6 +2052,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "gold-jewellery",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~11.66 g (colloquial synonym of Tola)",
     "conversion_formula": "1 Bhari = 1 Tola",
     "states": [
@@ -1964,8 +2076,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "157",
-    "slug": "suvarna-gold-jewellery-up",
+    "id": "uttar-pradesh-1444",
+    "slug": "suvarna-gold-jewellery-uttar-pradesh",
     "name_english": "Suvarna",
     "name_sanskrit": "सुवर्ण (Suvarṇa)",
     "name_hindi": "सुवर्ण",
@@ -1977,6 +2089,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "gold-jewellery",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~9.3–13.5 g gold (sources vary; Manusmriti reckoning ≈80 Ratti)",
     "conversion_formula": "80 Ratti = 1 Suvarna (Manusmriti)",
     "states": [
@@ -2000,8 +2114,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "158",
-    "slug": "nishka-gold-jewellery-up",
+    "id": "uttar-pradesh-1445",
+    "slug": "nishka-gold-jewellery-uttar-pradesh",
     "name_english": "Nishka",
     "name_sanskrit": "निष्क (Niṣka)",
     "name_hindi": "निष्क",
@@ -2013,6 +2127,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "gold-jewellery",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~37–39 g gold (Manusmriti reckoning ≈320 Ratti / 4 Suvarna)",
     "conversion_formula": "4 Suvarna = 1 Nishka (Manusmriti)",
     "states": [
@@ -2035,8 +2151,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "159",
-    "slug": "ashrafi-mohur-gold-jewellery-up",
+    "id": "uttar-pradesh-1446",
+    "slug": "ashrafi-mohur-gold-jewellery-uttar-pradesh",
     "name_english": "Ashrafi (Mohur)",
     "name_sanskrit": "मुद्रा (Mudrā)",
     "name_hindi": "अशर्फी / मोहर",
@@ -2048,6 +2164,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "gold-jewellery",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "historical_period": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "~11 g gold",
     "conversion_formula": "1 Mohur ≈ 15 Rupee (varied by era)",
     "states": [
@@ -2070,8 +2188,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "160",
-    "slug": "chittak-chhatank-seed-crop-agriculture-up",
+    "id": "uttar-pradesh-1447",
+    "slug": "chittak-chhatank-seed-crop-agriculture-uttar-pradesh",
     "name_english": "Chittak (Chhatank)",
     "name_hindi": "छटांक",
     "local_names": [
@@ -2082,6 +2200,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "agriculture",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~58.3 g",
     "conversion_formula": "1/16 Seer = 1 Chittak",
     "states": [
@@ -2105,8 +2225,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "161",
-    "slug": "seer-seed-crop-agriculture-up",
+    "id": "uttar-pradesh-1448",
+    "slug": "seer-seed-crop-agriculture-uttar-pradesh",
     "name_english": "Seer",
     "name_sanskrit": "सेर (Sēra)",
     "name_hindi": "सेर",
@@ -2118,6 +2238,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "agriculture",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.933 kg",
     "conversion_formula": "16 Chittak = 1 Seer",
     "states": [
@@ -2141,8 +2263,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "162",
-    "slug": "maund-man-seed-crop-agriculture-up",
+    "id": "uttar-pradesh-1449",
+    "slug": "maund-man-seed-crop-agriculture-uttar-pradesh",
     "name_english": "Maund (Man)",
     "name_sanskrit": "मन (Māna)",
     "name_hindi": "मन",
@@ -2154,6 +2276,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "agriculture",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~37.32 kg",
     "conversion_formula": "40 Seer = 1 Maund",
     "states": [
@@ -2177,8 +2301,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "163",
-    "slug": "bora-sack-seed-crop-agriculture-up",
+    "id": "uttar-pradesh-1450",
+    "slug": "bora-sack-seed-crop-agriculture-uttar-pradesh",
     "name_english": "Bora (sack)",
     "name_hindi": "बोरा",
     "local_names": [
@@ -2189,6 +2313,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "agriculture",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~50–100 kg (sack-dependent)",
     "conversion_formula": "Informal agricultural sack unit",
     "states": [
@@ -2211,8 +2337,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "164",
-    "slug": "quintal-seed-crop-agriculture-up",
+    "id": "uttar-pradesh-1451",
+    "slug": "quintal-seed-crop-agriculture-uttar-pradesh",
     "name_english": "Quintal",
     "name_sanskrit": "क्विंटल (Kvinṭal)",
     "name_hindi": "क्विंटल",
@@ -2224,6 +2350,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "agriculture",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "100 kg",
     "conversion_formula": "10 Quintal = 1 Metric Ton",
     "states": [
@@ -2246,8 +2374,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "165",
-    "slug": "bigha-pucca-seed-crop-agriculture-up",
+    "id": "uttar-pradesh-1452",
+    "slug": "bigha-pucca-seed-crop-agriculture-uttar-pradesh",
     "name_english": "Bigha (Pucca)",
     "name_hindi": "पक्का बीघा",
     "local_names": [
@@ -2258,6 +2386,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "agriculture",
     "origin": "Awadh region (Lucknow, Faizabad/Ayodhya, Gorakhpur, eastern UP)",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Awadh region (Lucknow, Faizabad/Ayodhya, Gorakhpur, eastern UP)",
     "modern_equivalent": "~27,225 sq ft ≈ 2,529 sq m",
     "conversion_formula": "20 Biswa = 1 Bigha",
     "states": [
@@ -2281,8 +2411,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "166",
-    "slug": "damri-currency-money-up",
+    "id": "uttar-pradesh-1453",
+    "slug": "damri-currency-money-uttar-pradesh",
     "name_english": "Damri",
     "name_hindi": "दमड़ी",
     "local_names": [
@@ -2293,6 +2423,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "currency-money",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~1/4 Dam (smallest colloquial fraction)",
     "conversion_formula": "4 Damri = 1 Dam (colloquial)",
     "states": [
@@ -2315,8 +2447,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "167",
-    "slug": "dam-paisa-currency-money-up",
+    "id": "uttar-pradesh-1454",
+    "slug": "dam-paisa-currency-money-uttar-pradesh",
     "name_english": "Dam (Paisa)",
     "name_hindi": "दाम / पैसा",
     "local_names": [
@@ -2327,6 +2459,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "currency-money",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "historical_period": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "Copper coin, ~20.9 g under Akbar",
     "conversion_formula": "40 Dam = 1 Rupee (Akbar's standardised rate)",
     "states": [
@@ -2350,8 +2484,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "168",
-    "slug": "ana-anna-currency-money-up",
+    "id": "uttar-pradesh-1455",
+    "slug": "ana-anna-currency-money-uttar-pradesh",
     "name_english": "Ana (Anna)",
     "name_sanskrit": "आन्या (Ānyā)",
     "name_hindi": "आना",
@@ -2363,6 +2497,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "currency-money",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "1/16 Rupee (historical); ~6.25 Paise (modern equivalent)",
     "conversion_formula": "16 Ana = 1 Rupee",
     "states": [
@@ -2385,8 +2521,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "169",
-    "slug": "rupaiya-rupee-currency-money-up",
+    "id": "uttar-pradesh-1456",
+    "slug": "rupaiya-rupee-currency-money-uttar-pradesh",
     "name_english": "Rupaiya (Rupee)",
     "name_sanskrit": "रूप्यकम् (Rūpyakam)",
     "name_hindi": "रुपया",
@@ -2398,6 +2534,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "currency-money",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "historical_period": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "~11.5 g silver; base unit of modern INR",
     "conversion_formula": "40 Dam = 16 Ana = 1 Rupee",
     "states": [
@@ -2420,8 +2558,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "170",
-    "slug": "mohur-ashrafi-currency-money-up",
+    "id": "uttar-pradesh-1457",
+    "slug": "mohur-ashrafi-currency-money-uttar-pradesh",
     "name_english": "Mohur (Ashrafi)",
     "name_sanskrit": "मुद्रा (Mudrā)",
     "name_hindi": "मोहर / अशर्फी",
@@ -2433,6 +2571,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "currency-money",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "historical_period": "Mughal Empire, reign of Akbar (1556–1605 CE) onward",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "~11 g gold",
     "conversion_formula": "1 Mohur ≈ 15 Rupee (varied by era)",
     "states": [
@@ -2455,8 +2595,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "171",
-    "slug": "chavanni-currency-money-up",
+    "id": "uttar-pradesh-1458",
+    "slug": "chavanni-currency-money-uttar-pradesh",
     "name_english": "Chavanni",
     "name_sanskrit": "चतुर्थांश (Caturthāṁśa)",
     "name_hindi": "चवन्नी",
@@ -2468,6 +2608,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "currency-money",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "1/4 Rupee (25 Paise)",
     "conversion_formula": "4 Ana = 1 Chavanni; 4 Chavanni = 1 Rupee",
     "states": [
@@ -2490,8 +2632,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "172",
-    "slug": "athanni-currency-money-up",
+    "id": "uttar-pradesh-1459",
+    "slug": "athanni-currency-money-uttar-pradesh",
     "name_english": "Athanni",
     "name_sanskrit": "अर्धरूप्यकम् (Ardharūpyakam)",
     "name_hindi": "अठन्नी",
@@ -2503,6 +2645,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "currency-money",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "1/2 Rupee (50 Paise)",
     "conversion_formula": "8 Ana = 1 Athanni; 2 Athanni = 1 Rupee",
     "states": [
@@ -2525,8 +2669,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "173",
-    "slug": "seer-storage-transportation-up",
+    "id": "uttar-pradesh-1460",
+    "slug": "seer-storage-transportation-uttar-pradesh",
     "name_english": "Seer",
     "name_sanskrit": "सेर (Sēra)",
     "name_hindi": "सेर",
@@ -2538,6 +2682,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "storage-transport",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~0.933 kg",
     "conversion_formula": "16 Chittak = 1 Seer",
     "states": [
@@ -2561,8 +2707,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "174",
-    "slug": "maund-man-storage-transportation-up",
+    "id": "uttar-pradesh-1461",
+    "slug": "maund-man-storage-transportation-uttar-pradesh",
     "name_english": "Maund (Man)",
     "name_sanskrit": "मन (Māna)",
     "name_hindi": "मन",
@@ -2574,6 +2720,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "storage-transport",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~37.32 kg",
     "conversion_formula": "40 Seer = 1 Maund",
     "states": [
@@ -2597,8 +2745,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "175",
-    "slug": "bora-sack-storage-transportation-up",
+    "id": "uttar-pradesh-1462",
+    "slug": "bora-sack-storage-transportation-uttar-pradesh",
     "name_english": "Bora (sack)",
     "name_hindi": "बोरा",
     "local_names": [
@@ -2609,6 +2757,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "storage-transport",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~50–100 kg (sack-dependent)",
     "conversion_formula": "Standard sack unit; varies by commodity",
     "states": [
@@ -2631,8 +2781,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "176",
-    "slug": "khandi-storage-transportation-up",
+    "id": "uttar-pradesh-1463",
+    "slug": "khandi-storage-transportation-uttar-pradesh",
     "name_english": "Khandi",
     "name_sanskrit": "खण्डिका (Khaṇḍikā)",
     "name_hindi": "खंडी",
@@ -2644,6 +2794,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "storage-transport",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "historical_period": "British colonial standardisation (18th–20th century CE), rooted in earlier Mughal practice",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~326–560 kg (regionally variable)",
     "conversion_formula": "20 Maund ≈ 1 Khandi (regionally variable)",
     "states": [
@@ -2666,8 +2818,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "177",
-    "slug": "kothi-kothar-granary-storage-transportation-up",
+    "id": "uttar-pradesh-1464",
+    "slug": "kothi-kothar-granary-storage-transportation-uttar-pradesh",
     "name_english": "Kothi/Kothar (granary)",
     "name_sanskrit": "कोष्ठागार (Koṣṭhāgāra)",
     "name_hindi": "कोठी / कोठार",
@@ -2679,6 +2831,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "storage-transport",
     "origin": "Awadh region (Lucknow, Faizabad/Ayodhya, Gorakhpur, eastern UP)",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Awadh region (Lucknow, Faizabad/Ayodhya, Gorakhpur, eastern UP)",
     "modern_equivalent": "Large variable capacity, often several Maund of grain",
     "conversion_formula": "Multiple Bora/Maund = 1 Kothi (variable by structure)",
     "states": [
@@ -2701,8 +2855,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "178",
-    "slug": "bael-gaadi-bullock-cart-load-storage-transportation-up",
+    "id": "uttar-pradesh-1465",
+    "slug": "bael-gaadi-bullock-cart-load-storage-transportation-uttar-pradesh",
     "name_english": "Bael-Gaadi (bullock-cart load)",
     "name_sanskrit": "शकट-भार (Śakaṭa-bhāra)",
     "name_hindi": "बैलगाड़ी भार",
@@ -2714,6 +2868,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "storage-transport",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "~500–1,000 kg (varies by cart size and terrain)",
     "conversion_formula": "Informal cart-load unit (~1–2 Khandi per full cart)",
     "states": [
@@ -2736,8 +2892,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "179",
-    "slug": "manzil-storage-transportation-up",
+    "id": "uttar-pradesh-1466",
+    "slug": "manzil-storage-transportation-uttar-pradesh",
     "name_english": "Manzil",
     "name_hindi": "मंज़िल",
     "local_names": [
@@ -2748,6 +2904,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "storage-transport",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "historical_period": "Delhi Sultanate–Mughal period (13th–18th century CE); continued under British colonial rule",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "Variable — one day's caravan march",
     "conversion_formula": "1 Manzil = a day's march between staging posts",
     "states": [
@@ -2770,8 +2928,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "180",
-    "slug": "pal-religious-cultural-sectors-up",
+    "id": "uttar-pradesh-1467",
+    "slug": "pal-religious-cultural-sectors-uttar-pradesh",
     "name_english": "Pal",
     "name_sanskrit": "पल (Pala)",
     "name_hindi": "पल",
@@ -2783,6 +2941,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "religious-cultural",
     "origin": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "historical_context": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "historical_period": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "region_applicable": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "modern_equivalent": "~24 seconds",
     "conversion_formula": "60 Vipal = 1 Pal (traditional subdivision)",
     "states": [
@@ -2806,8 +2966,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "181",
-    "slug": "ghati-ghatika-dand-religious-cultural-sectors-up",
+    "id": "uttar-pradesh-1468",
+    "slug": "ghati-ghatika-dand-religious-cultural-sectors-uttar-pradesh",
     "name_english": "Ghati (Ghatika/Dand)",
     "name_sanskrit": "घटिका (Ghaṭikā)",
     "name_hindi": "घड़ी / घटी",
@@ -2819,6 +2979,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "religious-cultural",
     "origin": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "historical_context": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "historical_period": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "region_applicable": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "modern_equivalent": "~24 minutes",
     "conversion_formula": "60 Pal = 1 Ghati",
     "states": [
@@ -2842,8 +3004,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "182",
-    "slug": "muhurta-religious-cultural-sectors-up",
+    "id": "uttar-pradesh-1469",
+    "slug": "muhurta-religious-cultural-sectors-uttar-pradesh",
     "name_english": "Muhurta",
     "name_sanskrit": "मुहूर्त (Muhūrta)",
     "name_hindi": "मुहूर्त",
@@ -2855,6 +3017,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "religious-cultural",
     "origin": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "historical_context": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "historical_period": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "region_applicable": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "modern_equivalent": "~48 minutes",
     "conversion_formula": "2 Ghati = 1 Muhurta; 30 Muhurta = 1 day-night",
     "states": [
@@ -2878,8 +3042,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "183",
-    "slug": "prahar-yama-religious-cultural-sectors-up",
+    "id": "uttar-pradesh-1470",
+    "slug": "prahar-yama-religious-cultural-sectors-uttar-pradesh",
     "name_english": "Prahar (Yama)",
     "name_sanskrit": "प्रहर / याम (Prahara / Yāma)",
     "name_hindi": "पहर",
@@ -2891,6 +3055,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "religious-cultural",
     "origin": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "historical_context": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "historical_period": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "region_applicable": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "modern_equivalent": "~3 hours",
     "conversion_formula": "~7.5 Ghati = 1 Prahar; 8 Prahar = 1 day-night",
     "states": [
@@ -2914,8 +3080,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "184",
-    "slug": "krosha-kos-religious-cultural-sectors-up",
+    "id": "uttar-pradesh-1471",
+    "slug": "krosha-kos-religious-cultural-sectors-uttar-pradesh",
     "name_english": "Krosha (Kos)",
     "name_sanskrit": "क्रोश (Krośa)",
     "name_hindi": "कोस / कोश",
@@ -2927,6 +3093,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "religious-cultural",
     "origin": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "historical_context": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "historical_period": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "region_applicable": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "modern_equivalent": "~3.2 km",
     "conversion_formula": "1 Krosha = traditional pilgrimage-circuit sub-unit",
     "states": [
@@ -2949,8 +3117,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "185",
-    "slug": "yojana-religious-cultural-sectors-up",
+    "id": "uttar-pradesh-1472",
+    "slug": "yojana-religious-cultural-sectors-uttar-pradesh",
     "name_english": "Yojana",
     "name_sanskrit": "योजन (Yojana)",
     "name_hindi": "योजन",
@@ -2962,6 +3130,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "religious-cultural",
     "origin": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "historical_context": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "historical_period": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "region_applicable": "Purvanchal / Kashi–Varanasi–Prayagraj region, eastern UP",
     "modern_equivalent": "~12–14.5 km (varied by text)",
     "conversion_formula": "4 Krosha = 1 Yojana",
     "states": [
@@ -2984,8 +3154,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "186",
-    "slug": "angul-tala-angula-religious-cultural-sectors-up",
+    "id": "uttar-pradesh-1473",
+    "slug": "angul-tala-angula-religious-cultural-sectors-uttar-pradesh",
     "name_english": "Angul (Tala-Angula)",
     "name_sanskrit": "अङ्गुल (Aṅgula)",
     "name_hindi": "अंगुल",
@@ -2997,6 +3167,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "religious-cultural",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "~1.9 cm",
     "conversion_formula": "12 Angula = 1 Tala",
     "states": [
@@ -3019,8 +3191,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "187",
-    "slug": "tala-religious-cultural-sectors-up",
+    "id": "uttar-pradesh-1474",
+    "slug": "tala-religious-cultural-sectors-uttar-pradesh",
     "name_english": "Tala",
     "name_sanskrit": "ताल (Tāla)",
     "name_hindi": "ताल",
@@ -3032,6 +3204,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "sector": "religious-cultural",
     "origin": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "historical_context": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "historical_period": "Vedic–Classical Sanskrit period (c. 1000 BCE–500 CE), continued through medieval and Mughal era",
+    "region_applicable": "Doab / Agra–Mathura region, western & central Uttar Pradesh",
     "modern_equivalent": "Variable — one face-length of the deity image, subdivided into 12 Angula",
     "conversion_formula": "Navatala (9 Tala) and Dasatala (10 Tala) canons commonly used",
     "states": [
@@ -3054,8 +3228,8 @@ export const UP_MEASUREMENTS: Measurement[] = [
     "created_at": "2024-01-01"
   },
   {
-    "id": "188",
-    "slug": "kalasha-ritual-vessel-measure-religious-cultural-sectors-up",
+    "id": "uttar-pradesh-1475",
+    "slug": "kalasha-ritual-vessel-measure-religious-cultural-sectors-uttar-pradesh",
     "name_english": "Kalasha (ritual vessel measure)",
     "name_sanskrit": "कलश (Kalaśa)",
     "name_hindi": "कलश",
@@ -3063,10 +3237,12 @@ export const UP_MEASUREMENTS: Measurement[] = [
       "कलश"
     ],
     "meaning": "Water/Ganga-jal vessel used in temple abhishekam, havan and household puja across UP",
-    "category": "other",
+    "category": "volume",
     "sector": "religious-cultural",
     "origin": "Pan–Uttar Pradesh / North India generally",
     "historical_context": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "historical_period": "Ancient–Puranic period (Vedic era onward); still ritually observed today",
+    "region_applicable": "Pan–Uttar Pradesh / North India generally",
     "modern_equivalent": "Vessel-based, informal (typically 1–5 L)",
     "conversion_formula": "Informal ritual-vessel unit, no fixed metrological hierarchy",
     "states": [
@@ -3084,7 +3260,7 @@ export const UP_MEASUREMENTS: Measurement[] = [
       "traditional-units",
       "religious-cultural-sectors",
       "religious-cultural",
-      "other"
+      "volume"
     ],
     "created_at": "2024-01-01"
   }

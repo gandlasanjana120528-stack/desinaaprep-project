@@ -1,3564 +1,6913 @@
 import { Measurement } from "@/types";
 
 export const GUJARAT_MEASUREMENTS: Measurement[] = [
-
-  // ─── AGRICULTURE (20 records) ────────────────────────────────────────────────
-  {
-    id: "gj-agri-1",
-    slug: "gj-yava-agri",
-    name_english: "Yava",
-    name_hindi: "જવ",
-    name_sanskrit: "Yava",
-    local_names: ["જવ (Yava)"],
-    meaning: "Barley grain used as the smallest reference in agricultural and surveying practices.",
-    category: "length",
-    sector: "agriculture",
-    modern_equivalent: "≈2.4 mm",
-    conversion_formula: "Grain-based unit",
-    historical_context: "Seed reference",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Seed measurement", "Surveying"],
-    references: ["Arthashastra", "Mānasāra"],
-  },
-  {
-    id: "gj-agri-2",
-    slug: "gj-gunja-agri",
-    name_english: "Gunja",
-    name_hindi: "ગુંજા",
-    name_sanskrit: "Guñjā (Raktikā)",
-    local_names: ["ગુંજા (Gunja)"],
-    meaning: "Gunja seed used for weighing seeds, herbs and valuable agricultural products.",
-    category: "weight",
-    sector: "agriculture",
-    modern_equivalent: "≈0.1215 g",
-    conversion_formula: "Seed weight",
-    historical_context: "Seed weighing",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Seed weighing", "Herbal products"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-agri-3",
-    slug: "gj-masha-agri",
-    name_english: "Masha",
-    name_hindi: "માષ",
-    name_sanskrit: "Māṣa",
-    local_names: ["માષ (Masha)"],
-    meaning: "Standard weight for seeds, spices and medicinal plants.",
-    category: "weight",
-    sector: "agriculture",
-    modern_equivalent: "≈0.97 g",
-    conversion_formula: "8 Gunja = 1 Masha",
-    historical_context: "Seed measurement",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Seeds", "Spices", "Medicinal plants"],
-    references: ["Sushruta Samhita"],
-  },
-  {
-    id: "gj-agri-4",
-    slug: "gj-tola-agri",
-    name_english: "Tola",
-    name_hindi: "તોળા",
-    name_sanskrit: "Tulā",
-    local_names: ["તોળા (Tola)"],
-    meaning: "Used for weighing high-value agricultural products.",
-    category: "weight",
-    sector: "agriculture",
-    modern_equivalent: "≈11.66 g",
-    conversion_formula: "Traditional weight unit",
-    historical_context: "Seed and spice trade",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["High-value agricultural products"],
-    references: ["Bombay Presidency Records"],
-  },
-  {
-    id: "gj-agri-5",
-    slug: "gj-pala-agri",
-    name_english: "Pala",
-    name_hindi: "પલ",
-    name_sanskrit: "Pala",
-    local_names: ["પલ (Pala)"],
-    meaning: "Standard agricultural weight for produce.",
-    category: "weight",
-    sector: "agriculture",
-    modern_equivalent: "≈48 g",
-    conversion_formula: "4 Karsha = 1 Pala",
-    historical_context: "Grain weighing",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Grain weighing"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-agri-6",
-    slug: "gj-chhatak-agri",
-    name_english: "Chhatak",
-    name_hindi: "છટાક",
-    local_names: ["છટાક (Chhatak)"],
-    meaning: "Small market measure used for pulses and cereals.",
-    category: "weight",
-    sector: "agriculture",
-    modern_equivalent: "≈58 g",
-    conversion_formula: "16 Chhatak = 1 Sher",
-    historical_context: "Grain markets",
-    origin: "Medieval–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Pulses", "Cereals"],
-    references: ["Bombay Presidency Manual"],
-  },
-  {
-    id: "gj-agri-7",
-    slug: "gj-sher-agri",
-    name_english: "Sher",
-    name_hindi: "શેર",
-    name_sanskrit: "Śer",
-    local_names: ["શેર (Sher)"],
-    meaning: "Common market unit for wheat, millet and pulses.",
-    category: "weight",
-    sector: "agriculture",
-    modern_equivalent: "≈0.93 kg",
-    conversion_formula: "Standard market measure",
-    historical_context: "Grain trade",
-    origin: "Sultanate–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Wheat", "Millet", "Pulses"],
-    references: ["Bombay Gazetteer"],
-  },
-  {
-    id: "gj-agri-8",
-    slug: "gj-paili-agri",
-    name_english: "Paili",
-    name_hindi: "પાયલી",
-    name_sanskrit: "Prastha (related)",
-    local_names: ["પાયલી (Paili)"],
-    meaning: "Grain measuring vessel widely used by farmers.",
-    category: "volume",
-    sector: "agriculture",
-    modern_equivalent: "≈3–4 L (regional variation)",
-    conversion_formula: "Traditional grain measure",
-    historical_context: "Seed measurement",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Seed measurement", "Grain storage"],
-    references: ["Gujarat Village Traditions"],
-  },
-  {
-    id: "gj-agri-9",
-    slug: "gj-adholi-agri",
-    name_english: "Adholi",
-    name_hindi: "અઢોળી",
-    local_names: ["અઢોળી (Adholi)"],
-    meaning: "Medium grain measure used in villages and markets.",
-    category: "volume",
-    sector: "agriculture",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "2 Paili = 1 Adholi",
-    historical_context: "Grain storage",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Grain storage", "Village markets"],
-    references: ["Revenue Records"],
-  },
-  {
-    id: "gj-agri-10",
-    slug: "gj-man-agri",
-    name_english: "Man",
-    name_hindi: "મણ",
-    name_sanskrit: "Maund (related)",
-    local_names: ["મણ (Man)"],
-    meaning: "Standard wholesale agricultural measure.",
-    category: "weight",
-    sector: "agriculture",
-    modern_equivalent: "≈37.3 kg",
-    conversion_formula: "40 Sher = 1 Man",
-    historical_context: "Bulk grain trade",
-    origin: "Mughal–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Bulk grain trade"],
-    references: ["Bombay Presidency Gazetteer"],
-  },
-  {
-    id: "gj-agri-11",
-    slug: "gj-khandi-agri",
-    name_english: "Khandi",
-    name_hindi: "ખાંડી",
-    name_sanskrit: "Khaṇḍi",
-    local_names: ["ખાંડી (Khandi)"],
-    meaning: "Large commercial grain storage unit.",
-    category: "weight",
-    sector: "agriculture",
-    modern_equivalent: "≈746 kg (regional variation)",
-    conversion_formula: "20 Man = 1 Khandi (regional variation)",
-    historical_context: "Bulk storage",
-    origin: "Medieval–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Bulk storage"],
-    references: ["Revenue Administration Records"],
-  },
-  {
-    id: "gj-agri-12",
-    slug: "gj-guni-agri",
-    name_english: "Guni",
-    name_hindi: "ગૂણી",
-    local_names: ["ગૂણી (Guni)"],
-    meaning: "Traditional sack used for storing harvested grain.",
-    category: "volume",
-    sector: "agriculture",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Grain sack",
-    historical_context: "Grain storage",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Grain storage"],
-    references: ["Agricultural Market Records"],
-  },
-  {
-    id: "gj-agri-13",
-    slug: "gj-topli-agri",
-    name_english: "Topli",
-    name_hindi: "ટોપલી",
-    local_names: ["ટોપલી (Topli)"],
-    meaning: "Bamboo basket used to carry vegetables, cotton and grains.",
-    category: "volume",
-    sector: "agriculture",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Basket measure",
-    historical_context: "Harvest transport",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Vegetables", "Cotton", "Grains"],
-    references: ["Gujarati Rural Traditions"],
-  },
-  {
-    id: "gj-agri-14",
-    slug: "gj-potlu-agri",
-    name_english: "Potlu",
-    name_hindi: "પોટલું",
-    local_names: ["પોટલું (Potlu)"],
-    meaning: "Cloth bundle used for seeds and harvested produce.",
-    category: "volume",
-    sector: "agriculture",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Bundle of crops",
-    historical_context: "Harvest transport",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Seeds", "Harvested produce"],
-    references: ["Village Customs"],
-  },
-  {
-    id: "gj-agri-15",
-    slug: "gj-bharo-agri",
-    name_english: "Bharo",
-    name_hindi: "ભારો",
-    name_sanskrit: "Bhāra",
-    local_names: ["ભારો (Bharo)"],
-    meaning: "Standard load carried manually from fields.",
-    category: "weight",
-    sector: "agriculture",
-    modern_equivalent: "≈20–30 kg (regional variation)",
-    conversion_formula: "One head-load",
-    historical_context: "Farm transport",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Farm transport"],
-    references: ["Rural Labour Practices"],
-  },
-  {
-    id: "gj-agri-16",
-    slug: "gj-bailgadi-bhar-agri",
-    name_english: "Bailgadi Bhar",
-    name_hindi: "બળદગાડી ભાર",
-    local_names: ["બળદગાડી ભાર (Bailgadi Bhar)"],
-    meaning: "Quantity transported by one traditional bullock cart.",
-    category: "volume",
-    sector: "agriculture",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Bullock-cart load",
-    historical_context: "Agricultural transport",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Agricultural transport"],
-    references: ["Rural Transport Records"],
-  },
-  {
-    id: "gj-agri-17",
-    slug: "gj-kothar-agri",
-    name_english: "Kothar",
-    name_hindi: "કોઠાર",
-    name_sanskrit: "Koṣṭhāgāra",
-    local_names: ["કોઠાર (Kothar)"],
-    meaning: "Traditional granary used to store harvested grain.",
-    category: "volume",
-    sector: "agriculture",
-    modern_equivalent: "Variable",
-    conversion_formula: "Grain storage structure",
-    historical_context: "Grain preservation",
-    origin: "Ancient–Modern",
-    states: ["Gujarat"],
-    used_in: ["Grain preservation"],
-    references: ["Rural Architecture Studies"],
-  },
-  {
-    id: "gj-agri-18",
-    slug: "gj-dhanya-rashi-agri",
-    name_english: "Dhanya Rashi",
-    name_hindi: "ધાન્ય રાશિ",
-    name_sanskrit: "Dhānya Rāśi",
-    local_names: ["ધાન્ય રાશિ (Dhanya Rashi)"],
-    meaning: "Heap of harvested grain used to estimate yield.",
-    category: "volume",
-    sector: "agriculture",
-    modern_equivalent: "Variable",
-    conversion_formula: "Heap of grain",
-    historical_context: "Harvest estimation",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Harvest estimation"],
-    references: ["Village Revenue Practices"],
-  },
-  {
-    id: "gj-agri-19",
-    slug: "gj-khala-agri",
-    name_english: "Khala",
-    name_hindi: "ખળ",
-    name_sanskrit: "Khala",
-    local_names: ["ખળ (Khala)"],
-    meaning: "Open area used for threshing and measuring grain.",
-    category: "area",
-    sector: "agriculture",
-    modern_equivalent: "Variable",
-    conversion_formula: "Processing area",
-    historical_context: "Post-harvest processing",
-    origin: "Ancient–Modern",
-    states: ["Gujarat"],
-    used_in: ["Threshing", "Measuring grain"],
-    references: ["Agricultural Traditions"],
-  },
-  {
-    id: "gj-agri-20",
-    slug: "gj-khet-mapani-dori-agri",
-    name_english: "Khet Mapani Dori",
-    name_hindi: "ખેત માપણી દોરી",
-    name_sanskrit: "Rajju",
-    local_names: ["ખેત માપણી દોરી (Khet Mapani Dori)"],
-    meaning: "Rope used by surveyors and farmers for measuring agricultural fields.",
-    category: "length",
-    sector: "agriculture",
-    modern_equivalent: "Variable",
-    conversion_formula: "Measuring rope",
-    historical_context: "Field measurement",
-    origin: "Ancient–Modern",
-    states: ["Gujarat"],
-    used_in: ["Field measurement", "Surveying"],
-    references: ["Arthashastra", "Gujarat Land Records"],
-  },
-
-  // ─── TRADE & COMMERCE (20 records) ──────────────────────────────────────────
-  {
-    id: "gj-trade-1",
-    slug: "gj-gunja-trade",
-    name_english: "Gunja",
-    name_hindi: "ગુંજા",
-    name_sanskrit: "Guñjā (Raktikā)",
-    local_names: ["ગુંજા (Gunja)"],
-    meaning: "Gunja seed used by merchants for weighing precious metals and gemstones.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈0.1215 g",
-    conversion_formula: "Seed weight",
-    historical_context: "Gold & gem trade",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Precious metals", "Gemstones"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-trade-2",
-    slug: "gj-masha-trade",
-    name_english: "Masha",
-    name_hindi: "માષ",
-    name_sanskrit: "Māṣa",
-    local_names: ["માષ (Masha)"],
-    meaning: "Used for weighing spices, medicines and costly commodities.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈0.97 g",
-    conversion_formula: "8 Gunja = 1 Masha",
-    historical_context: "Spice trade",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Spices", "Medicines", "Costly commodities"],
-    references: ["Arthashastra"],
-  },
-  {
-    id: "gj-trade-3",
-    slug: "gj-karsha-trade",
-    name_english: "Karsha",
-    name_hindi: "કર્ષ",
-    name_sanskrit: "Karṣa",
-    local_names: ["કર્ષ (Karsha)"],
-    meaning: "Standard commercial weight for valuable goods.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈12 g",
-    conversion_formula: "12 Masha = 1 Karsha",
-    historical_context: "Merchant weighing",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Valuable goods"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-trade-4",
-    slug: "gj-tola-trade",
-    name_english: "Tola",
-    name_hindi: "તોળા",
-    name_sanskrit: "Tulā",
-    local_names: ["તોળા (Tola)"],
-    meaning: "Standard weight used by jewellers and bullion merchants.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈11.66 g",
-    conversion_formula: "Traditional weight",
-    historical_context: "Jewellery trade",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Jewellery trade", "Bullion"],
-    references: ["Bombay Presidency Records"],
-  },
-  {
-    id: "gj-trade-5",
-    slug: "gj-chhatak-trade",
-    name_english: "Chhatak",
-    name_hindi: "છટાક",
-    local_names: ["છટાક (Chhatak)"],
-    meaning: "Used for grains, spices, jaggery and dry fruits.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈58 g",
-    conversion_formula: "16 Chhatak = 1 Sher",
-    historical_context: "Grocery trade",
-    origin: "Medieval–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Grains", "Spices", "Jaggery", "Dry fruits"],
-    references: ["Bombay Presidency Manual"],
-  },
-  {
-    id: "gj-trade-6",
-    slug: "gj-pala-trade",
-    name_english: "Pala",
-    name_hindi: "પલ",
-    name_sanskrit: "Pala",
-    local_names: ["પલ (Pala)"],
-    meaning: "Used for weighing agricultural and commercial goods.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈48 g",
-    conversion_formula: "4 Karsha = 1 Pala",
-    historical_context: "Commodity trade",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Agricultural goods", "Commercial goods"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-trade-7",
-    slug: "gj-sher-trade",
-    name_english: "Sher",
-    name_hindi: "શેર",
-    name_sanskrit: "Śer",
-    local_names: ["શેર (Sher)"],
-    meaning: "Standard unit for cereals, pulses, cotton and sugar.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈0.93 kg",
-    conversion_formula: "Standard market measure",
-    historical_context: "Grain markets",
-    origin: "Sultanate–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Cereals", "Pulses", "Cotton", "Sugar"],
-    references: ["Bombay Gazetteer"],
-  },
-  {
-    id: "gj-trade-8",
-    slug: "gj-man-trade",
-    name_english: "Man",
-    name_hindi: "મણ",
-    name_sanskrit: "Maund (related)",
-    local_names: ["મણ (Man)"],
-    meaning: "Bulk trading unit for cotton, wheat, rice and salt.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈37.3 kg",
-    conversion_formula: "40 Sher = 1 Man",
-    historical_context: "Wholesale trade",
-    origin: "Mughal–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Cotton", "Wheat", "Rice", "Salt"],
-    references: ["Bombay Presidency Gazetteer"],
-  },
-  {
-    id: "gj-trade-9",
-    slug: "gj-khandi-trade",
-    name_english: "Khandi",
-    name_hindi: "ખાંડી",
-    name_sanskrit: "Khaṇḍi",
-    local_names: ["ખાંડી (Khandi)"],
-    meaning: "Used for wholesale trading of cotton, grain and spices.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈746 kg (regional variation)",
-    conversion_formula: "20 Man = 1 Khandi (regional variation)",
-    historical_context: "Bulk commercial trade",
-    origin: "Medieval–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Cotton", "Grain", "Spices"],
-    references: ["Revenue Administration Records"],
-  },
-  {
-    id: "gj-trade-10",
-    slug: "gj-paili-trade",
-    name_english: "Paili",
-    name_hindi: "પાયલી",
-    name_sanskrit: "Prastha (related)",
-    local_names: ["પાયલી (Paili)"],
-    meaning: "Capacity measure used in village and town markets.",
-    category: "volume",
-    sector: "trade-commerce",
-    modern_equivalent: "≈3–4 L (regional variation)",
-    conversion_formula: "Traditional grain measure",
-    historical_context: "Grain markets",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Village markets", "Town markets"],
-    references: ["Gujarat Village Traditions"],
-  },
-  {
-    id: "gj-trade-11",
-    slug: "gj-adholi-trade",
-    name_english: "Adholi",
-    name_hindi: "અઢોળી",
-    local_names: ["અઢોળી (Adholi)"],
-    meaning: "Medium-sized grain measure for commercial transactions.",
-    category: "volume",
-    sector: "trade-commerce",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "2 Paili = 1 Adholi",
-    historical_context: "Grain trade",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Commercial grain transactions"],
-    references: ["Revenue Records"],
-  },
-  {
-    id: "gj-trade-12",
-    slug: "gj-guni-trade",
-    name_english: "Guni",
-    name_hindi: "ગૂણી",
-    local_names: ["ગૂણી (Guni)"],
-    meaning: "Traditional sack used for grain, cotton and spices.",
-    category: "volume",
-    sector: "trade-commerce",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Sack measure",
-    historical_context: "Commodity transport",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Grain", "Cotton", "Spices"],
-    references: ["Agricultural Market Records"],
-  },
-  {
-    id: "gj-trade-13",
-    slug: "gj-topli-trade",
-    name_english: "Topli",
-    name_hindi: "ટોપલી",
-    local_names: ["ટોપલી (Topli)"],
-    meaning: "Bamboo basket used by merchants to carry goods.",
-    category: "volume",
-    sector: "trade-commerce",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Basket measure",
-    historical_context: "Market transport",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Merchant goods"],
-    references: ["Gujarati Rural Traditions"],
-  },
-  {
-    id: "gj-trade-14",
-    slug: "gj-bharo-trade",
-    name_english: "Bharo",
-    name_hindi: "ભારો",
-    name_sanskrit: "Bhāra",
-    local_names: ["ભારો (Bharo)"],
-    meaning: "Standard load carried manually in village and town markets.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈20–30 kg (regional variation)",
-    conversion_formula: "One head-load",
-    historical_context: "Local transport",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Village markets", "Town markets"],
-    references: ["Rural Labour Practices"],
-  },
-  {
-    id: "gj-trade-15",
-    slug: "gj-bailgadi-bhar-trade",
-    name_english: "Bailgadi Bhar",
-    name_hindi: "બળદગાડી ભાર",
-    local_names: ["બળદગાડી ભાર (Bailgadi Bhar)"],
-    meaning: "Quantity transported by one traditional bullock cart.",
-    category: "volume",
-    sector: "trade-commerce",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Bullock-cart load",
-    historical_context: "Inland trade",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Inland trade transport"],
-    references: ["Rural Transport Records"],
-  },
-  {
-    id: "gj-trade-16",
-    slug: "gj-candy-trade",
-    name_english: "Candy",
-    name_hindi: "કેન્ડી",
-    name_sanskrit: "Khaṇḍi (related)",
-    local_names: ["કેન્ડી (Candy)"],
-    meaning: "Commercial weight widely used for cotton, spices and salt exports through Surat and Cambay ports.",
-    category: "weight",
-    sector: "trade-commerce",
-    modern_equivalent: "≈227 kg (regional variation)",
-    conversion_formula: "Multiple Man",
-    historical_context: "Export trade",
-    origin: "Colonial",
-    states: ["Gujarat"],
-    used_in: ["Cotton exports", "Spices", "Salt"],
-    references: ["East India Company Records"],
-  },
-  {
-    id: "gj-trade-17",
-    slug: "gj-bale-trade",
-    name_english: "Bale",
-    name_hindi: "બેલ",
-    local_names: ["બેલ (Bale)"],
-    meaning: "Standard bale prepared for cotton and textile export.",
-    category: "volume",
-    sector: "trade-commerce",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Bundle of cotton/cloth",
-    historical_context: "Cotton trade",
-    origin: "Colonial",
-    states: ["Gujarat"],
-    used_in: ["Cotton export", "Textile export"],
-    references: ["Bombay Trade Records"],
-  },
-  {
-    id: "gj-trade-18",
-    slug: "gj-mohur-trade",
-    name_english: "Mohur",
-    name_hindi: "મોહર",
-    name_sanskrit: "Mohura",
-    local_names: ["મોહર (Mohur)"],
-    meaning: "Gold coin used in major commercial and international transactions.",
-    category: "currency",
-    sector: "trade-commerce",
-    modern_equivalent: "≈10.9–11 g gold",
-    conversion_formula: "High-value coin",
-    historical_context: "High-value trade",
-    origin: "Mughal–Colonial",
-    states: ["Gujarat"],
-    used_in: ["International transactions"],
-    references: ["Indian Numismatic Studies"],
-  },
-  {
-    id: "gj-trade-19",
-    slug: "gj-rupiya-trade",
-    name_english: "Rupiya",
-    name_hindi: "રૂપિયા",
-    name_sanskrit: "Rūpya",
-    local_names: ["રૂપિયા (Rupiya)"],
-    meaning: "Principal monetary unit used in Gujarat's markets and ports.",
-    category: "currency",
-    sector: "trade-commerce",
-    modern_equivalent: "Historic silver standard",
-    conversion_formula: "16 Anna = 1 Rupiya",
-    historical_context: "General commerce",
-    origin: "Mughal–Colonial",
-    states: ["Gujarat"],
-    used_in: ["General commerce"],
-    references: ["Bombay Presidency Records"],
-  },
-  {
-    id: "gj-trade-20",
-    slug: "gj-hundi-trade",
-    name_english: "Hundi",
-    name_hindi: "હૂંડી",
-    name_sanskrit: "Huṇḍikā",
-    local_names: ["હૂંડી (Hundi)"],
-    meaning: "Bill of exchange extensively used by Gujarati merchant communities for domestic and overseas trade.",
-    category: "currency",
-    sector: "trade-commerce",
-    modern_equivalent: "Not applicable",
-    conversion_formula: "Merchant credit note",
-    historical_context: "Long-distance trade",
-    origin: "Medieval–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Long-distance trade", "Overseas commerce"],
-    references: ["Gujarati Merchant Records", "Bombay Presidency Archives"],
-  },
-
-  // ─── ARCHITECTURE (20 records) ───────────────────────────────────────────────
-  {
-    id: "gj-arch-1",
-    slug: "gj-paramanu-arch",
-    name_english: "Paramanu",
-    name_hindi: "પરમાણુ",
-    name_sanskrit: "Paramāṇu",
-    local_names: ["પરમાણુ (Paramanu)"],
-    meaning: "Smallest conceptual unit used in ancient architectural calculations.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "Theoretical",
-    conversion_formula: "Smallest theoretical unit",
-    historical_context: "Temple planning",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Architectural calculations"],
-    references: ["Mānasāra"],
-  },
-  {
-    id: "gj-arch-2",
-    slug: "gj-raji-arch",
-    name_english: "Raji",
-    name_hindi: "રજી",
-    name_sanskrit: "Rājī",
-    local_names: ["રજી (Raji)"],
-    meaning: "Minute unit used in proportional design.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "Theoretical",
-    conversion_formula: "Larger than Paramanu",
-    historical_context: "Architectural calculations",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Proportional design"],
-    references: ["Mayamata"],
-  },
-  {
-    id: "gj-arch-3",
-    slug: "gj-yava-arch",
-    name_english: "Yava",
-    name_hindi: "જવ",
-    name_sanskrit: "Yava",
-    local_names: ["જવ (Yava)"],
-    meaning: "Barley grain used as the smallest practical linear unit.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈2.4 mm",
-    conversion_formula: "8 Yava = 1 Angula",
-    historical_context: "Stone carving",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Stone carving", "Linear measurement"],
-    references: ["Mānasāra"],
-  },
-  {
-    id: "gj-arch-4",
-    slug: "gj-angula-arch",
-    name_english: "Angula",
-    name_hindi: "અંગુલ",
-    name_sanskrit: "Aṅgula",
-    local_names: ["અંગુલ (Angula)"],
-    meaning: "Finger-width measure used in temples, houses and stepwells.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈1.9 cm",
-    conversion_formula: "8 Yava = 1 Angula",
-    historical_context: "Building construction",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Temples", "Houses", "Stepwells"],
-    references: ["Mayamata"],
-  },
-  {
-    id: "gj-arch-5",
-    slug: "gj-vitasti-arch",
-    name_english: "Vitasti",
-    name_hindi: "વિતસ્તિ",
-    name_sanskrit: "Vitasti",
-    local_names: ["વિતસ્તિ (Vitasti)"],
-    meaning: "Palm-span measurement used in structural planning.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈22.8 cm",
-    conversion_formula: "12 Angula = 1 Vitasti",
-    historical_context: "Building layout",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Structural planning"],
-    references: ["Mānasāra"],
-  },
-  {
-    id: "gj-arch-6",
-    slug: "gj-hasta-arch",
-    name_english: "Hasta",
-    name_hindi: "હસ્ત",
-    name_sanskrit: "Hasta",
-    local_names: ["હસ્ત (Hasta)"],
-    meaning: "Cubit widely used in temple and palace construction.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈45.7 cm",
-    conversion_formula: "24 Angula = 1 Hasta",
-    historical_context: "Temple construction",
-    origin: "Ancient–Medieval",
-    states: ["Gujarat"],
-    used_in: ["Temples", "Palaces"],
-    references: ["Śilpa Śāstra"],
-  },
-  {
-    id: "gj-arch-7",
-    slug: "gj-aratni-arch",
-    name_english: "Aratni",
-    name_hindi: "અરત્નિ",
-    name_sanskrit: "Aratni",
-    local_names: ["અરત્નિ (Aratni)"],
-    meaning: "Cubit variation used by sculptors and masons.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈45 cm",
-    conversion_formula: "Elbow to fingertip",
-    historical_context: "Sculpture",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Sculpture", "Masonry"],
-    references: ["Mayamata"],
-  },
-  {
-    id: "gj-arch-8",
-    slug: "gj-tala-arch",
-    name_english: "Tala",
-    name_hindi: "તાલ",
-    name_sanskrit: "Tāla",
-    local_names: ["તાલ (Tala)"],
-    meaning: "Canonical proportion used in sculpting temple idols.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "Variable",
-    conversion_formula: "Body proportion unit",
-    historical_context: "Idol construction",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Temple idol sculpting"],
-    references: ["Śilpa Śāstra"],
-  },
-  {
-    id: "gj-arch-9",
-    slug: "gj-danda-arch",
-    name_english: "Danda",
-    name_hindi: "દંડ",
-    name_sanskrit: "Daṇḍa",
-    local_names: ["દંડ (Danda)"],
-    meaning: "Measuring rod used in foundation layout.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈1.83 m",
-    conversion_formula: "4 Hasta = 1 Danda",
-    historical_context: "Site measurement",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Foundation layout"],
-    references: ["Arthashastra"],
-  },
-  {
-    id: "gj-arch-10",
-    slug: "gj-kathi-arch",
-    name_english: "Kathi",
-    name_hindi: "કાઠી",
-    name_sanskrit: "Daṇḍa (related)",
-    local_names: ["કાઠી (Kathi)"],
-    meaning: "Wooden measuring pole used by builders and surveyors.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈2–3 m (regional variation)",
-    conversion_formula: "Measuring pole",
-    historical_context: "Land & construction",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Construction", "Surveying"],
-    references: ["Gujarat Revenue Records"],
-  },
-  {
-    id: "gj-arch-11",
-    slug: "gj-gaz-arch",
-    name_english: "Gaz",
-    name_hindi: "ગજ",
-    name_sanskrit: "Gaja",
-    local_names: ["ગજ (Gaz)"],
-    meaning: "Yard measure used for houses, markets and cloth.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈0.9144 m",
-    conversion_formula: "Traditional yard",
-    historical_context: "Building construction",
-    origin: "Sultanate–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Houses", "Markets", "Cloth"],
-    references: ["Bombay Presidency Manual"],
-  },
-  {
-    id: "gj-arch-12",
-    slug: "gj-rajju-arch",
-    name_english: "Rajju",
-    name_hindi: "રજ્જુ",
-    name_sanskrit: "Rajju",
-    local_names: ["રજ્જુ (Rajju)"],
-    meaning: "Measuring rope used for laying out buildings and roads.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "Variable",
-    conversion_formula: "Rope measure",
-    historical_context: "Foundation layout",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Building layout", "Roads"],
-    references: ["Mānasāra"],
-  },
-  {
-    id: "gj-arch-13",
-    slug: "gj-pada-arch",
-    name_english: "Pada",
-    name_hindi: "પદ",
-    name_sanskrit: "Pada",
-    local_names: ["પદ (Pada)"],
-    meaning: "Quarter-module used in architectural planning.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈22.8 cm",
-    conversion_formula: "12 Angula",
-    historical_context: "Structural design",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Architectural planning"],
-    references: ["Mayamata"],
-  },
-  {
-    id: "gj-arch-14",
-    slug: "gj-kishku-hasta-arch",
-    name_english: "Kishku Hasta",
-    name_hindi: "કિષ્કુ હસ્ત",
-    name_sanskrit: "Kiṣku Hasta",
-    local_names: ["કિષ્કુ હસ્ત (Kishku Hasta)"],
-    meaning: "Cubit prescribed for domestic architecture.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈45–48 cm",
-    conversion_formula: "Variant of Hasta",
-    historical_context: "Residential buildings",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Domestic architecture"],
-    references: ["Mānasāra"],
-  },
-  {
-    id: "gj-arch-15",
-    slug: "gj-prajapatya-hasta-arch",
-    name_english: "Prajapatya Hasta",
-    name_hindi: "પ્રજાપત્ય હસ્ત",
-    name_sanskrit: "Prajāpatya Hasta",
-    local_names: ["પ્રજાપત્ય હસ્ત (Prajapatya Hasta)"],
-    meaning: "Cubit recommended for temples and sacred structures.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈48 cm",
-    conversion_formula: "Variant of Hasta",
-    historical_context: "Sacred buildings",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Temples", "Sacred structures"],
-    references: ["Mayamata"],
-  },
-  {
-    id: "gj-arch-16",
-    slug: "gj-dhanus-arch",
-    name_english: "Dhanus",
-    name_hindi: "ધનુષ",
-    name_sanskrit: "Dhanus",
-    local_names: ["ધનુષ (Dhanus)"],
-    meaning: "Used for planning forts, temples and settlements.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈7.3 m",
-    conversion_formula: "4 Danda = 1 Dhanus",
-    historical_context: "Town planning",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Forts", "Temples", "Settlements"],
-    references: ["Arthashastra"],
-  },
-  {
-    id: "gj-arch-17",
-    slug: "gj-krosa-arch",
-    name_english: "Krosa",
-    name_hindi: "ક્રોશ",
-    name_sanskrit: "Krośa",
-    local_names: ["ક્રોશ (Krosa)"],
-    meaning: "Used for measuring distances between settlements.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈3.2 km",
-    conversion_formula: "Larger than Dhanus",
-    historical_context: "Urban planning",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Settlement distances", "Urban planning"],
-    references: ["Arthashastra"],
-  },
-  {
-    id: "gj-arch-18",
-    slug: "gj-yojana-arch",
-    name_english: "Yojana",
-    name_hindi: "યોજના",
-    name_sanskrit: "Yojana",
-    local_names: ["યોજના (Yojana)"],
-    meaning: "Large geographical unit used in planning roads and regions.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "≈12.8–13 km",
-    conversion_formula: "4 Krosa = 1 Yojana",
-    historical_context: "Regional planning",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Roads", "Regional planning"],
-    references: ["Purāṇas", "Arthashastra"],
-  },
-  {
-    id: "gj-arch-19",
-    slug: "gj-ayadi-mana-arch",
-    name_english: "Ayadi Mana",
-    name_hindi: "આયાદિ માન",
-    name_sanskrit: "Āyādi Māna",
-    local_names: ["આયાદિ માન (Āyādi Mana)"],
-    meaning: "Traditional Vāstu method for determining auspicious dimensions.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "Not an SI unit",
-    conversion_formula: "Vāstu calculation",
-    historical_context: "Temple architecture",
-    origin: "Ancient–Medieval",
-    states: ["Gujarat"],
-    used_in: ["Temple architecture", "Vāstu"],
-    references: ["Mayamata"],
-  },
-  {
-    id: "gj-arch-20",
-    slug: "gj-sutra-arch",
-    name_english: "Sutra",
-    name_hindi: "સૂત્ર",
-    name_sanskrit: "Sūtra",
-    local_names: ["સૂત્ર (Sutra)"],
-    meaning: "Measuring cord used for alignment in temples, stepwells and public buildings.",
-    category: "length",
-    sector: "architecture",
-    modern_equivalent: "Variable",
-    conversion_formula: "Survey Measure",
-    historical_context: "Construction layout",
-    origin: "Ancient–Medieval",
-    states: ["Gujarat"],
-    used_in: ["Temples", "Stepwells", "Public buildings"],
-    references: ["Samarāṅgaṇa Sūtradhāra"],
-  },
-
-  // ─── MEDICINE (AYURVEDA) (20 records) ────────────────────────────────────────
-  {
-    id: "gj-med-1",
-    slug: "gj-gunja-med",
-    name_english: "Gunja",
-    name_hindi: "ગુંજા",
-    name_sanskrit: "Guñjā (Raktikā)",
-    local_names: ["ગુંજા (Gunja)"],
-    meaning: "Gunja seed used for weighing herbs, minerals and precious medicinal ingredients.",
-    category: "weight",
-    sector: "medicine",
-    modern_equivalent: "≈0.1215 g",
-    conversion_formula: "Smallest practical weight",
-    historical_context: "Herbal medicines",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Herbs", "Minerals", "Medicinal ingredients"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-med-2",
-    slug: "gj-ratti-med",
-    name_english: "Ratti",
-    name_hindi: "રતી",
-    name_sanskrit: "Raktikā",
-    local_names: ["રતી (Ratti)"],
-    meaning: "Standard seed weight used in Ayurvedic and Rasashastra preparations.",
-    category: "weight",
-    sector: "medicine",
-    modern_equivalent: "≈0.1215 g",
-    conversion_formula: "Equivalent to Gunja seed",
-    historical_context: "Metallic medicines",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Ayurvedic preparations", "Rasashastra"],
-    references: ["Sushruta Samhita"],
-  },
-  {
-    id: "gj-med-3",
-    slug: "gj-masha-med",
-    name_english: "Masha",
-    name_hindi: "માષ",
-    name_sanskrit: "Māṣa",
-    local_names: ["માષ (Masha)"],
-    meaning: "Used for measuring herbal powders and medicinal pills.",
-    category: "weight",
-    sector: "medicine",
-    modern_equivalent: "≈0.97 g",
-    conversion_formula: "8 Ratti = 1 Masha",
-    historical_context: "Herbal powders",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Herbal powders", "Medicinal pills"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-med-4",
-    slug: "gj-karsha-med",
-    name_english: "Karsha",
-    name_hindi: "કર્ષ",
-    name_sanskrit: "Karṣa",
-    local_names: ["કર્ષ (Karsha)"],
-    meaning: "Standard unit for herbs, roots and mineral ingredients.",
-    category: "weight",
-    sector: "medicine",
-    modern_equivalent: "≈12 g",
-    conversion_formula: "12 Masha = 1 Karsha",
-    historical_context: "Medicinal preparations",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Herbs", "Roots", "Minerals"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-med-5",
-    slug: "gj-tola-med",
-    name_english: "Tola",
-    name_hindi: "તોળા",
-    name_sanskrit: "Tulā",
-    local_names: ["તોળા (Tola)"],
-    meaning: "Used for expensive herbs, metals and medicinal compounds.",
-    category: "weight",
-    sector: "medicine",
-    modern_equivalent: "≈11.66 g",
-    conversion_formula: "Traditional weight unit",
-    historical_context: "Precious medicines",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Expensive herbs", "Metals", "Medicinal compounds"],
-    references: ["Bombay Presidency Records"],
-  },
-  {
-    id: "gj-med-6",
-    slug: "gj-pala-med",
-    name_english: "Pala",
-    name_hindi: "પલ",
-    name_sanskrit: "Pala",
-    local_names: ["પલ (Pala)"],
-    meaning: "Standard weight for preparing herbal medicines.",
-    category: "weight",
-    sector: "medicine",
-    modern_equivalent: "≈48 g",
-    conversion_formula: "4 Karsha = 1 Pala",
-    historical_context: "Herbal ingredients",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Herbal medicine preparation"],
-    references: ["Aṣṭāṅga Hṛdaya"],
-  },
-  {
-    id: "gj-med-7",
-    slug: "gj-prasriti-med",
-    name_english: "Prasriti",
-    name_hindi: "પ્રસૃતિ",
-    name_sanskrit: "Prasṛti",
-    local_names: ["પ્રસૃતિ (Prasriti)"],
-    meaning: "Used for medicated oils, ghee and decoctions.",
-    category: "volume",
-    sector: "medicine",
-    modern_equivalent: "≈96 ml",
-    conversion_formula: "2 Pala = 1 Prasriti",
-    historical_context: "Herbal decoctions",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Medicated oils", "Ghee", "Decoctions"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-med-8",
-    slug: "gj-kudava-med",
-    name_english: "Kudava",
-    name_hindi: "કુડવ",
-    name_sanskrit: "Kuḍava",
-    local_names: ["કુડવ (Kudava)"],
-    meaning: "Capacity measure used in Ayurvedic pharmacies.",
-    category: "volume",
-    sector: "medicine",
-    modern_equivalent: "≈192 ml",
-    conversion_formula: "4 Prasriti = 1 Kudava",
-    historical_context: "Liquid medicines",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Ayurvedic pharmacies"],
-    references: ["Sushruta Samhita"],
-  },
-  {
-    id: "gj-med-9",
-    slug: "gj-prastha-med",
-    name_english: "Prastha",
-    name_hindi: "પ્રસ્થ",
-    name_sanskrit: "Prastha",
-    local_names: ["પ્રસ્થ (Prastha)"],
-    meaning: "Standard liquid measure for preparing medicines.",
-    category: "volume",
-    sector: "medicine",
-    modern_equivalent: "≈768 ml",
-    conversion_formula: "4 Kudava = 1 Prastha",
-    historical_context: "Pharmacy preparation",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Medicine preparation"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-med-10",
-    slug: "gj-adhaka-med",
-    name_english: "Adhaka",
-    name_hindi: "આઢક",
-    name_sanskrit: "Āḍhaka",
-    local_names: ["આઢક (Adhaka)"],
-    meaning: "Used for preparing large batches of medicinal decoctions.",
-    category: "volume",
-    sector: "medicine",
-    modern_equivalent: "≈3.07 L",
-    conversion_formula: "4 Prastha = 1 Adhaka",
-    historical_context: "Bulk preparation",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Large medicinal batches"],
-    references: ["Sushruta Samhita"],
-  },
-  {
-    id: "gj-med-11",
-    slug: "gj-drona-med",
-    name_english: "Drona",
-    name_hindi: "દ્રોણ",
-    name_sanskrit: "Droṇa",
-    local_names: ["દ્રોણ (Drona)"],
-    meaning: "Large capacity measure for storing medicinal preparations.",
-    category: "volume",
-    sector: "medicine",
-    modern_equivalent: "≈12.3 L",
-    conversion_formula: "4 Adhaka = 1 Drona",
-    historical_context: "Bulk storage",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Medicinal preparation storage"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-med-12",
-    slug: "gj-bindu-med",
-    name_english: "Bindu",
-    name_hindi: "બિંદુ",
-    name_sanskrit: "Bindu",
-    local_names: ["બિંદુ (Bindu)"],
-    meaning: "Smallest practical liquid dosage used in Ayurveda.",
-    category: "volume",
-    sector: "medicine",
-    modern_equivalent: "≈0.05 ml (approx.)",
-    conversion_formula: "Single drop",
-    historical_context: "Eye and nasal medicines",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Eye medicines", "Nasal medicines"],
-    references: ["Sushruta Samhita"],
-  },
-  {
-    id: "gj-med-13",
-    slug: "gj-anjali-med",
-    name_english: "Anjali",
-    name_hindi: "અંજલિ",
-    name_sanskrit: "Añjali",
-    local_names: ["અંજલિ (Anjali)"],
-    meaning: "Body-based dosage measure used by traditional Vaidyas.",
-    category: "volume",
-    sector: "medicine",
-    modern_equivalent: "Person-dependent",
-    conversion_formula: "Two cupped palms",
-    historical_context: "Patient dosage",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Patient dosage"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-med-14",
-    slug: "gj-mushti-med",
-    name_english: "Mushti",
-    name_hindi: "મુષ્ટિ",
-    name_sanskrit: "Muṣṭi",
-    local_names: ["મુષ્ટિ (Mushti)"],
-    meaning: "Handful measure used for fresh medicinal leaves and herbs.",
-    category: "volume",
-    sector: "medicine",
-    modern_equivalent: "Person-dependent",
-    conversion_formula: "One handful",
-    historical_context: "Herbal collection",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Medicinal leaves", "Herbs"],
-    references: ["Ayurvedic Practice Manuals"],
-  },
-  {
-    id: "gj-med-15",
-    slug: "gj-angula-med",
-    name_english: "Angula",
-    name_hindi: "અંગુલ",
-    name_sanskrit: "Aṅgula",
-    local_names: ["અંગુલ (Angula)"],
-    meaning: "Used to measure wounds, incisions and bandages.",
-    category: "length",
-    sector: "medicine",
-    modern_equivalent: "≈1.9 cm",
-    conversion_formula: "Finger width",
-    historical_context: "Surgical procedures",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Wounds", "Incisions", "Bandages"],
-    references: ["Sushruta Samhita"],
-  },
-  {
-    id: "gj-med-16",
-    slug: "gj-hasta-med",
-    name_english: "Hasta",
-    name_hindi: "હસ્ત",
-    name_sanskrit: "Hasta",
-    local_names: ["હસ્ત (Hasta)"],
-    meaning: "Used for body measurements in diagnosis and treatment.",
-    category: "length",
-    sector: "medicine",
-    modern_equivalent: "≈45.7 cm",
-    conversion_formula: "24 Angula = 1 Hasta",
-    historical_context: "Therapeutic procedures",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Body measurements", "Diagnosis"],
-    references: ["Aṣṭāṅga Hṛdaya"],
-  },
-  {
-    id: "gj-med-17",
-    slug: "gj-yava-med",
-    name_english: "Yava",
-    name_hindi: "જવ",
-    name_sanskrit: "Yava",
-    local_names: ["જવ (Yava)"],
-    meaning: "Used for measuring medicinal applications and surgical dimensions.",
-    category: "length",
-    sector: "medicine",
-    modern_equivalent: "≈2.4 mm",
-    conversion_formula: "Grain-based unit",
-    historical_context: "Surgical measurement",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Medicinal applications", "Surgery"],
-    references: ["Sushruta Samhita"],
-  },
-  {
-    id: "gj-med-18",
-    slug: "gj-shana-med",
-    name_english: "Shana",
-    name_hindi: "શાણ",
-    name_sanskrit: "Śāṇa",
-    local_names: ["શાણ (Shana)"],
-    meaning: "Used in preparing herbal powders and medicinal compounds.",
-    category: "weight",
-    sector: "medicine",
-    modern_equivalent: "≈3–4 g (regional variation)",
-    conversion_formula: "Traditional medicinal unit",
-    historical_context: "Herbal formulations",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Herbal powders", "Medicinal compounds"],
-    references: ["Rasashastra Texts"],
-  },
-  {
-    id: "gj-med-19",
-    slug: "gj-patra-med",
-    name_english: "Patra",
-    name_hindi: "પાત્ર",
-    name_sanskrit: "Pātra",
-    local_names: ["પાત્ર (Patra)"],
-    meaning: "Standard vessel used for preparing and storing medicines.",
-    category: "volume",
-    sector: "medicine",
-    modern_equivalent: "Variable",
-    conversion_formula: "Container measure",
-    historical_context: "Medicine preparation",
-    origin: "Ancient–Modern",
-    states: ["Gujarat"],
-    used_in: ["Preparing medicines", "Storing medicines"],
-    references: ["Gujarati Ayurvedic Manuscripts"],
-  },
-  {
-    id: "gj-med-20",
-    slug: "gj-kalasha-med",
-    name_english: "Kalasha",
-    name_hindi: "કલશ",
-    name_sanskrit: "Kalaśa",
-    local_names: ["કલશ (Kalasha)"],
-    meaning: "Earthen or metal vessel used to preserve oils, decoctions and medicinal liquids.",
-    category: "volume",
-    sector: "medicine",
-    modern_equivalent: "Variable",
-    conversion_formula: "Large storage vessel",
-    historical_context: "Medicine storage",
-    origin: "Ancient–Modern",
-    states: ["Gujarat"],
-    used_in: ["Oils", "Decoctions", "Medicinal liquids"],
-    references: ["Traditional Gujarati Vaidya Practices"],
-  },
-
-  // ─── TEXTILE & HANDLOOM (20 records) ────────────────────────────────────────
-  {
-    id: "gj-tex-1",
-    slug: "gj-yava-tex",
-    name_english: "Yava",
-    name_hindi: "જવ",
-    name_sanskrit: "Yava",
-    local_names: ["જવ (Yava)"],
-    meaning: "Barley grain used as the smallest reference in textile measurements and design.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "≈2.4 mm",
-    conversion_formula: "8 Yava = 1 Angula",
-    historical_context: "Fine weaving",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Textile measurements", "Design"],
-    references: ["Mānasāra"],
-  },
-  {
-    id: "gj-tex-2",
-    slug: "gj-angula-tex",
-    name_english: "Angula",
-    name_hindi: "અંગુલ",
-    name_sanskrit: "Aṅgula",
-    local_names: ["અંગુલ (Angula)"],
-    meaning: "Finger-width measure used for weaving and embroidery.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "≈1.9 cm",
-    conversion_formula: "8 Yava = 1 Angula",
-    historical_context: "Cloth measurement",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Weaving", "Embroidery"],
-    references: ["Mayamata"],
-  },
-  {
-    id: "gj-tex-3",
-    slug: "gj-vitasti-tex",
-    name_english: "Vitasti",
-    name_hindi: "વિતસ્તિ",
-    name_sanskrit: "Vitasti",
-    local_names: ["વિતસ્તિ (Vitasti)"],
-    meaning: "Palm-span measure used in loom preparation.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "≈22.8 cm",
-    conversion_formula: "12 Angula = 1 Vitasti",
-    historical_context: "Loom setup",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Loom preparation"],
-    references: ["Mānasāra"],
-  },
-  {
-    id: "gj-tex-4",
-    slug: "gj-hasta-tex",
-    name_english: "Hasta",
-    name_hindi: "હસ્ત",
-    name_sanskrit: "Hasta",
-    local_names: ["હસ્ત (Hasta)"],
-    meaning: "Cubit used for measuring woven cloth and silk fabrics.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "≈45.7 cm",
-    conversion_formula: "24 Angula = 1 Hasta",
-    historical_context: "Cloth weaving",
-    origin: "Ancient–Medieval",
-    states: ["Gujarat"],
-    used_in: ["Woven cloth", "Silk fabrics"],
-    references: ["Śilpa Śāstra"],
-  },
-  {
-    id: "gj-tex-5",
-    slug: "gj-gaz-tex",
-    name_english: "Gaz",
-    name_hindi: "ગજ",
-    name_sanskrit: "Gaja",
-    local_names: ["ગજ (Gaz)"],
-    meaning: "Standard yard measure widely used in Gujarat's cloth markets.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "≈0.9144 m",
-    conversion_formula: "Traditional yard",
-    historical_context: "Textile trade",
-    origin: "Sultanate–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Cloth markets"],
-    references: ["Bombay Presidency Manual"],
-  },
-  {
-    id: "gj-tex-6",
-    slug: "gj-kathi-tex",
-    name_english: "Kathi",
-    name_hindi: "કાઠી",
-    name_sanskrit: "Daṇḍa (related)",
-    local_names: ["કાઠી (Kathi)"],
-    meaning: "Wooden rod used to measure warp length before weaving.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "≈2–3 m (regional variation)",
-    conversion_formula: "Measuring rod",
-    historical_context: "Warp measurement",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Warp measurement"],
-    references: ["Gujarati Weaving Traditions"],
-  },
-  {
-    id: "gj-tex-7",
-    slug: "gj-sut-tex",
-    name_english: "Sut",
-    name_hindi: "સૂત",
-    name_sanskrit: "Sūtra",
-    local_names: ["સૂત (Sut)"],
-    meaning: "Individual spun thread used in cotton and silk weaving.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "—",
-    conversion_formula: "Single thread",
-    historical_context: "Yarn preparation",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Cotton weaving", "Silk weaving"],
-    references: ["Gujarati Textile Records"],
-  },
-  {
-    id: "gj-tex-8",
-    slug: "gj-tantu-tex",
-    name_english: "Tantu",
-    name_hindi: "તંતુ",
-    name_sanskrit: "Tantu",
-    local_names: ["તંતુ (Tantu)"],
-    meaning: "Individual fibre before spinning into thread.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "—",
-    conversion_formula: "Single fibre",
-    historical_context: "Yarn spinning",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Yarn spinning"],
-    references: ["Śilpa Śāstra"],
-  },
-  {
-    id: "gj-tex-9",
-    slug: "gj-hank-tex",
-    name_english: "Hank",
-    name_hindi: "હેન્ક",
-    local_names: ["હેન્ક (Hank)"],
-    meaning: "Standard hank used in cotton, silk and Patola weaving.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "Standard textile bundle",
-    conversion_formula: "Bundle of yarn",
-    historical_context: "Yarn trade",
-    origin: "Colonial",
-    states: ["Gujarat"],
-    used_in: ["Cotton weaving", "Silk weaving", "Patola"],
-    references: ["Bombay Textile Records"],
-  },
-  {
-    id: "gj-tex-10",
-    slug: "gj-sutni-gunch-tex",
-    name_english: "Sutni Gunch",
-    name_hindi: "સૂતની ગૂંચ",
-    local_names: ["સૂતની ગૂંચ (Sutni Gunch)"],
-    meaning: "Bundle of spun yarn prepared before weaving.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Bundle of thread",
-    historical_context: "Loom preparation",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Loom preparation"],
-    references: ["Gujarati Handloom Traditions"],
-  },
-  {
-    id: "gj-tex-11",
-    slug: "gj-tana-tex",
-    name_english: "Tana",
-    name_hindi: "તાણો",
-    name_sanskrit: "Tantra (related)",
-    local_names: ["તાણો (Tana)"],
-    meaning: "Longitudinal threads stretched on the loom.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "Variable",
-    conversion_formula: "Warp threads",
-    historical_context: "Loom preparation",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Warp preparation"],
-    references: ["Patola Weaving Manuals"],
-  },
-  {
-    id: "gj-tex-12",
-    slug: "gj-bana-tex",
-    name_english: "Bana",
-    name_hindi: "બાણો",
-    name_sanskrit: "Vāna (related)",
-    local_names: ["બાણો (Bana)"],
-    meaning: "Crosswise threads woven through the warp.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "Variable",
-    conversion_formula: "Cross threads",
-    historical_context: "Fabric weaving",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Fabric weaving"],
-    references: ["Gujarati Handloom Records"],
-  },
-  {
-    id: "gj-tex-13",
-    slug: "gj-magga-paholai-tex",
-    name_english: "Magga Paholai",
-    name_hindi: "મગ્ગા પહોળાઈ",
-    local_names: ["મગ્ગા પહોળાઈ (Magga Paholai)"],
-    meaning: "Width of cloth determined by the traditional loom.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "Variable",
-    conversion_formula: "Loom width",
-    historical_context: "Cloth production",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Cloth production"],
-    references: ["Rural Weaving Practices"],
-  },
-  {
-    id: "gj-tex-14",
-    slug: "gj-sadi-lambai-tex",
-    name_english: "Sadi Lambai",
-    name_hindi: "સાડી લંબાઈ",
-    local_names: ["સાડી લંબાઈ (Sadi Lambai)"],
-    meaning: "Traditional length used for weaving Gujarati sarees and Patola.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "≈5–9 m",
-    conversion_formula: "Standard saree length",
-    historical_context: "Saree weaving",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Saree weaving", "Patola"],
-    references: ["Patan Patola Records"],
-  },
-  {
-    id: "gj-tex-15",
-    slug: "gj-dhoti-lambai-tex",
-    name_english: "Dhoti Lambai",
-    name_hindi: "ધોતી લંબાઈ",
-    local_names: ["ધોતી લંબાઈ (Dhoti Lambai)"],
-    meaning: "Traditional length used for weaving dhotis.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "≈4–5 m",
-    conversion_formula: "Standard dhoti length",
-    historical_context: "Dhoti weaving",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Dhoti weaving"],
-    references: ["Gujarati Textile Traditions"],
-  },
-  {
-    id: "gj-tex-16",
-    slug: "gj-kapad-tukdo-tex",
-    name_english: "Kapad Tukdo",
-    name_hindi: "કાપડ ટુકડો",
-    local_names: ["કાપડ ટુકડો (Kapad Tukdo)"],
-    meaning: "Individual cut piece of woven cloth sold in markets.",
-    category: "length",
-    sector: "textile-handloom",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Cloth piece",
-    historical_context: "Retail trade",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Retail cloth trade"],
-    references: ["Market Records"],
-  },
-  {
-    id: "gj-tex-17",
-    slug: "gj-gaththo-tex",
-    name_english: "Gaththo",
-    name_hindi: "ગાંઠો",
-    local_names: ["ગાંઠો (Gaththo)"],
-    meaning: "Bundle of finished cloth prepared for merchants.",
-    category: "volume",
-    sector: "textile-handloom",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Bundle of cloth",
-    historical_context: "Textile transport",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Cloth bundling", "Merchant trade"],
-    references: ["Bombay Trade Records"],
-  },
-  {
-    id: "gj-tex-18",
-    slug: "gj-guni-tex",
-    name_english: "Guni",
-    name_hindi: "ગૂણી",
-    local_names: ["ગૂણી (Guni)"],
-    meaning: "Traditional sack used for transporting yarn and cloth.",
-    category: "volume",
-    sector: "textile-handloom",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Textile sack",
-    historical_context: "Yarn transport",
-    origin: "Colonial",
-    states: ["Gujarat"],
-    used_in: ["Yarn transport", "Cloth transport"],
-    references: ["Textile Trade Records"],
-  },
-  {
-    id: "gj-tex-19",
-    slug: "gj-bale-tex",
-    name_english: "Bale",
-    name_hindi: "બેલ",
-    local_names: ["બેલ (Bale)"],
-    meaning: "Standard bale of cotton or woven cloth exported through Surat and Bharuch ports.",
-    category: "volume",
-    sector: "textile-handloom",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Multiple bundles",
-    historical_context: "Cotton export",
-    origin: "Colonial",
-    states: ["Gujarat"],
-    used_in: ["Cotton export", "Woven cloth export"],
-    references: ["East India Company Records"],
-  },
-  {
-    id: "gj-tex-20",
-    slug: "gj-patola-gaththo-tex",
-    name_english: "Patola Gaththo",
-    name_hindi: "પટોળા ગાંઠો",
-    local_names: ["પટોળા ગાંઠો (Patola Gaththo)"],
-    meaning: "Bundle of finished Patola silk textiles prepared for domestic and international trade.",
-    category: "volume",
-    sector: "textile-handloom",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Bundle of Patola textiles",
-    historical_context: "Silk trade",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    districts: ["Patan"],
-    used_in: ["Patola silk trade"],
-    references: ["Patola Heritage Records"],
-  },
-
-  // ─── CURRENCY & MONEY (20 records) ──────────────────────────────────────────
-  {
-    id: "gj-cur-1",
-    slug: "gj-gunja-cur",
-    name_english: "Gunja",
-    name_hindi: "ગુંજા",
-    name_sanskrit: "Guñjā (Raktikā)",
-    local_names: ["ગુંજા (Gunja)"],
-    meaning: "Gunja seed used by goldsmiths and merchants to weigh gold and gemstones.",
-    category: "weight",
-    sector: "currency-money",
-    modern_equivalent: "≈0.1215 g",
-    conversion_formula: "Seed weight",
-    historical_context: "Gold weighing",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Gold weighing", "Gemstones"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-cur-2",
-    slug: "gj-ratti-cur",
-    name_english: "Ratti",
-    name_hindi: "રતી",
-    name_sanskrit: "Raktikā",
-    local_names: ["રતી (Ratti)"],
-    meaning: "Standard jeweller's weight for precious metals and gems.",
-    category: "weight",
-    sector: "currency-money",
-    modern_equivalent: "≈0.1215 g",
-    conversion_formula: "Equivalent to Gunja seed",
-    historical_context: "Bullion trade",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Precious metals", "Gems"],
-    references: ["Arthashastra"],
-  },
-  {
-    id: "gj-cur-3",
-    slug: "gj-masha-cur",
-    name_english: "Masha",
-    name_hindi: "માષ",
-    name_sanskrit: "Māṣa",
-    local_names: ["માષ (Masha)"],
-    meaning: "Used for weighing gold, silver and medicinal metals.",
-    category: "weight",
-    sector: "currency-money",
-    modern_equivalent: "≈0.97 g",
-    conversion_formula: "8 Ratti = 1 Masha",
-    historical_context: "Precious metals",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Gold", "Silver", "Medicinal metals"],
-    references: ["Sushruta Samhita"],
-  },
-  {
-    id: "gj-cur-4",
-    slug: "gj-karsha-cur",
-    name_english: "Karsha",
-    name_hindi: "કર્ષ",
-    name_sanskrit: "Karṣa",
-    local_names: ["કર્ષ (Karsha)"],
-    meaning: "Commercial weight for valuable metals and goods.",
-    category: "weight",
-    sector: "currency-money",
-    modern_equivalent: "≈12 g",
-    conversion_formula: "12 Masha = 1 Karsha",
-    historical_context: "Bullion weighing",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Valuable metals"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-cur-5",
-    slug: "gj-tola-cur",
-    name_english: "Tola",
-    name_hindi: "તોળા",
-    name_sanskrit: "Tulā",
-    local_names: ["તોળા (Tola)"],
-    meaning: "Standard unit used by jewellers and bullion merchants.",
-    category: "weight",
-    sector: "currency-money",
-    modern_equivalent: "≈11.66 g",
-    conversion_formula: "Traditional weight unit",
-    historical_context: "Jewellery trade",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Jewellers", "Bullion merchants"],
-    references: ["Bombay Presidency Records"],
-  },
-  {
-    id: "gj-cur-6",
-    slug: "gj-pala-cur",
-    name_english: "Pala",
-    name_hindi: "પલ",
-    name_sanskrit: "Pala",
-    local_names: ["પલ (Pala)"],
-    meaning: "Larger weight used for silver and gold transactions.",
-    category: "weight",
-    sector: "currency-money",
-    modern_equivalent: "≈48 g",
-    conversion_formula: "4 Karsha = 1 Pala",
-    historical_context: "Bullion weighing",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Silver transactions", "Gold transactions"],
-    references: ["Ayurvedic Texts"],
-  },
-  {
-    id: "gj-cur-7",
-    slug: "gj-dam-cur",
-    name_english: "Dam",
-    name_hindi: "દામ",
-    name_sanskrit: "Dāma",
-    local_names: ["દામ (Dam)"],
-    meaning: "Small copper coin used in village and town markets.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Copper coin",
-    historical_context: "Retail transactions",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Village markets", "Town markets"],
-    references: ["Mughal Coin Records"],
-  },
-  {
-    id: "gj-cur-8",
-    slug: "gj-paisa-cur",
-    name_english: "Paisa",
-    name_hindi: "પૈસા",
-    local_names: ["પૈસા (Paisa)"],
-    meaning: "Small denomination coin used in local trade.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "Historic fractional value",
-    conversion_formula: "Fraction of Anna",
-    historical_context: "Everyday purchases",
-    origin: "Colonial",
-    states: ["Gujarat"],
-    used_in: ["Local trade"],
-    references: ["Bombay Presidency Manual"],
-  },
-  {
-    id: "gj-cur-9",
-    slug: "gj-anna-cur",
-    name_english: "Anna",
-    name_hindi: "આણા",
-    local_names: ["આણા (Anna)"],
-    meaning: "Standard subdivision of the Rupee in British India.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "1/16 Rupee",
-    conversion_formula: "16 Anna = 1 Rupee",
-    historical_context: "Daily commerce",
-    origin: "Colonial",
-    states: ["Gujarat"],
-    used_in: ["Daily commerce"],
-    references: ["British Indian Currency Records"],
-  },
-  {
-    id: "gj-cur-10",
-    slug: "gj-panam-cur",
-    name_english: "Panam",
-    name_hindi: "પાણમ",
-    name_sanskrit: "Paṇa",
-    local_names: ["પાણમ (Panam)"],
-    meaning: "Coin mentioned in medieval trade records of western India.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Traditional denomination",
-    historical_context: "Regional trade",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Regional trade"],
-    references: ["Epigraphia Indica"],
-  },
-  {
-    id: "gj-cur-11",
-    slug: "gj-fanam-cur",
-    name_english: "Fanam",
-    name_hindi: "ફણમ",
-    name_sanskrit: "Paṇa (related)",
-    local_names: ["ફણમ (Fanam)"],
-    meaning: "Small gold coin used in western coastal trade.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "≈0.35–0.40 g (regional variation)",
-    conversion_formula: "Fractional gold coin",
-    historical_context: "Merchant trade",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Western coastal trade"],
-    references: ["Indian Numismatic Studies"],
-  },
-  {
-    id: "gj-cur-12",
-    slug: "gj-mahamudi-cur",
-    name_english: "Mahamudi",
-    name_hindi: "મહમૂદી",
-    name_sanskrit: "Mahmūdī",
-    local_names: ["મહમૂદી (Mahamudi)"],
-    meaning: "Famous silver coin issued by the Gujarat Sultanate and widely accepted in trade.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Regional silver coin",
-    historical_context: "Gujarat Sultanate trade",
-    origin: "Gujarat Sultanate",
-    states: ["Gujarat"],
-    used_in: ["Gujarat Sultanate trade"],
-    references: ["Gujarat Sultanate Coinage"],
-  },
-  {
-    id: "gj-cur-13",
-    slug: "gj-kori-cur",
-    name_english: "Kori",
-    name_hindi: "કોરી",
-    local_names: ["કોરી (Kori)"],
-    meaning: "Traditional coin extensively used in Kutch and western Gujarat.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Regional denomination",
-    historical_context: "Local trade",
-    origin: "Medieval–Colonial",
-    states: ["Gujarat"],
-    districts: ["Kutch"],
-    used_in: ["Kutch regional trade"],
-    references: ["Kutch State Coin Records"],
-  },
-  {
-    id: "gj-cur-14",
-    slug: "gj-mohur-cur",
-    name_english: "Mohur",
-    name_hindi: "મોહર",
-    name_sanskrit: "Mohura",
-    local_names: ["મોહર (Mohur)"],
-    meaning: "Gold coin used in domestic and overseas trade.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "≈10.9–11 g gold",
-    conversion_formula: "High-value coin",
-    historical_context: "Large commercial transactions",
-    origin: "Mughal–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Domestic trade", "Overseas trade"],
-    references: ["Indian Numismatic Society"],
-  },
-  {
-    id: "gj-cur-15",
-    slug: "gj-rupiya-cur",
-    name_english: "Rupiya",
-    name_hindi: "રૂપિયા",
-    name_sanskrit: "Rūpya",
-    local_names: ["રૂપિયા (Rupiya)"],
-    meaning: "Principal silver currency used across Gujarat.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "Historic silver standard",
-    conversion_formula: "16 Anna = 1 Rupiya",
-    historical_context: "General trade",
-    origin: "Mughal–Colonial",
-    states: ["Gujarat"],
-    used_in: ["General trade"],
-    references: ["Bombay Presidency Gazetteer"],
-  },
-  {
-    id: "gj-cur-16",
-    slug: "gj-ashrafi-cur",
-    name_english: "Ashrafi",
-    name_hindi: "અશરફી",
-    name_sanskrit: "Aśrafī",
-    local_names: ["અશરફી (Ashrafi)"],
-    meaning: "High-value gold coin used by wealthy merchants and rulers.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Premium gold coin",
-    historical_context: "International trade",
-    origin: "Mughal",
-    states: ["Gujarat"],
-    used_in: ["International trade", "Wealthy merchants"],
-    references: ["Mughal Coin Catalogues"],
-  },
-  {
-    id: "gj-cur-17",
-    slug: "gj-hundi-cur",
-    name_english: "Hundi",
-    name_hindi: "હૂંડી",
-    name_sanskrit: "Huṇḍikā",
-    local_names: ["હૂંડી (Hundi)"],
-    meaning: "Traditional bill of exchange widely used by Gujarati merchant communities in domestic and overseas commerce.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "Not applicable",
-    conversion_formula: "Merchant credit note",
-    historical_context: "Long-distance trade",
-    origin: "Medieval–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Domestic commerce", "Overseas commerce"],
-    references: ["Gujarati Merchant Records"],
-  },
-  {
-    id: "gj-cur-18",
-    slug: "gj-dakshina-cur",
-    name_english: "Dakshina",
-    name_hindi: "દક્ષિણા",
-    name_sanskrit: "Dakṣiṇā",
-    local_names: ["દક્ષિણા (Dakshina)"],
-    meaning: "Monetary offering made to priests, scholars and temples.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "Not fixed",
-    conversion_formula: "Honorarium",
-    historical_context: "Religious payments",
-    origin: "Ancient–Modern",
-    states: ["Gujarat"],
-    used_in: ["Religious offerings", "Temple payments"],
-    references: ["Dharmaśāstra Texts"],
-  },
-  {
-    id: "gj-cur-19",
-    slug: "gj-nazarana-cur",
-    name_english: "Nazarana",
-    name_hindi: "નજરાણા",
-    name_sanskrit: "Nazarāṇā",
-    local_names: ["નજરાણા (Nazarana)"],
-    meaning: "Ceremonial payment or tribute presented to rulers and nobles.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "Not fixed",
-    conversion_formula: "Royal gift/payment",
-    historical_context: "Court administration",
-    origin: "Sultanate–Maratha",
-    states: ["Gujarat"],
-    used_in: ["Court administration", "Royal tribute"],
-    references: ["Administrative Records"],
-  },
-  {
-    id: "gj-cur-20",
-    slug: "gj-khajano-cur",
-    name_english: "Khajano",
-    name_hindi: "ખજાનો",
-    name_sanskrit: "Kośa",
-    local_names: ["ખજાનો (Khajano)"],
-    meaning: "Treasury and accounting term used for managing royal revenue, taxes and currency reserves.",
-    category: "currency",
-    sector: "currency-money",
-    modern_equivalent: "Not applicable",
-    conversion_formula: "Treasury accounting",
-    historical_context: "State finance",
-    origin: "Sultanate–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Royal revenue", "Tax management"],
-    references: ["Gujarat State Revenue Records"],
-  },
-
-  // ─── HOUSEHOLD (20 records) ──────────────────────────────────────────────────
-  {
-    id: "gj-hh-1",
-    slug: "gj-bindu-hh",
-    name_english: "Bindu",
-    name_hindi: "બિંદુ",
-    name_sanskrit: "Bindu",
-    local_names: ["બિંદુ (Bindu)"],
-    meaning: "Smallest liquid measure used for oils, medicines and ritual purposes.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "≈0.05 ml (approx.)",
-    conversion_formula: "Single drop",
-    historical_context: "Oils & medicines",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Oils", "Medicines", "Rituals"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-hh-2",
-    slug: "gj-gunja-hh",
-    name_english: "Gunja",
-    name_hindi: "ગુંજા",
-    name_sanskrit: "Guñjā",
-    local_names: ["ગુંજા (Gunja)"],
-    meaning: "Gunja seed used for weighing valuable spices and herbs.",
-    category: "weight",
-    sector: "household",
-    modern_equivalent: "≈0.1215 g",
-    conversion_formula: "Seed weight",
-    historical_context: "Spices",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Spices", "Herbs"],
-    references: ["Charaka Samhita"],
-  },
-  {
-    id: "gj-hh-3",
-    slug: "gj-masha-hh",
-    name_english: "Masha",
-    name_hindi: "માષ",
-    name_sanskrit: "Māṣa",
-    local_names: ["માષ (Masha)"],
-    meaning: "Traditional weight for spices and medicinal ingredients.",
-    category: "weight",
-    sector: "household",
-    modern_equivalent: "≈0.97 g",
-    conversion_formula: "8 Gunja = 1 Masha",
-    historical_context: "Medicines & spices",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Spices", "Medicinal ingredients"],
-    references: ["Sushruta Samhita"],
-  },
-  {
-    id: "gj-hh-4",
-    slug: "gj-tola-hh",
-    name_english: "Tola",
-    name_hindi: "તોળા",
-    name_sanskrit: "Tulā",
-    local_names: ["તોળા (Tola)"],
-    meaning: "Used for measuring costly spices, ghee and jaggery.",
-    category: "weight",
-    sector: "household",
-    modern_equivalent: "≈11.66 g",
-    conversion_formula: "Traditional weight",
-    historical_context: "Kitchen ingredients",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Spices", "Ghee", "Jaggery"],
-    references: ["Bombay Presidency Records"],
-  },
-  {
-    id: "gj-hh-5",
-    slug: "gj-chhatak-hh",
-    name_english: "Chhatak",
-    name_hindi: "છટાક",
-    local_names: ["છટાક (Chhatak)"],
-    meaning: "Used for flour, sugar, pulses and cereals.",
-    category: "weight",
-    sector: "household",
-    modern_equivalent: "≈58 g",
-    conversion_formula: "16 Chhatak = 1 Sher",
-    historical_context: "Grocery measurement",
-    origin: "Medieval–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Flour", "Sugar", "Pulses", "Cereals"],
-    references: ["Bombay Presidency Manual"],
-  },
-  {
-    id: "gj-hh-6",
-    slug: "gj-pala-hh",
-    name_english: "Pala",
-    name_hindi: "પલ",
-    name_sanskrit: "Pala",
-    local_names: ["પલ (Pala)"],
-    meaning: "Traditional unit for grains and cooking materials.",
-    category: "weight",
-    sector: "household",
-    modern_equivalent: "≈48 g",
-    conversion_formula: "4 Karsha = 1 Pala",
-    historical_context: "Food ingredients",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Grains", "Cooking materials"],
-    references: ["Ayurvedic Texts"],
-  },
-  {
-    id: "gj-hh-7",
-    slug: "gj-sher-hh",
-    name_english: "Sher",
-    name_hindi: "શેર",
-    name_sanskrit: "Śer",
-    local_names: ["શેર (Sher)"],
-    meaning: "Common household measure for rice, wheat and pulses.",
-    category: "weight",
-    sector: "household",
-    modern_equivalent: "≈0.93 kg",
-    conversion_formula: "Standard market measure",
-    historical_context: "Grain storage",
-    origin: "Medieval–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Rice", "Wheat", "Pulses"],
-    references: ["Bombay Gazetteer"],
-  },
-  {
-    id: "gj-hh-8",
-    slug: "gj-paili-hh",
-    name_english: "Paili",
-    name_hindi: "પાયલી",
-    name_sanskrit: "Prastha (related)",
-    local_names: ["પાયલી (Paili)"],
-    meaning: "Measuring vessel used for storing cereals and pulses.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "≈3–4 L (regional variation)",
-    conversion_formula: "Traditional grain measure",
-    historical_context: "Grain storage",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Cereals", "Pulses"],
-    references: ["Gujarat Village Traditions"],
-  },
-  {
-    id: "gj-hh-9",
-    slug: "gj-adholi-hh",
-    name_english: "Adholi",
-    name_hindi: "અઢોળી",
-    local_names: ["અઢોળી (Adholi)"],
-    meaning: "Medium-sized grain measuring vessel used in homes.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "2 Paili = 1 Adholi",
-    historical_context: "Grain storage",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Home grain storage"],
-    references: ["Revenue Records"],
-  },
-  {
-    id: "gj-hh-10",
-    slug: "gj-man-hh",
-    name_english: "Man",
-    name_hindi: "મણ",
-    name_sanskrit: "Maund (related)",
-    local_names: ["મણ (Man)"],
-    meaning: "Traditional unit for storing harvested grain in homes.",
-    category: "weight",
-    sector: "household",
-    modern_equivalent: "≈37.3 kg",
-    conversion_formula: "40 Sher = 1 Man",
-    historical_context: "Bulk grain storage",
-    origin: "Mughal–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Grain storage at home"],
-    references: ["Bombay Presidency Gazetteer"],
-  },
-  {
-    id: "gj-hh-11",
-    slug: "gj-topli-hh",
-    name_english: "Topli",
-    name_hindi: "ટોપલી",
-    local_names: ["ટોપલી (Topli)"],
-    meaning: "Bamboo basket used for vegetables, fruits and grains.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Basket measure",
-    historical_context: "Grain & vegetable handling",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Vegetables", "Fruits", "Grains"],
-    references: ["Gujarati Rural Traditions"],
-  },
-  {
-    id: "gj-hh-12",
-    slug: "gj-guni-hh",
-    name_english: "Guni",
-    name_hindi: "ગૂણી",
-    local_names: ["ગૂણી (Guni)"],
-    meaning: "Traditional sack used for storing wheat, millet and pulses.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Sack measure",
-    historical_context: "Grain storage",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Wheat", "Millet", "Pulses"],
-    references: ["Agricultural Market Records"],
-  },
-  {
-    id: "gj-hh-13",
-    slug: "gj-potlu-hh",
-    name_english: "Potlu",
-    name_hindi: "પોટલું",
-    local_names: ["પોટલું (Potlu)"],
-    meaning: "Cloth bundle used to store grains, spices and household items.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Cloth bundle",
-    historical_context: "Food storage",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Grains", "Spices", "Household items"],
-    references: ["Village Customs"],
-  },
-  {
-    id: "gj-hh-14",
-    slug: "gj-handi-hh",
-    name_english: "Handi",
-    name_hindi: "હાંડી",
-    name_sanskrit: "Haṇḍī",
-    local_names: ["હાંડી (Handi)"],
-    meaning: "Earthen or metal vessel used for preparing daily meals.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "≈2–5 L (varies)",
-    conversion_formula: "Cooking pot",
-    historical_context: "Cooking",
-    origin: "Ancient–Modern",
-    states: ["Gujarat"],
-    used_in: ["Daily cooking"],
-    references: ["Gujarati Household Traditions"],
-  },
-  {
-    id: "gj-hh-15",
-    slug: "gj-ghado-hh",
-    name_english: "Ghado",
-    name_hindi: "ઘડો",
-    name_sanskrit: "Ghaṭa",
-    local_names: ["ઘડો (Ghado)"],
-    meaning: "Traditional earthen or brass pot for storing drinking water.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "≈10–15 L (regional variation)",
-    conversion_formula: "Water pot",
-    historical_context: "Water storage",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Water storage"],
-    references: ["Gujarati Rural Customs"],
-  },
-  {
-    id: "gj-hh-16",
-    slug: "gj-kalash-hh",
-    name_english: "Kalash",
-    name_hindi: "કલશ",
-    name_sanskrit: "Kalaśa",
-    local_names: ["કલશ (Kalash)"],
-    meaning: "Metal vessel used for water storage and religious ceremonies.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "≈5–10 L (varies)",
-    conversion_formula: "Ritual/storage vessel",
-    historical_context: "Water & rituals",
-    origin: "Ancient–Modern",
-    states: ["Gujarat"],
-    used_in: ["Water storage", "Religious ceremonies"],
-    references: ["Dharmaśāstra Texts"],
-  },
-  {
-    id: "gj-hh-17",
-    slug: "gj-dabba-hh",
-    name_english: "Dabba",
-    name_hindi: "ડબ્બો",
-    local_names: ["ડબ્બો (Dabba)"],
-    meaning: "Metal container used to store flour, spices and grains.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "Variable",
-    conversion_formula: "Metal container",
-    historical_context: "Food storage",
-    origin: "Colonial–Modern",
-    states: ["Gujarat"],
-    used_in: ["Flour", "Spices", "Grains"],
-    references: ["Household Records"],
-  },
-  {
-    id: "gj-hh-18",
-    slug: "gj-bharo-hh",
-    name_english: "Bharo",
-    name_hindi: "ભારો",
-    name_sanskrit: "Bhāra",
-    local_names: ["ભારો (Bharo)"],
-    meaning: "Standard load carried manually from farms or markets to homes.",
-    category: "weight",
-    sector: "household",
-    modern_equivalent: "≈20–30 kg (regional variation)",
-    conversion_formula: "One head-load",
-    historical_context: "Household transport",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Farm to home transport"],
-    references: ["Rural Labour Practices"],
-  },
-  {
-    id: "gj-hh-19",
-    slug: "gj-kothar-hh",
-    name_english: "Kothar",
-    name_hindi: "કોઠાર",
-    name_sanskrit: "Koṣṭhāgāra",
-    local_names: ["કોઠાર (Kothar)"],
-    meaning: "Traditional mud or wooden granary for storing harvested crops.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "Variable",
-    conversion_formula: "Household grain storage",
-    historical_context: "Long-term grain preservation",
-    origin: "Ancient–Modern",
-    states: ["Gujarat"],
-    used_in: ["Crop storage"],
-    references: ["Rural Architecture Studies"],
-  },
-  {
-    id: "gj-hh-20",
-    slug: "gj-dhanya-kothar-hh",
-    name_english: "Dhanya Kothar",
-    name_hindi: "ધાન્ય કોઠાર",
-    name_sanskrit: "Dhānya Koṣṭhāgāra",
-    local_names: ["ધાન્ય કોઠાર (Dhanya Kothar)"],
-    meaning: "Large granary used for preserving grain for long periods.",
-    category: "volume",
-    sector: "household",
-    modern_equivalent: "Variable",
-    conversion_formula: "Largest storage structure",
-    historical_context: "Community grain reserve",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Long-term grain preservation"],
-    references: ["Gujarat Revenue Records"],
-  },
-
-  // ─── STORAGE & TRANSPORTATION (20 records) ───────────────────────────────────
-  {
-    id: "gj-storage-1",
-    slug: "gj-paili-storage",
-    name_english: "Paili",
-    name_hindi: "પાયલી",
-    name_sanskrit: "Prastha (related)",
-    local_names: ["પાયલી (Paili)"],
-    meaning: "Small measuring vessel used before storing or transporting grain.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "≈3–4 L (regional variation)",
-    conversion_formula: "Basic grain measure",
-    historical_context: "Grain storage",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Grain storage", "Transport preparation"],
-    references: ["Bombay Presidency Gazetteer"],
-  },
-  {
-    id: "gj-storage-2",
-    slug: "gj-adholi-storage",
-    name_english: "Adholi",
-    name_hindi: "અઢોળી",
-    local_names: ["અઢોળી (Adholi)"],
-    meaning: "Medium grain measure used by farmers and merchants.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "2 Paili = 1 Adholi",
-    historical_context: "Grain markets",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Farmers", "Merchant measures"],
-    references: ["Gujarat Revenue Records"],
-  },
-  {
-    id: "gj-storage-3",
-    slug: "gj-sher-storage",
-    name_english: "Sher",
-    name_hindi: "શેર",
-    name_sanskrit: "Śer",
-    local_names: ["શેર (Sher)"],
-    meaning: "Standard measure for cereals, pulses and spices before transport.",
-    category: "weight",
-    sector: "storage-transport",
-    modern_equivalent: "≈0.93 kg",
-    conversion_formula: "Standard market measure",
-    historical_context: "Grain transport",
-    origin: "Sultanate–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Cereals", "Pulses", "Spices"],
-    references: ["Bombay Presidency Manual"],
-  },
-  {
-    id: "gj-storage-4",
-    slug: "gj-man-storage",
-    name_english: "Man",
-    name_hindi: "મણ",
-    name_sanskrit: "Maund (related)",
-    local_names: ["મણ (Man)"],
-    meaning: "Standard wholesale unit for grain, cotton and salt.",
-    category: "weight",
-    sector: "storage-transport",
-    modern_equivalent: "≈37.3 kg",
-    conversion_formula: "40 Sher = 1 Man",
-    historical_context: "Bulk storage",
-    origin: "Mughal–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Grain", "Cotton", "Salt"],
-    references: ["Bombay Presidency Gazetteer"],
-  },
-  {
-    id: "gj-storage-5",
-    slug: "gj-khandi-storage",
-    name_english: "Khandi",
-    name_hindi: "ખાંડી",
-    name_sanskrit: "Khaṇḍi",
-    local_names: ["ખાંડી (Khandi)"],
-    meaning: "Large commercial unit for cotton, grain and spices.",
-    category: "weight",
-    sector: "storage-transport",
-    modern_equivalent: "≈746 kg (regional variation)",
-    conversion_formula: "20 Man = 1 Khandi (regional variation)",
-    historical_context: "Bulk commodity storage",
-    origin: "Medieval–Colonial",
-    states: ["Gujarat"],
-    used_in: ["Cotton", "Grain", "Spices"],
-    references: ["Revenue Administration Records"],
-  },
-  {
-    id: "gj-storage-6",
-    slug: "gj-guni-storage",
-    name_english: "Guni",
-    name_hindi: "ગૂણી",
-    local_names: ["ગૂણી (Guni)"],
-    meaning: "Traditional jute sack used for grain, cotton and pulses.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Sack measure",
-    historical_context: "Grain transport",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Grain", "Cotton", "Pulses"],
-    references: ["Agricultural Market Records"],
-  },
-  {
-    id: "gj-storage-7",
-    slug: "gj-potlu-storage",
-    name_english: "Potlu",
-    name_hindi: "પોટલું",
-    local_names: ["પોટલું (Potlu)"],
-    meaning: "Cloth bundle used for carrying seeds, spices and household goods.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Cloth bundle",
-    historical_context: "Commodity transport",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Seeds", "Spices", "Household goods"],
-    references: ["Village Customs"],
-  },
-  {
-    id: "gj-storage-8",
-    slug: "gj-topli-storage",
-    name_english: "Topli",
-    name_hindi: "ટોપલી",
-    local_names: ["ટોપલી (Topli)"],
-    meaning: "Bamboo basket used to transport vegetables, fruits and harvested crops.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Basket measure",
-    historical_context: "Farm transport",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Vegetables", "Fruits", "Harvested crops"],
-    references: ["Gujarati Rural Traditions"],
-  },
-  {
-    id: "gj-storage-9",
-    slug: "gj-bharo-storage",
-    name_english: "Bharo",
-    name_hindi: "ભારો",
-    name_sanskrit: "Bhāra",
-    local_names: ["ભારો (Bharo)"],
-    meaning: "Standard load carried by a person from farms to markets.",
-    category: "weight",
-    sector: "storage-transport",
-    modern_equivalent: "≈20–30 kg (regional variation)",
-    conversion_formula: "One head-load",
-    historical_context: "Manual transport",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Farm to market transport"],
-    references: ["Rural Labour Practices"],
-  },
-  {
-    id: "gj-storage-10",
-    slug: "gj-bailgadi-bhar-storage",
-    name_english: "Bailgadi Bhar",
-    name_hindi: "બળદગાડી ભાર",
-    local_names: ["બળદગાડી ભાર (Bailgadi Bhar)"],
-    meaning: "Quantity transported by one traditional bullock cart.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Bullock-cart load",
-    historical_context: "Inland transport",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Inland transport"],
-    references: ["Rural Transport Records"],
-  },
-  {
-    id: "gj-storage-11",
-    slug: "gj-unt-gadi-bhar-storage",
-    name_english: "Unt Gadi Bhar",
-    name_hindi: "ઊંટગાડી ભાર",
-    local_names: ["ઊંટગાડી ભાર (Unt Gadi Bhar)"],
-    meaning: "Traditional load carried by camel carts in Kutch and North Gujarat.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Camel cart capacity",
-    historical_context: "Desert transport",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    districts: ["Kutch"],
-    used_in: ["Desert transport"],
-    references: ["Kutch Transport Records"],
-  },
-  {
-    id: "gj-storage-12",
-    slug: "gj-kothar-storage",
-    name_english: "Kothar",
-    name_hindi: "કોઠાર",
-    name_sanskrit: "Koṣṭhāgāra",
-    local_names: ["કોઠાર (Kothar)"],
-    meaning: "Traditional mud or wooden granary for storing harvested grain.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Variable",
-    conversion_formula: "Storage structure",
-    historical_context: "Grain preservation",
-    origin: "Ancient–Modern",
-    states: ["Gujarat"],
-    used_in: ["Grain preservation"],
-    references: ["Rural Architecture Studies"],
-  },
-  {
-    id: "gj-storage-13",
-    slug: "gj-dhanya-kothar-storage",
-    name_english: "Dhanya Kothar",
-    name_hindi: "ધાન્ય કોઠાર",
-    name_sanskrit: "Dhānya Koṣṭhāgāra",
-    local_names: ["ધાન્ય કોઠાર (Dhanya Kothar)"],
-    meaning: "Large community grain storage structure.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Variable",
-    conversion_formula: "Community granary",
-    historical_context: "Village grain reserve",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Community grain reserve"],
-    references: ["Gujarat Revenue Records"],
-  },
-  {
-    id: "gj-storage-14",
-    slug: "gj-dabba-storage",
-    name_english: "Dabba",
-    name_hindi: "ડબ્બો",
-    local_names: ["ડબ્બો (Dabba)"],
-    meaning: "Metal container used for grains, flour and spices.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Variable",
-    conversion_formula: "Metal container",
-    historical_context: "Food storage",
-    origin: "Colonial–Modern",
-    states: ["Gujarat"],
-    used_in: ["Grains", "Flour", "Spices"],
-    references: ["Household Records"],
-  },
-  {
-    id: "gj-storage-15",
-    slug: "gj-handi-storage",
-    name_english: "Handi",
-    name_hindi: "હાંડી",
-    name_sanskrit: "Haṇḍī",
-    local_names: ["હાંડી (Handi)"],
-    meaning: "Earthen or metal pot used for storing and carrying milk, oil and water.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "≈2–5 L (varies)",
-    conversion_formula: "Earthen pot",
-    historical_context: "Liquid transport",
-    origin: "Ancient–Modern",
-    states: ["Gujarat"],
-    used_in: ["Milk", "Oil", "Water"],
-    references: ["Gujarati Household Traditions"],
-  },
-  {
-    id: "gj-storage-16",
-    slug: "gj-ghado-storage",
-    name_english: "Ghado",
-    name_hindi: "ઘડો",
-    name_sanskrit: "Ghaṭa",
-    local_names: ["ઘડો (Ghado)"],
-    meaning: "Earthen or brass vessel used to carry drinking water.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "≈10–15 L (regional variation)",
-    conversion_formula: "Water pot",
-    historical_context: "Water transport",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Drinking water transport"],
-    references: ["Gujarati Rural Customs"],
-  },
-  {
-    id: "gj-storage-17",
-    slug: "gj-kalash-storage",
-    name_english: "Kalash",
-    name_hindi: "કલશ",
-    name_sanskrit: "Kalaśa",
-    local_names: ["કલશ (Kalash)"],
-    meaning: "Vessel used for storing water and ceremonial purposes.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "≈5–10 L (varies)",
-    conversion_formula: "Ritual/storage vessel",
-    historical_context: "Water & grain storage",
-    origin: "Ancient–Modern",
-    states: ["Gujarat"],
-    used_in: ["Water storage", "Ceremonial use"],
-    references: ["Dharmaśāstra Texts"],
-  },
-  {
-    id: "gj-storage-18",
-    slug: "gj-bale-storage",
-    name_english: "Bale",
-    name_hindi: "બેલ",
-    local_names: ["બેલ (Bale)"],
-    meaning: "Standard cotton bale prepared for export through Surat and Bharuch ports.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Commodity dependent",
-    conversion_formula: "Compressed cotton bundle",
-    historical_context: "Cotton export",
-    origin: "Colonial",
-    states: ["Gujarat"],
-    used_in: ["Cotton export"],
-    references: ["Bombay Trade Records"],
-  },
-  {
-    id: "gj-storage-19",
-    slug: "gj-hodi-bhar-storage",
-    name_english: "Hodi Bhar",
-    name_hindi: "હોડી ભાર",
-    name_sanskrit: "Nau Bhāra (related)",
-    local_names: ["હોડી ભાર (Hodi Bhar)"],
-    meaning: "Cargo capacity of traditional boats operating along Gujarat's rivers and coast.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Boat cargo capacity",
-    historical_context: "River & coastal trade",
-    origin: "Medieval–Colonial",
-    states: ["Gujarat"],
-    used_in: ["River trade", "Coastal trade"],
-    references: ["Maritime Trade Records"],
-  },
-  {
-    id: "gj-storage-20",
-    slug: "gj-godown-storage",
-    name_english: "Godown",
-    name_hindi: "ગોડાઉન",
-    name_sanskrit: "Koṣṭhāgāra (related)",
-    local_names: ["ગોડાઉન (Godown)"],
-    meaning: "Large warehouse used for storing grain, cotton, spices and salt before domestic distribution and overseas export.",
-    category: "volume",
-    sector: "storage-transport",
-    modern_equivalent: "Variable",
-    conversion_formula: "Largest storage facility",
-    historical_context: "Commercial warehousing",
-    origin: "Colonial",
-    states: ["Gujarat"],
-    used_in: ["Grain", "Cotton", "Spices", "Salt"],
-    references: ["Bombay Presidency Gazetteer"],
-  },
-
-  // ─── LAND MEASUREMENT (8 records) ───────────────────────────────────────────
-  {
-    id: "gj-land-1",
-    slug: "gj-angul-land",
-    name_english: "Angul",
-    name_hindi: "અંગુલ",
-    name_sanskrit: "Aṅgula",
-    local_names: ["અંગુલ (Angul)"],
-    meaning: "Smallest traditional length unit used for small boundary measurements and construction.",
-    category: "length",
-    sector: "land-measurement",
-    modern_equivalent: "≈1.9 cm",
-    conversion_formula: "Basic finger-width unit",
-    historical_context: "Small boundary measurements",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Boundary measurements", "Construction"],
-    references: ["Indian traditional measurement texts"],
-  },
-  {
-    id: "gj-land-2",
-    slug: "gj-gaj-land",
-    name_english: "Gaj",
-    name_hindi: "ગજ",
-    name_sanskrit: "Gaja",
-    local_names: ["ગજ (Gaj)"],
-    meaning: "Yard-based land measurement unit used for house plots and land boundaries.",
-    category: "area",
-    sector: "land-measurement",
-    modern_equivalent: "0.836 sq.m",
-    conversion_formula: "1 Gaj = 3 feet; Square Gaj = 9 sq.ft",
-    historical_context: "Land boundaries",
-    origin: "Medieval period onwards",
-    states: ["Gujarat"],
-    used_in: ["House plots", "Land boundaries"],
-    references: ["Revenue and property practices"],
-  },
-  {
-    id: "gj-land-3",
-    slug: "gj-vigha-land",
-    name_english: "Vigha / Bigha",
-    name_hindi: "વીઘા / બીઘા",
-    local_names: ["વીઘા (Vigha)", "બીઘા (Bigha)"],
-    meaning: "One of the most important Gujarat farming land units.",
-    category: "area",
-    sector: "land-measurement",
-    modern_equivalent: "Approx. 17,400 sq.ft (varies)",
-    conversion_formula: "Regional conversion varies",
-    historical_context: "Major agricultural land unit",
-    origin: "Medieval period onwards",
-    states: ["Gujarat"],
-    used_in: ["Agricultural land", "Farming plots"],
-    references: ["Gujarat agricultural records"],
-  },
-  {
-    id: "gj-land-4",
-    slug: "gj-biswa-land",
-    name_english: "Biswa",
-    name_hindi: "બિસ્વા",
-    local_names: ["બિસ્વા (Biswa)"],
-    meaning: "Small agricultural land division unit used for land subdivision.",
-    category: "area",
-    sector: "land-measurement",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Subdivision of Bigha in some regions",
-    historical_context: "Land subdivision",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    districts: ["North Gujarat"],
-    used_in: ["Land subdivision"],
-    references: ["Revenue records"],
-  },
-  {
-    id: "gj-land-5",
-    slug: "gj-guntha-land",
-    name_english: "Guntha",
-    name_hindi: "ગુંઠા",
-    local_names: ["ગુંઠા (Guntha)"],
-    meaning: "Deccan and western India land unit used for agricultural holdings.",
-    category: "area",
-    sector: "land-measurement",
-    modern_equivalent: "1,089 sq.ft",
-    conversion_formula: "40 Guntha = 1 Acre",
-    historical_context: "Agricultural holdings",
-    origin: "Historical period onwards",
-    states: ["Gujarat"],
-    districts: ["Saurashtra"],
-    used_in: ["Agricultural holdings"],
-    references: ["Land measurement traditions"],
-  },
-  {
-    id: "gj-land-6",
-    slug: "gj-killa-land",
-    name_english: "Killa",
-    name_hindi: "કિલ્લા",
-    local_names: ["કિલ્લા (Killa)"],
-    meaning: "Large agricultural plot unit used for farmland measurement.",
-    category: "area",
-    sector: "land-measurement",
-    modern_equivalent: "≈1 Acre (varies)",
-    conversion_formula: "Regional relation with Acre",
-    historical_context: "Farmland measurement",
-    origin: "Historical period",
-    states: ["Gujarat"],
-    used_in: ["Farmland measurement"],
-    references: ["Regional practices"],
-  },
-  {
-    id: "gj-land-7",
-    slug: "gj-acre-land",
-    name_english: "Acre",
-    name_hindi: "એકર",
-    local_names: ["એકર (Acre)"],
-    meaning: "Colonial-era standard land unit used for farms and property records.",
-    category: "area",
-    sector: "land-measurement",
-    modern_equivalent: "43,560 sq.ft",
-    conversion_formula: "1 Acre = 100 Cent",
-    historical_context: "Farms and property records",
-    origin: "Colonial period onwards",
-    states: ["Gujarat"],
-    used_in: ["Farms", "Property records"],
-    references: ["Government land records"],
-  },
-  {
-    id: "gj-land-8",
-    slug: "gj-hectare-land",
-    name_english: "Hectare",
-    name_hindi: "હેક્ટર",
-    local_names: ["હેક્ટર (Hectare)"],
-    meaning: "SI-based land measurement used in modern agricultural records.",
-    category: "area",
-    sector: "land-measurement",
-    modern_equivalent: "10,000 sq.m",
-    conversion_formula: "1 Hectare = 2.471 Acres",
-    historical_context: "Modern agricultural records",
-    origin: "Modern period",
-    states: ["Gujarat"],
-    used_in: ["Agricultural records", "Government statistics"],
-    references: ["Government statistics"],
-  },
-
-  // ─── TRANSPORTATION & DISTANCE (9 records) ───────────────────────────────────
-  {
-    id: "gj-trans-1",
-    slug: "gj-angul-trans",
-    name_english: "Angula",
-    name_hindi: "અંગુલ",
-    name_sanskrit: "Aṅgula",
-    local_names: ["અંગુલ (Angula)"],
-    meaning: "Smallest traditional length unit used for small measurements in construction and craft work.",
-    category: "length",
-    sector: "transportation-distance",
-    modern_equivalent: "≈1.9 cm",
-    conversion_formula: "Basic finger-width measurement",
-    historical_context: "Construction and craft",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Small measurements", "Construction"],
-    references: ["Indian traditional measurement system"],
-  },
-  {
-    id: "gj-trans-2",
-    slug: "gj-vitasti-trans",
-    name_english: "Vitasti",
-    name_hindi: "વીતસ્તિ",
-    name_sanskrit: "Vitasti",
-    local_names: ["વીતસ્તિ (Vitasti)"],
-    meaning: "Hand-span distance from thumb to little finger used for short measurements.",
-    category: "length",
-    sector: "transportation-distance",
-    modern_equivalent: "≈22–24 cm",
-    conversion_formula: "12 Angula = 1 Vitasti",
-    historical_context: "Short measurements",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Short measurements"],
-    references: ["Sanskrit measurement traditions"],
-  },
-  {
-    id: "gj-trans-3",
-    slug: "gj-hasta-trans",
-    name_english: "Hasta",
-    name_hindi: "હાથ",
-    name_sanskrit: "Hasta",
-    local_names: ["હાથ (Hasta)"],
-    meaning: "Traditional arm-length measure used in architecture, temple construction and surveying.",
-    category: "length",
-    sector: "transportation-distance",
-    modern_equivalent: "≈45–48 cm",
-    conversion_formula: "2 Vitasti = 1 Hasta",
-    historical_context: "Architecture and surveying",
-    origin: "Ancient–Medieval",
-    states: ["Gujarat"],
-    used_in: ["Architecture", "Temples", "Surveying"],
-    references: ["Vastu traditions"],
-  },
-  {
-    id: "gj-trans-4",
-    slug: "gj-gaj-trans",
-    name_english: "Gaj",
-    name_hindi: "ગજ",
-    name_sanskrit: "Gaja",
-    local_names: ["ગજ (Gaj)"],
-    meaning: "Yard-based measurement unit used for land boundaries, roads and property measurements.",
-    category: "length",
-    sector: "transportation-distance",
-    modern_equivalent: "≈0.91 m",
-    conversion_formula: "1 Gaj = 2 Hasta",
-    historical_context: "Land boundaries and roads",
-    origin: "Medieval period onwards",
-    states: ["Gujarat"],
-    used_in: ["Land boundaries", "Roads", "Property"],
-    references: ["Land survey practices"],
-  },
-  {
-    id: "gj-trans-5",
-    slug: "gj-danda-trans",
-    name_english: "Danda",
-    name_hindi: "દંડ",
-    name_sanskrit: "Daṇḍa",
-    local_names: ["દંડ (Danda)"],
-    meaning: "Rod-based measuring unit used by surveyors for fields, roads and boundaries.",
-    category: "length",
-    sector: "transportation-distance",
-    modern_equivalent: "≈1.8–2 m",
-    conversion_formula: "1 Danda = 4 Hasta",
-    historical_context: "Fields and roads",
-    origin: "Ancient–Medieval",
-    states: ["Gujarat"],
-    used_in: ["Fields", "Roads", "Boundaries"],
-    references: ["Arthashastra references"],
-  },
-  {
-    id: "gj-trans-6",
-    slug: "gj-kathi-trans",
-    name_english: "Kathi",
-    name_hindi: "કાઠી",
-    local_names: ["કાઠી (Kathi)"],
-    meaning: "Wooden measuring stick used in surveying by village land measurers.",
-    category: "length",
-    sector: "transportation-distance",
-    modern_equivalent: "≈1.5–2 m (varies)",
-    conversion_formula: "Measuring rod unit; regional values vary",
-    historical_context: "Land surveying",
-    origin: "Medieval period onwards",
-    states: ["Gujarat"],
-    used_in: ["Land measuring", "Surveying"],
-    references: ["Local survey traditions"],
-  },
-  {
-    id: "gj-trans-7",
-    slug: "gj-kos-trans",
-    name_english: "Kos / Kosh",
-    name_hindi: "કોશ",
-    name_sanskrit: "Krośa",
-    local_names: ["કોશ (Kos)"],
-    meaning: "Ancient Indian route-distance unit used for travel distance between villages and towns.",
-    category: "length",
-    sector: "transportation-distance",
-    modern_equivalent: "≈2–3 km (varies)",
-    conversion_formula: "Traditional multiples of Danda",
-    historical_context: "Travel distance",
-    origin: "Ancient–Medieval",
-    states: ["Gujarat"],
-    used_in: ["Travel routes", "Village-to-town distances"],
-    references: ["Classical Indian texts"],
-  },
-  {
-    id: "gj-trans-8",
-    slug: "gj-gavyuti-trans",
-    name_english: "Gavyuti",
-    name_hindi: "ગવ્યૂતિ",
-    name_sanskrit: "Gavyūti",
-    local_names: ["ગવ્યૂતિ (Gavyuti)"],
-    meaning: "Distance unit based on cattle movement used for describing pastoral distances.",
-    category: "length",
-    sector: "transportation-distance",
-    modern_equivalent: "≈10–12 km (varies)",
-    conversion_formula: "Traditionally related to cow-call distance",
-    historical_context: "Pastoral distances",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Pastoral distances"],
-    references: ["Vedic literature"],
-  },
-  {
-    id: "gj-trans-9",
-    slug: "gj-yojana-trans",
-    name_english: "Yojana",
-    name_hindi: "યોજન",
-    name_sanskrit: "Yojana",
-    local_names: ["યોજન (Yojana)"],
-    meaning: "Largest classical Indian distance unit used for long journeys and geographical descriptions.",
-    category: "length",
-    sector: "transportation-distance",
-    modern_equivalent: "≈12–15 km (varies)",
-    conversion_formula: "1 Yojana = 4 Kos (traditional relation)",
-    historical_context: "Long journeys",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Long journeys", "Geographical descriptions"],
-    references: ["Puranic and classical texts"],
-  },
-
-  // ─── LIVESTOCK & DAIRY (11 records) ─────────────────────────────────────────
-  {
-    id: "gj-dairy-1",
-    slug: "gj-ratti-dairy",
-    name_english: "Ratti",
-    name_hindi: "રતી",
-    name_sanskrit: "Raktika",
-    local_names: ["રતી (Ratti)"],
-    meaning: "Traditional small weight reference used for measuring small quantities of medicines and valuable substances.",
-    category: "weight",
-    sector: "livestock-dairy",
-    modern_equivalent: "≈0.1215 g",
-    conversion_formula: "Basic seed-based weight unit",
-    historical_context: "Small quantities of medicines",
-    origin: "Ancient period onwards",
-    states: ["Gujarat"],
-    used_in: ["Medicines", "Valuable substances"],
-    references: ["Indian traditional weight systems"],
-  },
-  {
-    id: "gj-dairy-2",
-    slug: "gj-masha-dairy",
-    name_english: "Masha",
-    name_hindi: "માસા",
-    name_sanskrit: "Māṣa",
-    local_names: ["માસા (Masha)"],
-    meaning: "Small traditional weight unit used for veterinary medicines and herbal preparations.",
-    category: "weight",
-    sector: "livestock-dairy",
-    modern_equivalent: "≈0.97 g",
-    conversion_formula: "8 Ratti = 1 Masha",
-    historical_context: "Veterinary medicines",
-    origin: "Ancient–Medieval",
-    states: ["Gujarat"],
-    used_in: ["Veterinary medicines", "Herbal preparations"],
-    references: ["Classical measurement texts"],
-  },
-  {
-    id: "gj-dairy-3",
-    slug: "gj-tola-dairy",
-    name_english: "Tola",
-    name_hindi: "તોલા",
-    name_sanskrit: "Tola",
-    local_names: ["તોલા (Tola)"],
-    meaning: "Traditional market weight unit used in trade and preparation of animal medicines.",
-    category: "weight",
-    sector: "livestock-dairy",
-    modern_equivalent: "≈11.66 g",
-    conversion_formula: "12 Masha = 1 Tola",
-    historical_context: "Animal medicines",
-    origin: "Medieval period onwards",
-    states: ["Gujarat"],
-    used_in: ["Trade", "Animal medicines"],
-    references: ["Traditional Indian weights"],
-  },
-  {
-    id: "gj-dairy-4",
-    slug: "gj-pao-dairy",
-    name_english: "Pao / Pav",
-    name_hindi: "પાવ",
-    local_names: ["પાવ (Pao / Pav)"],
-    meaning: "Quarter measurement used in daily markets for milk products, butter and food items.",
-    category: "weight",
-    sector: "livestock-dairy",
-    modern_equivalent: "≈230 g",
-    conversion_formula: "4 Pao = 1 Seer",
-    historical_context: "Milk products and butter",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Milk products", "Butter", "Food items"],
-    references: ["Western Indian measurement practices"],
-  },
-  {
-    id: "gj-dairy-5",
-    slug: "gj-seer-dairy",
-    name_english: "Seer / Sher",
-    name_hindi: "શેર",
-    name_sanskrit: "Śēr",
-    local_names: ["શેર (Seer / Sher)"],
-    meaning: "Most common traditional dairy trade unit used for measuring milk, curd, ghee and grains.",
-    category: "weight",
-    sector: "livestock-dairy",
-    modern_equivalent: "≈0.93 kg or ~1 litre (varies)",
-    conversion_formula: "Regional multiples of Pao",
-    historical_context: "Dairy trade",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Milk", "Curd", "Ghee", "Grains"],
-    references: ["Market records"],
-  },
-  {
-    id: "gj-dairy-6",
-    slug: "gj-adhiya-dairy",
-    name_english: "Adhiya",
-    name_hindi: "અઢિયા",
-    local_names: ["અઢિયા (Adhiya)"],
-    meaning: "Half measure used in household trade for small dairy quantities.",
-    category: "volume",
-    sector: "livestock-dairy",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Half-unit measure",
-    historical_context: "Small dairy quantities",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Small dairy quantities"],
-    references: ["Local practices"],
-  },
-  {
-    id: "gj-dairy-7",
-    slug: "gj-shera-dairy",
-    name_english: "Shera / Ser",
-    name_hindi: "શેરા",
-    local_names: ["શેરા (Shera / Ser)"],
-    meaning: "Traditional village dairy measure used for milk collection and exchange.",
-    category: "volume",
-    sector: "livestock-dairy",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Larger Seer-based measure",
-    historical_context: "Milk collection",
-    origin: "Historical",
-    states: ["Gujarat"],
-    used_in: ["Milk collection", "Exchange"],
-    references: ["Dairy traditions"],
-  },
-  {
-    id: "gj-dairy-8",
-    slug: "gj-paili-dairy",
-    name_english: "Paili / Payli",
-    name_hindi: "પાયલી",
-    local_names: ["પાયલી (Paili / Payli)"],
-    meaning: "Traditional measuring vessel used for milk, grain and household liquids.",
-    category: "volume",
-    sector: "livestock-dairy",
-    modern_equivalent: "≈1.5–2 litres (varies)",
-    conversion_formula: "Vessel-based measure",
-    historical_context: "Milk and grain",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    districts: ["Saurashtra"],
-    used_in: ["Milk", "Grain", "Household liquids"],
-    references: ["Regional measures"],
-  },
-  {
-    id: "gj-dairy-9",
-    slug: "gj-kudav-dairy",
-    name_english: "Kudav / Kudva",
-    name_hindi: "કુડવ",
-    name_sanskrit: "Kuḍava",
-    local_names: ["કુડવ (Kudav / Kudva)"],
-    meaning: "Ancient Indian vessel measure used for liquids including milk and ghee.",
-    category: "volume",
-    sector: "livestock-dairy",
-    modern_equivalent: "≈1–2 litres (varies)",
-    conversion_formula: "Traditional vessel measure",
-    historical_context: "Milk and ghee",
-    origin: "Ancient period onwards",
-    states: ["Gujarat"],
-    used_in: ["Milk", "Ghee", "Liquids"],
-    references: ["Indian vessel measures"],
-  },
-  {
-    id: "gj-dairy-10",
-    slug: "gj-matka-dairy",
-    name_english: "Matka / Ghada",
-    name_hindi: "મટકો / ઘડો",
-    name_sanskrit: "Ghaṭa",
-    local_names: ["મટકો / ઘડો (Matka / Ghada)"],
-    meaning: "Earthen pot-based dairy storage measure used for storing and transporting milk.",
-    category: "volume",
-    sector: "livestock-dairy",
-    modern_equivalent: "≈5–15 litres (varies)",
-    conversion_formula: "Large container measure",
-    historical_context: "Milk storage and transport",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Milk storage", "Milk transport"],
-    references: ["Village dairy practices"],
-  },
-  {
-    id: "gj-dairy-11",
-    slug: "gj-handi-dairy",
-    name_english: "Handi",
-    name_hindi: "હાંડી",
-    local_names: ["હાંડી (Handi)"],
-    meaning: "Large household dairy vessel used for bulk milk, curd and buttermilk storage.",
-    category: "volume",
-    sector: "livestock-dairy",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Larger vessel measure",
-    historical_context: "Bulk dairy storage",
-    origin: "Traditional",
-    states: ["Gujarat"],
-    used_in: ["Milk", "Curd", "Buttermilk"],
-    references: ["Local traditions"],
-  },
-
-  // ─── GOLD & JEWELLERY (11 records) ───────────────────────────────────────────
-  {
-    id: "gj-gold-1",
-    slug: "gj-gunja-gold",
-    name_english: "Gunja",
-    name_hindi: "ગુંજા",
-    name_sanskrit: "Guñjā",
-    local_names: ["ગુંજા (Gunja)"],
-    meaning: "Natural seed used as traditional weight reference for gold and gemstone weighing.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "≈0.12 g",
-    conversion_formula: "1 Gunja ≈ 1 Ratti",
-    historical_context: "Gold and gemstone weighing",
-    origin: "Ancient period onwards",
-    states: ["Gujarat"],
-    used_in: ["Gold weighing", "Gemstones"],
-    references: ["Ancient Indian weight traditions"],
-  },
-  {
-    id: "gj-gold-2",
-    slug: "gj-ratti-gold",
-    name_english: "Ratti",
-    name_hindi: "રતી",
-    name_sanskrit: "Raktika",
-    local_names: ["રતી (Ratti)"],
-    meaning: "One of the oldest jewellery weight units used by jewellers for diamonds, pearls and small gold pieces.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "≈0.1215 g",
-    conversion_formula: "8 Ratti = 1 Masha",
-    historical_context: "Diamonds, pearls and gold",
-    origin: "Ancient period onwards",
-    states: ["Gujarat"],
-    used_in: ["Diamonds", "Pearls", "Small gold pieces"],
-    references: ["Classical Indian measurement texts"],
-  },
-  {
-    id: "gj-gold-3",
-    slug: "gj-masha-gold",
-    name_english: "Masha",
-    name_hindi: "માસા",
-    name_sanskrit: "Māṣa",
-    local_names: ["માસા (Masha)"],
-    meaning: "Intermediate precious metal weight used for measuring small quantities of gold and silver.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "≈0.97 g",
-    conversion_formula: "1 Masha = 8 Ratti",
-    historical_context: "Gold and silver",
-    origin: "Ancient–Medieval",
-    states: ["Gujarat"],
-    used_in: ["Gold", "Silver"],
-    references: ["Indian traditional weight system"],
-  },
-  {
-    id: "gj-gold-4",
-    slug: "gj-dharana-gold",
-    name_english: "Dharana",
-    name_hindi: "ધરણ",
-    name_sanskrit: "Dharaṇa",
-    local_names: ["ધરણ (Dharana)"],
-    meaning: "Ancient Indian precious metal unit used in classical metal trade and jewellery calculations.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "≈3–4 g (varies)",
-    conversion_formula: "Traditional relation with Masha/Ratti",
-    historical_context: "Metal trade",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Metal trade", "Jewellery calculations"],
-    references: ["Sanskrit measurement references"],
-  },
-  {
-    id: "gj-gold-5",
-    slug: "gj-panam-gold",
-    name_english: "Panam / Pana",
-    name_hindi: "પણમ / પણ",
-    name_sanskrit: "Paṇa",
-    local_names: ["પણમ / પણ (Panam / Pana)"],
-    meaning: "Historical currency-weight unit used for gold coins and jewellery transactions.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "Varies",
-    conversion_formula: "Regional value changes by period",
-    historical_context: "Gold coins and jewellery",
-    origin: "Medieval",
-    states: ["Gujarat"],
-    used_in: ["Gold coins", "Jewellery transactions"],
-    references: ["Historical coin records"],
-  },
-  {
-    id: "gj-gold-6",
-    slug: "gj-kori-gold",
-    name_english: "Kori / Kori Weight",
-    name_hindi: "કોરી",
-    local_names: ["કોરી (Kori)"],
-    meaning: "Traditional monetary weight reference used in Gujarat trade systems, especially coastal commerce.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "Varies",
-    conversion_formula: "Regional coin-based measure",
-    historical_context: "Coastal commerce",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    districts: ["Saurashtra", "Kutch"],
-    used_in: ["Coastal commerce"],
-    references: ["Gujarat trade history"],
-  },
-  {
-    id: "gj-gold-7",
-    slug: "gj-tola-gold",
-    name_english: "Tola",
-    name_hindi: "તોલા",
-    name_sanskrit: "Tola",
-    local_names: ["તોલા (Tola)"],
-    meaning: "Standard jeweller weight across India; main traditional gold trading unit before metric system.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "≈11.66 g",
-    conversion_formula: "12 Masha = 1 Tola = 96 Ratti",
-    historical_context: "Gold trading",
-    origin: "Medieval–Modern",
-    states: ["Gujarat"],
-    used_in: ["Gold trading", "Jewellery"],
-    references: ["Traditional gold standards"],
-  },
-  {
-    id: "gj-gold-8",
-    slug: "gj-vori-gold",
-    name_english: "Vori / Bhori",
-    name_hindi: "વોરી",
-    local_names: ["વોરી (Vori / Bhori)"],
-    meaning: "Regional name for Tola used by jewellers in western India.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "≈11.66 g",
-    conversion_formula: "Generally equal to Tola",
-    historical_context: "Jewellery trade",
-    origin: "Modern traditional",
-    states: ["Gujarat"],
-    used_in: ["Jewellery markets"],
-    references: ["Regional jeweller practices"],
-  },
-  {
-    id: "gj-gold-9",
-    slug: "gj-tulam-gold",
-    name_english: "Tulam / Tula",
-    name_hindi: "તુલા",
-    name_sanskrit: "Tulā",
-    local_names: ["તુલા (Tulam / Tula)"],
-    meaning: "Derived from traditional weighing balance; used for larger gold transactions.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "Regional variation",
-    conversion_formula: "Balance-based larger weight",
-    historical_context: "Larger gold transactions",
-    origin: "Ancient–Medieval",
-    states: ["Gujarat"],
-    used_in: ["Larger gold transactions"],
-    references: ["Indian traditional weights"],
-  },
-  {
-    id: "gj-gold-10",
-    slug: "gj-pala-gold",
-    name_english: "Pala",
-    name_hindi: "પળ",
-    name_sanskrit: "Pala",
-    local_names: ["પળ (Pala)"],
-    meaning: "Classical Indian weight unit used for bulk precious metal measurement.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "≈48 g (approx.)",
-    conversion_formula: "Classical larger weight unit",
-    historical_context: "Bulk precious metal",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Bulk precious metal"],
-    references: ["Sanskrit texts"],
-  },
-  {
-    id: "gj-gold-11",
-    slug: "gj-karsha-gold",
-    name_english: "Karsha",
-    name_hindi: "કર્ષ",
-    name_sanskrit: "Karṣa",
-    local_names: ["કર્ષ (Karsha)"],
-    meaning: "Ancient Indian weight standard used for metals and medicinal substances.",
-    category: "weight",
-    sector: "gold-jewellery",
-    modern_equivalent: "≈12 g (approx.)",
-    conversion_formula: "1 Karsha = 16 Masha",
-    historical_context: "Metals and medicinal substances",
-    origin: "Ancient",
-    states: ["Gujarat"],
-    used_in: ["Metals", "Medicinal substances"],
-    references: ["Classical measurement literature"],
-  },
+  {
+    "id": "gj-agri-1",
+    "slug": "yava-agri-gj-1",
+    "name_english": "Yava",
+    "category": "length",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "યવ (Yava)"
+    ],
+    "used_in": [
+      "Barley grain used as the smallest reference in agricultural and surveying practices."
+    ],
+    "references": [
+      "Arthashastra; Manasara"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "yava",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Yava",
+    "name_hindi": "यव",
+    "meaning": "Barley grain used as the smallest reference in agricultural and surveying practices.",
+    "measurement_type": "Length/Seed",
+    "modern_equivalent": "≈2.4 mm",
+    "conversion_formula": "Grain-based unit",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-agri-2",
+    "slug": "gunja-agri-gj-2",
+    "name_english": "Gunja",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગુંજા (Gunja)"
+    ],
+    "used_in": [
+      "Gunja seed used for weighing seeds, herbs and valuable agricultural products."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "gunja",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Guñjā (Raktikā)",
+    "name_hindi": "गुंजा",
+    "meaning": "Gunja seed used for weighing seeds, herbs and valuable agricultural products.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.1215 g",
+    "conversion_formula": "Seed weight",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-agri-3",
+    "slug": "masha-agri-gj-3",
+    "name_english": "Masha",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "માષા (Masha)"
+    ],
+    "used_in": [
+      "Standard weight for seeds, spices and medicinal plants."
+    ],
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "masha",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Māṣa",
+    "name_hindi": "माषा",
+    "meaning": "Standard weight for seeds, spices and medicinal plants.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.97 g",
+    "conversion_formula": "8 Gunja = 1 Masha",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-agri-4",
+    "slug": "tola-agri-gj-4",
+    "name_english": "Tola",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "તોલા (Tola)"
+    ],
+    "used_in": [
+      "Used for weighing high-value agricultural products."
+    ],
+    "references": [
+      "Bombay Presidency Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "tola",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Tulā",
+    "name_hindi": "तोला",
+    "meaning": "Used for weighing high-value agricultural products.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "Traditional weight unit",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-agri-5",
+    "slug": "pala-agri-gj-5",
+    "name_english": "Pala",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પલ (Pala)"
+    ],
+    "used_in": [
+      "Standard agricultural weight for produce."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "pala",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Pala",
+    "name_hindi": "पल",
+    "meaning": "Standard agricultural weight for produce.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈48 g",
+    "conversion_formula": "4 Karsha = 1 Pala",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-agri-6",
+    "slug": "chhatak-agri-gj-6",
+    "name_english": "Chhatak",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "છટાક (Chhatak)"
+    ],
+    "used_in": [
+      "Small market measure used for pulses and cereals."
+    ],
+    "references": [
+      "Bombay Presidency Manual"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "chhatak",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "छटाक",
+    "meaning": "Small market measure used for pulses and cereals.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈58 g",
+    "conversion_formula": "16 Chhatak = 1 Sher",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-agri-7",
+    "slug": "sher-agri-gj-7",
+    "name_english": "Sher",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "શેર (Sher)"
+    ],
+    "used_in": [
+      "Common market weight for wheat, millet and pulses."
+    ],
+    "references": [
+      "Bombay Gazetteer"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "sher",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Śeri",
+    "name_hindi": "शेर",
+    "meaning": "Common market weight for wheat, millet and pulses.",
+    "measurement_type": "Weight/Capacity",
+    "modern_equivalent": "≈0.93 kg",
+    "conversion_formula": "Standard market measure",
+    "historical_period": "Sultanate–Colonial"
+  },
+  {
+    "id": "gj-agri-8",
+    "slug": "paili-agri-gj-8",
+    "name_english": "Paili",
+    "category": "volume",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પૈલી (Paili)"
+    ],
+    "used_in": [
+      "Grain measure widely used by farmers."
+    ],
+    "references": [
+      "Gujarat Village Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "paili",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Prastha (related)",
+    "name_hindi": "पैली",
+    "meaning": "Grain measure widely used by farmers.",
+    "measurement_type": "Capacity",
+    "modern_equivalent": "≈3–4 L (regional variation)",
+    "conversion_formula": "Traditional grain measure",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-agri-9",
+    "slug": "adholi-agri-gj-9",
+    "name_english": "Adholi",
+    "category": "volume",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અધોળી (Adholi)"
+    ],
+    "used_in": [
+      "Medium grain measure used in villages and markets."
+    ],
+    "references": [
+      "Revenue Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "adholi",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "अधोली",
+    "meaning": "Medium grain measure used in villages and markets.",
+    "measurement_type": "Capacity",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "2 Paili = 1 Adholi",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-agri-10",
+    "slug": "man-agri-gj-10",
+    "name_english": "Man",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "મણ (Man)"
+    ],
+    "used_in": [
+      "Standard wholesale agricultural measure."
+    ],
+    "references": [
+      "Bombay Presidency Gazetteer"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "man",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Māna (related)",
+    "name_hindi": "मन",
+    "meaning": "Standard wholesale agricultural measure.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈37.3 kg",
+    "conversion_formula": "40 Sher = 1 Man",
+    "historical_period": "Mughal–Colonial"
+  },
+  {
+    "id": "gj-agri-11",
+    "slug": "khandi-agri-gj-11",
+    "name_english": "Khandi",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ખાંડી (Khandi)"
+    ],
+    "used_in": [
+      "Large commercial agricultural survey unit."
+    ],
+    "references": [
+      "Revenue Administration Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "khandi",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Khaṇḍī",
+    "name_hindi": "खांडी",
+    "meaning": "Large commercial agricultural survey unit.",
+    "measurement_type": "Bulk Weight",
+    "modern_equivalent": "≈746 kg (regional variation)",
+    "conversion_formula": "20 Man = 1 Khandi (regional variation)",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-agri-12",
+    "slug": "guni-agri-gj-12",
+    "name_english": "Guni",
+    "category": "volume",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગુણી (Guni)"
+    ],
+    "used_in": [
+      "Traditional sack used for storing harvested grain."
+    ],
+    "references": [
+      "Agricultural Market Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "guni",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "गुणी",
+    "meaning": "Traditional sack used for storing harvested grain.",
+    "measurement_type": "Sack Measure",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Grain sack",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-agri-13",
+    "slug": "topli-agri-gj-13",
+    "name_english": "Topli",
+    "category": "volume",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ટોપલી (Topli)"
+    ],
+    "used_in": [
+      "Bamboo basket used to carry vegetables, cotton and grains."
+    ],
+    "references": [
+      "Gujarat Rural Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "topli",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "टोपली",
+    "meaning": "Bamboo basket used to carry vegetables, cotton and grains.",
+    "measurement_type": "Basket Measure",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Basket measure",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-agri-14",
+    "slug": "potlu-agri-gj-14",
+    "name_english": "Potlu",
+    "category": "volume",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પોટલું (Potlu)"
+    ],
+    "used_in": [
+      "Cloth bundle for seeds and harvested produce."
+    ],
+    "references": [
+      "Village Customs"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "potlu",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "पोटली",
+    "meaning": "Cloth bundle for seeds and harvested produce.",
+    "measurement_type": "Bundle Measure",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Bundle of crops",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-agri-15",
+    "slug": "bhara-agri-gj-15",
+    "name_english": "Bhara",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ભારો (Bhara)"
+    ],
+    "used_in": [
+      "Standard load carried manually from fields."
+    ],
+    "references": [
+      "Rural Labour Practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "bhara",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Bhāra",
+    "name_hindi": "भारा",
+    "meaning": "Standard load carried manually from fields.",
+    "measurement_type": "Load Measure",
+    "modern_equivalent": "≈20–30 kg (regional variation)",
+    "conversion_formula": "One head-load",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-agri-16",
+    "slug": "balgadli-bhar-agri-gj-16",
+    "name_english": "Balgadli Bhar",
+    "category": "weight",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "બળદગાડું ભાર (Balgadli Bhar)"
+    ],
+    "used_in": [
+      "Quantity transported by traditional bullock cart."
+    ],
+    "references": [
+      "Rural Transport Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "balgadli-bhar",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "बैलगाड़ी भार",
+    "meaning": "Quantity transported by traditional bullock cart.",
+    "measurement_type": "Cart Load",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Bullock-cart load",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-agri-17",
+    "slug": "kothar-agri-gj-17",
+    "name_english": "Kothar",
+    "category": "volume",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કોઠાર (Kothar)"
+    ],
+    "used_in": [
+      "Traditional granary used to store harvested grain."
+    ],
+    "references": [
+      "Rural Architecture Studies"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "kothar",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Koṣṭhāgāra",
+    "name_hindi": "कोठार",
+    "meaning": "Traditional granary used to store harvested grain.",
+    "measurement_type": "Granary",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Grain storage structure",
+    "historical_period": "Ancient–Modern"
+  },
+  {
+    "id": "gj-agri-18",
+    "slug": "dhanya-rashi-agri-gj-18",
+    "name_english": "Dhanya Rashi",
+    "category": "volume",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ધાન્ય રાશિ (Dhanya Rashi)"
+    ],
+    "used_in": [
+      "Heap of harvested grain used to estimate yield."
+    ],
+    "references": [
+      "Village Revenue Practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "dhanya-rashi",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Dhānya Rāśi",
+    "name_hindi": "धान्य राशि",
+    "meaning": "Heap of harvested grain used to estimate yield.",
+    "measurement_type": "Heap Measure",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Heap of grain",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-agri-19",
+    "slug": "khalo-agri-gj-19",
+    "name_english": "Khalo",
+    "category": "area",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ખળો (Khalo)"
+    ],
+    "used_in": [
+      "Open area used for threshing and winnowing grains."
+    ],
+    "references": [
+      "Agricultural Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "khalo",
+      "area"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Khala",
+    "name_hindi": "खलो",
+    "meaning": "Open area used for threshing and winnowing grains.",
+    "measurement_type": "Threshing Floor",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Processing area",
+    "historical_period": "Ancient–Modern"
+  },
+  {
+    "id": "gj-agri-20",
+    "slug": "khet-mapani-dori-agri-gj-20",
+    "name_english": "Khet Mapani Dori",
+    "category": "length",
+    "sector": "agriculture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ખેત માપણી દોરી (Khet Mapani Dori)"
+    ],
+    "used_in": [
+      "Rope used by surveyors and farmers for measuring agricultural fields."
+    ],
+    "references": [
+      "Arthashastra; Gujarat Land Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "agriculture",
+      "khet-mapani-dori",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Rajju",
+    "name_hindi": "खेत मापनी डोरी",
+    "meaning": "Rope used by surveyors and farmers for measuring agricultural fields.",
+    "measurement_type": "Survey Measure",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Measuring rope",
+    "historical_period": "Ancient–Modern"
+  },
+  {
+    "id": "gj-trad-1",
+    "slug": "gunja-trad-gj-1",
+    "name_english": "Gunja",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગુંજા (Gunja)"
+    ],
+    "used_in": [
+      "Gunja seed used by merchants for weighing precious metals and gems."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "gunja",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Guñjā (Raktikā)",
+    "name_hindi": "गुंजा",
+    "meaning": "Gunja seed used by merchants for weighing precious metals and gems.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.1215 g",
+    "conversion_formula": "Seed weight",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-trad-2",
+    "slug": "masha-trad-gj-2",
+    "name_english": "Masha",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "માષા (Masha)"
+    ],
+    "used_in": [
+      "Used for weighing spices, medicines and costly commodities."
+    ],
+    "references": [
+      "Arthashastra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "masha",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Māṣa",
+    "name_hindi": "माषा",
+    "meaning": "Used for weighing spices, medicines and costly commodities.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.97 g",
+    "conversion_formula": "8 Gunja = 1 Masha",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-trad-3",
+    "slug": "karsha-trad-gj-3",
+    "name_english": "Karsha",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કર્ષ (Karsha)"
+    ],
+    "used_in": [
+      "Standard commercial weight for valuable goods."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "karsha",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Karṣa",
+    "name_hindi": "कर्ष",
+    "meaning": "Standard commercial weight for valuable goods.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈12 g",
+    "conversion_formula": "12 Masha = 1 Karsha",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-trad-4",
+    "slug": "tola-trad-gj-4",
+    "name_english": "Tola",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "તોલા (Tola)"
+    ],
+    "used_in": [
+      "Standard weight used by jewellers and bullion merchants."
+    ],
+    "references": [
+      "Bombay Presidency Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "tola",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Tulā",
+    "name_hindi": "तोला",
+    "meaning": "Standard weight used by jewellers and bullion merchants.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "Traditional weight",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-trad-5",
+    "slug": "chhatak-trad-gj-5",
+    "name_english": "Chhatak",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "છટાક (Chhatak)"
+    ],
+    "used_in": [
+      "Used for spices, jaggery and dry fruits."
+    ],
+    "references": [
+      "Bombay Presidency Manual"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "chhatak",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "छटाक",
+    "meaning": "Used for spices, jaggery and dry fruits.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈58 g",
+    "conversion_formula": "16 Chhatak = 1 Sher",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-trad-6",
+    "slug": "pala-trad-gj-6",
+    "name_english": "Pala",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પલ (Pala)"
+    ],
+    "used_in": [
+      "Used for weighing agricultural and commercial goods."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "pala",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Pala",
+    "name_hindi": "पल",
+    "meaning": "Used for weighing agricultural and commercial goods.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈48 g",
+    "conversion_formula": "4 Karsha = 1 Pala",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-trad-7",
+    "slug": "sher-trad-gj-7",
+    "name_english": "Sher",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "શેર (Sher)"
+    ],
+    "used_in": [
+      "Standard unit for cereals, pulses and ghee."
+    ],
+    "references": [
+      "Bombay Gazetteer"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "sher",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Śeri",
+    "name_hindi": "शेर",
+    "meaning": "Standard unit for cereals, pulses and ghee.",
+    "measurement_type": "Weight/Capacity",
+    "modern_equivalent": "≈0.93 kg",
+    "conversion_formula": "Standard market measure",
+    "historical_period": "Sultanate–Colonial"
+  },
+  {
+    "id": "gj-trad-8",
+    "slug": "man-trad-gj-8",
+    "name_english": "Man",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "મણ (Man)"
+    ],
+    "used_in": [
+      "Bulk trading unit for cotton, ghee, iron and grain."
+    ],
+    "references": [
+      "Bombay Presidency Gazetteer"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "man",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Māna (related)",
+    "name_hindi": "मन",
+    "meaning": "Bulk trading unit for cotton, ghee, iron and grain.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈37.3 kg",
+    "conversion_formula": "40 Sher = 1 Man",
+    "historical_period": "Mughal–Colonial"
+  },
+  {
+    "id": "gj-trad-9",
+    "slug": "khandi-trad-gj-9",
+    "name_english": "Khandi",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ખાંડી (Khandi)"
+    ],
+    "used_in": [
+      "Used for wholesale trading of cotton, grain and spices."
+    ],
+    "references": [
+      "Revenue Administration Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "khandi",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Khaṇḍī",
+    "name_hindi": "खांडी",
+    "meaning": "Used for wholesale trading of cotton, grain and spices.",
+    "measurement_type": "Bulk Weight",
+    "modern_equivalent": "≈746 kg (regional variation)",
+    "conversion_formula": "20 Man = 1 Khandi (regional variation)",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-trad-10",
+    "slug": "paili-trad-gj-10",
+    "name_english": "Paili",
+    "category": "volume",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પૈલી (Paili)"
+    ],
+    "used_in": [
+      "Capacity measure used in village and town markets."
+    ],
+    "references": [
+      "Gujarat Village Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "paili",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Prastha (related)",
+    "name_hindi": "पैली",
+    "meaning": "Capacity measure used in village and town markets.",
+    "measurement_type": "Capacity",
+    "modern_equivalent": "≈3–4 L (regional variation)",
+    "conversion_formula": "Traditional village measure",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-trad-11",
+    "slug": "adholi-trad-gj-11",
+    "name_english": "Adholi",
+    "category": "volume",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અધોળી (Adholi)"
+    ],
+    "used_in": [
+      "Medium-sized grain measure for commercial transactions."
+    ],
+    "references": [
+      "Revenue Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "adholi",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "अधोली",
+    "meaning": "Medium-sized grain measure for commercial transactions.",
+    "measurement_type": "Capacity",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "2 Paili = 1 Adholi",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-trad-12",
+    "slug": "guni-trad-gj-12",
+    "name_english": "Guni",
+    "category": "volume",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગુણી (Guni)"
+    ],
+    "used_in": [
+      "Traditional sack used for trading cotton and grains."
+    ],
+    "references": [
+      "Agricultural Market Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "guni",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "गुणी",
+    "meaning": "Traditional sack used for trading cotton and grains.",
+    "measurement_type": "Sack Measure",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Sack measure",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-trad-13",
+    "slug": "topli-trad-gj-13",
+    "name_english": "Topli",
+    "category": "volume",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ટોપલી (Topli)"
+    ],
+    "used_in": [
+      "Bamboo basket used by merchants for displaying goods."
+    ],
+    "references": [
+      "Gujarat Rural Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "topli",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "टोपली",
+    "meaning": "Bamboo basket used by merchants for displaying goods.",
+    "measurement_type": "Basket Measure",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Basket measure",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-trad-14",
+    "slug": "bhara-trad-gj-14",
+    "name_english": "Bhara",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ભારો (Bhara)"
+    ],
+    "used_in": [
+      "Standard load carried manually in village and town markets."
+    ],
+    "references": [
+      "Rural Labour Practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "bhara",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Bhāra",
+    "name_hindi": "भारा",
+    "meaning": "Standard load carried manually in village and town markets.",
+    "measurement_type": "Load Measure",
+    "modern_equivalent": "≈20–30 kg (regional variation)",
+    "conversion_formula": "One head-load",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-trad-15",
+    "slug": "balgadli-bhar-trad-gj-15",
+    "name_english": "Balgadli Bhar",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "બળદગાડું ભાર (Balgadli Bhar)"
+    ],
+    "used_in": [
+      "Quantity transported by traditional bullock cart."
+    ],
+    "references": [
+      "Rural Transport Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "balgadli-bhar",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "बैलगाड़ी भार",
+    "meaning": "Quantity transported by traditional bullock cart.",
+    "measurement_type": "Cart Load",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Bullock-cart load",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-trad-16",
+    "slug": "candy-trad-gj-16",
+    "name_english": "Candy",
+    "category": "weight",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કેન્ડી (Candy)"
+    ],
+    "used_in": [
+      "Commercial weight widely used for cotton, wool and oil exports through Surat and Mandvi ports."
+    ],
+    "references": [
+      "East India Company Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "candy",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Khaṇḍī (related)",
+    "name_hindi": "कैंडी",
+    "meaning": "Commercial weight widely used for cotton, wool and oil exports through Surat and Mandvi ports.",
+    "measurement_type": "Bulk Weight",
+    "modern_equivalent": "≈227 kg (regional variation)",
+    "conversion_formula": "Multiple Man",
+    "historical_period": "Colonial"
+  },
+  {
+    "id": "gj-trad-17",
+    "slug": "bale-trad-gj-17",
+    "name_english": "Bale",
+    "category": "volume",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગાંસડી (Bale)"
+    ],
+    "used_in": [
+      "Standard bale pressed for cotton and textile export."
+    ],
+    "references": [
+      "Bombay Trade Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "bale",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "गांठ",
+    "meaning": "Standard bale pressed for cotton and textile export.",
+    "measurement_type": "Textile Bundle",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Bundle of cotton/cloth",
+    "historical_period": "Colonial"
+  },
+  {
+    "id": "gj-trad-18",
+    "slug": "mohur-trad-gj-18",
+    "name_english": "Mohur",
+    "category": "currency",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "મોહોર (Mohur)"
+    ],
+    "used_in": [
+      "Gold coin used in major commercial and international transactions."
+    ],
+    "references": [
+      "Indian Numismatic Studies"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "mohur",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Mudrā",
+    "name_hindi": "मोहर",
+    "meaning": "Gold coin used in major commercial and international transactions.",
+    "measurement_type": "Gold Coin",
+    "modern_equivalent": "≈10.8–11 g gold",
+    "conversion_formula": "High-value coin",
+    "historical_period": "Mughal–Colonial"
+  },
+  {
+    "id": "gj-trad-19",
+    "slug": "rupiya-trad-gj-19",
+    "name_english": "Rupiya",
+    "category": "currency",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "રૂપિયો (Rupiya)"
+    ],
+    "used_in": [
+      "Principal monetary unit used in Gujarat's markets and ports."
+    ],
+    "references": [
+      "Bombay Presidency Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "rupiya",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Rūpya",
+    "name_hindi": "रुपया",
+    "meaning": "Principal monetary unit used in Gujarat's markets and ports.",
+    "measurement_type": "Currency",
+    "modern_equivalent": "Historic silver standard",
+    "conversion_formula": "16 Anna = 1 Rupiya",
+    "historical_period": "Mughal–Colonial"
+  },
+  {
+    "id": "gj-trad-20",
+    "slug": "hundi-trad-gj-20",
+    "name_english": "Hundi",
+    "category": "currency",
+    "sector": "trade-commerce",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "હૂંડી (Hundi)"
+    ],
+    "used_in": [
+      "Bill of exchange / credit note used by Gujarat merchants for domestic and overseas trade."
+    ],
+    "references": [
+      "Gujarat Merchant Records; Bombay Presidency Archives"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "trade-commerce",
+      "hundi",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Huṇḍikā",
+    "name_hindi": "हुंडी",
+    "meaning": "Bill of exchange / credit note used by Gujarat merchants for domestic and overseas trade.",
+    "measurement_type": "Financial Instrument",
+    "modern_equivalent": "Not applicable",
+    "conversion_formula": "Merchant credit note",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-arch-1",
+    "slug": "paramanu-arch-gj-1",
+    "name_english": "Paramanu",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પરમાણુ (Paramanu)"
+    ],
+    "used_in": [
+      "Smallest conceptual unit used in ancient architectural calculations."
+    ],
+    "references": [
+      "Mānasāra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "paramanu",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Paramāṇu",
+    "name_hindi": "परमाणु",
+    "meaning": "Smallest conceptual unit used in ancient architectural calculations.",
+    "measurement_type": "Length",
+    "modern_equivalent": "Theoretical",
+    "conversion_formula": "Smallest theoretical unit",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-2",
+    "slug": "truti-arch-gj-2",
+    "name_english": "Truti",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ત્રુટી (Truti)"
+    ],
+    "used_in": [
+      "Minute unit used in proportional design."
+    ],
+    "references": [
+      "Mānasāra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "truti",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Truṭi",
+    "name_hindi": "त्रुटि",
+    "meaning": "Minute unit used in proportional design.",
+    "measurement_type": "Length",
+    "modern_equivalent": "Theoretical",
+    "conversion_formula": "Larger than Paramanu",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-3",
+    "slug": "yava-arch-gj-3",
+    "name_english": "Yava",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "યવ (Yava)"
+    ],
+    "used_in": [
+      "Barley grain used as the smallest practical linear unit."
+    ],
+    "references": [
+      "Mānasāra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "yava",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Yava",
+    "name_hindi": "यव",
+    "meaning": "Barley grain used as the smallest practical linear unit.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈2.4 mm",
+    "conversion_formula": "8 Yava = 1 Angula",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-4",
+    "slug": "angula-arch-gj-4",
+    "name_english": "Angula",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અંગુલ (Angula)"
+    ],
+    "used_in": [
+      "Finger-width measure used in temples, houses and stepwells."
+    ],
+    "references": [
+      "Mānasāra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "angula",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Aṅgula",
+    "name_hindi": "अंगुल",
+    "meaning": "Finger-width measure used in temples, houses and stepwells.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈1.9 cm",
+    "conversion_formula": "8 Yava = 1 Angula",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-5",
+    "slug": "vitasti-arch-gj-5",
+    "name_english": "Vitasti",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "વિતસ્તિ (Vitasti)"
+    ],
+    "used_in": [
+      "Palm-span measure used in structural planning."
+    ],
+    "references": [
+      "Mānasāra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "vitasti",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Vitasti",
+    "name_hindi": "वितस्ति",
+    "meaning": "Palm-span measure used in structural planning.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈22.8 cm",
+    "conversion_formula": "12 Angula = 1 Vitasti",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-6",
+    "slug": "hasta-arch-gj-6",
+    "name_english": "Hasta",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "હસ્ત (Hasta)"
+    ],
+    "used_in": [
+      "Cubit widely used in temple and palace construction."
+    ],
+    "references": [
+      "Śilpa Śāstra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "hasta",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Hasta",
+    "name_hindi": "हस्त",
+    "meaning": "Cubit widely used in temple and palace construction.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈45.7 cm",
+    "conversion_formula": "24 Angula = 1 Hasta",
+    "historical_period": "Ancient–Medieval"
+  },
+  {
+    "id": "gj-arch-7",
+    "slug": "aratni-arch-gj-7",
+    "name_english": "Aratni",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અરત્નિ (Aratni)"
+    ],
+    "used_in": [
+      "Cubit variation used in sculpture and masonry."
+    ],
+    "references": [
+      "Mayamata"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "aratni",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Aratni",
+    "name_hindi": "अरत्नि",
+    "meaning": "Cubit variation used in sculpture and masonry.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈42 cm",
+    "conversion_formula": "Elbow to finger tip",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-8",
+    "slug": "tala-arch-gj-8",
+    "name_english": "Tala",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "તાલ (Tala)"
+    ],
+    "used_in": [
+      "Proportional measure used in sculpting temple idols."
+    ],
+    "references": [
+      "Śilpa Śāstra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "tala",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Tāla",
+    "name_hindi": "ताल",
+    "meaning": "Proportional measure used in sculpting temple idols.",
+    "measurement_type": "Proportional Measure",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Body proportion unit",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-9",
+    "slug": "danda-arch-gj-9",
+    "name_english": "Danda",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "દંડ (Danda)"
+    ],
+    "used_in": [
+      "Measuring rod used in foundation layout."
+    ],
+    "references": [
+      "Arthashastra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "danda",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Daṇḍa",
+    "name_hindi": "दंड",
+    "meaning": "Measuring rod used in foundation layout.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈1.83 m",
+    "conversion_formula": "4 Hasta = 1 Danda",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-10",
+    "slug": "kathi-arch-gj-10",
+    "name_english": "Kathi",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કાઠી (Kathi)"
+    ],
+    "used_in": [
+      "Wooden measuring pole used by builders and surveyors."
+    ],
+    "references": [
+      "Gujarat Revenue Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "kathi",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Daṇḍa (related)",
+    "name_hindi": "काठी",
+    "meaning": "Wooden measuring pole used by builders and surveyors.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈2–3 m (regional variation)",
+    "conversion_formula": "Measuring pole",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-arch-11",
+    "slug": "gaj-arch-gj-11",
+    "name_english": "Gaj",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગજ (Gaj)"
+    ],
+    "used_in": [
+      "Yard measure used for houses, stepwells and forts."
+    ],
+    "references": [
+      "Bombay Presidency Manual"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "gaj",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Gaja",
+    "name_hindi": "गज",
+    "meaning": "Yard measure used for houses, stepwells and forts.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈0.9144 m",
+    "conversion_formula": "Traditional yard",
+    "historical_period": "Sultanate–Colonial"
+  },
+  {
+    "id": "gj-arch-12",
+    "slug": "rajju-arch-gj-12",
+    "name_english": "Rajju",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "રજ્જુ (Rajju)"
+    ],
+    "used_in": [
+      "Measuring rope used for forts, buildings and roads."
+    ],
+    "references": [
+      "Mānasāra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "rajju",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Rajju",
+    "name_hindi": "रज्जु",
+    "meaning": "Measuring rope used for forts, buildings and roads.",
+    "measurement_type": "Length",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Rope measure",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-13",
+    "slug": "pada-arch-gj-13",
+    "name_english": "Pada",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પદ (Pada)"
+    ],
+    "used_in": [
+      "Quarter module used in architectural planning."
+    ],
+    "references": [
+      "Mayamata"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "pada",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Pada",
+    "name_hindi": "पद",
+    "meaning": "Quarter module used in architectural planning.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈22.8 cm",
+    "conversion_formula": "12 Angula",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-14",
+    "slug": "kishku-hasta-arch-gj-14",
+    "name_english": "Kishku Hasta",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કિષ્કુ હસ્ત (Kishku Hasta)"
+    ],
+    "used_in": [
+      "Cubit prescribed for domestic architecture."
+    ],
+    "references": [
+      "Mānasāra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "kishku-hasta",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Kiṣku Hasta",
+    "name_hindi": "किष्कु हस्त",
+    "meaning": "Cubit prescribed for domestic architecture.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈45–48 cm",
+    "conversion_formula": "Variant of Hasta",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-15",
+    "slug": "prahasta-hasta-arch-gj-15",
+    "name_english": "Prahasta / Hasta",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પ્રહસ્ત/હસ્ત (Prahasta / Hasta)"
+    ],
+    "used_in": [
+      "Cubit recommended for temples and sacred structures."
+    ],
+    "references": [
+      "Mayamata"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "prahasta-hasta",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Prāśasta Hasta",
+    "name_hindi": "प्रहस्त / हस्त",
+    "meaning": "Cubit recommended for temples and sacred structures.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈48 cm",
+    "conversion_formula": "Variant of Hasta",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-16",
+    "slug": "dhanus-arch-gj-16",
+    "name_english": "Dhanus",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ધનુષ (Dhanus)"
+    ],
+    "used_in": [
+      "Used for planning forts, ramparts and settlements."
+    ],
+    "references": [
+      "Arthashastra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "dhanus",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Dhanus",
+    "name_hindi": "धनुष",
+    "meaning": "Used for planning forts, ramparts and settlements.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈7.3 m",
+    "conversion_formula": "4 Danda = 1 Dhanus",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-17",
+    "slug": "krosa-arch-gj-17",
+    "name_english": "Krosa",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ક્રોશ (Krosa)"
+    ],
+    "used_in": [
+      "Used to measure distances between settlements."
+    ],
+    "references": [
+      "Arthashastra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "krosa",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Krośa",
+    "name_hindi": "क्रोश",
+    "meaning": "Used to measure distances between settlements.",
+    "measurement_type": "Distance",
+    "modern_equivalent": "≈3.2 km",
+    "conversion_formula": "Larger than Dhanus",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-18",
+    "slug": "yojana-arch-gj-18",
+    "name_english": "Yojana",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "યોજના (Yojana)"
+    ],
+    "used_in": [
+      "Large geographical unit used in planning roads and regions."
+    ],
+    "references": [
+      "Puranas; Arthashastra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "yojana",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Yojana",
+    "name_hindi": "योजन",
+    "meaning": "Large geographical unit used in planning roads and regions.",
+    "measurement_type": "Distance",
+    "modern_equivalent": "≈12.8–13 km",
+    "conversion_formula": "4 Krosa = 1 Yojana",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-arch-19",
+    "slug": "ayadi-mana-arch-gj-19",
+    "name_english": "Ayadi Mana",
+    "category": "other",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "આયાદિ માન (Ayadi Mana)"
+    ],
+    "used_in": [
+      "Traditional vastu method for determining auspicious dimensions."
+    ],
+    "references": [
+      "Mayamata"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "ayadi-mana",
+      "other"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Āyādi Māna",
+    "name_hindi": "आयादि मान",
+    "meaning": "Traditional vastu method for determining auspicious dimensions.",
+    "measurement_type": "Architectural Calculation",
+    "modern_equivalent": "Not an SI unit",
+    "conversion_formula": "Vastu calculation",
+    "historical_period": "Ancient–Medieval"
+  },
+  {
+    "id": "gj-arch-20",
+    "slug": "sutra-arch-gj-20",
+    "name_english": "Sutra",
+    "category": "length",
+    "sector": "architecture",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "સૂત્ર (Sutra)"
+    ],
+    "used_in": [
+      "Measuring cord used for alignment in temples, stepwells and public buildings."
+    ],
+    "references": [
+      "Samarangana Sutradhara"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "architecture",
+      "sutra",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Sūtra",
+    "name_hindi": "सूत्र",
+    "meaning": "Measuring cord used for alignment in temples, stepwells and public buildings.",
+    "measurement_type": "Survey Measure",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Measuring cord",
+    "historical_period": "Ancient–Medieval"
+  },
+  {
+    "id": "gj-medi-1",
+    "slug": "gunja-medi-gj-1",
+    "name_english": "Gunja",
+    "category": "weight",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગુંજા (Gunja)"
+    ],
+    "used_in": [
+      "Gunja seed used for weighing minerals and precious medicinal ingredients."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "gunja",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Guñjā (Raktikā)",
+    "name_hindi": "गुंजा",
+    "meaning": "Gunja seed used for weighing minerals and precious medicinal ingredients.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.1215 g",
+    "conversion_formula": "Smallest practical weight",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-2",
+    "slug": "ratti-medi-gj-2",
+    "name_english": "Ratti",
+    "category": "weight",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "રત્તી (Ratti)"
+    ],
+    "used_in": [
+      "Standard seed weight used in Ayurvedic and Rasashastra preparations."
+    ],
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "ratti",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Raktikā",
+    "name_hindi": "रत्ती",
+    "meaning": "Standard seed weight used in Ayurvedic and Rasashastra preparations.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.1215 g",
+    "conversion_formula": "Equivalent to Gunja seed",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-3",
+    "slug": "masha-medi-gj-3",
+    "name_english": "Masha",
+    "category": "weight",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "માષા (Masha)"
+    ],
+    "used_in": [
+      "Used for measuring powders and medicinal pills."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "masha",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Māṣa",
+    "name_hindi": "माषा",
+    "meaning": "Used for measuring powders and medicinal pills.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.97 g",
+    "conversion_formula": "8 Ratti = 1 Masha",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-4",
+    "slug": "karsha-medi-gj-4",
+    "name_english": "Karsha",
+    "category": "weight",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કર્ષ (Karsha)"
+    ],
+    "used_in": [
+      "Standard unit for herbs, roots and mineral ingredients."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "karsha",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Karṣa",
+    "name_hindi": "कर्ष",
+    "meaning": "Standard unit for herbs, roots and mineral ingredients.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈12 g",
+    "conversion_formula": "12 Masha = 1 Karsha",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-5",
+    "slug": "tola-medi-gj-5",
+    "name_english": "Tola",
+    "category": "weight",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "તોલા (Tola)"
+    ],
+    "used_in": [
+      "Used for expensive herbs, metals and medicinal compounds."
+    ],
+    "references": [
+      "Bombay Presidency Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "tola",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Tulā",
+    "name_hindi": "तोला",
+    "meaning": "Used for expensive herbs, metals and medicinal compounds.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "Traditional weight unit",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-medi-6",
+    "slug": "pala-medi-gj-6",
+    "name_english": "Pala",
+    "category": "weight",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પલ (Pala)"
+    ],
+    "used_in": [
+      "Standard weight for measuring herbal decoctions."
+    ],
+    "references": [
+      "Ashtanga Hridaya"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "pala",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Pala",
+    "name_hindi": "पल",
+    "meaning": "Standard weight for measuring herbal decoctions.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈48 g",
+    "conversion_formula": "4 Karsha = 1 Pala",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-7",
+    "slug": "prasuti-medi-gj-7",
+    "name_english": "Prasuti",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પ્રસૂતિ (Prasuti)"
+    ],
+    "used_in": [
+      "Used for medicines, oils, ghee and decoctions."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "prasuti",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Prasṛti",
+    "name_hindi": "प्रसूति",
+    "meaning": "Used for medicines, oils, ghee and decoctions.",
+    "measurement_type": "Volume",
+    "modern_equivalent": "≈96 ml",
+    "conversion_formula": "2 Pala = 1 Prasriti",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-8",
+    "slug": "kudava-medi-gj-8",
+    "name_english": "Kudava",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કુડવ (Kudava)"
+    ],
+    "used_in": [
+      "Capacity measure used in liquid pharmacy."
+    ],
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "kudava",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Kuḍava",
+    "name_hindi": "कुड़व",
+    "meaning": "Capacity measure used in liquid pharmacy.",
+    "measurement_type": "Capacity",
+    "modern_equivalent": "≈192 ml",
+    "conversion_formula": "4 Prasriti = 1 Kudava",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-9",
+    "slug": "prastha-medi-gj-9",
+    "name_english": "Prastha",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પ્રસ્થ (Prastha)"
+    ],
+    "used_in": [
+      "Standard liquid measure for preparing medicines."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "prastha",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Prastha",
+    "name_hindi": "प्रस्थ",
+    "meaning": "Standard liquid measure for preparing medicines.",
+    "measurement_type": "Capacity",
+    "modern_equivalent": "≈768 ml",
+    "conversion_formula": "4 Kudava = 1 Prastha",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-10",
+    "slug": "adhaka-medi-gj-10",
+    "name_english": "Adhaka",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "આઢક (Adhaka)"
+    ],
+    "used_in": [
+      "Used for large-scale preparation of medicinal decoctions."
+    ],
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "adhaka",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Āḍhaka",
+    "name_hindi": "आढ़क",
+    "meaning": "Used for large-scale preparation of medicinal decoctions.",
+    "measurement_type": "Capacity",
+    "modern_equivalent": "≈3.07 L",
+    "conversion_formula": "4 Prastha = 1 Adhaka",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-11",
+    "slug": "drona-medi-gj-11",
+    "name_english": "Drona",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "દ્રોણ (Drona)"
+    ],
+    "used_in": [
+      "Large capacity measure for storing medicinal oils."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "drona",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Droṇa",
+    "name_hindi": "द्रोण",
+    "meaning": "Large capacity measure for storing medicinal oils.",
+    "measurement_type": "Capacity",
+    "modern_equivalent": "≈12.3 L",
+    "conversion_formula": "4 Adhaka = 1 Drona",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-12",
+    "slug": "bindu-medi-gj-12",
+    "name_english": "Bindu",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "બિંદુ (Bindu)"
+    ],
+    "used_in": [
+      "Smallest medical liquid dosage used in Ayurveda."
+    ],
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "bindu",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Bindu",
+    "name_hindi": "बिंदु",
+    "meaning": "Smallest medical liquid dosage used in Ayurveda.",
+    "measurement_type": "Liquid Measure",
+    "modern_equivalent": "≈0.05 ml (approx.)",
+    "conversion_formula": "Single drop",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-13",
+    "slug": "anjali-medi-gj-13",
+    "name_english": "Anjali",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અંજલિ (Anjali)"
+    ],
+    "used_in": [
+      "Body-based dosage measure used by vaidhyas (religious/herbal)."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "anjali",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Añjali",
+    "name_hindi": "अंजलि",
+    "meaning": "Body-based dosage measure used by vaidhyas (religious/herbal).",
+    "measurement_type": "Volume",
+    "modern_equivalent": "Person dependent",
+    "conversion_formula": "Two cupped palms",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-14",
+    "slug": "mushti-medi-gj-14",
+    "name_english": "Mushti",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "મુષ્ટિ (Mushti)"
+    ],
+    "used_in": [
+      "Handful measure used for raw medicinal leaves and herbs."
+    ],
+    "references": [
+      "Ayurvedic Practice Manuals"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "mushti",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Muṣṭi",
+    "name_hindi": "मुष्टि",
+    "meaning": "Handful measure used for raw medicinal leaves and herbs.",
+    "measurement_type": "Volume",
+    "modern_equivalent": "Person dependent",
+    "conversion_formula": "One handful",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-15",
+    "slug": "angula-medi-gj-15",
+    "name_english": "Angula",
+    "category": "length",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અંગુલ (Angula)"
+    ],
+    "used_in": [
+      "Used to measure wounds, incisions and lancets."
+    ],
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "angula",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Aṅgula",
+    "name_hindi": "अंगुल",
+    "meaning": "Used to measure wounds, incisions and lancets.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈1.9 cm",
+    "conversion_formula": "Finger width",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-16",
+    "slug": "hasta-medi-gj-16",
+    "name_english": "Hasta",
+    "category": "length",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "હસ્ત (Hasta)"
+    ],
+    "used_in": [
+      "Used for body measurements in diagnosis and treatment."
+    ],
+    "references": [
+      "Ashtanga Hridaya"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "hasta",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Hasta",
+    "name_hindi": "हस्त",
+    "meaning": "Used for body measurements in diagnosis and treatment.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈45.7 cm",
+    "conversion_formula": "24 Angula = 1 Hasta",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-17",
+    "slug": "yava-medi-gj-17",
+    "name_english": "Yava",
+    "category": "length",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "યવ (Yava)"
+    ],
+    "used_in": [
+      "Used for precise anatomical application and surgical dimensions."
+    ],
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "yava",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Yava",
+    "name_hindi": "यव",
+    "meaning": "Used for precise anatomical application and surgical dimensions.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈2.4 mm",
+    "conversion_formula": "Grain-based unit",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-medi-18",
+    "slug": "vana-medi-gj-18",
+    "name_english": "Vana",
+    "category": "weight",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "વાણ (Vana)"
+    ],
+    "used_in": [
+      "Used in preparing certain herbal and medicinal compounds."
+    ],
+    "references": [
+      "Rasashastra Texts"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "vana",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Vāṇa",
+    "name_hindi": "वाण",
+    "meaning": "Used in preparing certain herbal and medicinal compounds.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈3–4 g (regional variation)",
+    "conversion_formula": "Traditional medicinal unit",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-medi-19",
+    "slug": "patra-medi-gj-19",
+    "name_english": "Patra",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પાત્ર (Patra)"
+    ],
+    "used_in": [
+      "Standard vessel used for measuring and boiling medicines."
+    ],
+    "references": [
+      "Gujarat Ayurvedic Vaidya Measures"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "patra",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Pātra",
+    "name_hindi": "पात्र",
+    "meaning": "Standard vessel used for measuring and boiling medicines.",
+    "measurement_type": "Vessel Measure",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Container measure",
+    "historical_period": "Ancient–Modern"
+  },
+  {
+    "id": "gj-medi-20",
+    "slug": "kalasha-medi-gj-20",
+    "name_english": "Kalasha",
+    "category": "volume",
+    "sector": "medicine",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કળશ (Kalasha)"
+    ],
+    "used_in": [
+      "Earthen or metal vessel used to preserve oils, decoction and medicinal liquids."
+    ],
+    "references": [
+      "Traditional Gujarat Vaidya Practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "medicine",
+      "kalasha",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Kalaśa",
+    "name_hindi": "कलश",
+    "meaning": "Earthen or metal vessel used to preserve oils, decoction and medicinal liquids.",
+    "measurement_type": "Storage Vessel",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Large storage vessel",
+    "historical_period": "Ancient–Modern"
+  },
+  {
+    "id": "gj-text-1",
+    "slug": "yava-text-gj-1",
+    "name_english": "Yava",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "યવ (Yava)"
+    ],
+    "used_in": [
+      "Barley grain used as the smallest unit in loom measurements and design."
+    ],
+    "references": [
+      "Mānasāra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "yava",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Yava",
+    "name_hindi": "यव",
+    "meaning": "Barley grain used as the smallest unit in loom measurements and design.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈2.4 mm",
+    "conversion_formula": "8 Yava = 1 Angula",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-text-2",
+    "slug": "angula-text-gj-2",
+    "name_english": "Angula",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અંગુલ (Angula)"
+    ],
+    "used_in": [
+      "Finger-width measure used for weaving and embroidery design."
+    ],
+    "references": [
+      "Mayamata"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "angula",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Aṅgula",
+    "name_hindi": "अंगुल",
+    "meaning": "Finger-width measure used for weaving and embroidery design.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈1.9 cm",
+    "conversion_formula": "8 Yava = 1 Angula",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-text-3",
+    "slug": "vitasti-text-gj-3",
+    "name_english": "Vitasti",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "વિતસ્તિ (Vitasti)"
+    ],
+    "used_in": [
+      "Palm-span measure used in loom preparation."
+    ],
+    "references": [
+      "Mānasāra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "vitasti",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Vitasti",
+    "name_hindi": "वितस्ति",
+    "meaning": "Palm-span measure used in loom preparation.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈22.8 cm",
+    "conversion_formula": "12 Angula = 1 Vitasti",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-text-4",
+    "slug": "hasta-text-gj-4",
+    "name_english": "Hasta",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "હસ્ત (Hasta)"
+    ],
+    "used_in": [
+      "Cubit used for measuring woven cloth and silk fabrics."
+    ],
+    "references": [
+      "Śilpa Śāstra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "hasta",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Hasta",
+    "name_hindi": "हस्त",
+    "meaning": "Cubit used for measuring woven cloth and silk fabrics.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈45.7 cm",
+    "conversion_formula": "24 Angula = 1 Hasta",
+    "historical_period": "Ancient–Medieval"
+  },
+  {
+    "id": "gj-text-5",
+    "slug": "gaj-text-gj-5",
+    "name_english": "Gaj",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગજ (Gaj)"
+    ],
+    "used_in": [
+      "Standard yard measure widely used in Gujarat's cloth markets."
+    ],
+    "references": [
+      "Bombay Presidency Manual"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "gaj",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Gaja",
+    "name_hindi": "गज",
+    "meaning": "Standard yard measure widely used in Gujarat's cloth markets.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈0.9144 m",
+    "conversion_formula": "Traditional yard",
+    "historical_period": "Sultanate–Colonial"
+  },
+  {
+    "id": "gj-text-6",
+    "slug": "kathi-text-gj-6",
+    "name_english": "Kathi",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કાઠી (Kathi)"
+    ],
+    "used_in": [
+      "Wooden rod used to measure warp length before weaving."
+    ],
+    "references": [
+      "Gujarati Weavers Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "kathi",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Daṇḍa (related)",
+    "name_hindi": "काठी",
+    "meaning": "Wooden rod used to measure warp length before weaving.",
+    "measurement_type": "Length",
+    "modern_equivalent": "≈2–3 m (regional variation)",
+    "conversion_formula": "Measuring rod",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-text-7",
+    "slug": "sut-text-gj-7",
+    "name_english": "Sut",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "સૂત (Sut)"
+    ],
+    "used_in": [
+      "Individual spun thread used in cotton and silk weaving."
+    ],
+    "references": [
+      "Gujarat Textile Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "sut",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Sūtra",
+    "name_hindi": "सूत",
+    "meaning": "Individual spun thread used in cotton and silk weaving.",
+    "measurement_type": "Yarn Measure",
+    "conversion_formula": "Single thread",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-text-8",
+    "slug": "tantu-text-gj-8",
+    "name_english": "Tantu",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "તંતુ (Tantu)"
+    ],
+    "used_in": [
+      "Individual fibre before spinning into thread."
+    ],
+    "references": [
+      "Śilpa Śāstra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "tantu",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Tantu",
+    "name_hindi": "तंतु",
+    "meaning": "Individual fibre before spinning into thread.",
+    "measurement_type": "Yarn Measure",
+    "conversion_formula": "Single fibre",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-text-9",
+    "slug": "hank-text-gj-9",
+    "name_english": "Hank",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "લચ્છો (Hank)"
+    ],
+    "used_in": [
+      "Standard hank used in cotton, silk and Patola weaving."
+    ],
+    "references": [
+      "Bombay Textile Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "hank",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "लच्छा",
+    "meaning": "Standard hank used in cotton, silk and Patola weaving.",
+    "measurement_type": "Yarn Measure",
+    "modern_equivalent": "Standard skein bundle",
+    "conversion_formula": "Bundle of yarn",
+    "historical_period": "Colonial"
+  },
+  {
+    "id": "gj-text-10",
+    "slug": "suti-gunch-text-gj-10",
+    "name_english": "Suti Gunch",
+    "category": "volume",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "સૂતરની ગૂંચ (Suti Gunch)"
+    ],
+    "used_in": [
+      "Bundle of yarn prepared before weaving."
+    ],
+    "references": [
+      "Gujarat Handloom Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "suti-gunch",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "सूती गुच्छ",
+    "meaning": "Bundle of yarn prepared before weaving.",
+    "measurement_type": "Yarn Bundle",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Bundle of thread",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-text-11",
+    "slug": "tana-text-gj-11",
+    "name_english": "Tana",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "તાણો (Tana)"
+    ],
+    "used_in": [
+      "Longitudinal threads stretched on the loom."
+    ],
+    "references": [
+      "Patola Weavers Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "tana",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Tantra (related)",
+    "name_hindi": "ताना",
+    "meaning": "Longitudinal threads stretched on the loom.",
+    "measurement_type": "Warp Measure",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Warp threads",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-text-12",
+    "slug": "bana-text-gj-12",
+    "name_english": "Bana",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "વાણો (Bana)"
+    ],
+    "used_in": [
+      "Crosswise threads woven through the warp."
+    ],
+    "references": [
+      "Gujarat Handloom Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "bana",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Vāna (related)",
+    "name_hindi": "बाना",
+    "meaning": "Crosswise threads woven through the warp.",
+    "measurement_type": "Weft Measure",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Cross threads",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-text-13",
+    "slug": "magga-poholai-text-gj-13",
+    "name_english": "Magga Poholai",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "સાળની પહોળાઈ (Magga Poholai)"
+    ],
+    "used_in": [
+      "Width of cloth determined by the loom frame."
+    ],
+    "references": [
+      "Rural Weaving Practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "magga-poholai",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "करघा चौड़ाई",
+    "meaning": "Width of cloth determined by the loom frame.",
+    "measurement_type": "Width Measure",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Loom width",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-text-14",
+    "slug": "sadi-lambai-text-gj-14",
+    "name_english": "Sadi Lambai",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "સાડી લંબાઈ (Sadi Lambai)"
+    ],
+    "used_in": [
+      "Traditional length used for weaving Gujarat sarees and Patola."
+    ],
+    "references": [
+      "Patan Patola Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "sadi-lambai",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "साड़ी लंबाई",
+    "meaning": "Traditional length used for weaving Gujarat sarees and Patola.",
+    "measurement_type": "Cloth Length",
+    "modern_equivalent": "≈5–5.5 m",
+    "conversion_formula": "Standard saree length",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-text-15",
+    "slug": "dhoti-lambai-text-gj-15",
+    "name_english": "Dhoti Lambai",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ધોતી લંબાઈ (Dhoti Lambai)"
+    ],
+    "used_in": [
+      "Traditional length used for weaving dhotis."
+    ],
+    "references": [
+      "Gujarat Textile Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "dhoti-lambai",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "धोती लंबाई",
+    "meaning": "Traditional length used for weaving dhotis.",
+    "measurement_type": "Cloth Length",
+    "modern_equivalent": "≈4–4.5 m",
+    "conversion_formula": "Standard dhoti length",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-text-16",
+    "slug": "kapad-tukdo-text-gj-16",
+    "name_english": "Kapad Tukdo",
+    "category": "length",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કાપડ ટુકડો (Kapad Tukdo)"
+    ],
+    "used_in": [
+      "Individual cut piece of woven cloth sold in markets."
+    ],
+    "references": [
+      "Market Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "kapad-tukdo",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "कपड़ा टुकड़ा",
+    "meaning": "Individual cut piece of woven cloth sold in markets.",
+    "measurement_type": "Cloth Measure",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Cloth piece",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-text-17",
+    "slug": "gathhadi-text-gj-17",
+    "name_english": "Gathhadi",
+    "category": "volume",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગાંસડી (Gathhadi)"
+    ],
+    "used_in": [
+      "Bundle of finished cloth prepared for merchants."
+    ],
+    "references": [
+      "Ancillary Trade Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "gathhadi",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "गठरी",
+    "meaning": "Bundle of finished cloth prepared for merchants.",
+    "measurement_type": "Bundle Measure",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Bundle of cloth",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-text-18",
+    "slug": "guni-text-gj-18",
+    "name_english": "Guni",
+    "category": "volume",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગુણી (Guni)"
+    ],
+    "used_in": [
+      "Traditional sack used for transporting raw yarn and cloth."
+    ],
+    "references": [
+      "Textile Trade Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "guni",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "गुणी",
+    "meaning": "Traditional sack used for transporting raw yarn and cloth.",
+    "measurement_type": "Sack Measure",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Textile sack",
+    "historical_period": "Colonial"
+  },
+  {
+    "id": "gj-text-19",
+    "slug": "bale-text-gj-19",
+    "name_english": "Bale",
+    "category": "volume",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગાંસ (Bale)"
+    ],
+    "used_in": [
+      "Standard bale of cotton or woven cloth exported through Surat and Bharuch ports."
+    ],
+    "references": [
+      "East India Company Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "bale",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "गांठ",
+    "meaning": "Standard bale of cotton or woven cloth exported through Surat and Bharuch ports.",
+    "measurement_type": "Bulk Textile Measure",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Multiple bundles",
+    "historical_period": "Colonial"
+  },
+  {
+    "id": "gj-text-20",
+    "slug": "patola-gathho-text-gj-20",
+    "name_english": "Patola Gathho",
+    "category": "volume",
+    "sector": "textile-handloom",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પટોળાં ગાંસડી (Patola Gathho)"
+    ],
+    "used_in": [
+      "Bundle of finished Patola silk textiles prepared for domestic and international trade."
+    ],
+    "references": [
+      "Patola Heritage Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "textile-handloom",
+      "patola-gathho",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "पटोला गट्ठा",
+    "meaning": "Bundle of finished Patola silk textiles prepared for domestic and international trade.",
+    "measurement_type": "Silk Bundle",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Bundle of Patola textiles",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-tran-1",
+    "slug": "angul-tran-gj-1",
+    "name_english": "Angul",
+    "category": "length",
+    "sector": "transportation-distance",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અંગુલ (Angul)"
+    ],
+    "used_in": [
+      "Used for small measurements in construction and craft work. Smallest traditional length unit."
+    ],
+    "references": [
+      "Indian traditional measurement system"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "transportation-distance",
+      "angul",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "अङ्गुल (Aṅgula)",
+    "name_hindi": "अंगुल",
+    "meaning": "Used for small measurements in construction and craft work. Smallest traditional length unit.",
+    "measurement_type": "Length Measurement",
+    "modern_equivalent": "≈1.9 cm",
+    "conversion_formula": "Basic finger-width measurement",
+    "historical_period": "Ancient period"
+  },
+  {
+    "id": "gj-tran-2",
+    "slug": "vitasti-tran-gj-2",
+    "name_english": "Vitasti",
+    "category": "length",
+    "sector": "transportation-distance",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "વીતસ્તિ (Vitasti)"
+    ],
+    "used_in": [
+      "Used for short measurements. Hand-span distance from thumb to little finger."
+    ],
+    "references": [
+      "Sanskrit measurement traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "transportation-distance",
+      "vitasti",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "वितस्ति (Vitasti)",
+    "name_hindi": "वितस्ति",
+    "meaning": "Used for short measurements. Hand-span distance from thumb to little finger.",
+    "measurement_type": "Length Measurement",
+    "modern_equivalent": "≈22–24 cm",
+    "conversion_formula": "12 Angula = 1 Vitasti",
+    "historical_period": "Ancient period"
+  },
+  {
+    "id": "gj-tran-3",
+    "slug": "hasta-tran-gj-3",
+    "name_english": "Hasta",
+    "category": "length",
+    "sector": "transportation-distance",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "હાથ (Hasta)"
+    ],
+    "used_in": [
+      "Used in architecture, temple construction and surveying. Traditional arm-length measure."
+    ],
+    "references": [
+      "Vastu traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "transportation-distance",
+      "hasta",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "हस्त (Hasta)",
+    "name_hindi": "हस्त",
+    "meaning": "Used in architecture, temple construction and surveying. Traditional arm-length measure.",
+    "measurement_type": "Length Measurement",
+    "modern_equivalent": "≈45–48 cm",
+    "conversion_formula": "2 Vitasti = 1 Hasta",
+    "historical_period": "Ancient–Medieval period"
+  },
+  {
+    "id": "gj-tran-4",
+    "slug": "gaj-tran-gj-4",
+    "name_english": "Gaj",
+    "category": "length",
+    "sector": "transportation-distance",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગજ (Gaj)"
+    ],
+    "used_in": [
+      "Used for land boundaries, roads and property measurements. Yard-based measurement unit."
+    ],
+    "references": [
+      "Land survey practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "transportation-distance",
+      "gaj",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "गज (Gaja)",
+    "name_hindi": "गज",
+    "meaning": "Used for land boundaries, roads and property measurements. Yard-based measurement unit.",
+    "measurement_type": "Length Measurement",
+    "modern_equivalent": "≈0.91 m",
+    "conversion_formula": "1 Gaj = 2 Hasta",
+    "historical_period": "Medieval period onwards"
+  },
+  {
+    "id": "gj-tran-5",
+    "slug": "danda-tran-gj-5",
+    "name_english": "Danda",
+    "category": "length",
+    "sector": "transportation-distance",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "દંડ (Danda)"
+    ],
+    "used_in": [
+      "Used by surveyors for fields, roads and boundaries. Rod-based measuring unit."
+    ],
+    "references": [
+      "Arthashastra references"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "transportation-distance",
+      "danda",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "दण्ड (Daṇḍa)",
+    "name_hindi": "दंड",
+    "meaning": "Used by surveyors for fields, roads and boundaries. Rod-based measuring unit.",
+    "measurement_type": "Length Measurement",
+    "modern_equivalent": "≈1.8–2 m",
+    "conversion_formula": "1 Danda = 4 Hasta",
+    "historical_period": "Ancient–Medieval period"
+  },
+  {
+    "id": "gj-tran-6",
+    "slug": "kathi-tran-gj-6",
+    "name_english": "Kathi",
+    "category": "length",
+    "sector": "transportation-distance",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કાઠી (Kathi)"
+    ],
+    "used_in": [
+      "Used by village land measurers. Wooden measuring stick used in surveying."
+    ],
+    "references": [
+      "Local survey traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "transportation-distance",
+      "kathi",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "काठी",
+    "meaning": "Used by village land measurers. Wooden measuring stick used in surveying.",
+    "measurement_type": "Length Measurement",
+    "modern_equivalent": "≈1.5–2 m (varies)",
+    "conversion_formula": "Measuring rod unit; regional values vary",
+    "historical_period": "Medieval period onwards"
+  },
+  {
+    "id": "gj-tran-7",
+    "slug": "kos-kosh-tran-gj-7",
+    "name_english": "Kos / Kosh",
+    "category": "length",
+    "sector": "transportation-distance",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કોશ (Kos / Kosh)"
+    ],
+    "used_in": [
+      "Used for travel distance between villages and towns. Ancient Indian route-distance unit."
+    ],
+    "references": [
+      "Classical Indian texts"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "transportation-distance",
+      "kos-kosh",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "क्रोश (Krośa)",
+    "name_hindi": "कोश",
+    "meaning": "Used for travel distance between villages and towns. Ancient Indian route-distance unit.",
+    "measurement_type": "Long Distance Measurement",
+    "modern_equivalent": "≈2–3 km (varies)",
+    "conversion_formula": "Traditional multiples of Danda",
+    "historical_period": "Ancient–Medieval period"
+  },
+  {
+    "id": "gj-tran-8",
+    "slug": "gavyuti-tran-gj-8",
+    "name_english": "Gavyuti",
+    "category": "length",
+    "sector": "transportation-distance",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગવ્યૂતિ (Gavyuti)"
+    ],
+    "used_in": [
+      "Used for describing pastoral distances. Distance unit based on cattle movement."
+    ],
+    "references": [
+      "Vedic literature"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "transportation-distance",
+      "gavyuti",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Gavyūti (गव्यूति)",
+    "name_hindi": "गव्युति",
+    "meaning": "Used for describing pastoral distances. Distance unit based on cattle movement.",
+    "measurement_type": "Long Distance Measurement",
+    "modern_equivalent": "≈10–12 km (varies)",
+    "conversion_formula": "Traditionally related to cow-call distance",
+    "historical_period": "Ancient period"
+  },
+  {
+    "id": "gj-tran-9",
+    "slug": "yojana-tran-gj-9",
+    "name_english": "Yojana",
+    "category": "length",
+    "sector": "transportation-distance",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "યોજન (Yojana)"
+    ],
+    "used_in": [
+      "Used for long journeys and geographical descriptions. Largest classical Indian distance unit."
+    ],
+    "references": [
+      "Puranic and classical texts"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "transportation-distance",
+      "yojana",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "योजन (Yojana)",
+    "name_hindi": "योजन",
+    "meaning": "Used for long journeys and geographical descriptions. Largest classical Indian distance unit.",
+    "measurement_type": "Long Distance Measurement",
+    "modern_equivalent": "≈12–15 km (varies)",
+    "conversion_formula": "1 Yojana = 4 Kos (traditional relation)",
+    "historical_period": "Ancient period"
+  },
+  {
+    "id": "gj-land-1",
+    "slug": "angul-land-gj-1",
+    "name_english": "Angul",
+    "category": "length",
+    "sector": "land-measurement",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અંગુલ (Angul)"
+    ],
+    "used_in": [
+      "Used for small boundary measurements and construction. Smallest traditional length unit."
+    ],
+    "references": [
+      "Indian traditional measurement texts"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "land-measurement",
+      "angul",
+      "length"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "अङ्गुल (Aṅgula)",
+    "name_hindi": "अंगुल",
+    "meaning": "Used for small boundary measurements and construction. Smallest traditional length unit.",
+    "measurement_type": "Length Measurement",
+    "modern_equivalent": "≈1.9 cm",
+    "conversion_formula": "Basic finger-width unit",
+    "historical_period": "Ancient period"
+  },
+  {
+    "id": "gj-land-2",
+    "slug": "gaj-land-gj-2",
+    "name_english": "Gaj",
+    "category": "area",
+    "sector": "land-measurement",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગજ (Gaj)"
+    ],
+    "used_in": [
+      "Used for house plots and land boundaries. Yard-based land measurement unit."
+    ],
+    "references": [
+      "Revenue and property practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "land-measurement",
+      "gaj",
+      "area"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "गज (Gaja)",
+    "name_hindi": "गज",
+    "meaning": "Used for house plots and land boundaries. Yard-based land measurement unit.",
+    "measurement_type": "Length / Area Measurement",
+    "modern_equivalent": "0.836 sq.m",
+    "conversion_formula": "1 Gaj = 3 feet; Square Gaj = 9 sq.ft",
+    "historical_period": "Medieval period onwards"
+  },
+  {
+    "id": "gj-land-3",
+    "slug": "vigha-bigha-land-gj-3",
+    "name_english": "Vigha / Bigha",
+    "category": "area",
+    "sector": "land-measurement",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "વિઘા / વીઘા (Vigha / Bigha)"
+    ],
+    "used_in": [
+      "Major agricultural land unit. One of the most important Gujarat farming land units."
+    ],
+    "references": [
+      "Gujarat agricultural records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "land-measurement",
+      "vigha-bigha",
+      "area"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "बीघा / विघा",
+    "meaning": "Major agricultural land unit. One of the most important Gujarat farming land units.",
+    "measurement_type": "Area Measurement",
+    "modern_equivalent": "Approx. 17,400 sq.ft (varies)",
+    "conversion_formula": "Regional conversion varies",
+    "historical_period": "Medieval period onwards"
+  },
+  {
+    "id": "gj-land-4",
+    "slug": "biswa-land-gj-4",
+    "name_english": "Biswa",
+    "category": "area",
+    "sector": "land-measurement",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "બિસ્વા (Biswa)"
+    ],
+    "used_in": [
+      "Used for land subdivision. Small agricultural land division unit."
+    ],
+    "references": [
+      "Revenue records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "land-measurement",
+      "biswa",
+      "area"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "बिस्वा",
+    "meaning": "Used for land subdivision. Small agricultural land division unit.",
+    "measurement_type": "Area Measurement",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Subdivision of Bigha in some regions",
+    "historical_period": "Medieval period"
+  },
+  {
+    "id": "gj-land-5",
+    "slug": "guntha-land-gj-5",
+    "name_english": "Guntha",
+    "category": "area",
+    "sector": "land-measurement",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગૂંઠા (Guntha)"
+    ],
+    "used_in": [
+      "Used for agricultural holdings. Deccan and western India land unit."
+    ],
+    "references": [
+      "Land measurement traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "land-measurement",
+      "guntha",
+      "area"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "गुंठा",
+    "meaning": "Used for agricultural holdings. Deccan and western India land unit.",
+    "measurement_type": "Area Measurement",
+    "modern_equivalent": "1,089 sq.ft",
+    "conversion_formula": "40 Guntha = 1 Acre",
+    "historical_period": "Historical period onwards"
+  },
+  {
+    "id": "gj-land-6",
+    "slug": "killa-land-gj-6",
+    "name_english": "Killa",
+    "category": "area",
+    "sector": "land-measurement",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કિલ્લા (Killa)"
+    ],
+    "used_in": [
+      "Used for farmland measurement. Large agricultural plot unit."
+    ],
+    "references": [
+      "Regional practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "land-measurement",
+      "killa",
+      "area"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "किल्ला",
+    "meaning": "Used for farmland measurement. Large agricultural plot unit.",
+    "measurement_type": "Area Measurement",
+    "modern_equivalent": "≈1 Acre (varies)",
+    "conversion_formula": "Regional relation with Acre",
+    "historical_period": "Historical period"
+  },
+  {
+    "id": "gj-land-7",
+    "slug": "acre-land-gj-7",
+    "name_english": "Acre",
+    "category": "area",
+    "sector": "land-measurement",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "એકર (Acre)"
+    ],
+    "used_in": [
+      "Used for farms and property records. Colonial-era standard land unit."
+    ],
+    "references": [
+      "Government land records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "land-measurement",
+      "acre",
+      "area"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "एकड़",
+    "meaning": "Used for farms and property records. Colonial-era standard land unit.",
+    "measurement_type": "Area Measurement",
+    "modern_equivalent": "43,560 sq.ft",
+    "conversion_formula": "1 Acre = 100 Cent",
+    "historical_period": "Colonial period onwards"
+  },
+  {
+    "id": "gj-land-8",
+    "slug": "hectare-land-gj-8",
+    "name_english": "Hectare",
+    "category": "area",
+    "sector": "land-measurement",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "હેક્ટર (Hectare)"
+    ],
+    "used_in": [
+      "Used in modern agricultural records. SI-based land measurement."
+    ],
+    "references": [
+      "Government statistics"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "land-measurement",
+      "hectare",
+      "area"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "हेक्टेयर",
+    "meaning": "Used in modern agricultural records. SI-based land measurement.",
+    "measurement_type": "Area Measurement",
+    "modern_equivalent": "10,000 sq.m",
+    "conversion_formula": "1 Hectare = 2.471 Acres",
+    "historical_period": "Modern period"
+  },
+  {
+    "id": "gj-hous-1",
+    "slug": "bindu-hous-gj-1",
+    "name_english": "Bindu",
+    "category": "volume",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "બિંદુ (Bindu)"
+    ],
+    "used_in": [
+      "Smallest liquid measure used for oils, medicines and ritual purposes."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "bindu",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Bindu",
+    "name_hindi": "बिंदु",
+    "meaning": "Smallest liquid measure used for oils, medicines and ritual purposes.",
+    "measurement_type": "Liquid Measure",
+    "modern_equivalent": "≈0.05 ml (approx.)",
+    "conversion_formula": "Single drop",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-hous-2",
+    "slug": "gunja-hous-gj-2",
+    "name_english": "Gunja",
+    "category": "weight",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગુંજા (Gunja)"
+    ],
+    "used_in": [
+      "Gunja seed used for weighing valuable spices and herbs."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "gunja",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Guñjā",
+    "name_hindi": "गुंजा",
+    "meaning": "Gunja seed used for weighing valuable spices and herbs.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.1215 g",
+    "conversion_formula": "Seed weight",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-hous-3",
+    "slug": "masha-hous-gj-3",
+    "name_english": "Masha",
+    "category": "weight",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "માષા (Masha)"
+    ],
+    "used_in": [
+      "Traditional weight for spices and medicinal ingredients."
+    ],
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "masha",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Māṣa",
+    "name_hindi": "माषा",
+    "meaning": "Traditional weight for spices and medicinal ingredients.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.97 g",
+    "conversion_formula": "8 Gunja = 1 Masha",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-hous-4",
+    "slug": "tola-hous-gj-4",
+    "name_english": "Tola",
+    "category": "weight",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "તોલા (Tola)"
+    ],
+    "used_in": [
+      "Used for measuring costly spices, ghee and jaggery."
+    ],
+    "references": [
+      "Bombay Presidency Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "tola",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Tulā",
+    "name_hindi": "तोला",
+    "meaning": "Used for measuring costly spices, ghee and jaggery.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "Traditional weight",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-hous-5",
+    "slug": "chhatak-hous-gj-5",
+    "name_english": "Chhatak",
+    "category": "weight",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "છટાક (Chhatak)"
+    ],
+    "used_in": [
+      "Used for flour, sugar, pulses and cereals."
+    ],
+    "references": [
+      "Bombay Presidency Manual"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "chhatak",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "छटाक",
+    "meaning": "Used for flour, sugar, pulses and cereals.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈58 g",
+    "conversion_formula": "16 Chhatak = 1 Sher",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-hous-6",
+    "slug": "pala-hous-gj-6",
+    "name_english": "Pala",
+    "category": "weight",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પલ (Pala)"
+    ],
+    "used_in": [
+      "Traditional unit for grains and cooking materials."
+    ],
+    "references": [
+      "Ayurvedic Texts"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "pala",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Pala",
+    "name_hindi": "पल",
+    "meaning": "Traditional unit for grains and cooking materials.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈48 g",
+    "conversion_formula": "4 Karsha = 1 Pala",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-hous-7",
+    "slug": "sher-hous-gj-7",
+    "name_english": "Sher",
+    "category": "weight",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "શેર (Sher)"
+    ],
+    "used_in": [
+      "Common household measure for flour, wheat and pulses."
+    ],
+    "references": [
+      "Bombay Gazetteer"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "sher",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Śeri",
+    "name_hindi": "शेर",
+    "meaning": "Common household measure for flour, wheat and pulses.",
+    "measurement_type": "Weight/Capacity",
+    "modern_equivalent": "≈0.93 kg",
+    "conversion_formula": "Standard market measure",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-hous-8",
+    "slug": "paili-hous-gj-8",
+    "name_english": "Paili",
+    "category": "volume",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પૈલી (Paili)"
+    ],
+    "used_in": [
+      "Measure widely used for cooking cereals and pulses."
+    ],
+    "references": [
+      "Gujarat Village Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "paili",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Prastha (related)",
+    "name_hindi": "पैली",
+    "meaning": "Measure widely used for cooking cereals and pulses.",
+    "measurement_type": "Capacity",
+    "modern_equivalent": "≈3–4 L (regional variation)",
+    "conversion_formula": "Traditional grain measure",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-hous-9",
+    "slug": "adholi-hous-gj-9",
+    "name_english": "Adholi",
+    "category": "volume",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અધોળી (Adholi)"
+    ],
+    "used_in": [
+      "Medium grain measure used in homes."
+    ],
+    "references": [
+      "Revenue Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "adholi",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "अधोली",
+    "meaning": "Medium grain measure used in homes.",
+    "measurement_type": "Capacity",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "2 Paili = 1 Adholi",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-hous-10",
+    "slug": "man-hous-gj-10",
+    "name_english": "Man",
+    "category": "weight",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "મણ (Man)"
+    ],
+    "used_in": [
+      "Traditional bulk storage for harvested grains in homes."
+    ],
+    "references": [
+      "Bombay Presidency Gazetteer"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "man",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Māna (related)",
+    "name_hindi": "मन",
+    "meaning": "Traditional bulk storage for harvested grains in homes.",
+    "measurement_type": "Bulk Capacity",
+    "modern_equivalent": "≈37.3 kg",
+    "conversion_formula": "40 Sher = 1 Man",
+    "historical_period": "Mughal–Colonial"
+  },
+  {
+    "id": "gj-hous-11",
+    "slug": "topli-hous-gj-11",
+    "name_english": "Topli",
+    "category": "volume",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ટોપલી (Topli)"
+    ],
+    "used_in": [
+      "Bamboo basket used for vegetables, fruits and grains."
+    ],
+    "references": [
+      "Gujarat Rural Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "topli",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "टोपली",
+    "meaning": "Bamboo basket used for vegetables, fruits and grains.",
+    "measurement_type": "Basket Measure",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Basket measure",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-hous-12",
+    "slug": "guni-hous-gj-12",
+    "name_english": "Guni",
+    "category": "volume",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગુણી (Guni)"
+    ],
+    "used_in": [
+      "Traditional sack used for storing wheat, millet and pulses."
+    ],
+    "references": [
+      "Agricultural Market Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "guni",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "गुणी",
+    "meaning": "Traditional sack used for storing wheat, millet and pulses.",
+    "measurement_type": "Sack Measure",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Sack measure",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-hous-13",
+    "slug": "potlu-hous-gj-13",
+    "name_english": "Potlu",
+    "category": "volume",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પોટલું (Potlu)"
+    ],
+    "used_in": [
+      "Cloth bundle used to store grains, spices and household items."
+    ],
+    "references": [
+      "Village Customs"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "potlu",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "पोटली",
+    "meaning": "Cloth bundle used to store grains, spices and household items.",
+    "measurement_type": "Storage Bundle",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Cloth bundle",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-hous-14",
+    "slug": "handi-hous-gj-14",
+    "name_english": "Handi",
+    "category": "volume",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "હાંડી (Handi)"
+    ],
+    "used_in": [
+      "Earthen or metal vessel used for preparing daily meals."
+    ],
+    "references": [
+      "Gujarat Household Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "handi",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Handī",
+    "name_hindi": "हांडी",
+    "meaning": "Earthen or metal vessel used for preparing daily meals.",
+    "measurement_type": "Vessel Measure",
+    "modern_equivalent": "≈2–5 L (varies)",
+    "conversion_formula": "Cooking pot",
+    "historical_period": "Ancient–Modern"
+  },
+  {
+    "id": "gj-hous-15",
+    "slug": "ghado-hous-gj-15",
+    "name_english": "Ghado",
+    "category": "volume",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ઘડો (Ghado)"
+    ],
+    "used_in": [
+      "Traditional earthen or brass pot for storing drinking water."
+    ],
+    "references": [
+      "Gujarat Rural Customs"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "ghado",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Ghaṭa",
+    "name_hindi": "घड़ा",
+    "meaning": "Traditional earthen or brass pot for storing drinking water.",
+    "measurement_type": "Water Vessel",
+    "modern_equivalent": "≈10–15 L (regional variation)",
+    "conversion_formula": "Water pot",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-hous-16",
+    "slug": "kalash-hous-gj-16",
+    "name_english": "Kalash",
+    "category": "volume",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કળશ (Kalash)"
+    ],
+    "used_in": [
+      "Metal vessel used for water storage and religious ceremonies."
+    ],
+    "references": [
+      "Dharmashastra Texts"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "kalash",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Kalaśa",
+    "name_hindi": "कलश",
+    "meaning": "Metal vessel used for water storage and religious ceremonies.",
+    "measurement_type": "Storage Vessel",
+    "modern_equivalent": "≈5–10 L (varies)",
+    "conversion_formula": "Metal/earthen storage vessel",
+    "historical_period": "Ancient–Modern"
+  },
+  {
+    "id": "gj-hous-17",
+    "slug": "dabbo-hous-gj-17",
+    "name_english": "Dabbo",
+    "category": "volume",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ડબ્બો (Dabbo)"
+    ],
+    "used_in": [
+      "Metal container used to store flour, spices and grains."
+    ],
+    "references": [
+      "Household Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "dabbo",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "डिब्बा",
+    "meaning": "Metal container used to store flour, spices and grains.",
+    "measurement_type": "Storage Container",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Metal container",
+    "historical_period": "Colonial–Modern"
+  },
+  {
+    "id": "gj-hous-18",
+    "slug": "bhara-hous-gj-18",
+    "name_english": "Bhara",
+    "category": "weight",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ભારો (Bhara)"
+    ],
+    "used_in": [
+      "Standard load carried manually from farms or markets to homes."
+    ],
+    "references": [
+      "Rural Labour Practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "bhara",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Bhāra",
+    "name_hindi": "भारा",
+    "meaning": "Standard load carried manually from farms or markets to homes.",
+    "measurement_type": "Load Measure",
+    "modern_equivalent": "≈20–30 kg (regional variation)",
+    "conversion_formula": "One head-load",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-hous-19",
+    "slug": "kothar-hous-gj-19",
+    "name_english": "Kothar",
+    "category": "volume",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કોઠાર (Kothar)"
+    ],
+    "used_in": [
+      "Traditional mud or wooden granary for storing harvested crops."
+    ],
+    "references": [
+      "Rural Architecture Studies"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "kothar",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Koṣṭhāgāra",
+    "name_hindi": "कोठार",
+    "meaning": "Traditional mud or wooden granary for storing harvested crops.",
+    "measurement_type": "Granary",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Household grain storage",
+    "historical_period": "Ancient–Modern"
+  },
+  {
+    "id": "gj-hous-20",
+    "slug": "dhanya-kothar-hous-gj-20",
+    "name_english": "Dhanya Kothar",
+    "category": "volume",
+    "sector": "household",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ધાન્ય કોઠાર (Dhanya Kothar)"
+    ],
+    "used_in": [
+      "Large granary used for preserving grain for long periods."
+    ],
+    "references": [
+      "Gujarat Revenue Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "household",
+      "dhanya-kothar",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Dhānya Koṣṭhāgāra",
+    "name_hindi": "धान्य कोठार",
+    "meaning": "Large granary used for preserving grain for long periods.",
+    "measurement_type": "Granary",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Largest storage structure",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-curr-1",
+    "slug": "gunja-curr-gj-1",
+    "name_english": "Gunja",
+    "category": "weight",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગુંજા (Gunja)"
+    ],
+    "used_in": [
+      "Gunja seed used by moneychangers and goldsmiths for weighing gold and precious metals."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "gunja",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Guñjā (Raktikā)",
+    "name_hindi": "गुंजा",
+    "meaning": "Gunja seed used by moneychangers and goldsmiths for weighing gold and precious metals.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.1215 g",
+    "conversion_formula": "Seed weight",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-curr-2",
+    "slug": "ratti-curr-gj-2",
+    "name_english": "Ratti",
+    "category": "weight",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "રત્તી (Ratti)"
+    ],
+    "used_in": [
+      "Standard jeweller's weight for precious metals and gems."
+    ],
+    "references": [
+      "Arthashastra"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "ratti",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Raktikā",
+    "name_hindi": "रत्ती",
+    "meaning": "Standard jeweller's weight for precious metals and gems.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.1215 g",
+    "conversion_formula": "Equivalent to Gunja seed",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-curr-3",
+    "slug": "masha-curr-gj-3",
+    "name_english": "Masha",
+    "category": "weight",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "માષા (Masha)"
+    ],
+    "used_in": [
+      "Traditional weight used for gold, silver and bullion trade."
+    ],
+    "references": [
+      "Sushruta Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "masha",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Māṣa",
+    "name_hindi": "माषा",
+    "meaning": "Traditional weight used for gold, silver and bullion trade.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈0.97 g",
+    "conversion_formula": "8 Ratti = 1 Masha",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-curr-4",
+    "slug": "karsha-curr-gj-4",
+    "name_english": "Karsha",
+    "category": "weight",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કર્ષ (Karsha)"
+    ],
+    "used_in": [
+      "Standard commercial weight for silver and gold."
+    ],
+    "references": [
+      "Charaka Samhita"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "karsha",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Karṣa",
+    "name_hindi": "कर्ष",
+    "meaning": "Standard commercial weight for silver and gold.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈12 g",
+    "conversion_formula": "12 Masha = 1 Karsha",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-curr-5",
+    "slug": "tola-curr-gj-5",
+    "name_english": "Tola",
+    "category": "weight",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "તોલા (Tola)"
+    ],
+    "used_in": [
+      "Standard weight used by jewellers and bullion merchants."
+    ],
+    "references": [
+      "Bombay Presidency Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "tola",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Tulā",
+    "name_hindi": "तोला",
+    "meaning": "Standard weight used by jewellers and bullion merchants.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "Traditional weight unit",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-curr-6",
+    "slug": "pala-curr-gj-6",
+    "name_english": "Pala",
+    "category": "weight",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પલ (Pala)"
+    ],
+    "used_in": [
+      "Larger weight used in commercial transactions."
+    ],
+    "references": [
+      "Ayurvedic Texts"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "pala",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Pala",
+    "name_hindi": "पल",
+    "meaning": "Larger weight used in commercial transactions.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈48 g",
+    "conversion_formula": "4 Karsha = 1 Pala",
+    "historical_period": "Ancient"
+  },
+  {
+    "id": "gj-curr-7",
+    "slug": "dam-curr-gj-7",
+    "name_english": "Dam",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "દામ (Dam)"
+    ],
+    "used_in": [
+      "Small copper coin used in village markets."
+    ],
+    "references": [
+      "Mughal Coin System"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "dam",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Dāma",
+    "name_hindi": "दाम",
+    "meaning": "Small copper coin used in village markets.",
+    "measurement_type": "Coin",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Copper coin",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-curr-8",
+    "slug": "paisa-curr-gj-8",
+    "name_english": "Paisa",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પૈસા (Paisa)"
+    ],
+    "used_in": [
+      "Common denomination used in local trade."
+    ],
+    "references": [
+      "Bombay Presidency Manual"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "paisa",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Paisa",
+    "name_hindi": "पैसा",
+    "meaning": "Common denomination used in local trade.",
+    "measurement_type": "Coin Value",
+    "modern_equivalent": "Historic fractional value",
+    "conversion_formula": "Fractional coin",
+    "historical_period": "Colonial"
+  },
+  {
+    "id": "gj-curr-9",
+    "slug": "anna-curr-gj-9",
+    "name_english": "Anna",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "આના (Anna)"
+    ],
+    "used_in": [
+      "Standard subdivision of the rupee in British India."
+    ],
+    "references": [
+      "British Indian Currency System"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "anna",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "आना",
+    "meaning": "Standard subdivision of the rupee in British India.",
+    "measurement_type": "Coin Value",
+    "modern_equivalent": "1/16th Rupee",
+    "conversion_formula": "16 Anna = 1 Rupiya",
+    "historical_period": "Colonial"
+  },
+  {
+    "id": "gj-curr-10",
+    "slug": "dokdo-curr-gj-10",
+    "name_english": "Dokdo",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ડોકડો (Dokdo)"
+    ],
+    "used_in": [
+      "Traditional copper coin minted in Kutch and Saurashtra."
+    ],
+    "references": [
+      "Princely State Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "dokdo",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "डोकडो",
+    "meaning": "Traditional copper coin minted in Kutch and Saurashtra.",
+    "measurement_type": "Coin",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Traditional copper coin",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-curr-11",
+    "slug": "dhinglo-curr-gj-11",
+    "name_english": "Dhinglo",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ઢીંગલો (Dhinglo)"
+    ],
+    "used_in": [
+      "Copper coin used in Kutch and Saurashtra markets."
+    ],
+    "references": [
+      "Indian Numismatic Studies"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "dhinglo",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "ढिंगलो",
+    "meaning": "Copper coin used in Kutch and Saurashtra markets.",
+    "measurement_type": "Coin",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Regional copper coin",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-curr-12",
+    "slug": "mahamudi-curr-gj-12",
+    "name_english": "Mahamudi",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "મહમૂદી (Mahamudi)"
+    ],
+    "used_in": [
+      "Famous silver coin minted by Gujarat Sultanate, widely accepted across western India."
+    ],
+    "references": [
+      "Gujarat Sultanate Coinage"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "mahamudi",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Mahmūdī",
+    "name_hindi": "महमूदी",
+    "meaning": "Famous silver coin minted by Gujarat Sultanate, widely accepted across western India.",
+    "measurement_type": "Silver Coin",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Regional silver coin",
+    "historical_period": "Sultanate–Mughal"
+  },
+  {
+    "id": "gj-curr-13",
+    "slug": "kori-curr-gj-13",
+    "name_english": "Kori",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કોરી (Kori)"
+    ],
+    "used_in": [
+      "Traditional silver / copper coin minted in Kutch and western Gujarat."
+    ],
+    "references": [
+      "Kutch State Coin Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "kori",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "कोरी",
+    "meaning": "Traditional silver / copper coin minted in Kutch and western Gujarat.",
+    "measurement_type": "Coin",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Regional denomination",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-curr-14",
+    "slug": "mohur-curr-gj-14",
+    "name_english": "Mohur",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "મોહોર (Mohur)"
+    ],
+    "used_in": [
+      "Gold coin used in major commercial and overseas trade."
+    ],
+    "references": [
+      "Indian Numismatic Studies"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "mohur",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Mudrā",
+    "name_hindi": "मोहर",
+    "meaning": "Gold coin used in major commercial and overseas trade.",
+    "measurement_type": "Gold Coin",
+    "modern_equivalent": "≈10.8–11 g gold",
+    "conversion_formula": "High-value gold coin",
+    "historical_period": "Mughal–Colonial"
+  },
+  {
+    "id": "gj-curr-15",
+    "slug": "rupiya-curr-gj-15",
+    "name_english": "Rupiya",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "રૂપિયો (Rupiya)"
+    ],
+    "used_in": [
+      "Principal monetary unit used across Gujarat's ports and markets."
+    ],
+    "references": [
+      "Bombay Presidency Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "rupiya",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Rūpya",
+    "name_hindi": "रुपया",
+    "meaning": "Principal monetary unit used across Gujarat's ports and markets.",
+    "measurement_type": "Silver Coin",
+    "modern_equivalent": "Historic silver standard",
+    "conversion_formula": "16 Anna = 1 Rupiya",
+    "historical_period": "Mughal–Colonial"
+  },
+  {
+    "id": "gj-curr-16",
+    "slug": "ashrafi-curr-gj-16",
+    "name_english": "Ashrafi",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અશરફી (Ashrafi)"
+    ],
+    "used_in": [
+      "High-value gold coin used by wealthy merchants and nobles."
+    ],
+    "references": [
+      "Mughal Coin Catalogue"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "ashrafi",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Ashrafī",
+    "name_hindi": "अशरफ़ी",
+    "meaning": "High-value gold coin used by wealthy merchants and nobles.",
+    "measurement_type": "Gold Coin",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Precious gold coin",
+    "historical_period": "Mughal"
+  },
+  {
+    "id": "gj-curr-17",
+    "slug": "hundi-curr-gj-17",
+    "name_english": "Hundi",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "હૂંડી (Hundi)"
+    ],
+    "used_in": [
+      "Traditional bill of exchange used by Gujarat merchants for domestic and overseas trade."
+    ],
+    "references": [
+      "Gujarat Merchant Records; Bombay Presidency Archives"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "hundi",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Huṇḍikā",
+    "name_hindi": "हुंडी",
+    "meaning": "Traditional bill of exchange used by Gujarat merchants for domestic and overseas trade.",
+    "measurement_type": "Financial Instrument",
+    "modern_equivalent": "Not applicable",
+    "conversion_formula": "Credit note / draft",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-curr-18",
+    "slug": "dakshina-curr-gj-18",
+    "name_english": "Dakshina",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "દક્ષિણા (Dakshina)"
+    ],
+    "used_in": [
+      "Monetary offering given to priests, scholars and temples."
+    ],
+    "references": [
+      "Dharmashastra Texts"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "dakshina",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Dakṣiṇā",
+    "name_hindi": "दक्षिणा",
+    "meaning": "Monetary offering given to priests, scholars and temples.",
+    "measurement_type": "Ritual Offering",
+    "modern_equivalent": "Not standardized",
+    "conversion_formula": "Traditional offering",
+    "historical_period": "Ancient–Colonial"
+  },
+  {
+    "id": "gj-curr-19",
+    "slug": "nazrana-curr-gj-19",
+    "name_english": "Nazrana",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "નઝરાણું (Nazrana)"
+    ],
+    "used_in": [
+      "Ceremonial payment or tribute presented to rulers, nawabs and chiefs."
+    ],
+    "references": [
+      "Historical Land Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "nazrana",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Nazrānā",
+    "name_hindi": "नज़राना",
+    "meaning": "Ceremonial payment or tribute presented to rulers, nawabs and chiefs.",
+    "measurement_type": "Tribute / Payment",
+    "modern_equivalent": "Not standardized",
+    "conversion_formula": "Royal gift/tax",
+    "historical_period": "Sultanate–Colonial"
+  },
+  {
+    "id": "gj-curr-20",
+    "slug": "khata-curr-gj-20",
+    "name_english": "Khata",
+    "category": "currency",
+    "sector": "currency-money",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ખાતું (Khata)"
+    ],
+    "used_in": [
+      "Traditional accounting unit used by merchants for tracking trade, credit and currency balances."
+    ],
+    "references": [
+      "Gujarat Merchant Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "currency-money",
+      "khata",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Pattra",
+    "name_hindi": "खाता",
+    "meaning": "Traditional accounting unit used by merchants for tracking trade, credit and currency balances.",
+    "measurement_type": "Financial Unit",
+    "modern_equivalent": "Not applicable",
+    "conversion_formula": "Ledger / account unit",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-stor-1",
+    "slug": "paili-stor-gj-1",
+    "name_english": "Paili",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પૈલી (Paili)"
+    ],
+    "used_in": [
+      "Grain measure widely used in village storage and transport of grains."
+    ],
+    "references": [
+      "Bombay Presidency Gazetteer"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "paili",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Prastha (related)",
+    "name_hindi": "पैली",
+    "meaning": "Grain measure widely used in village storage and transport of grains.",
+    "measurement_type": "Capacity",
+    "modern_equivalent": "≈3–4 L (regional variation)",
+    "conversion_formula": "Basic grain measure",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-stor-2",
+    "slug": "adholi-stor-gj-2",
+    "name_english": "Adholi",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અધોળી (Adholi)"
+    ],
+    "used_in": [
+      "Medium grain measure used by farmers and merchants."
+    ],
+    "references": [
+      "Gujarat Revenue Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "adholi",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "अधोली",
+    "meaning": "Medium grain measure used by farmers and merchants.",
+    "measurement_type": "Capacity",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "2 Paili = 1 Adholi",
+    "historical_period": "Medieval"
+  },
+  {
+    "id": "gj-stor-3",
+    "slug": "sher-stor-gj-3",
+    "name_english": "Sher",
+    "category": "weight",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "શેર (Sher)"
+    ],
+    "used_in": [
+      "Standard measure for wheat, pulses and spices in transit."
+    ],
+    "references": [
+      "Bombay Presidency Manual"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "sher",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Śeri",
+    "name_hindi": "शेर",
+    "meaning": "Standard measure for wheat, pulses and spices in transit.",
+    "measurement_type": "Weight/Capacity",
+    "modern_equivalent": "≈0.93 kg",
+    "conversion_formula": "Standard market measure",
+    "historical_period": "Sultanate–Colonial"
+  },
+  {
+    "id": "gj-stor-4",
+    "slug": "man-stor-gj-4",
+    "name_english": "Man",
+    "category": "weight",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "મણ (Man)"
+    ],
+    "used_in": [
+      "Standard wholesale unit for grain storage and cart loads."
+    ],
+    "references": [
+      "Bombay Presidency Gazetteer"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "man",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Māna (related)",
+    "name_hindi": "मन",
+    "meaning": "Standard wholesale unit for grain storage and cart loads.",
+    "measurement_type": "Weight",
+    "modern_equivalent": "≈37.3 kg",
+    "conversion_formula": "40 Sher = 1 Man",
+    "historical_period": "Mughal–Colonial"
+  },
+  {
+    "id": "gj-stor-5",
+    "slug": "khandi-stor-gj-5",
+    "name_english": "Khandi",
+    "category": "weight",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ખાંડી (Khandi)"
+    ],
+    "used_in": [
+      "Large commercial storage unit for cotton, grain and pulses."
+    ],
+    "references": [
+      "Revenue Administration Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "khandi",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Khaṇḍī",
+    "name_hindi": "खांडी",
+    "meaning": "Large commercial storage unit for cotton, grain and pulses.",
+    "measurement_type": "Bulk Weight",
+    "modern_equivalent": "≈746 kg (regional variation)",
+    "conversion_formula": "20 Man = 1 Khandi (regional variation)",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-stor-6",
+    "slug": "guni-stor-gj-6",
+    "name_english": "Guni",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગુણી (Guni)"
+    ],
+    "used_in": [
+      "Traditional jute/cloth sack used for transporting grains and pulses."
+    ],
+    "references": [
+      "Agricultural Market Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "guni",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "गुणी",
+    "meaning": "Traditional jute/cloth sack used for transporting grains and pulses.",
+    "measurement_type": "Sack Measure",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Sack measure",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-stor-7",
+    "slug": "potlu-stor-gj-7",
+    "name_english": "Potlu",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પોટલું (Potlu)"
+    ],
+    "used_in": [
+      "Cloth bundle used in carrying harvested produce."
+    ],
+    "references": [
+      "Village Customs"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "potlu",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "पोटली",
+    "meaning": "Cloth bundle used in carrying harvested produce.",
+    "measurement_type": "Storage Bundle",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Cloth bundle",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-stor-8",
+    "slug": "topli-stor-gj-8",
+    "name_english": "Topli",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ટોપલી (Topli)"
+    ],
+    "used_in": [
+      "Bamboo basket used to transport vegetables, fruits and grains."
+    ],
+    "references": [
+      "Gujarat Rural Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "topli",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "टोपली",
+    "meaning": "Bamboo basket used to transport vegetables, fruits and grains.",
+    "measurement_type": "Basket Measure",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Basket measure",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-stor-9",
+    "slug": "bhara-stor-gj-9",
+    "name_english": "Bhara",
+    "category": "weight",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ભારો (Bhara)"
+    ],
+    "used_in": [
+      "Standard load carried manually from fields to storage or village homes."
+    ],
+    "references": [
+      "Rural Labour Practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "bhara",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Bhāra",
+    "name_hindi": "भारा",
+    "meaning": "Standard load carried manually from fields to storage or village homes.",
+    "measurement_type": "Load Measure",
+    "modern_equivalent": "≈20–30 kg (regional variation)",
+    "conversion_formula": "One head-load",
+    "historical_period": "Traditional"
+  },
+  {
+    "id": "gj-stor-10",
+    "slug": "balgadli-bhar-stor-gj-10",
+    "name_english": "Balgadli Bhar",
+    "category": "weight",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "બળદગાડું ભાર (Balgadli Bhar)"
+    ],
+    "used_in": [
+      "Quantity transported by traditional bullock cart."
+    ],
+    "references": [
+      "Rural Transport Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "balgadli-bhar",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "बैलगाड़ी भार",
+    "meaning": "Quantity transported by traditional bullock cart.",
+    "measurement_type": "Cart Load",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Bullock-cart load",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-stor-11",
+    "slug": "oont-gadi-bhar-stor-gj-11",
+    "name_english": "Oont Gadi Bhar",
+    "category": "weight",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ઊંટગાડી ભાર (Oont Gadi Bhar)"
+    ],
+    "used_in": [
+      "Traditional load carried by camel carts in Kutch and north Gujarat."
+    ],
+    "references": [
+      "Farm Transport Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "oont-gadi-bhar",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "ऊंटगाड़ी भार",
+    "meaning": "Traditional load carried by camel carts in Kutch and north Gujarat.",
+    "measurement_type": "Cart Load",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Camel cart load",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-stor-12",
+    "slug": "kothar-stor-gj-12",
+    "name_english": "Kothar",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કોઠાર (Kothar)"
+    ],
+    "used_in": [
+      "Traditional mud or wooden granary for storing harvested grain."
+    ],
+    "references": [
+      "Rural Architecture Studies"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "kothar",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Koṣṭhāgāra",
+    "name_hindi": "कोठार",
+    "meaning": "Traditional mud or wooden granary for storing harvested grain.",
+    "measurement_type": "Granary",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Granary structure",
+    "historical_period": "Ancient–Modern"
+  },
+  {
+    "id": "gj-stor-13",
+    "slug": "dhanya-kothar-stor-gj-13",
+    "name_english": "Dhanya Kothar",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ધાન્ય કોઠાર (Dhanya Kothar)"
+    ],
+    "used_in": [
+      "Large communal granary structure."
+    ],
+    "references": [
+      "Gujarat Revenue Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "dhanya-kothar",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Dhānya Koṣṭhāgāra",
+    "name_hindi": "ધાન્ય કોઠાર",
+    "meaning": "Large communal granary structure.",
+    "measurement_type": "Granary",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Large granary",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-stor-14",
+    "slug": "dabbo-stor-gj-14",
+    "name_english": "Dabbo",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ડબ્બો (Dabbo)"
+    ],
+    "used_in": [
+      "Metal container used for grains, flour and spices."
+    ],
+    "references": [
+      "Household Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "dabbo",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "डिब्बा",
+    "meaning": "Metal container used for grains, flour and spices.",
+    "measurement_type": "Storage Container",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Metal container",
+    "historical_period": "Colonial–Modern"
+  },
+  {
+    "id": "gj-stor-15",
+    "slug": "handi-stor-gj-15",
+    "name_english": "Handi",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "હાંડી (Handi)"
+    ],
+    "used_in": [
+      "Earthen or metal pot used for storing cooked food, milk, oil etc."
+    ],
+    "references": [
+      "Gujarat Household Traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "handi",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Handī",
+    "name_hindi": "हांडी",
+    "meaning": "Earthen or metal pot used for storing cooked food, milk, oil etc.",
+    "measurement_type": "Storage Vessel",
+    "modern_equivalent": "≈2–5 L (varies)",
+    "conversion_formula": "Earthen pot",
+    "historical_period": "Ancient–Modern"
+  },
+  {
+    "id": "gj-stor-16",
+    "slug": "ghado-stor-gj-16",
+    "name_english": "Ghado",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ઘડો (Ghado)"
+    ],
+    "used_in": [
+      "Traditional earthen or brass pot used for carrying drinking water."
+    ],
+    "references": [
+      "Gujarat Rural Customs"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "ghado",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Ghaṭa",
+    "name_hindi": "घड़ा",
+    "meaning": "Traditional earthen or brass pot used for carrying drinking water.",
+    "measurement_type": "Water Vessel",
+    "modern_equivalent": "≈10–15 L (regional variation)",
+    "conversion_formula": "Earthen pot",
+    "historical_period": "Medieval–Modern"
+  },
+  {
+    "id": "gj-stor-17",
+    "slug": "kalash-stor-gj-17",
+    "name_english": "Kalash",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કળશ (Kalash)"
+    ],
+    "used_in": [
+      "Metal vessel used for water storage and ceremonial purposes."
+    ],
+    "references": [
+      "Dharmashastra Texts"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "kalash",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Kalaśa",
+    "name_hindi": "कलश",
+    "meaning": "Metal vessel used for water storage and ceremonial purposes.",
+    "measurement_type": "Storage Vessel",
+    "modern_equivalent": "≈5–10 L (varies)",
+    "conversion_formula": "Metal/earthen storage vessel",
+    "historical_period": "Ancient–Modern"
+  },
+  {
+    "id": "gj-stor-18",
+    "slug": "bale-stor-gj-18",
+    "name_english": "Bale",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગાંસ (Bale)"
+    ],
+    "used_in": [
+      "Standard cotton bale pressed for export through Surat and Bharuch ports."
+    ],
+    "references": [
+      "Bombay Trade Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "bale",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "गांठ",
+    "meaning": "Standard cotton bale pressed for export through Surat and Bharuch ports.",
+    "measurement_type": "Bulk Transport",
+    "modern_equivalent": "Commodity dependent",
+    "conversion_formula": "Compressed textile bundle",
+    "historical_period": "Colonial"
+  },
+  {
+    "id": "gj-stor-19",
+    "slug": "vahan-bhar-stor-gj-19",
+    "name_english": "Vahan Bhar",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "વહાણ ભાર (Vahan Bhar)"
+    ],
+    "used_in": [
+      "Large capacity of traditional dhows / boats recorded along Gujarat's sea routes (used by merchants for maritime trade)."
+    ],
+    "references": [
+      "Maritime Trade Records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "vahan-bhar",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Nau-bhāra (related)",
+    "name_hindi": "वहन भार",
+    "meaning": "Large capacity of traditional dhows / boats recorded along Gujarat's sea routes (used by merchants for maritime trade).",
+    "measurement_type": "Boat Load",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Cargo boat capacity",
+    "historical_period": "Medieval–Colonial"
+  },
+  {
+    "id": "gj-stor-20",
+    "slug": "godown-stor-gj-20",
+    "name_english": "Godown",
+    "category": "volume",
+    "sector": "storage-transport",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગોડાઉન (Godown)"
+    ],
+    "used_in": [
+      "Large storage facility used in ports and towns before domestic distribution and overseas export."
+    ],
+    "references": [
+      "Bombay Presidency Gazetteer"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "storage-transport",
+      "godown",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Koṣṭhāgāra",
+    "name_hindi": "गोदाम",
+    "meaning": "Large storage facility used in ports and towns before domestic distribution and overseas export.",
+    "measurement_type": "Warehouse Capacity",
+    "modern_equivalent": "Variable",
+    "conversion_formula": "Commercial warehouse",
+    "historical_period": "Colonial"
+  },
+  {
+    "id": "gj-live-1",
+    "slug": "ratti-live-gj-1",
+    "name_english": "Ratti",
+    "category": "weight",
+    "sector": "livestock-dairy",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "રતી (Ratti)"
+    ],
+    "used_in": [
+      "Used for measuring small quantities of medicines and valuable substances. Traditional small weight reference."
+    ],
+    "references": [
+      "Indian traditional weight systems"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "livestock-dairy",
+      "ratti",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Raktika (रक्तिका)",
+    "name_hindi": "रत्ती",
+    "meaning": "Used for measuring small quantities of medicines and valuable substances. Traditional small weight reference.",
+    "measurement_type": "Weight Measurement",
+    "modern_equivalent": "≈0.1215 g",
+    "conversion_formula": "Basic seed-based weight unit",
+    "historical_period": "Ancient period onwards"
+  },
+  {
+    "id": "gj-live-2",
+    "slug": "masha-live-gj-2",
+    "name_english": "Masha",
+    "category": "weight",
+    "sector": "livestock-dairy",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "માસા (Masha)"
+    ],
+    "used_in": [
+      "Used for veterinary medicines and herbal preparations. Small traditional weight unit."
+    ],
+    "references": [
+      "Classical measurement texts"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "livestock-dairy",
+      "masha",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Māṣa (माष)",
+    "name_hindi": "माषा",
+    "meaning": "Used for veterinary medicines and herbal preparations. Small traditional weight unit.",
+    "measurement_type": "Weight Measurement",
+    "modern_equivalent": "≈0.97 g",
+    "conversion_formula": "8 Ratti = 1 Masha",
+    "historical_period": "Ancient–Medieval period"
+  },
+  {
+    "id": "gj-live-3",
+    "slug": "tola-live-gj-3",
+    "name_english": "Tola",
+    "category": "weight",
+    "sector": "livestock-dairy",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "તોલા (Tola)"
+    ],
+    "used_in": [
+      "Used in trade and preparation of animal medicines. Traditional market weight unit."
+    ],
+    "references": [
+      "Traditional Indian weights"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "livestock-dairy",
+      "tola",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Tola (तोल)",
+    "name_hindi": "तोला",
+    "meaning": "Used in trade and preparation of animal medicines. Traditional market weight unit.",
+    "measurement_type": "Weight Measurement",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "12 Masha = 1 Tola",
+    "historical_period": "Medieval period onwards"
+  },
+  {
+    "id": "gj-live-4",
+    "slug": "pao-pav-live-gj-4",
+    "name_english": "Pao / Pav",
+    "category": "volume",
+    "sector": "livestock-dairy",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પાવ (Pao / Pav)"
+    ],
+    "used_in": [
+      "Used for milk products, butter and food items. Quarter measurement used in daily markets."
+    ],
+    "references": [
+      "Western Indian measurement practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "livestock-dairy",
+      "pao-pav",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "पाव",
+    "meaning": "Used for milk products, butter and food items. Quarter measurement used in daily markets.",
+    "measurement_type": "Weight / Volume Measurement",
+    "modern_equivalent": "≈230 g",
+    "conversion_formula": "4 Pao = 1 Seer",
+    "historical_period": "Medieval–Modern period"
+  },
+  {
+    "id": "gj-live-5",
+    "slug": "seer-sher-live-gj-5",
+    "name_english": "Seer / Sher",
+    "category": "volume",
+    "sector": "livestock-dairy",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "શેર (Seer / Sher)"
+    ],
+    "used_in": [
+      "Used for measuring milk, curd, ghee and grains. Most common traditional dairy trade unit."
+    ],
+    "references": [
+      "Market records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "livestock-dairy",
+      "seer-sher",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Śēr",
+    "name_hindi": "सेर / शेर",
+    "meaning": "Used for measuring milk, curd, ghee and grains. Most common traditional dairy trade unit.",
+    "measurement_type": "Weight / Volume Measurement",
+    "modern_equivalent": "≈0.93 kg or ~1 litre (varies)",
+    "conversion_formula": "Regional multiples of Pao",
+    "historical_period": "Medieval–Modern period"
+  },
+  {
+    "id": "gj-live-6",
+    "slug": "adhiya-live-gj-6",
+    "name_english": "Adhiya",
+    "category": "volume",
+    "sector": "livestock-dairy",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "અધિયા (Adhiya)"
+    ],
+    "used_in": [
+      "Used for small dairy quantities. Half measure used in household trade."
+    ],
+    "references": [
+      "Local practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "livestock-dairy",
+      "adhiya",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "अधिया",
+    "meaning": "Used for small dairy quantities. Half measure used in household trade.",
+    "measurement_type": "Volume Measurement",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Half-unit measure",
+    "historical_period": "Traditional period"
+  },
+  {
+    "id": "gj-live-7",
+    "slug": "shera-ser-live-gj-7",
+    "name_english": "Shera / Ser",
+    "category": "volume",
+    "sector": "livestock-dairy",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "શેરા (Shera / Ser)"
+    ],
+    "used_in": [
+      "Used for milk collection and exchange. Traditional village dairy measure."
+    ],
+    "references": [
+      "Dairy traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "livestock-dairy",
+      "shera-ser",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "शेरा / सेर",
+    "meaning": "Used for milk collection and exchange. Traditional village dairy measure.",
+    "measurement_type": "Volume Measurement",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Larger Seer-based measure",
+    "historical_period": "Historical period"
+  },
+  {
+    "id": "gj-live-8",
+    "slug": "paili-payli-live-gj-8",
+    "name_english": "Paili / Payli",
+    "category": "volume",
+    "sector": "livestock-dairy",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પાયલી (Paili / Payli)"
+    ],
+    "used_in": [
+      "Used for milk, grain and household liquids. Traditional measuring vessel."
+    ],
+    "references": [
+      "Regional measures"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "livestock-dairy",
+      "paili-payli",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "पैली",
+    "meaning": "Used for milk, grain and household liquids. Traditional measuring vessel.",
+    "measurement_type": "Volume Measurement",
+    "modern_equivalent": "≈1.5–2 litres (varies)",
+    "conversion_formula": "Vessel-based measure",
+    "historical_period": "Traditional period"
+  },
+  {
+    "id": "gj-live-9",
+    "slug": "kudav-kudva-live-gj-9",
+    "name_english": "Kudav / Kudva",
+    "category": "volume",
+    "sector": "livestock-dairy",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કુડવ (Kudav / Kudva)"
+    ],
+    "used_in": [
+      "Used for liquids including milk and ghee. Ancient Indian vessel measure."
+    ],
+    "references": [
+      "Indian vessel measures"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "livestock-dairy",
+      "kudav-kudva",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Kuḍava",
+    "name_hindi": "कुड़व",
+    "meaning": "Used for liquids including milk and ghee. Ancient Indian vessel measure.",
+    "measurement_type": "Volume Measurement",
+    "modern_equivalent": "≈1–2 litres (varies)",
+    "conversion_formula": "Traditional vessel measure",
+    "historical_period": "Ancient period onwards"
+  },
+  {
+    "id": "gj-live-10",
+    "slug": "matka-ghada-live-gj-10",
+    "name_english": "Matka / Ghada",
+    "category": "volume",
+    "sector": "livestock-dairy",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "મટકો / ઘડો (Matka / Ghada)"
+    ],
+    "used_in": [
+      "Used for storing and transporting milk. Earthen pot-based dairy storage measure."
+    ],
+    "references": [
+      "Village dairy practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "livestock-dairy",
+      "matka-ghada",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Ghaṭa",
+    "name_hindi": "मटका / घड़ा",
+    "meaning": "Used for storing and transporting milk. Earthen pot-based dairy storage measure.",
+    "measurement_type": "Volume Measurement",
+    "modern_equivalent": "≈5–15 litres (varies)",
+    "conversion_formula": "Large container measure",
+    "historical_period": "Traditional period"
+  },
+  {
+    "id": "gj-live-11",
+    "slug": "handi-live-gj-11",
+    "name_english": "Handi",
+    "category": "volume",
+    "sector": "livestock-dairy",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "હાંડી (Handi)"
+    ],
+    "used_in": [
+      "Used for bulk milk, curd and buttermilk storage. Large household dairy vessel."
+    ],
+    "references": [
+      "Local traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "livestock-dairy",
+      "handi",
+      "volume"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "हांडी",
+    "meaning": "Used for bulk milk, curd and buttermilk storage. Large household dairy vessel.",
+    "measurement_type": "Volume Measurement",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Larger vessel measure",
+    "historical_period": "Traditional period"
+  },
+  {
+    "id": "gj-gold-1",
+    "slug": "gunja-gold-gj-1",
+    "name_english": "Gunja",
+    "category": "weight",
+    "sector": "gold-jewellery",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ગુંજા (Gunja)"
+    ],
+    "used_in": [
+      "Used as a seed-based standard for gold and gemstone weighing. Natural seed used as traditional weight reference."
+    ],
+    "references": [
+      "Ancient Indian weight traditions"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "gold-jewellery",
+      "gunja",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Guñjā (गुञ्जा)",
+    "name_hindi": "गुंजा",
+    "meaning": "Used as a seed-based standard for gold and gemstone weighing. Natural seed used as traditional weight reference.",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "≈0.12 g",
+    "conversion_formula": "1 Gunja = 1 Ratti",
+    "historical_period": "Ancient period onwards"
+  },
+  {
+    "id": "gj-gold-2",
+    "slug": "ratti-gold-gj-2",
+    "name_english": "Ratti",
+    "category": "weight",
+    "sector": "gold-jewellery",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "રતી (Ratti)"
+    ],
+    "used_in": [
+      "Used by jewellers for diamonds, pearls and small gold pieces. One of the oldest jewellery weight units."
+    ],
+    "references": [
+      "Classical Indian measurement texts"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "gold-jewellery",
+      "ratti",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Raktikā (रक्तिका)",
+    "name_hindi": "रत्ती",
+    "meaning": "Used by jewellers for diamonds, pearls and small gold pieces. One of the oldest jewellery weight units.",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "≈0.1215 g",
+    "conversion_formula": "8 Ratti = 1 Masha",
+    "historical_period": "Ancient period onwards"
+  },
+  {
+    "id": "gj-gold-3",
+    "slug": "masha-gold-gj-3",
+    "name_english": "Masha",
+    "category": "weight",
+    "sector": "gold-jewellery",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "માસા (Masha)"
+    ],
+    "used_in": [
+      "Used for measuring small quantities of gold and silver. Intermediate precious metal weight."
+    ],
+    "references": [
+      "Indian traditional weight system"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "gold-jewellery",
+      "masha",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Māṣa (माष)",
+    "name_hindi": "माषा",
+    "meaning": "Used for measuring small quantities of gold and silver. Intermediate precious metal weight.",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "≈0.97 g",
+    "conversion_formula": "1 Masha = 8 Ratti",
+    "historical_period": "Ancient–Medieval period"
+  },
+  {
+    "id": "gj-gold-4",
+    "slug": "dharana-gold-gj-4",
+    "name_english": "Dharana",
+    "category": "weight",
+    "sector": "gold-jewellery",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "ધરણ (Dharana)"
+    ],
+    "used_in": [
+      "Used in classical metal trade and jewellery calculations. Ancient Indian precious metal unit."
+    ],
+    "references": [
+      "Sanskrit measurement references"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "gold-jewellery",
+      "dharana",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Dharaṇa (धरण)",
+    "name_hindi": "धरण",
+    "meaning": "Used in classical metal trade and jewellery calculations. Ancient Indian precious metal unit.",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "≈3–4 g (varies)",
+    "conversion_formula": "Traditional relation with Masha/Ratti",
+    "historical_period": "Ancient period"
+  },
+  {
+    "id": "gj-gold-5",
+    "slug": "panam-pana-gold-gj-5",
+    "name_english": "Panam / Pana",
+    "category": "currency",
+    "sector": "gold-jewellery",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પણમ / પણ (Panam / Pana)"
+    ],
+    "used_in": [
+      "Used for gold coins and jewellery transactions. Historical currency-weight unit."
+    ],
+    "references": [
+      "Historical coin records"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "gold-jewellery",
+      "panam-pana",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Pana (पण)",
+    "name_hindi": "पणम / पण",
+    "meaning": "Used for gold coins and jewellery transactions. Historical currency-weight unit.",
+    "measurement_type": "Coin & Gold Weight",
+    "modern_equivalent": "Varies",
+    "conversion_formula": "Regional value changes by period",
+    "historical_period": "Medieval period"
+  },
+  {
+    "id": "gj-gold-6",
+    "slug": "kori-kori-weight-gold-gj-6",
+    "name_english": "Kori / Kori Weight",
+    "category": "currency",
+    "sector": "gold-jewellery",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કોરી (Kori / Kori Weight)"
+    ],
+    "used_in": [
+      "Used in Gujarat trade systems, especially coastal commerce. Traditional monetary weight reference."
+    ],
+    "references": [
+      "Gujarat gold trade history"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "gold-jewellery",
+      "kori-kori-weight",
+      "currency"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "कोरी",
+    "meaning": "Used in Gujarat trade systems, especially coastal commerce. Traditional monetary weight reference.",
+    "measurement_type": "Coin / Precious Metal Weight",
+    "modern_equivalent": "Varies",
+    "conversion_formula": "Regional coin-based measure",
+    "historical_period": "Medieval–Modern period"
+  },
+  {
+    "id": "gj-gold-7",
+    "slug": "tola-gold-gj-7",
+    "name_english": "Tola",
+    "category": "weight",
+    "sector": "gold-jewellery",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "તોલા (Tola)"
+    ],
+    "used_in": [
+      "Main traditional gold trading unit before metric system. Standard jeweller weight across India."
+    ],
+    "references": [
+      "Traditional gold standards"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "gold-jewellery",
+      "tola",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Tola (तोल)",
+    "name_hindi": "तोला",
+    "meaning": "Main traditional gold trading unit before metric system. Standard jeweller weight across India.",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "12 Masha = 1 Tola = 96 Ratti",
+    "historical_period": "Medieval period"
+  },
+  {
+    "id": "gj-gold-8",
+    "slug": "vori-bhori-gold-gj-8",
+    "name_english": "Vori / Bhori",
+    "category": "weight",
+    "sector": "gold-jewellery",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "વોરી (Vori / Bhori)"
+    ],
+    "used_in": [
+      "Used by jewellers in western India. Regional name for Tola."
+    ],
+    "references": [
+      "Regional jeweller practices"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "gold-jewellery",
+      "vori-bhori",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_hindi": "वोरी / भोरी",
+    "meaning": "Used by jewellers in western India. Regional name for Tola.",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "≈11.66 g",
+    "conversion_formula": "Generally equal to Tola",
+    "historical_period": "Modern traditional period"
+  },
+  {
+    "id": "gj-gold-9",
+    "slug": "tulam-tola-larger-gold-gj-9",
+    "name_english": "Tulam / Tola Larger",
+    "category": "weight",
+    "sector": "gold-jewellery",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "તુલા (Tulam / Tola Larger)"
+    ],
+    "used_in": [
+      "Used for larger gold transactions. Derived from traditional weighing balance."
+    ],
+    "references": [
+      "Indian traditional weights"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "gold-jewellery",
+      "tulam-tola-larger",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Tulā (तुला)",
+    "name_hindi": "तुला",
+    "meaning": "Used for larger gold transactions. Derived from traditional weighing balance.",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "Regional variation",
+    "conversion_formula": "Balance-based larger weight",
+    "historical_period": "Ancient–Medieval period"
+  },
+  {
+    "id": "gj-gold-10",
+    "slug": "pala-gold-gj-10",
+    "name_english": "Pala",
+    "category": "weight",
+    "sector": "gold-jewellery",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "પળ (Pala)"
+    ],
+    "used_in": [
+      "Used for bulk precious metal measurement. Classical Indian weight unit."
+    ],
+    "references": [
+      "Sanskrit texts"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "gold-jewellery",
+      "pala",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Pala (पल)",
+    "name_hindi": "पल",
+    "meaning": "Used for bulk precious metal measurement. Classical Indian weight unit.",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "≈48 g (approx.)",
+    "conversion_formula": "Classical larger weight unit",
+    "historical_period": "Ancient period"
+  },
+  {
+    "id": "gj-gold-11",
+    "slug": "karsha-gold-gj-11",
+    "name_english": "Karsha",
+    "category": "weight",
+    "sector": "gold-jewellery",
+    "origin": "Gujarat",
+    "states": [
+      "Gujarat"
+    ],
+    "local_names": [
+      "કર્ષ (Karsha)"
+    ],
+    "used_in": [
+      "Used for metals and medicinal substances. Ancient Indian weight standard."
+    ],
+    "references": [
+      "Classical measurement literature"
+    ],
+    "tags": [
+      "gujarat",
+      "traditional-units",
+      "gold-jewellery",
+      "karsha",
+      "weight"
+    ],
+    "created_at": "2024-01-01",
+    "name_sanskrit": "Karṣa (कर्ष)",
+    "name_hindi": "कर्ष",
+    "meaning": "Used for metals and medicinal substances. Ancient Indian weight standard.",
+    "measurement_type": "Precious Metal Weight",
+    "modern_equivalent": "≈12 g (approx.)",
+    "conversion_formula": "1 Karsha = 16 Masha",
+    "historical_period": "Ancient period"
+  }
 ];

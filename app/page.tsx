@@ -12,7 +12,16 @@ const QUICK_LINKS = [
 ];
 
 export default function HomePage() {
-  const featuredMeasurements = SAMPLE_MEASUREMENTS.slice(0, 3);
+  // Hand-picked, different unit types that have accurate photos
+  const FEATURED_SLUGS = [
+    "ratti-trade-commerce-telangana",   // weight – Abrus (gunja) seeds
+    "padi-household-telangana",         // volume – traditional grain measure
+    "cowrie-kaudi-currency-telangana",  // currency – cowrie shell
+  ];
+  const picked = FEATURED_SLUGS
+    .map((slug) => SAMPLE_MEASUREMENTS.find((m) => m.slug === slug))
+    .filter((m): m is (typeof SAMPLE_MEASUREMENTS)[number] => Boolean(m));
+  const featuredMeasurements = picked.length === 3 ? picked : SAMPLE_MEASUREMENTS.slice(0, 3);
   const featuredSectors = SECTORS.slice(0, 6);
 
   return (
