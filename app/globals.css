@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FAF7F2;
+  --foreground: #2E2A26;
+  --primary: #6F4E37;
+  --primary-dark: #4A3426;
+  --accent: #B88646;
+  --border: #E8DED1;
+  --card: #FFFFFF;
+  --muted: #7A6E65;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Inter, system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.font-serif { font-family: Georgia, Cambria, "Times New Roman", serif; }
+
+.prose-content h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; }
+.prose-content h3 { font-size: 1.2rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+.prose-content p { margin-bottom: 1rem; line-height: 1.75; }
+.prose-content ul { margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #FAF7F2; }
+::-webkit-scrollbar-thumb { background: #E8DED1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #B88646; }
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid #6F4E37;
+  outline-offset: 2px;
+}
+
+/* Mascot Idle Animation */
+@keyframes mascot-bob {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-mascot-bob {
+  animation: mascot-bob 2.5s ease-in-out infinite;
+}
+
