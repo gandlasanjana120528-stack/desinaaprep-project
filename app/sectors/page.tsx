@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata = { title: "Sectors" };
 
 const EMOJI: Record<string, string> = {
+  "vedic-measurements": "📜",
   agriculture: "🌾", "trade-commerce": "⚖️", "currency-money": "🪙",
   architecture: "🏛️", medicine: "🌿", "textile-handloom": "🧵",
   household: "🏠", "storage-transport": "📦"

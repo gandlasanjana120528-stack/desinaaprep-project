@@ -28,6 +28,7 @@ import { MIZORAM_MEASUREMENTS } from "@/lib/mizoramData";
 import { CHHATTISGARH_MEASUREMENTS } from "@/lib/chhattisgarhData";
 import { TAMILNADU_MEASUREMENTS } from "@/lib/tamilnaduData";
 import { JK_MEASUREMENTS } from "@/lib/jkData";
+import { VEDIC_MEASUREMENTS } from "@/lib/vedicData";
 
 // ─── Base Sample Measurements ──────────────────────────────────────────────────
 
@@ -210,6 +211,7 @@ export const SAMPLE_MEASUREMENTS: Measurement[] = [
   ...CHHATTISGARH_MEASUREMENTS,
   ...TAMILNADU_MEASUREMENTS,
   ...JK_MEASUREMENTS,
+  ...VEDIC_MEASUREMENTS,
   ...BASE_SAMPLE_MEASUREMENTS
 ];
 
@@ -528,6 +530,8 @@ export const INDIAN_STATES: State[] = [
 // ─── Sectors ──────────────────────────────────────────────────────────────────
 
 export const SECTORS: Sector[] = [
+  { id: "vedic", slug: "vedic-measurements", name: "Vedic Measurements", icon: "Scroll", description: "Ancient canonical units across Length, Weight, Capacity, and Time codified in classical treatises", measurement_count: 40 },
+  { id: "agri", slug: "agriculture", name: "Seed & Crop (Agriculture)", icon: "Wheat", description: "Seed sowing quantities, grain harvest measures, and crop yield units", measurement_count: 84 },
   { id: "trade", slug: "trade-commerce", name: "Trade & Commerce", icon: "Store", description: "Weight and volume units for bazaar, mandi, and commercial trade", measurement_count: 67 },
   { id: "textile", slug: "textile-handloom", name: "Textile & Handloom", icon: "Scissors", description: "Length and count units for Banarasi silk, brocade, and loom weaving", measurement_count: 31 },
   { id: "med", slug: "medicine", name: "Medicine (Ayurveda)", icon: "Stethoscope", description: "Ayurvedic drug measures, dosage units, and herbo-mineral preparations", measurement_count: 39 },
@@ -537,7 +541,6 @@ export const SECTORS: Sector[] = [
   { id: "dairy", slug: "livestock-dairy", name: "Livestock & Dairy", icon: "Milk", description: "Milk, ghee, and khoya measures used by gwalas and dairy mandis", measurement_count: 18 },
   { id: "hh", slug: "household", name: "Household & Daily Life", icon: "Home", description: "Everyday cooking, handful, pinch, and utility vessel volume units", measurement_count: 45 },
   { id: "gold", slug: "gold-jewellery", name: "Gold & Jewellery", icon: "Gem", description: "Sunar gold, silver, gem weighing scales (Ratti, Tola, Suvarna)", measurement_count: 35 },
-  { id: "agri", slug: "agriculture", name: "Seed & Crop (Agriculture)", icon: "Wheat", description: "Seed sowing quantities, grain harvest measures, and crop yield units", measurement_count: 84 },
   { id: "currency", slug: "currency-money", name: "Currency & Money", icon: "Coins", description: "Mughal Dam, Rupee, Damri, Paisa, and monetary denominations", measurement_count: 48 },
   { id: "storage", slug: "storage-transport", name: "Storage & Transportation", icon: "Package", description: "Bulk granary storage, cartload, and warehouse consignment measures", measurement_count: 28 },
   { id: "relig", slug: "religious-cultural", name: "Religious & Cultural", icon: "Sparkles", description: "Panchang ritual time, Ghati, Pal, Muhurta, and sacred geography units", measurement_count: 30 }
@@ -570,6 +573,7 @@ export const SAMPLE_INFOGRAPHICS: Infographic[] = [
 export const CATEGORIES = [
   { value: "length", label: "Length" },
   { value: "weight", label: "Weight" },
+  { value: "capacity", label: "Capacity" },
   { value: "volume", label: "Volume" },
   { value: "area", label: "Area" },
   { value: "time", label: "Time" },
@@ -582,12 +586,13 @@ export const getCategoryColor = (category: string): string => {
   const map: Record<string, string> = {
     length: "bg-blue-100 text-blue-800",
     weight: "bg-green-100 text-green-800",
+    capacity: "bg-teal-100 text-teal-800",
     volume: "bg-purple-100 text-purple-800",
     area: "bg-orange-100 text-orange-800",
-    time: "bg-yellow-100 text-yellow-800",
+    time: "bg-amber-100 text-amber-800",
     currency: "bg-red-100 text-red-800",
     count: "bg-pink-100 text-pink-800",
     other: "bg-gray-100 text-gray-800"
   };
-  return map[category] || "bg-gray-100 text-gray-800";
+  return map[category?.toLowerCase()] || "bg-gray-100 text-gray-800";
 };

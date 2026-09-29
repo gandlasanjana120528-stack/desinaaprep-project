@@ -19,7 +19,8 @@ const NAV_LINKS = [
       { label: "Textile & Handloom", href: "/sectors/textile-handloom" },
       { label: "Currency & Money", href: "/sectors/currency-money" },
       { label: "Household", href: "/sectors/household" },
-      { label: "Storage & Transport", href: "/sectors/storage-transport" }
+      { label: "Storage & Transport", href: "/sectors/storage-transport" },
+      { label: "Vedic Measurements", href: "/sectors/vedic-measurements" }
     ]
   },
   { label: "Infographics", href: "/infographics" },

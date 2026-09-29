@@ -140,6 +140,7 @@ function nameKeys(name: string): string[] {
 
 /** Instant (no network) image – fixed Commons photos and own uploads. */
 export function getStaticImage(m: Measurement): MeasurementImage | null {
+  if (m.sector === "vedic-measurements" || m.tags?.includes("vedic-measurements") || m.tags?.includes("vedic")) return null;
   if (m.image_url) return { src: m.image_url, alt: m.image_alt || m.name_english, credit: m.image_credit };
   if (IMAGE_BY_SLUG[m.slug]) return IMAGE_BY_SLUG[m.slug];
   const keys = nameKeys(m.name_english);
@@ -153,11 +154,15 @@ export function getStaticImage(m: Measurement): MeasurementImage | null {
 
 /** Wikipedia articles to try (unit-specific first, then sector fallback). */
 export function getWikiCandidates(m: Measurement): { titles: string[]; generic: boolean } | null {
+  if (m.sector === "vedic-measurements" || m.tags?.includes("vedic-measurements") || m.tags?.includes("vedic")) return null;
   for (const k of nameKeys(m.name_english)) if (WIKI_TITLES[k]) return { titles: WIKI_TITLES[k], generic: false };
   return null;
 }
 
 export function getCategoryFallback(m: Measurement): { fixed: MeasurementImage | null; titles: string[] } {
+  if (m.sector === "vedic-measurements" || m.tags?.includes("vedic-measurements") || m.tags?.includes("vedic")) {
+    return { fixed: null, titles: [] };
+  }
   const c = (m.category || "").toLowerCase();
   return { fixed: IMAGE_BY_CATEGORY[c] ?? null, titles: CATEGORY_WIKI[c] ?? [] };
 }

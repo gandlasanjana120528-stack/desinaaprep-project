@@ -34,7 +34,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white text-sm mb-3">Sectors</h4>
             <ul className="space-y-2 text-sm text-[#C8B8A2]">
-              {[["Agriculture", "/sectors/agriculture"], ["Architecture", "/sectors/architecture"], ["Trade & Commerce", "/sectors/trade-commerce"], ["Medicine", "/sectors/medicine"], ["Textile & Handloom", "/sectors/textile-handloom"]].map(([label, href]) => (
+              {[["Vedic Measurements", "/sectors/vedic-measurements"], ["Agriculture", "/sectors/agriculture"], ["Architecture", "/sectors/architecture"], ["Trade & Commerce", "/sectors/trade-commerce"], ["Medicine", "/sectors/medicine"], ["Textile & Handloom", "/sectors/textile-handloom"]].map(([label, href]) => (
                 <li key={href}><Link href={href} className="hover:text-[#B88646] transition-colors">{label}</Link></li>
               ))}
             </ul>

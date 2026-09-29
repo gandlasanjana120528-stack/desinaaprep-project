@@ -1,75 +1,92 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useParams } from "next/navigation";
-import { getCategoryColor } from "@/lib/data";
+import { SAMPLE_MEASUREMENTS, getCategoryColor } from "@/lib/data";
 import Link from "next/link";
 import { ArrowLeft, MapPin, BookOpen, ChevronRight, Scale, Layers } from "lucide-react";
 import { db } from "@/lib/firebase/client";
-import { collection, doc, getDoc, getDocs, query, where, limit } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { Measurement } from "@/types";
 import { MeasurementFigure } from "@/components/measurements/MeasurementImage";
 
+function findMeasurement(slugOrId: string): Measurement | null {
+  if (!slugOrId) return null;
+  const raw = String(slugOrId).trim();
+  const lower = raw.toLowerCase();
+  let decoded = raw;
+  try {
+    decoded = decodeURIComponent(raw).toLowerCase().trim();
+  } catch {}
+
+  return (
+    SAMPLE_MEASUREMENTS.find(
+      (item) =>
+        item.slug === raw ||
+        item.id === raw ||
+        item.slug?.toLowerCase() === lower ||
+        item.id?.toLowerCase() === lower ||
+        item.slug?.toLowerCase() === decoded ||
+        item.id?.toLowerCase() === decoded ||
+        item.name_english?.toLowerCase() === decoded ||
+        item.name_sanskrit?.toLowerCase() === decoded
+    ) || null
+  );
+}
+
 export default function MeasurementDetailPage() {
   const params = useParams();
-  const slug = params?.id as string;
-  const [m, setM] = useState<Measurement | null>(null);
-  const [related, setRelated] = useState<Measurement[]>([]);
+  const rawParam = params?.id;
+  const slug = Array.isArray(rawParam) ? rawParam[0] : (rawParam as string);
+
+  const [m, setM] = useState<Measurement | null>(() => findMeasurement(slug));
   const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     if (!slug) return;
 
-    async function fetchData() {
+    // Check local dataset first
+    const localItem = findMeasurement(slug);
+    if (localItem) {
+      setM(localItem);
+      setNotFound(false);
+      return;
+    }
+
+    // Attempt Firebase fetch if not in local dataset
+    let dead = false;
+    async function fetchFromFirestore() {
       try {
-        let measurement: Measurement | null = null;
-
-        try {
-          const docRef = doc(db, "measurements", slug);
-          const snap = await getDoc(docRef);
-          if (snap.exists()) {
-            measurement = { id: snap.id, ...snap.data() } as Measurement;
-          }
-        } catch (e) {
-          console.warn("Firestore fetch error, falling back to local dataset:", e);
-        }
-
-        if (!measurement) {
-          const { SAMPLE_MEASUREMENTS } = await import("@/lib/data");
-          measurement =
-            SAMPLE_MEASUREMENTS.find(
-              (item) => item.slug === slug || item.id === slug
-            ) || null;
-        }
-
-        if (!measurement) {
-          setNotFound(true);
+        const docRef = doc(db, "measurements", slug);
+        const snap = await getDoc(docRef);
+        if (snap.exists() && !dead) {
+          setM({ id: snap.id, ...snap.data() } as Measurement);
+          setNotFound(false);
           return;
         }
-
-        setM(measurement);
-
-        // Fetch related measurements
-        try {
-          const { SAMPLE_MEASUREMENTS } = await import("@/lib/data");
-          const localRelated = SAMPLE_MEASUREMENTS.filter(
-            (item) =>
-              item.category === measurement!.category &&
-              item.slug !== measurement!.slug &&
-              item.id !== measurement!.id
-          ).slice(0, 3);
-          setRelated(localRelated);
-        } catch (e) {
-          console.error("Error fetching related measurements:", e);
-        }
-      } catch (err) {
-        console.error("Error fetching measurement:", err);
+      } catch (e) {
+        console.warn("Firestore fetch error:", e);
+      }
+      if (!dead) {
         setNotFound(true);
       }
     }
 
-    fetchData();
+    fetchFromFirestore();
+    return () => {
+      dead = true;
+    };
   }, [slug]);
+
+  const related = useMemo(() => {
+    if (!m) return [];
+    return SAMPLE_MEASUREMENTS.filter(
+      (item) =>
+        (item.sector === m.sector || item.category === m.category) &&
+        item.slug !== m.slug &&
+        item.id !== m.id
+    ).slice(0, 3);
+  }, [m]);
 
   if (notFound) {
     return (
@@ -95,9 +112,13 @@ export default function MeasurementDetailPage() {
       <nav className="flex items-center gap-2 text-xs text-[#A09080] mb-8">
         <Link href="/" className="hover:text-[#6F4E37]">Home</Link>
         <ChevronRight className="w-3 h-3" />
-        <Link href="/measurements" className="hover:text-[#6F4E37]">Measurements</Link>
+        <Link href="/sectors" className="hover:text-[#6F4E37]">Sectors</Link>
         <ChevronRight className="w-3 h-3" />
-        <span className="text-[#2E2A26]">{m.name_english}</span>
+        <Link href={m.sector === "vedic-measurements" ? "/sectors/vedic-measurements" : `/sectors/${m.sector}`} className="hover:text-[#6F4E37] capitalize">
+          {m.sector?.replace(/-/g, " ")}
+        </Link>
+        <ChevronRight className="w-3 h-3" />
+        <span className="text-[#2E2A26] font-medium">{m.name_english}</span>
       </nav>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -105,8 +126,10 @@ export default function MeasurementDetailPage() {
         <div className="lg:col-span-2">
           <div className="mb-6">
             <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${getCategoryColor(m.category)}`}>{m.category}</span>
-              <span className="text-xs text-[#7A6E65] bg-[#FAF7F2] px-2.5 py-1 rounded-full border border-[#E8DED1] capitalize">{m.sector}</span>
+              <span className={`text-xs font-medium px-2.5 py-1 rounded-full capitalize ${getCategoryColor(m.category)}`}>{m.category}</span>
+              <Link href={m.sector === "vedic-measurements" ? "/sectors/vedic-measurements" : `/sectors/${m.sector}`} className="text-xs text-[#7A6E65] bg-[#FAF7F2] px-2.5 py-1 rounded-full border border-[#E8DED1] capitalize hover:border-[#6F4E37] hover:text-[#2E2A26] transition-colors">
+                {m.sector?.replace(/-/g, " ")}
+              </Link>
             </div>
             <h1 className="font-serif text-4xl font-bold text-[#2E2A26] mb-2">{m.name_english}</h1>
             {m.name_sanskrit && <p className="text-xl text-[#6F4E37] font-serif mb-1">{m.name_sanskrit}</p>}
@@ -256,9 +279,20 @@ export default function MeasurementDetailPage() {
             </div>
           )}
 
-          <Link href="/measurements" className="flex items-center gap-1 text-sm text-[#6F4E37] font-medium px-5">
-            <ArrowLeft className="w-4 h-4" /> Back to Measurements
-          </Link>
+          <div className="space-y-2 px-1">
+            <Link
+              href={m.sector === "vedic-measurements" ? "/sectors/vedic-measurements" : `/sectors/${m.sector}`}
+              className="flex items-center gap-1.5 text-sm text-[#6F4E37] font-semibold hover:text-[#4A3426] transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" /> Back to {m.sector === "vedic-measurements" ? "Vedic Measurements" : "Sector"}
+            </Link>
+            <Link
+              href="/measurements"
+              className="block text-xs text-[#A09080] hover:text-[#6F4E37] transition-colors"
+            >
+              Browse all measurements →
+            </Link>
+          </div>
         </div>
       </div>
 

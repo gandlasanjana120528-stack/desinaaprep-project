@@ -172,7 +172,7 @@ export default function HomePage() {
                 className="bg-[#FAF7F2] border border-[#E8DED1] rounded-lg p-4 text-center hover:bg-white hover:border-[#B88646] hover:shadow-md transition-all group"
               >
                 <div className="text-2xl mb-2">
-                  {s.slug === "agriculture" ? "🌾" : s.slug === "trade-commerce" ? "⚖️" : s.slug === "architecture" ? "🏛️" : s.slug === "medicine" ? "🌿" : s.slug === "textile-handloom" ? "🧵" : s.slug === "currency-money" ? "🪙" : "📦"}
+                  {s.slug === "vedic-measurements" ? "📜" : s.slug === "agriculture" ? "🌾" : s.slug === "trade-commerce" ? "⚖️" : s.slug === "architecture" ? "🏛️" : s.slug === "medicine" ? "🌿" : s.slug === "textile-handloom" ? "🧵" : s.slug === "currency-money" ? "🪙" : "📦"}
                 </div>
                 <div className="font-medium text-sm text-[#2E2A26] group-hover:text-[#6F4E37]">{s.name}</div>
                 <div className="text-xs text-[#A09080] mt-1">{s.measurement_count} units</div>

@@ -6,8 +6,13 @@ import { type MeasurementImage, getStaticImage, getWikiCandidates, getCategoryFa
 import { resolveWikiImage } from "@/lib/wikiImage";
 
 function useMeasurementImage(m: Measurement): MeasurementImage | null {
-  const [img, setImg] = useState<MeasurementImage | null>(() => getStaticImage(m));
+  const isVedic = m.sector === "vedic-measurements" || m.tags?.includes("vedic-measurements") || m.tags?.includes("vedic");
+  const [img, setImg] = useState<MeasurementImage | null>(() => (isVedic ? null : getStaticImage(m)));
   useEffect(() => {
+    if (isVedic) {
+      setImg(null);
+      return;
+    }
     const fixed = getStaticImage(m);
     setImg(fixed);
     if (fixed) return;
@@ -26,8 +31,8 @@ function useMeasurementImage(m: Measurement): MeasurementImage | null {
       }
     })();
     return () => { dead = true; };
-  }, [m.slug, m.name_english, m.category]); // eslint-disable-line react-hooks/exhaustive-deps
-  return img;
+  }, [m.slug, m.name_english, m.category, isVedic]); // eslint-disable-line react-hooks/exhaustive-deps
+  return isVedic ? null : img;
 }
 
 const onErr = (img: MeasurementImage) => (e: SyntheticEvent<HTMLImageElement>) => {
