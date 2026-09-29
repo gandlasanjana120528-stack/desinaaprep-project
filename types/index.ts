@@ -24,6 +24,9 @@ export interface Measurement {
   image_url?: string;
   image_alt?: string;
   image_credit?: string;
+  historical_period?: string;
+  region_applicable?: string;
+  measurement_type?: string;
   created_at?: string;
   updated_at?: string;
 }

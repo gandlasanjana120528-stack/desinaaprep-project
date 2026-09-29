@@ -75,11 +75,15 @@ export default function AdminSidebar({ userEmail: initialEmail }: { userEmail: s
       >
         {/* Logo */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-[#B88646] rounded flex items-center justify-center">
-              <span className="text-white font-bold text-xs">D</span>
+          <Link href="/" className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg overflow-hidden border border-[#B88646]/40 shadow-sm flex-shrink-0 bg-white">
+              <img
+                src="/assets/logo-mark.jpg"
+                alt="DESINAAP Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <span className="font-bold text-sm text-white">DESINAAP Admin</span>
+            <span className="font-serif font-bold text-sm text-white">DESINAAP Admin</span>
           </Link>
           <button className="lg:hidden text-white/60 hover:text-white" onClick={() => setOpen(false)}>
             <X className="w-4 h-4" />

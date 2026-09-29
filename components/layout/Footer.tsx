@@ -6,12 +6,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-[#B88646] rounded flex items-center justify-center">
-                <span className="text-white font-bold text-sm">D</span>
+            <Link href="/" className="flex items-center gap-3 mb-4 group inline-flex">
+              <div className="w-9 h-9 rounded-lg overflow-hidden border border-[#B88646]/40 shadow-sm flex-shrink-0 bg-white">
+                <img
+                  src="/assets/logo-mark.jpg"
+                  alt="DESINAAP Logo"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                />
               </div>
-              <span className="font-bold text-white text-lg">DESINAAP</span>
-            </div>
+              <span className="font-serif font-bold text-white text-xl tracking-tight">DESINAAP</span>
+            </Link>
             <p className="text-sm text-[#C8B8A2] leading-relaxed mb-4">
               A digital platform for documenting, preserving, and exploring India's traditional measurement systems. Developed as part of the Indian Knowledge Systems (IKS) Internship.
             </p>

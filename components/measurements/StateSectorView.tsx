@@ -875,7 +875,7 @@ export default function StateSectorView({
                             (!isGoa && !isMaharashtra && !isAndhra && !isKarnataka) ? `${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder}` : "border"
                           }`}
                         >
-                          {m.measurement_type || m.category}
+                          {(m as any).measurement_type || m.category}
                         </span>
                       </td>
 
@@ -906,16 +906,16 @@ export default function StateSectorView({
                             {m.used_in.join(", ")}
                           </div>
                         )}
-                        {m.historical_period && (
+                        {(m as any).historical_period && (
                           <div className="mt-1 text-[10px] text-[#6B5E55]">
                             <span className="font-semibold text-[#4A3E39]">Historical Period:</span>{" "}
-                            {m.historical_period}
+                            {(m as any).historical_period}
                           </div>
                         )}
-                        {m.region_applicable && (
+                        {(m as any).region_applicable && (
                           <div className="mt-0.5 text-[10px] text-[#6B5E55]">
                             <span className="font-semibold text-[#4A3E39]">Region:</span>{" "}
-                            {m.region_applicable}
+                            {(m as any).region_applicable}
                           </div>
                         )}
                         {m.references && m.references.length > 0 && (
