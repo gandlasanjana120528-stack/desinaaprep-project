@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { CATEGORIES, SECTORS, getCategoryColor } from "@/lib/data";
+import { CATEGORIES, SECTORS, getCategoryColor, isExcludedMeasurement } from "@/lib/data";
 import { Search, Plus, Edit, Trash2, Eye, Filter } from "lucide-react";
 import Link from "next/link";
 import { db, auth } from "@/lib/firebase/client";
@@ -36,7 +36,8 @@ export default function AdminMeasurementsPage() {
       const querySnapshot = await getDocs(collection(db, "measurements"));
       const data: Measurement[] = [];
       querySnapshot.forEach((doc) => {
-        data.push({ id: doc.id, ...doc.data() } as Measurement);
+        const item = { id: doc.id, ...doc.data() } as Measurement;
+        if (!isExcludedMeasurement(item)) data.push(item);
       });
       setMeasurements(data);
     } catch (error) {

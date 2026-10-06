@@ -20,13 +20,13 @@ export default function Footer() {
               A digital platform for documenting, preserving, and exploring India's traditional measurement systems. Developed as part of the Indian Knowledge Systems (IKS) Internship.
             </p>
             <p className="text-xs text-[#A09080]">
-              © 2024 DESINAAP · Indian Knowledge Systems Initiative
+              © 2025 DESINAAP · IKS Internship Project, Ministry of Education
             </p>
           </div>
           <div>
             <h4 className="font-semibold text-white text-sm mb-3">Explore</h4>
             <ul className="space-y-2 text-sm text-[#C8B8A2]">
-              {[["Measurements", "/measurements"], ["Regions", "/regions"], ["Sectors", "/sectors"], ["Infographics", "/infographics"], ["References", "/references"]].map(([label, href]) => (
+              {[["Measurements", "/measurements"], ["Regions", "/regions"], ["Sectors", "/sectors"], ["Infographics", "/infographics"], ["References", "/references"], ["About the Project", "/about"], ["Members", "/members"]].map(([label, href]) => (
                 <li key={href}><Link href={href} className="hover:text-[#B88646] transition-colors">{label}</Link></li>
               ))}
             </ul>

@@ -63,7 +63,7 @@ export default function GlobalSearch({ large = false }: { large?: boolean }) {
               <ArrowRight className="w-3.5 h-3.5 text-[#A09080] group-hover:text-[#6F4E37] transition-colors" />
             </Link>
           ))}
-          <Link href={`/measurements?q=${query}`}
+          <Link href={`/measurements?q=${encodeURIComponent(query)}`}
             onClick={() => setOpen(false)}
             className="block px-4 py-2.5 text-xs text-[#6F4E37] font-medium hover:bg-[#FAF7F2] text-center border-t border-[#E8DED1]"
           >

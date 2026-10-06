@@ -1,7 +1,9 @@
 "use client";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef, Suspense } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Search, Filter, LayoutGrid, List, X } from "lucide-react";
-import { CATEGORIES, SECTORS, SAMPLE_MEASUREMENTS, getCategoryColor } from "@/lib/data";
+import { CATEGORIES, SECTORS, SAMPLE_MEASUREMENTS, getCategoryColor, isExcludedMeasurement, normalizeMeasurement } from "@/lib/data";
+import { displayMeasurementType } from "@/lib/format";
 import MeasurementCard from "@/components/measurements/MeasurementCard";
 import Link from "next/link";
 import { Measurement } from "@/types";
@@ -12,14 +14,65 @@ import { collection, getDocs } from "firebase/firestore";
 const PER_PAGE = 12;
 
 export default function MeasurementsPage() {
+  return (
+    <Suspense fallback={<div className="max-w-7xl mx-auto px-4 py-20 text-center text-[#7A6E65]">Loading measurements…</div>}>
+      <MeasurementsBrowser />
+    </Suspense>
+  );
+}
+
+function MeasurementsBrowser() {
+  // Search text, filters, view and page are kept in the URL, so links like
+  // /measurements?q=Tola work and the Back button returns to the same results.
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [measurements, setMeasurements] = useState<Measurement[]>(SAMPLE_MEASUREMENTS);
   const [loading, setLoading] = useState(true);
-  const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("");
-  const [sector, setSector] = useState("");
-  const [view, setView] = useState<"grid" | "list">("grid");
-  const [page, setPage] = useState(1);
-  const [showFilters, setShowFilters] = useState(false);
+  const [query, setQueryState] = useState(searchParams.get("q") ?? "");
+  const category = searchParams.get("category") ?? "";
+  const sector = searchParams.get("sector") ?? "";
+  const view: "grid" | "list" = searchParams.get("view") === "list" ? "list" : "grid";
+  const page = Math.max(1, parseInt(searchParams.get("page") ?? "1", 10) || 1);
+  const [showFilters, setShowFilters] = useState(Boolean(category || sector));
+
+  const setParams = useCallback(
+    (changes: Record<string, string | number | null>) => {
+      const params = new URLSearchParams(searchParams.toString());
+      for (const [k, v] of Object.entries(changes)) {
+        if (v === null || v === "" || (k === "page" && v === 1) || (k === "view" && v === "grid")) params.delete(k);
+        else params.set(k, String(v));
+      }
+      const qs = params.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    },
+    [pathname, router, searchParams]
+  );
+  const setCategory = (v: string) => setParams({ category: v, page: 1 });
+  const setSector = (v: string) => setParams({ sector: v, page: 1 });
+  const setView = (v: "grid" | "list") => setParams({ view: v });
+  const setPage = (v: number | ((p: number) => number)) =>
+    setParams({ page: typeof v === "function" ? v(page) : v });
+
+  // Keep the search box and the URL in step (debounced so typing stays smooth)
+  const lastPushedQ = useRef(searchParams.get("q") ?? "");
+  useEffect(() => {
+    // Only react to URL changes we did not make ourselves (e.g. Back/Forward, a new ?q= link)
+    const urlQ = searchParams.get("q") ?? "";
+    if (urlQ !== lastPushedQ.current) {
+      lastPushedQ.current = urlQ;
+      setQueryState(urlQ);
+    }
+  }, [searchParams]);
+  const setQuery = (v: string) => setQueryState(v);
+  useEffect(() => {
+    if (query === lastPushedQ.current) return;
+    const t = setTimeout(() => {
+      lastPushedQ.current = query;
+      setParams({ q: query, page: 1 });
+    }, 300);
+    return () => clearTimeout(t);
+  }, [query]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     // Local dataset is shown immediately. Firestore data (if any) is merged in
@@ -33,7 +86,10 @@ export default function MeasurementsPage() {
         ]);
         if (!snap || cancelled) return;
         const remote: Measurement[] = [];
-        snap.forEach((d) => remote.push({ id: d.id, ...d.data() } as Measurement));
+        snap.forEach((d) => {
+          const item = normalizeMeasurement({ id: d.id, ...d.data() } as Measurement);
+          if (!isExcludedMeasurement(item)) remote.push(item);
+        });
         if (remote.length === 0) return;
         const seen = new Set(SAMPLE_MEASUREMENTS.map((m) => m.slug || m.id));
         const extra = remote.filter((m) => !seen.has(m.slug || m.id));
@@ -65,9 +121,7 @@ export default function MeasurementsPage() {
   const paginated = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
   const totalPages = Math.ceil(filtered.length / PER_PAGE);
 
-  useEffect(() => { setPage(1); }, [query, category, sector]);
-
-  const clearFilters = () => { setQuery(""); setCategory(""); setSector(""); };
+  const clearFilters = () => { setQueryState(""); lastPushedQ.current = ""; setParams({ q: null, category: null, sector: null, page: 1 }); };
   const hasFilters = query || category || sector;
 
   return (
@@ -146,7 +200,7 @@ export default function MeasurementsPage() {
         {hasFilters && (
           <div className="flex flex-wrap gap-2">
             {category && <span className={`text-xs px-2 py-0.5 rounded-full ${getCategoryColor(category)}`}>{category}</span>}
-            {sector && <span className="text-xs px-2 py-0.5 bg-[#FAF7F2] text-[#6F4E37] rounded-full border border-[#E8DED1]">{sector}</span>}
+            {sector && <span className="text-xs px-2 py-0.5 bg-[#FAF7F2] text-[#6F4E37] rounded-full border border-[#E8DED1]">{SECTORS.find((s) => s.slug === sector)?.name ?? sector}</span>}
           </div>
         )}
       </div>
@@ -177,9 +231,9 @@ export default function MeasurementsPage() {
                   <td className="px-4 py-3 font-medium text-[#2E2A26]">{m.name_english}</td>
                   <td className="px-4 py-3 text-[#7A6E65]">{m.name_sanskrit || "—"}</td>
                   <td className="px-4 py-3">
-                    <span className={`text-xs px-2 py-0.5 rounded-full ${getCategoryColor(m.category)}`}>{m.category}</span>
+                    <span className={`text-xs px-2 py-0.5 rounded-full ${getCategoryColor(m.category)}`}>{displayMeasurementType(m.measurement_type, m.category)}</span>
                   </td>
-                  <td className="px-4 py-3 text-[#7A6E65] capitalize">{m.sector}</td>
+                  <td className="px-4 py-3 text-[#7A6E65]">{SECTORS.find((s) => s.slug === m.sector)?.name ?? m.sector}</td>
                   <td className="px-4 py-3 text-[#7A6E65] font-mono text-xs">{m.modern_equivalent || "—"}</td>
                   <td className="px-4 py-3 text-[#7A6E65] text-xs">{m.states?.slice(0, 2).join(", ")}</td>
                   <td className="px-4 py-3">

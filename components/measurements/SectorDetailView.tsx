@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Sector, Measurement } from "@/types";
-import { getCategoryColor } from "@/lib/data";
+import { getCategoryColor, MEASUREMENT_HEADLINE } from "@/lib/data";
 import MeasurementCard from "@/components/measurements/MeasurementCard";
 import Link from "next/link";
-import { Search, ChevronRight, ArrowLeft, Layers, Filter } from "lucide-react";
+import BackButton from "@/components/ui/BackButton";
+import { Search, ChevronRight, Layers, Filter } from "lucide-react";
 
 interface SectorDetailViewProps {
   sector: Sector;
@@ -39,7 +41,18 @@ export default function SectorDetailView({
     return Array.from(set);
   }, [isVedic, measurements]);
 
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  // The chosen category is kept in the URL so Back returns to the same filter
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const selectedCategory = searchParams.get("category") || "all";
+  const setSelectedCategory = (c: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (c === "all") params.delete("category");
+    else params.set("category", c);
+    const qs = params.toString();
+    router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+  };
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   const filteredMeasurements = useMemo(() => {
@@ -277,18 +290,12 @@ export default function SectorDetailView({
 
       {/* Bottom Back Button */}
       <div className="border-t border-[#E8DED1] pt-8 flex items-center justify-between">
-        <Link
-          href="/sectors"
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#6F4E37] hover:text-[#4A3426] transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to All Sectors</span>
-        </Link>
+        <BackButton fallbackHref="/sectors" />
         <Link
           href="/measurements"
           className="text-xs text-[#7A6E65] hover:text-[#6F4E37] transition-colors"
         >
-          Explore All 500+ Measurements →
+          Explore all {MEASUREMENT_HEADLINE} measurements
         </Link>
       </div>
     </div>

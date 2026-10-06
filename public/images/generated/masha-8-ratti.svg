@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" width="700" height="400">
+<defs>
+  <clipPath id="redpart"><rect x="-50" y="-40" width="64" height="80"/></clipPath>
+  <radialGradient id="red" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#F0533B"/><stop offset=".7" stop-color="#C8231A"/><stop offset="1" stop-color="#8E130E"/></radialGradient>
+</defs>
+<rect width="700" height="400" fill="#F3EBDD"/>
+<g transform="translate(150 150) rotate(-18)">
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="#141010"/>
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="url(#red)" clip-path="url(#redpart)"/>
+  <ellipse cx="14" cy="0" rx="4" ry="29" fill="#141010" opacity=".5"/>
+  <ellipse cx="-12" cy="-12" rx="11" ry="6" fill="#ffffff" opacity=".35"/>
+</g><g transform="translate(250 150) rotate(12)">
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="#141010"/>
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="url(#red)" clip-path="url(#redpart)"/>
+  <ellipse cx="14" cy="0" rx="4" ry="29" fill="#141010" opacity=".5"/>
+  <ellipse cx="-12" cy="-12" rx="11" ry="6" fill="#ffffff" opacity=".35"/>
+</g><g transform="translate(350 150) rotate(-6)">
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="#141010"/>
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="url(#red)" clip-path="url(#redpart)"/>
+  <ellipse cx="14" cy="0" rx="4" ry="29" fill="#141010" opacity=".5"/>
+  <ellipse cx="-12" cy="-12" rx="11" ry="6" fill="#ffffff" opacity=".35"/>
+</g><g transform="translate(450 150) rotate(20)">
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="#141010"/>
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="url(#red)" clip-path="url(#redpart)"/>
+  <ellipse cx="14" cy="0" rx="4" ry="29" fill="#141010" opacity=".5"/>
+  <ellipse cx="-12" cy="-12" rx="11" ry="6" fill="#ffffff" opacity=".35"/>
+</g><g transform="translate(200 255) rotate(8)">
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="#141010"/>
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="url(#red)" clip-path="url(#redpart)"/>
+  <ellipse cx="14" cy="0" rx="4" ry="29" fill="#141010" opacity=".5"/>
+  <ellipse cx="-12" cy="-12" rx="11" ry="6" fill="#ffffff" opacity=".35"/>
+</g><g transform="translate(300 255) rotate(-14)">
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="#141010"/>
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="url(#red)" clip-path="url(#redpart)"/>
+  <ellipse cx="14" cy="0" rx="4" ry="29" fill="#141010" opacity=".5"/>
+  <ellipse cx="-12" cy="-12" rx="11" ry="6" fill="#ffffff" opacity=".35"/>
+</g><g transform="translate(400 255) rotate(16)">
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="#141010"/>
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="url(#red)" clip-path="url(#redpart)"/>
+  <ellipse cx="14" cy="0" rx="4" ry="29" fill="#141010" opacity=".5"/>
+  <ellipse cx="-12" cy="-12" rx="11" ry="6" fill="#ffffff" opacity=".35"/>
+</g><g transform="translate(500 255) rotate(-10)">
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="#141010"/>
+  <ellipse cx="0" cy="0" rx="38" ry="30" fill="url(#red)" clip-path="url(#redpart)"/>
+  <ellipse cx="14" cy="0" rx="4" ry="29" fill="#141010" opacity=".5"/>
+  <ellipse cx="-12" cy="-12" rx="11" ry="6" fill="#ffffff" opacity=".35"/>
+</g>
+<text x="350" y="355" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#4A3426">8 Ratti (Gunja seeds) = 1 Masha</text>
+</svg>

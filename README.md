@@ -10,7 +10,9 @@ The platform brings together traditional measurements from different Indian regi
 
 - 📏 **Traditional Measurements** – Explore traditional Indian units with names, categories, conversions, history, and regional usage.
 - 🗺️ **Regions & Districts** – Browse measurement information by Indian state and district.
-- 🏛️ **8 Traditional Sectors** – Agriculture, Trade & Commerce, Architecture, Medicine, Textile, Currency, Household, and Storage & Transportation.
+- 📏 **3000+ Units** – traditional units from 29 states (headline set in `MEASUREMENT_HEADLINE`, `lib/data.ts`).
+- 🏛️ **8 Major Sectors** – Agriculture & Livestock, Trade & Commerce, Construction & Architecture, Medicine (Ayurveda), Textile & Handloom, Currency & Money, Household & Daily Life, and Land & Distance – plus a separate **Vedic Measurements** collection. Smaller source sectors are folded in via `SECTOR_ALIASES` in `lib/data.ts`.
+- 👥 **About & Members pages** – the IKS 2025 project story and the team (edit `lib/team.ts` to add LinkedIn links).
 - 🔎 **Global Search** – Quickly find measurements using fuzzy search with Fuse.js.
 - 📊 **Infographics** – Explore visual explanations, measurement relationships, and educational resources.
 - 📚 **References** – Browse academic, historical, government, and web references.
@@ -42,7 +44,7 @@ The platform brings together traditional measurements from different Indian regi
 ### Search & AI
 - Fuse.js
 - Groq API
-- Qwen AI model
+- Llama 3.3 70B (`llama-3.3-70b-versatile`)
 
 ### Deployment
 - Vercel
@@ -93,6 +95,8 @@ desinaap/
 | `/sectors/[slug]` | Sector details |
 | `/infographics` | Infographic gallery |
 | `/references` | Academic and historical references |
+| `/about` | About the project (IKS 2025) |
+| `/members` | Interns and Principal Investigator |
 | `/admin/login` | Admin login |
 | `/admin/dashboard` | Admin dashboard |
 | `/api/chat` | DESINAAP AI Assistant API |
@@ -216,7 +220,7 @@ Relevant Context
       ↓
 Groq API
       ↓
-Qwen Model
+Llama 3.3 70B
       ↓
 AI Response
 ```
@@ -250,10 +254,14 @@ lib/measurementImages.ts
 
 Image selection follows this approach:
 
-1. Custom measurement image, when available.
-2. Curated Wikimedia Commons image.
-3. Wikipedia article lead image.
-4. Representative sector/category image.
+1. The team's real photo for that unit (`lib/unitPhotos.ts`, files in `public/images/units/`).
+1. Custom measurement image (`image_url`), when available.
+2. A fixed photo for that exact unit (project photos in `public/images/local/`, verified Commons files).
+3. Tola / Tulam: the silver one-rupee coin.
+4. The lead photo of the Wikipedia article about that exact unit.
+No generated drawings are used – only real photos (the one exception is the Masha illustration of 8 Ratti seeds).
+
+There are no shared "representative" images – a unit with no fitting picture shows none.
 
 Third-party images are displayed with appropriate attribution where applicable.
 
@@ -326,6 +334,13 @@ Make sure the following services are configured before deployment:
 - Firebase
 - Groq API
 - Required environment variables
+
+---
+
+## 🔑 Admin login
+
+Admin accounts are **Firebase Authentication users** – they are not stored in this code.
+If you forget the password: Firebase Console → **Authentication → Users** → reset the password for the admin email, or **Add user** to create a new admin.
 
 ---
 

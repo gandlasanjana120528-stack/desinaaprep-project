@@ -1,10 +1,11 @@
-const path = require("path");
-
-// Mock data
-// Usually we'd import this but ts-node on raw ts files might complain with Next.js aliases
-// For simplicity we use the existing SAMPLE_MEASUREMENTS by copying them or just using raw array
-// Let's use TS Node for execution: npx ts-node scripts/seed-firebase.ts
-import { SAMPLE_MEASUREMENTS, SECTORS, INDIAN_STATES, SAMPLE_REFERENCES, SAMPLE_INFOGRAPHICS } from "../lib/data";
+// Uploads the built-in data to Firestore. Run from the project root:
+//   npx tsx --env-file=.env.local scripts/seed-firebase.ts
+// SAMPLE_MEASUREMENTS is already cleaned (no Storage & Transportation sector, no
+// Ratti in Agriculture). If you seeded an older version, delete the old
+// "measurements" collection in the Firebase console first – the site also hides
+// removed records, but a fresh seed keeps the admin list tidy.
+import { SAMPLE_MEASUREMENTS, SECTORS, INDIAN_STATES, SAMPLE_REFERENCES } from "../lib/data";
+import { INFOGRAPHICS_DATA } from "../lib/infographicsData";
 
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
@@ -26,7 +27,7 @@ async function seed() {
   
   // Measurements
   for (const m of SAMPLE_MEASUREMENTS) {
-    await setDoc(doc(db, "measurements", m.slug), m);
+    await setDoc(doc(db, "measurements", m.slug), JSON.parse(JSON.stringify(m))); // drops undefined fields
     console.log(`Added measurement: ${m.name_english}`);
   }
   
@@ -49,7 +50,7 @@ async function seed() {
   }
   
   // Infographics
-  for (const i of SAMPLE_INFOGRAPHICS) {
+  for (const i of INFOGRAPHICS_DATA) {
     await setDoc(doc(db, "infographics", i.id), i);
     console.log(`Added infographic: ${i.title}`);
   }

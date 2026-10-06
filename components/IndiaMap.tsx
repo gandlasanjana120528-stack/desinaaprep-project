@@ -3,6 +3,10 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { INDIA_MAP_DATA } from "@/lib/indiaMapData";
+import { INDIAN_STATES } from "@/lib/data";
+import { stateSlug } from "@/lib/format";
+
+const DOCUMENTED = new Set(INDIAN_STATES.map((s) => s.slug));
 
 const stateColors: Record<string, string> = {
   // North
@@ -69,13 +73,10 @@ export default function IndiaMap() {
     title: string | null;
   }) => {
     if (!state.title) return;
+    const slug = stateSlug(state.title);
+    if (!DOCUMENTED.has(slug)) return; // union territories etc. are not documented yet
     setSelectedState(state.id);
-
-    const stateSlug = state.title
-      .toLowerCase()
-      .replace(/\s+/g, "-");
-
-    router.push(`/regions/${stateSlug}`);
+    router.push(`/regions/${slug}`);
   };
 
   return (
@@ -137,7 +138,7 @@ export default function IndiaMap() {
                 }}
                 onClick={() => handleStateClick(state)}
               >
-                <title>{state.title}</title>
+                <title>{state.title && DOCUMENTED.has(stateSlug(state.title)) ? state.title : `${state.title} (not documented yet)`}</title>
               </path>
             );
           })}

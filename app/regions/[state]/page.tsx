@@ -5,6 +5,7 @@ import {
 } from "@/lib/data";
 
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import Link from "next/link";
 import { MapPin, Building2 } from "lucide-react";
 
@@ -138,9 +139,7 @@ export default async function StatePage({
           <div className="text-right">
 
             <div className="font-serif text-3xl font-bold text-[#B88646]">
-              {state.measurement_count ||
-                stateMeasurements.length ||
-                0}
+              {stateMeasurements.length}
             </div>
 
             <div className="text-xs text-[#C8B8A2]">
@@ -173,11 +172,13 @@ export default async function StatePage({
               Measurements from {state.name}
             </h2>
 
-            <StateSectorView
-              stateName={state.name}
-              measurements={stateMeasurements}
-              sectors={SECTORS}
-            />
+            <Suspense fallback={<div className="text-sm text-[#7A6E65]">Loading measurements…</div>}>
+              <StateSectorView
+                stateName={state.name}
+                measurements={stateMeasurements}
+                sectors={SECTORS}
+              />
+            </Suspense>
 
           </section>
 
@@ -248,10 +249,7 @@ export default async function StatePage({
                 },
                 {
                   label: "Measurements",
-                  value:
-                    state.measurement_count ||
-                    stateMeasurements.length ||
-                    0,
+                  value: stateMeasurements.length,
                 },
               ].map(({ label, value }) => (
 
@@ -289,7 +287,7 @@ export default async function StatePage({
 
             <div className="flex flex-wrap gap-2">
 
-              {(activeStateSectors.length > 0 ? activeStateSectors : SECTORS.slice(0, 5)).map((sector) => (
+              {activeStateSectors.map((sector) => (
 
                 <Link
                   key={sector.id}

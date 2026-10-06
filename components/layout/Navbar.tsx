@@ -4,27 +4,26 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SECTORS } from "@/lib/data";
 
-const NAV_LINKS = [
+const NAV_LINKS: { label: string; href: string; children?: { label: string; href: string }[] }[] = [
   { label: "Measurements", href: "/measurements" },
   { label: "Regions", href: "/regions" },
   {
     label: "Sectors",
     href: "/sectors",
-    children: [
-      { label: "Agriculture", href: "/sectors/agriculture" },
-      { label: "Trade & Commerce", href: "/sectors/trade-commerce" },
-      { label: "Architecture", href: "/sectors/architecture" },
-      { label: "Medicine", href: "/sectors/medicine" },
-      { label: "Textile & Handloom", href: "/sectors/textile-handloom" },
-      { label: "Currency & Money", href: "/sectors/currency-money" },
-      { label: "Household", href: "/sectors/household" },
-      { label: "Storage & Transport", href: "/sectors/storage-transport" },
-      { label: "Vedic Measurements", href: "/sectors/vedic-measurements" }
-    ]
+    children: SECTORS.map((s) => ({ label: s.name, href: `/sectors/${s.slug}` })),
   },
   { label: "Infographics", href: "/infographics" },
-  { label: "References", href: "/references" }
+  { label: "References", href: "/references" },
+  {
+    label: "About",
+    href: "/about",
+    children: [
+      { label: "About the Project", href: "/about" },
+      { label: "Members", href: "/members" },
+    ],
+  },
 ];
 
 export default function Navbar() {
@@ -72,7 +71,7 @@ export default function Navbar() {
                   href={link.href}
                   className={cn(
                     "flex items-center gap-1 px-3 py-2 rounded text-sm font-medium transition-colors",
-                    pathname.startsWith(link.href) && link.href !== "/"
+                    (pathname.startsWith(link.href) || link.children?.some((c) => pathname.startsWith(c.href))) && link.href !== "/"
                       ? "text-[#6F4E37] bg-[#FAF7F2]"
                       : "text-[#2E2A26] hover:text-[#6F4E37] hover:bg-[#FAF7F2]"
                   )}
@@ -81,7 +80,7 @@ export default function Navbar() {
                   {link.children && <ChevronDown className="w-3 h-3" />}
                 </Link>
                 {link.children && openDropdown === link.label && (
-                  <div className="absolute top-full left-0 mt-1 w-52 bg-white border border-[#E8DED1] rounded-lg shadow-lg py-1 z-50">
+                  <div className="absolute top-full left-0 mt-1 w-60 max-h-[70vh] overflow-y-auto bg-white border border-[#E8DED1] rounded-lg shadow-lg py-1 z-50">
                     {link.children.map((child) => (
                       <Link key={child.href} href={child.href}
                         className="block px-4 py-2 text-sm text-[#2E2A26] hover:bg-[#FAF7F2] hover:text-[#6F4E37]"

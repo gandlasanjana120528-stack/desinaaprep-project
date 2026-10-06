@@ -1,0 +1,1934 @@
+[
+ {
+  "sector": "agriculture",
+  "unit": "Seer",
+  "keys": [
+   "seer",
+   "seeru",
+   "ser",
+   "sera",
+   "sher"
+  ],
+  "file": "/images/units/agriculture/seer.jpg",
+  "what": "Brass/iron seer weight or a kirana shop balance weighing 1 seer of grain",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Maund",
+  "keys": [
+   "man",
+   "mananu",
+   "maund",
+   "mon"
+  ],
+  "file": "/images/units/agriculture/maund.jpg",
+  "what": "Old stone/iron maund weight, or sacks being weighed at a mandi",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Pav (Pao)",
+  "keys": [
+   "paav",
+   "pao",
+   "pau",
+   "pauwa",
+   "pav",
+   "pav (pao)",
+   "poa"
+  ],
+  "file": "/images/units/agriculture/pav.jpg",
+  "what": "Quarter-seer weight; old shop weight set with pav marking",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Bhara",
+  "keys": [
+   "bhar",
+   "bhara"
+  ],
+  "file": "/images/units/agriculture/bhara.jpg",
+  "what": "Bullock-cart or head-load of produce (bhara/bhar)",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Bora (sack)",
+  "keys": [
+   "bora",
+   "bora (sack)",
+   "sack"
+  ],
+  "file": "/images/units/agriculture/bora.jpg",
+  "what": "Jute sack of grain at a farm or market",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Adha Seer",
+  "keys": [
+   "adha seer",
+   "adhsera"
+  ],
+  "file": "/images/units/agriculture/adha-seer.jpg",
+  "what": "Half-seer brass/iron weight, or a half-seer grain measure",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Bailgadi Bhar",
+  "keys": [
+   "bailgadi bhar",
+   "balgadli bhar"
+  ],
+  "file": "/images/units/agriculture/bailgadi-bhar.jpg",
+  "what": "Bullock cart fully loaded with produce (Maharashtra)",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Goni (Guni, Gunny bag)",
+  "keys": [
+   "goni",
+   "goni (guni, gunny bag)",
+   "guni",
+   "gunny bag"
+  ],
+  "file": "/images/units/agriculture/goni.jpg",
+  "what": "Jute gunny bag filled with grain, stacked in a mandi",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Handi",
+  "keys": [
+   "hande",
+   "handi"
+  ],
+  "file": "/images/units/agriculture/handi.jpg",
+  "what": "Earthen/metal cooking handi on a stove",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Padi",
+  "keys": [
+   "padi"
+  ],
+  "file": "/images/units/agriculture/padi.jpg",
+  "what": "Wooden/brass padi measure (Kerala/Tamil) filled with rice",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Paili (Payli)",
+  "keys": [
+   "paili",
+   "paili (payli)",
+   "payli"
+  ],
+  "file": "/images/units/agriculture/paili.jpg",
+  "what": "Paili grain measure (Odisha/Bengal/Assam/Uttarakhand) – wooden or brass vessel with rice",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Paseri",
+  "keys": [
+   "paseri",
+   "pasri"
+  ],
+  "file": "/images/units/agriculture/paseri.jpg",
+  "what": "Paseri measuring vessel or weight in a haat/market",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Adda",
+  "keys": [
+   "adda"
+  ],
+  "file": "/images/units/agriculture/adda.jpg",
+  "what": "Adda grain measure (Telugu/Kerala) – wooden or brass vessel",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Bigha",
+  "keys": [
+   "bigha"
+  ],
+  "file": "/images/units/agriculture/bigha.jpg",
+  "what": "Farm field in north India (bigha plot) with a land-survey rope/chain",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Kolaga",
+  "keys": [
+   "kolaga"
+  ],
+  "file": "/images/units/agriculture/kolaga.jpg",
+  "what": "Kolaga (Karnataka) – measuring vessel for grain",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Marakkal",
+  "keys": [
+   "maraka",
+   "marakkal"
+  ],
+  "file": "/images/units/agriculture/marakkal.jpg",
+  "what": "Wooden marakkal measure (Tamil Nadu/Kerala) filled with paddy",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Matka (Ghada)",
+  "keys": [
+   "ghada",
+   "matka",
+   "matka (ghada)"
+  ],
+  "file": "/images/units/agriculture/matka.jpg",
+  "what": "Earthen matka / ghada water pot",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Tumu",
+  "keys": [
+   "tumu"
+  ],
+  "file": "/images/units/agriculture/tumu.jpg",
+  "what": "Tumu grain measure (Odisha) – large basket/vessel",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Kanal",
+  "keys": [
+   "kanal"
+  ],
+  "file": "/images/units/agriculture/kanal.jpg",
+  "what": "Kanal-sized plot in Punjab/Haryana/Kashmir (farm or house plot)",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Kani",
+  "keys": [
+   "kani"
+  ],
+  "file": "/images/units/agriculture/kani.jpg",
+  "what": "Kani wet-land plots (Tamil Nadu) – paddy field",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Katha (Kattha, Cottah)",
+  "keys": [
+   "cottah",
+   "katha",
+   "katha (kattha, cottah)",
+   "kattha"
+  ],
+  "file": "/images/units/agriculture/katha.jpg",
+  "what": "Residential plot (katha) in Bengal/Bihar",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Khanduga",
+  "keys": [
+   "khanduga"
+  ],
+  "file": "/images/units/agriculture/khanduga.jpg",
+  "what": "Large grain storage / khanduga measure (Karnataka/Telangana)",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Nazhi (Nali)",
+  "keys": [
+   "nali",
+   "nazhi",
+   "nazhi (nali)",
+   "nāḷi"
+  ],
+  "file": "/images/units/agriculture/nazhi.jpg",
+  "what": "Nazhi/nali measure (coconut-shell or brass cup) with rice",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Topli",
+  "keys": [
+   "topli"
+  ],
+  "file": "/images/units/agriculture/topli.jpg",
+  "what": "Bamboo topli basket used in fields",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Acre",
+  "keys": [
+   "acre"
+  ],
+  "file": "/images/units/agriculture/acre.jpg",
+  "what": "Farm field with revenue-survey boundary stone",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Angula (Angul)",
+  "keys": [
+   "angul",
+   "angula",
+   "angula (angul)"
+  ],
+  "file": "/images/units/agriculture/angula.jpg",
+  "what": "Finger-width held next to a ruler (angula)",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Biswa (Biswansi)",
+  "keys": [
+   "biswa",
+   "biswa (biswansi)",
+   "biswansi"
+  ],
+  "file": "/images/units/agriculture/biswa.jpg",
+  "what": "Small land plot with boundary markers (biswa)",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Guntha (Kunta)",
+  "keys": [
+   "guntha",
+   "guntha (kunta)",
+   "kunta"
+  ],
+  "file": "/images/units/agriculture/guntha.jpg",
+  "what": "A small farm plot / survey stones marking one guntha",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Hasta (Hath, Haath)",
+  "keys": [
+   "haath",
+   "hasta",
+   "hasta (hath, haath)",
+   "hath"
+  ],
+  "file": "/images/units/agriculture/hasta.jpg",
+  "what": "Person measuring cloth/length elbow-to-fingertip (hasta/hath)",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Kalam",
+  "keys": [
+   "kalam"
+  ],
+  "file": "/images/units/agriculture/kalam.jpg",
+  "what": "Kalam grain measure (South India)",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Kharwar",
+  "keys": [
+   "kharwar"
+  ],
+  "file": "/images/units/agriculture/kharwar.jpg",
+  "what": "Pack-animal (donkey) load in Kashmir; sacks being weighed",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Kuruni",
+  "keys": [
+   "kuruni"
+  ],
+  "file": "/images/units/agriculture/kuruni.jpg",
+  "what": "Kuruni measuring vessel (Tamil Nadu) with grain",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Moota",
+  "keys": [
+   "moota"
+  ],
+  "file": "/images/units/agriculture/moota.jpg",
+  "what": "Moota bundle of harvested crop carried by a farmer",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Muthi (Mushti)",
+  "keys": [
+   "mushti",
+   "muthi",
+   "muthi (mushti)"
+  ],
+  "file": "/images/units/agriculture/muthi.jpg",
+  "what": "A hand holding one fistful (muthi) of rice/grain",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Parai (Para)",
+  "keys": [
+   "para",
+   "parai",
+   "parai (para)"
+  ],
+  "file": "/images/units/agriculture/parai.jpg",
+  "what": "Wooden para (large paddy measure) at a farm or temple",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Potli",
+  "keys": [
+   "potli"
+  ],
+  "file": "/images/units/agriculture/potli.jpg",
+  "what": "Cloth potli (tied bundle) of grain/seeds",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Tokri",
+  "keys": [
+   "tokri"
+  ],
+  "file": "/images/units/agriculture/tokri.jpg",
+  "what": "Bamboo tokri (basket) with vegetables/grain",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Uzhakku",
+  "keys": [
+   "ulakku",
+   "uzhakku"
+  ],
+  "file": "/images/units/agriculture/uzhakku.jpg",
+  "what": "Small brass uzhakku measure with grain",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Yojana",
+  "keys": [
+   "yojana"
+  ],
+  "file": "/images/units/architecture/yojana.jpg",
+  "what": "Ancient road/route map or milestone showing long-distance (yojana) travel",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Karam",
+  "keys": [
+   "karam"
+  ],
+  "file": "/images/units/architecture/karam.jpg",
+  "what": "Karam – land-measuring rod/chain used by patwari",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Muzham",
+  "keys": [
+   "muzham"
+  ],
+  "file": "/images/units/architecture/muzham.jpg",
+  "what": "Forearm/cubit length (muzham) measured by a carpenter",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Bitta",
+  "keys": [
+   "bitta"
+  ],
+  "file": "/images/units/architecture/bitta.jpg",
+  "what": "Handspan (thumb to little finger) measured against a ruler",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Jarib",
+  "keys": [
+   "jarib"
+  ],
+  "file": "/images/units/architecture/jarib.jpg",
+  "what": "Jarib – land survey chain (patwari/revenue survey)",
+  "source": null
+ },
+ {
+  "sector": "medicine",
+  "unit": "Anjali",
+  "keys": [
+   "anjali",
+   "añjali",
+   "añjali pramāṇa"
+  ],
+  "file": "/images/units/medicine/anjali.jpg",
+  "what": "Cupped hands holding grain/water (anjali)",
+  "source": null
+ },
+ {
+  "sector": "medicine",
+  "unit": "Bindu",
+  "keys": [
+   "bindu"
+  ],
+  "file": "/images/units/medicine/bindu.jpg",
+  "what": "A single drop of oil/medicine falling from a dropper or spoon",
+  "source": null
+ },
+ {
+  "sector": "medicine",
+  "unit": "Kalasha (Kalash)",
+  "keys": [
+   "kalash",
+   "kalasha",
+   "kalasha (kalash)",
+   "kalaśa"
+  ],
+  "file": "/images/units/medicine/kalasha.jpg",
+  "what": "Brass kalash pot used in puja",
+  "source": null
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Hank",
+  "keys": [
+   "cotton hank",
+   "hank",
+   "silk hank"
+  ],
+  "file": "/images/units/textile-handloom/hank.jpg",
+  "what": "Hank (skein) of cotton or silk yarn",
+  "source": null
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Thaan (Than)",
+  "keys": [
+   "bolt of cloth",
+   "cloth piece",
+   "thaan",
+   "thaan (than)",
+   "than"
+  ],
+  "file": "/images/units/textile-handloom/thaan.jpg",
+  "what": "Full roll (than) of cloth at a handloom/cloth shop",
+  "source": null
+ },
+ {
+  "sector": "household",
+  "unit": "Chutki",
+  "keys": [
+   "chutki",
+   "chutuki"
+  ],
+  "file": "/images/units/household/chutki.jpg",
+  "what": "Fingers holding a pinch (chutki) of salt/spice",
+  "source": null
+ },
+ {
+  "sector": "household",
+  "unit": "Ghati (Ghatika, Nadika)",
+  "keys": [
+   "ghati",
+   "ghati (ghatika, nadika)",
+   "ghatika",
+   "nadika"
+  ],
+  "file": "/images/units/household/ghati.jpg",
+  "what": "Traditional water-clock (ghatika) – bowl with hole floating in water",
+  "source": null
+ },
+ {
+  "sector": "household",
+  "unit": "Dabba",
+  "keys": [
+   "dabba",
+   "dabbo"
+  ],
+  "file": "/images/units/household/dabba.jpg",
+  "what": "Metal dabba (storage tin) for flour/spices",
+  "source": null
+ },
+ {
+  "sector": "household",
+  "unit": "Chembu",
+  "keys": [
+   "chembu"
+  ],
+  "file": "/images/units/household/chembu.jpg",
+  "what": "Brass chembu (Kerala vessel for water/milk)",
+  "source": null
+ },
+ {
+  "sector": "household",
+  "unit": "Prahar (Yama)",
+  "keys": [
+   "pahar",
+   "prahar",
+   "prahar (yama)",
+   "yaama",
+   "yama"
+  ],
+  "file": "/images/units/household/prahar.jpg",
+  "what": "A traditional sundial / old village clock or Panchang page showing prahar timing",
+  "source": null
+ },
+ {
+  "sector": "household",
+  "unit": "Chullu",
+  "keys": [
+   "chullu"
+  ],
+  "file": "/images/units/household/chullu.jpg",
+  "what": "A handful (chullu) of water in cupped palm",
+  "source": null
+ },
+ {
+  "sector": "household",
+  "unit": "Degchi",
+  "keys": [
+   "degchi"
+  ],
+  "file": "/images/units/household/degchi.jpg",
+  "what": "Metal degchi (cooking vessel)",
+  "source": null
+ },
+ {
+  "sector": "household",
+  "unit": "Katori",
+  "keys": [
+   "katori"
+  ],
+  "file": "/images/units/household/katori.jpg",
+  "what": "Steel/brass katori (small bowl)",
+  "source": null
+ },
+ {
+  "sector": "household",
+  "unit": "Lota",
+  "keys": [
+   "lota"
+  ],
+  "file": "/images/units/household/lota.jpg",
+  "what": "Brass lota (small water pot)",
+  "source": null
+ },
+ {
+  "sector": "household",
+  "unit": "Thali",
+  "keys": [
+   "thali"
+  ],
+  "file": "/images/units/household/thali.jpg",
+  "what": "Steel/brass thali (plate) with a meal",
+  "source": null
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Tola",
+  "keys": [
+   "bhori",
+   "bhori / vori",
+   "tola",
+   "tola / bhori",
+   "tolam",
+   "vori",
+   "vori / bhori"
+  ],
+  "file": "/images/units/trade-commerce/tola.jpg",
+  "what": "Silver rupee coin / a goldsmith weighing 1 tola of gold on a small balance",
+  "source": null
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Seer",
+  "keys": [
+   "seer",
+   "seeru",
+   "ser",
+   "sera",
+   "sher"
+  ],
+  "file": "/images/units/trade-commerce/seer.jpg",
+  "what": "Brass/iron seer weight or a kirana shop balance weighing 1 seer of grain",
+  "source": "https://www.facebook.com/photo/?fbid=10231647944609063&set=pcb.2270556763374080"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Ratti",
+  "keys": [
+   "gunja",
+   "guriginja",
+   "kunri",
+   "ratti",
+   "roti"
+  ],
+  "file": "/images/units/trade-commerce/ratti.jpg",
+  "what": "Red-and-black Abrus (gunja) seeds, with a goldsmith balance if possible",
+  "source": null
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Masha",
+  "keys": [
+   "maas",
+   "masha",
+   "mashaka"
+  ],
+  "file": "/images/units/trade-commerce/masha.jpg",
+  "what": "8 Ratti seeds on a balance pan; a goldsmith weighing gold in masha",
+  "source": null
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Maund",
+  "keys": [
+   "man",
+   "mananu",
+   "maund"
+  ],
+  "file": "/images/units/trade-commerce/maund.jpg",
+  "what": "Old stone/iron maund weight, or sacks being weighed at a mandi",
+  "source": "https://en.wikipedia.org/wiki/Maund_%28unit%29"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Chhatak",
+  "keys": [
+   "chatak",
+   "chattak",
+   "chattank",
+   "chhaatank",
+   "chhatak",
+   "chhataku",
+   "chhatank",
+   "chittak"
+  ],
+  "file": "/images/units/trade-commerce/chhatak.jpg",
+  "what": "Old cast-iron shop weight",
+  "source": "http://facebook.com/missionupscnotes/posts/%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A5%80%E0%A4%AF-%E0%A4%A4%E0%A5%8B%E0%A4%B2-%E0%A4%95%E0%A4%BE-%E0%A4%87%E0%A4%A4%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B8/1346236997534574/"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Pala",
+  "keys": [
+   "pal",
+   "pala",
+   "palam"
+  ],
+  "file": "/images/units/trade-commerce/pala.jpg",
+  "what": "Old brass palam/pala weight; Ayurvedic shop weighing herbs",
+  "source": null
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Pav (Pao)",
+  "keys": [
+   "paav",
+   "pao",
+   "pau",
+   "pauwa",
+   "pav",
+   "pav (pao)",
+   "poa"
+  ],
+  "file": "/images/units/trade-commerce/pav.jpg",
+  "what": "Quarter-seer weight; old shop weight set with pav marking",
+  "source": "https://www.facebook.com/photo?fbid=1346236970867910&set=a.546622084162740"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Cowrie (Kauri, Kori)",
+  "keys": [
+   "cowrie",
+   "cowrie (kauri, kori)",
+   "kauri",
+   "kori"
+  ],
+  "file": "/images/units/trade-commerce/cowrie.jpg",
+  "what": "Cowrie shells used as old money",
+  "source": "https://www.amazon.in/SriSatymev-White-Shells-Cowri-Diwali/dp/B09V2K8CNC"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Bale",
+  "keys": [
+   "bale"
+  ],
+  "file": "/images/units/trade-commerce/bale.jpg",
+  "what": "Cotton bale at a mill or market",
+  "source": "https://www.indiamart.com/proddetail/cotton-bales-2848986081248.html?srsltid=AU7gw4VEVRSnr6CCb8hwar8BmHTgolH8EQP28ZpzptePzx9PIeayWUPW"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Rupee",
+  "keys": [
+   "indian rupee",
+   "rupaiya",
+   "rupaya",
+   "rupee",
+   "rupiya"
+  ],
+  "file": "/images/units/trade-commerce/rupee.jpg",
+  "what": "Old British-Indian silver rupee and modern rupee coins/notes",
+  "source": "https://www.flipkart.com/newway-one-rupee-1983-star-mark-old-rare-find-ancient-coin-collection/p/itm204b76c32754f"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Goni (Guni, Gunny bag)",
+  "keys": [
+   "goni",
+   "goni (guni, gunny bag)",
+   "guni",
+   "gunny bag"
+  ],
+  "file": "/images/units/trade-commerce/goni.jpg",
+  "what": "Jute gunny bag filled with grain, stacked in a mandi",
+  "source": "https://www.tradeindia.com/products/a-grade-and-grains-jute-gunny-bag-7716395.html"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Hundi",
+  "keys": [
+   "hundi"
+  ],
+  "file": "/images/units/trade-commerce/hundi.jpg",
+  "what": "An old hundi (bill of exchange) document",
+  "source": "https://en.wikipedia.org/wiki/Hundi"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Marakkal",
+  "keys": [
+   "maraka",
+   "marakkal"
+  ],
+  "file": "/images/units/trade-commerce/marakkal.jpg",
+  "what": "Wooden marakkal measure (Tamil Nadu/Kerala) filled with paddy",
+  "source": "https://exhibits.cooponscitech.in/s/shmp_landing/item/26892"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Mohur (Ashrafi)",
+  "keys": [
+   "ashrafi",
+   "mohur",
+   "mohur (ashrafi)"
+  ],
+  "file": "/images/units/trade-commerce/mohur.jpg",
+  "what": "Gold mohur/ashrafi coin (museum photo)",
+  "source": "https://www.instagram.com/popular/mohur-coins/"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Fanam (Panam)",
+  "keys": [
+   "fanam",
+   "fanam (panam)",
+   "panam"
+  ],
+  "file": "/images/units/trade-commerce/fanam.jpg",
+  "what": "Old fanam coin (South India, museum photo)",
+  "source": "https://www.tezbid.com/products/1-fanam-nagapatnam-indo-dutch?variant=39346411667525"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Putti",
+  "keys": [
+   "putti"
+  ],
+  "file": "/images/units/trade-commerce/putti.jpg",
+  "what": "Putti (large basket/volume) holding grain in a South Indian village",
+  "source": "https://eronjohnsonantiques.com/products/m2586-large-south-indian-hammered-brass-water-storage-pot"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Adha Seer",
+  "keys": [
+   "adha seer"
+  ],
+  "file": "/images/units/trade-commerce/adha-seer.jpg",
+  "what": "Half-seer brass/iron weight, or a half-seer grain measure",
+  "source": "https://www.ebay.com.au/itm/275178481606?srsltid=AU7gw4U6Tfq_zGrSuUS_7FAcBGNg_eS1q-6ctdAbKCioQ5gdJSzPjdmN"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Anna",
+  "keys": [
+   "ana",
+   "anna"
+  ],
+  "file": "/images/units/trade-commerce/anna.jpg",
+  "what": "Old Indian anna coin (1 anna)",
+  "source": "https://en.numista.com/8849"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Nazhi (Nali)",
+  "keys": [
+   "nali",
+   "nazhi",
+   "nazhi (nali)",
+   "nāḷi"
+  ],
+  "file": "/images/units/trade-commerce/nazhi.jpg",
+  "what": "Nazhi/nali measure (coconut-shell or brass cup) with rice",
+  "source": "https://digishoppiekingnqueenz.com/nazhi-traditional-measuring-tool/"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Padi",
+  "keys": [
+   "padi"
+  ],
+  "file": "/images/units/trade-commerce/padi.jpg",
+  "what": "Wooden/brass padi measure (Kerala/Tamil) filled with rice",
+  "source": "https://www.indianshelf.in/brass-rice-measuring-pot-padi-with-patina/?srsltid=AU7gw4Xqt8E6V6F0u0VPZknZ7VUfFIW5SgbEhTywthLC0q57y8wltfCP"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Paili (Payli)",
+  "keys": [
+   "paili",
+   "paili (payli)",
+   "payli"
+  ],
+  "file": "/images/units/trade-commerce/paili.jpg",
+  "what": "Paili grain measure (Odisha/Bengal/Assam/Uttarakhand) – wooden or brass vessel with rice",
+  "source": "https://www.indianshelf.in/old-brass-grain-measurement-pot-paili/?srsltid=AU7gw4W0sNL5REyYI40htHwCTKofZ9oqxnx-0xIQkVIqOS4di3hPqAO1"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Hasta (Hath, Haath)",
+  "keys": [
+   "haath",
+   "hasta",
+   "hasta (hath, haath)",
+   "hath"
+  ],
+  "file": "/images/units/trade-commerce/hasta.jpg",
+  "what": "Person measuring cloth/length elbow-to-fingertip (hasta/hath)",
+  "source": "https://www.mpanchang.com/nakshatras-constellations/hasta/"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Kalam",
+  "keys": [
+   "kalam"
+  ],
+  "file": "/images/units/trade-commerce/kalam.jpg",
+  "what": "Kalam grain measure (South India)",
+  "source": "https://www.amazon.in/Moongil-Traditional-Azhakku-Measuring-Decorative/dp/B0GWRB9W7V"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Kharwar",
+  "keys": [
+   "kharwar"
+  ],
+  "file": "/images/units/trade-commerce/kharwar.jpg",
+  "what": "Pack-animal (donkey) load in Kashmir; sacks being weighed",
+  "source": "https://www.dreamstime.com/photos-images/donkey-carrying-load.html"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Kolaga",
+  "keys": [
+   "kolaga"
+  ],
+  "file": "/images/units/trade-commerce/kolaga.jpg",
+  "what": "Kolaga (Karnataka) – measuring vessel for grain",
+  "source": "https://www.amazon.in/Coconut-Stainless-Steel-Container-Fridge/dp/B082ZLF9RQ"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Moota",
+  "keys": [
+   "moota"
+  ],
+  "file": "/images/units/trade-commerce/moota.jpg",
+  "what": "Moota bundle of harvested crop carried by a farmer",
+  "source": "https://www.pexels.com/photo/farmer-carrying-harvested-rice-in-field-35066647/"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Pagoda (Varaha)",
+  "keys": [
+   "pagoda",
+   "pagoda (varaha)",
+   "varaha"
+  ],
+  "file": "/images/units/trade-commerce/pagoda.jpg",
+  "what": "Old gold pagoda/varaha coin (museum photo)",
+  "source": "https://www.instagram.com/p/DYs42YSD0wt/"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Paisa (Pice)",
+  "keys": [
+   "paisa",
+   "paisa (pice)",
+   "pice"
+  ],
+  "file": "/images/units/trade-commerce/paisa.jpg",
+  "what": "Old copper paisa/pice coins",
+  "source": "https://en.numista.com/1627"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Parai (Para)",
+  "keys": [
+   "para",
+   "parai",
+   "parai (para)"
+  ],
+  "file": "/images/units/trade-commerce/parai.jpg",
+  "what": "Wooden para (large paddy measure) at a farm or temple",
+  "source": "https://au.pinterest.com/pin/tamil-arts-parai--29343835065388797/"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Potli",
+  "keys": [
+   "potli"
+  ],
+  "file": "/images/units/trade-commerce/potli.jpg",
+  "what": "Cloth potli (tied bundle) of grain/seeds",
+  "source": "https://www.torani.in/products/rangili-jinal-potli?srsltid=AU7gw4UuEDf64DO5zxWunsQcp1VIcJqykI8vo4h4-aqZEQIZglvA3nGD"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Tokri",
+  "keys": [
+   "tokri"
+  ],
+  "file": "/images/units/trade-commerce/tokri.jpg",
+  "what": "Bamboo tokri (basket) with vegetables/grain",
+  "source": "https://www.justdial.com/jdmart/Udaipur-Rajasthan/Tokri-Handmade-Bamboo-Basket/pid-802475689/9999PX294-X294-240116134023-A1D1"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Topli",
+  "keys": [
+   "topli"
+  ],
+  "file": "/images/units/trade-commerce/topli.jpg",
+  "what": "Bamboo topli basket used in fields",
+  "source": "https://www.indiamart.com/bhubandebnath/bamboo-topli.html?srsltid=AU7gw4W6yZ3tWZoyDI_dyrkepkKr4q4YtuD9bUsU15WJzbsGoOjBFLm9"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Tumu",
+  "keys": [
+   "tumu"
+  ],
+  "file": "/images/units/trade-commerce/tumu.jpg",
+  "what": "Tumu grain measure (Odisha) – large basket/vessel",
+  "source": "https://www.indianshelf.in/vintage-orissa-brass-grain-measurement-pot-paili/?srsltid=AU7gw4VP1p2nP2yZD_dk5RF0l9lG930b_0k-Kd7EQb7M8me4URibptnB"
+ },
+ {
+  "sector": "trade-commerce",
+  "unit": "Uzhakku",
+  "keys": [
+   "ulakku",
+   "uzhakku"
+  ],
+  "file": "/images/units/trade-commerce/uzhakku.jpg",
+  "what": "Small brass uzhakku measure with grain",
+  "source": "https://commons.wikimedia.org/wiki/File:Uzhakku.JPG"
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Gaz (Gaj, Gajam)",
+  "keys": [
+   "gaj",
+   "gaja",
+   "gajam",
+   "gaz",
+   "gaz (gaj, gajam)"
+  ],
+  "file": "/images/units/textile-handloom/gaz.jpg",
+  "what": "Tailor/cloth shop gaz measuring stick or a yardstick",
+  "source": null,
+  "sectorOnly": true
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Tola",
+  "keys": [
+   "bhori",
+   "bhori / vori",
+   "tola",
+   "tola / bhori",
+   "tolam",
+   "vori",
+   "vori / bhori"
+  ],
+  "file": "/images/units/textile-handloom/tola.jpg",
+  "what": "Silver rupee coin / a goldsmith weighing 1 tola of gold on a small balance",
+  "source": "https://www.amazon.in/Handcrafted-Brass-Weighing-Balance-Scale/dp/B0H9S1JBKC"
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Seer",
+  "keys": [
+   "seer",
+   "ser"
+  ],
+  "file": "/images/units/textile-handloom/seer.jpg",
+  "what": "Brass/iron seer weight or a kirana shop balance weighing 1 seer of grain",
+  "source": null
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Saree Length",
+  "keys": [
+   "cheera podavu",
+   "sadi lambai",
+   "sadi lambi",
+   "saree length",
+   "tussar saree"
+  ],
+  "file": "/images/units/textile-handloom/saree-length.jpg",
+  "what": "Saree being measured in length (9 yards / 6 yards)",
+  "source": null
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Bale",
+  "keys": [
+   "bale"
+  ],
+  "file": "/images/units/textile-handloom/bale.jpg",
+  "what": "Cotton bale at a mill or market",
+  "source": "https://www.tradeindia.com/products/pure-white-raw-cotton-bale-used-in-textile-industry-filling-material-7511951.html"
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Dhoti Lambai",
+  "keys": [
+   "dhotar lambi",
+   "dhoti lambai",
+   "panche podavu",
+   "veshti alavu"
+  ],
+  "file": "/images/units/textile-handloom/dhoti-lambai.jpg",
+  "what": "Dhoti/veshti being measured by length",
+  "source": "https://www.amazon.in/HALDI-MEHENDI-SHAADI-Angavastram-Readymade/dp/B0GTQSQYV5"
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Hank",
+  "keys": [
+   "cotton hank",
+   "hank",
+   "silk hank"
+  ],
+  "file": "/images/units/textile-handloom/hank.jpg",
+  "what": "Hank (skein) of cotton or silk yarn",
+  "source": "https://en.wikipedia.org/wiki/Hank_%28unit_of_measure%29"
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Thaan (Than)",
+  "keys": [
+   "bolt of cloth",
+   "cloth piece",
+   "thaan",
+   "thaan (than)",
+   "than"
+  ],
+  "file": "/images/units/textile-handloom/thaan.jpg",
+  "what": "Full roll (than) of cloth at a handloom/cloth shop",
+  "source": "https://www.alamy.com/stock-photo/cloth-shop-roll.html?sortBy=relevant"
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Maund",
+  "keys": [
+   "man",
+   "maund"
+  ],
+  "file": "/images/units/textile-handloom/maund.jpg",
+  "what": "Old stone/iron maund weight, or sacks being weighed at a mandi",
+  "source": "https://en.wikipedia.org/wiki/Maund_%28unit%29"
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Goni (Guni, Gunny bag)",
+  "keys": [
+   "goni",
+   "goni (guni, gunny bag)",
+   "guni",
+   "gunny bag"
+  ],
+  "file": "/images/units/textile-handloom/goni.jpg",
+  "what": "Jute gunny bag filled with grain, stacked in a mandi",
+  "source": "https://www.tradeindia.com/products/a-grade-and-grains-jute-gunny-bag-7716395.html"
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Turban Cloth",
+  "keys": [
+   "pagri length",
+   "turban cloth",
+   "turban cloth measure"
+  ],
+  "file": "/images/units/textile-handloom/turban-cloth.jpg",
+  "what": "Pagri (turban) cloth length being measured",
+  "source": null
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Chhatak",
+  "keys": [
+   "chatak",
+   "chattak",
+   "chattank",
+   "chhaatank",
+   "chhatak",
+   "chhataku",
+   "chhatank",
+   "chittak"
+  ],
+  "file": "/images/units/trade-commerce/chhatak.jpg",
+  "what": "Old cast-iron shop weight",
+  "source": null
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Karam",
+  "keys": [
+   "karam"
+  ],
+  "file": null,
+  "what": "No photo – removed on request",
+  "source": null
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Muzham",
+  "keys": [
+   "muzham"
+  ],
+  "file": "/images/units/textile-handloom/muzham.jpg",
+  "what": "Forearm/cubit length (muzham) measured by a carpenter",
+  "source": "https://www.vedantu.com/question-answer/define-cubit-handspan-armlength-and-footspan-class-11-physics-cbse-6114165f36f93358408f2f9e"
+ },
+ {
+  "sector": "textile-handloom",
+  "unit": "Pav (Pao)",
+  "keys": [
+   "paav",
+   "pao",
+   "pau",
+   "pauwa",
+   "pav",
+   "pav (pao)",
+   "poa"
+  ],
+  "file": "/images/units/textile-handloom/pav.jpg",
+  "what": "Quarter-seer weight; old shop weight set with pav marking",
+  "source": "https://www.alamy.com/stock-photo/ancient-weight-scale.html?pseudoid=C3C5EA4A-D3A8-4821-ABA2-1D1FB5A71F16"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Rupee",
+  "keys": [
+   "indian rupee",
+   "rupaiya",
+   "rupaya",
+   "rupee",
+   "rupiya"
+  ],
+  "file": "/images/units/currency-money/rupee.jpg",
+  "what": "Old British-Indian silver rupee and modern rupee coins/notes",
+  "source": null
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Anna",
+  "keys": [
+   "aana",
+   "ana",
+   "anna"
+  ],
+  "file": "/images/units/currency-money/anna.jpg",
+  "what": "Old Indian anna coin (1 anna)",
+  "source": "https://www.antiquerelic.in/products/1-anna-coin-george-5th-king-1918?srsltid=AU7gw4X22-TYBZebOzf-Va6erQud5ZvrXzrdzwmY_F-tr-XxTsPXCqsW."
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Paisa (Pice)",
+  "keys": [
+   "paisa",
+   "paisa (pice)",
+   "pice"
+  ],
+  "file": "/images/units/currency-money/paisa.jpg",
+  "what": "Old copper paisa/pice coins",
+  "source": "https://coinstamp.in/shop/coins/buy-indian-coins-online/1-pice-horse-1951-bombay-mumbai-mint-used/?srsltid=AU7gw4UsxPyPc-EM-RUTHQTTeXZsCigjUlQduxz6zeMHQ29i7tyY6Msp"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Mohur (Ashrafi)",
+  "keys": [
+   "ashrafi",
+   "gold mohur",
+   "mohar",
+   "mohur",
+   "mohur (ashrafi)"
+  ],
+  "file": "/images/units/currency-money/mohur.jpg",
+  "what": "Gold mohur/ashrafi coin (museum photo)",
+  "source": "https://www.kbcoins.in/product/rajkot-state-1-mohur-dharmendra-singhji-1975-scarce-silver-coin/"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Cowrie (Kauri, Kori)",
+  "keys": [
+   "cowrie",
+   "cowrie (kauri, kori)",
+   "kauri",
+   "kori"
+  ],
+  "file": "/images/units/currency-money/cowrie.jpg",
+  "what": "Cowrie shells used as old money",
+  "source": null
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Masha",
+  "keys": [
+   "masha",
+   "mashaka"
+  ],
+  "file": "/images/units/currency-money/masha.jpg",
+  "what": "8 Ratti seeds on a balance pan; a goldsmith weighing gold in masha",
+  "source": "https://marudhararts.com/e-auction/auction-no-43/lot-no-147/coins-of-india/hindu-medieval-of-india/chandela-dynasty/investment.html"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Fanam (Panam)",
+  "keys": [
+   "fanam",
+   "fanam (panam)",
+   "pana",
+   "panam"
+  ],
+  "file": "/images/units/currency-money/fanam.jpg",
+  "what": "Old fanam coin (South India, museum photo)",
+  "source": "https://www.dema-coins.com/2022/04/fanam-coin-Cochin-India.html#google_vignette"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Ratti",
+  "keys": [
+   "gunja",
+   "guriginja",
+   "kunri",
+   "ratti"
+  ],
+  "file": "/images/units/currency-money/ratti.jpg",
+  "what": "Red-and-black Abrus (gunja) seeds, with a goldsmith balance if possible",
+  "source": "https://www.facebook.com/100066665771736/posts/name-ratti-chirmi-gomchi-or-guinchibotanical-name-abrus-precatorius-it-was-widel/116807000072087/"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Dakshina",
+  "keys": [
+   "dakhina",
+   "dakshina"
+  ],
+  "file": "/images/units/currency-money/dakshina.jpg",
+  "what": "Priest receiving dakshina (money/coins) in a puja",
+  "source": null
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Tola",
+  "keys": [
+   "bhori",
+   "bhori / vori",
+   "tola",
+   "tola / bhori",
+   "tolam",
+   "vori",
+   "vori / bhori"
+  ],
+  "file": "/images/units/currency-money/tola.jpg",
+  "what": "Silver rupee coin / a goldsmith weighing 1 tola of gold on a small balance",
+  "source": "https://www.bombayauctions.com/viewlot.aspx?itemid=29749&auctionid=1040&lotno=386"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Damri",
+  "keys": [
+   "damri"
+  ],
+  "file": "/images/units/currency-money/damri.jpg",
+  "what": "Old damri coin (very small copper coin)",
+  "source": "https://en.numista.com/71537"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Kasu",
+  "keys": [
+   "kasu",
+   "kāsu"
+  ],
+  "file": "/images/units/currency-money/kasu.jpg",
+  "what": "Old Tamil/Telugu kasu coin",
+  "source": "https://www.antiquerelic.in/products/1609-23-madurai-kingdom-copper-kasu-muthu-veerappan-nayaka?srsltid=AU7gw4VcUL7pJG9U2ih5aZZH-gtVI8jRfHLsjNvmnOfS8ZeX35kdtTl9"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Pagoda (Varaha)",
+  "keys": [
+   "madras pagoda",
+   "pagoda",
+   "pagoda (varaha)",
+   "varaha"
+  ],
+  "file": "/images/units/currency-money/pagoda.jpg",
+  "what": "Old gold pagoda/varaha coin (museum photo)",
+  "source": "https://collections.museumsvictoria.com.au/items/67342"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Pala",
+  "keys": [
+   "pala"
+  ],
+  "file": "/images/units/currency-money/pala.jpg",
+  "what": "Old brass palam/pala weight; Ayurvedic shop weighing herbs",
+  "source": "https://marudhararts.com/printed-auction/auction-no-36/lot-no-65/coins-of-india/medieval-coins-of-india/chola-empire/gold-pala-coin-of-srilankan-kings-of-chola-dynasty"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Hundi",
+  "keys": [
+   "hundi"
+  ],
+  "file": "/images/units/currency-money/hundi.jpg",
+  "what": "An old hundi (bill of exchange) document",
+  "source": "https://en.wikipedia.org/wiki/Hundi"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Athanni",
+  "keys": [
+   "athanni"
+  ],
+  "file": "/images/units/currency-money/athanni.jpg",
+  "what": "Old 8-anna (athanni) coin",
+  "source": "https://en.wikipedia.org/wiki/Indian_50-paisa_coin"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Chavanni",
+  "keys": [
+   "chavanni"
+  ],
+  "file": "/images/units/currency-money/chavanni.jpg",
+  "what": "Old 4-anna (chavanni) coin",
+  "source": "https://boldaal.wordpress.com/2011/07/15/%E0%A4%9A%E0%A4%B5%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A5%80-%E0%A4%95%E0%A5%80-%E0%A4%AE%E0%A5%8C%E0%A4%A4/"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Pie",
+  "keys": [
+   "pie"
+  ],
+  "file": "/images/units/currency-money/pie.jpg",
+  "what": "Old Indian pie coin",
+  "source": "https://www.tezbid.com/products/1-pie-east-india-company?variant=31209981050949"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Duggani",
+  "keys": [
+   "duggani"
+  ],
+  "file": "/images/units/currency-money/duggani.jpg",
+  "what": "Old duggani coin (2 annas)",
+  "source": "https://marudhararts.com/e-shop/pid-no-2262/billon-dugani-coin-of-ghiyath-ud-din-balban-of-delhi-sultanates"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Maund",
+  "keys": [
+   "maund"
+  ],
+  "file": "/images/units/currency-money/maund.jpg",
+  "what": "Old stone/iron maund weight, or sacks being weighed at a mandi",
+  "source": "https://www.chiswickauctions.co.uk/auction/lot/lot-689---an-indian-stone-fishing-weight-kerala-18th19th-century/?lot=150056&sd=1"
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Seer",
+  "keys": [
+   "seer"
+  ],
+  "file": "/images/units/currency-money/seer.jpg",
+  "what": "Brass/iron seer weight or a kirana shop balance weighing 1 seer of grain",
+  "source": "https://www.facebook.com/photo/?fbid=10231647944609063&set=pcb.2270556763374080"
+ },
+ {
+  "sector": "land-measurement",
+  "unit": "Veli",
+  "keys": [
+   "veli"
+  ],
+  "file": "/images/units/land-measurement/veli.jpg",
+  "what": "Paddy fields making up a veli of wet land",
+  "source": null
+ },
+ {
+  "sector": "land-measurement",
+  "unit": "Ropani",
+  "keys": [
+   "ropani"
+  ],
+  "file": "/images/units/land-measurement/ropani.jpg",
+  "what": "Hill plot surrounded by terraced fields",
+  "source": null
+ },
+ {
+  "sector": "land-measurement",
+  "unit": "Ground",
+  "keys": [
+   "ground"
+  ],
+  "file": "/images/units/land-measurement/ground.jpg",
+  "what": "A residential ground plot in a layout",
+  "source": null
+ },
+ {
+  "sector": "land-measurement",
+  "unit": "Murabba",
+  "keys": [
+   "murabba"
+  ],
+  "file": "/images/units/land-measurement/murabba.jpg",
+  "what": "Square block of fields divided into smaller plots",
+  "source": null
+ },
+ {
+  "sector": "land-measurement",
+  "unit": "Cent",
+  "keys": [
+   "cent",
+   "cents"
+  ],
+  "file": "/images/units/land-measurement/cent.jpg",
+  "what": "Small plot marked with boundary stones",
+  "source": null
+ },
+ {
+  "sector": "land-measurement",
+  "unit": "Adugu",
+  "keys": [
+   "adugu",
+   "adugu / foot"
+  ],
+  "file": "/images/units/land-measurement/adugu.jpg",
+  "what": "Measuring length by foot steps",
+  "source": null
+ },
+ {
+  "sector": "land-measurement",
+  "unit": "Square Gaj",
+  "keys": [
+   "sq gaj",
+   "square gaj",
+   "square gaj (sq yard)",
+   "square gaja"
+  ],
+  "file": "/images/units/land-measurement/square-gaj.jpg",
+  "what": "House plots with boundary walls, sold by the square gaj",
+  "source": null
+ },
+ {
+  "sector": "land-measurement",
+  "unit": "Dhur",
+  "keys": [
+   "dhoor",
+   "dhur"
+  ],
+  "file": "/images/units/land-measurement/dhur.jpg",
+  "what": "Small village plot marked out beside a field",
+  "source": null
+ },
+ {
+  "sector": "land-measurement",
+  "unit": "Marla",
+  "keys": [
+   "marla"
+  ],
+  "file": "/images/units/land-measurement/marla.jpg",
+  "what": "House plot enclosed by a boundary wall",
+  "source": null
+ },
+ {
+  "sector": "land-measurement",
+  "unit": "Kuli",
+  "keys": [
+   "kuli",
+   "kuzhi"
+  ],
+  "file": "/images/units/land-measurement/kuli.jpg",
+  "what": "Small plot marked with boundary posts",
+  "source": null
+ },
+ {
+  "sector": "land-measurement",
+  "unit": "Decimal (Dismil)",
+  "keys": [
+   "decimal",
+   "decimal (dismil)",
+   "decimel",
+   "dismil",
+   "satak"
+  ],
+  "file": "/images/units/land-measurement/decimal-dismil.jpg",
+  "what": "Small plot marked out with boundary markers",
+  "source": null
+ },
+ {
+  "sector": "household",
+  "unit": "Kudam",
+  "keys": [
+   "kodam",
+   "kudam"
+  ],
+  "file": "/images/units/household/kudam.jpg",
+  "what": "Copper kudam water pot",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Angula",
+  "keys": [
+   "angul",
+   "angula",
+   "angula (angul)",
+   "angulam",
+   "aṅgula"
+  ],
+  "file": "/images/units/architecture/angula.jpg",
+  "what": "Width of a finger, about 1.76 cm",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Vitasti",
+  "keys": [
+   "vitasthi",
+   "vitasti"
+  ],
+  "file": "/images/units/architecture/vitasti.jpg",
+  "what": "Hand span, about 21 cm",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Hasta",
+  "keys": [
+   "haath",
+   "hasta",
+   "hasta (hath, haath)",
+   "hat",
+   "hat (hasta/cubit)",
+   "hath"
+  ],
+  "file": "/images/units/architecture/hasta.jpg",
+  "what": "Elbow to fingertip, about 45 cm",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Danda",
+  "keys": [
+   "danda",
+   "danda (dhanush)",
+   "danda / dhanusha",
+   "daṇḍa",
+   "dhanu / danda"
+  ],
+  "file": "/images/units/architecture/danda.jpg",
+  "what": "Measuring rod of 4 Hasta, about 1.8 m",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Rajju",
+  "keys": [
+   "rajju"
+  ],
+  "file": "/images/units/architecture/rajju.jpg",
+  "what": "Measuring rope, about 14–19 m",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Tala",
+  "keys": [
+   "tala",
+   "tāla"
+  ],
+  "file": "/images/units/architecture/tala.jpg",
+  "what": "Palm width, 5 Angulas",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Gokarna",
+  "keys": [
+   "gokarna"
+  ],
+  "file": "/images/units/architecture/gokarna.jpg",
+  "what": "Span of thumb and ring finger, 11 Angulas",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Pradesa",
+  "keys": [
+   "pradesa",
+   "pradesha",
+   "prādeśa"
+  ],
+  "file": "/images/units/architecture/pradesa.jpg",
+  "what": "Span of thumb and forefinger, 12 Angulas",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Aratni",
+  "keys": [
+   "aratni",
+   "hasta / aratni"
+  ],
+  "file": "/images/units/architecture/aratni.jpg",
+  "what": "Elbow to little-finger tip, 24 Angulas",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Pada",
+  "keys": [
+   "pada"
+  ],
+  "file": "/images/units/architecture/pada.jpg",
+  "what": "Length of the foot, 15 Angulas",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Prakrama",
+  "keys": [
+   "prakrama"
+  ],
+  "file": "/images/units/architecture/prakrama.jpg",
+  "what": "One pace, about 3 Padas",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Vyayama",
+  "keys": [
+   "vyama",
+   "vyayama",
+   "vyāma"
+  ],
+  "file": "/images/units/architecture/vyayama.jpg",
+  "what": "Outstretched arms, 4 Aratnis (96 Angulas)",
+  "source": null
+ },
+ {
+  "sector": "architecture",
+  "unit": "Purusha-Vyama",
+  "keys": [
+   "purusa-vyama",
+   "purusha vyama",
+   "purusha-vyama"
+  ],
+  "file": "/images/units/architecture/purusha-vyama.jpg",
+  "what": "Height with arms raised, 5 Aratnis (120 Angulas)",
+  "source": null
+ },
+ {
+  "sector": "vedic-measurements",
+  "unit": "Ayana",
+  "keys": [
+   "ayana",
+   "ayanam"
+  ],
+  "file": "/images/units/vedic-measurements/ayanam.jpg",
+  "what": "Uttarayana / Dakshinayana – the sun's half-year path",
+  "source": null
+ },
+ {
+  "sector": "vedic-measurements",
+  "unit": "Māsa",
+  "keys": [
+   "maasa",
+   "masa",
+   "māsa"
+  ],
+  "file": "/images/units/vedic-measurements/masa.jpg",
+  "what": "A lunar month in the Panchang",
+  "source": null
+ },
+ {
+  "sector": "vedic-measurements",
+  "unit": "Pakṣa",
+  "keys": [
+   "paksa",
+   "paksha",
+   "pakshya",
+   "pakṣa"
+  ],
+  "file": "/images/units/vedic-measurements/paksha.jpg",
+  "what": "A fortnight – Shukla and Krishna Paksha",
+  "source": null
+ },
+ {
+  "sector": "vedic-measurements",
+  "unit": "Saṃvatsara",
+  "keys": [
+   "samvatsara",
+   "samvatsaram",
+   "saṃvatsara"
+  ],
+  "file": "/images/units/vedic-measurements/samvatsara.jpg",
+  "what": "The year (Samvatsara) in the Panchang",
+  "source": null
+ },
+ {
+  "sector": "vedic-measurements",
+  "unit": "Ṛtu",
+  "keys": [
+   "ritu",
+   "rutu",
+   "ṛtu"
+  ],
+  "file": "/images/units/vedic-measurements/ritu.jpg",
+  "what": "The six seasons (Ritu)",
+  "source": null
+ },
+ {
+  "sector": "currency-money",
+  "unit": "Tanka",
+  "keys": [
+   "tanka",
+   "tanka (taka)",
+   "tankah"
+  ],
+  "file": "/images/units/currency-money/tanka.jpg",
+  "what": "Silver tanka coin",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Adhaka",
+  "keys": [
+   "adhaka",
+   "āḍhaka",
+   "adhakam",
+   "aadhaka"
+  ],
+  "file": "/images/units/agriculture/adhaka.jpg",
+  "what": "Old metal grain measure (Adhaka)",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Drona",
+  "keys": [
+   "drona",
+   "droṇa",
+   "dronam",
+   "dron"
+  ],
+  "file": "/images/units/agriculture/drona.jpg",
+  "what": "Old wooden grain measure (Drona)",
+  "source": null
+ },
+ {
+  "sector": "medicine",
+  "unit": "Kudava",
+  "keys": [
+   "kudava",
+   "kuḍava",
+   "kudavam",
+   "kudab"
+  ],
+  "file": "/images/units/medicine/kudava.jpg",
+  "what": "Hand-held measuring cup (Kudava)",
+  "source": null
+ },
+ {
+  "sector": "medicine",
+  "unit": "Prastha",
+  "keys": [
+   "prastha",
+   "prasta",
+   "prasthā",
+   "prastham",
+   "prasthaka"
+  ],
+  "file": "/images/units/medicine/prastha.jpg",
+  "what": "Ayurvedic decoction measured by the Prastha",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Bre",
+  "keys": [
+   "bre",
+   "bray",
+   "bre (tibetan)"
+  ],
+  "file": "/images/units/agriculture/bre.jpg",
+  "what": "Wooden grain container (Bre)",
+  "source": null
+ },
+ {
+  "sector": "agriculture",
+  "unit": "Quintal",
+  "keys": [
+   "quintal",
+   "qtl",
+   "quintals"
+  ],
+  "file": "/images/units/agriculture/quintal.jpg",
+  "what": "Grain sacks being weighed by the quintal",
+  "source": null
+ }
+]

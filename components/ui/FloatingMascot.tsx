@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { X, Send, Sparkles, MessageCircle } from "lucide-react";
+import ChatText from "./ChatText";
 
 type Pose = "idle" | "wave" | "thinking" | "celebrating";
 
@@ -24,8 +25,6 @@ const POSES: Record<Pose, string> = {
 export default function FloatingMascot() {
   const [position, setPosition] = useState<{ x: number; y: number } | null>(null);
   const [isClickAnimating, setIsClickAnimating] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
 
   // Chat Panel States
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -34,7 +33,7 @@ export default function FloatingMascot() {
     {
       id: "welcome",
       sender: "mascot",
-      text: "Hi! Ask me about Angula, Hasta, Vitasti, or any traditional measurement.",
+      text: "Hi! I'm the DESINAAP assistant. Ask me about Angula, Hasta, Tola or any traditional measurement – or say \"quiz me\" to test yourself.",
       timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
     },
   ]);
@@ -190,7 +189,13 @@ export default function FloatingMascot() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: trimmed }),
+        body: JSON.stringify({
+          question: trimmed,
+          history: messages
+            .filter((m) => m.id !== "welcome")
+            .slice(-10)
+            .map((m) => ({ role: m.sender === "user" ? "user" : "assistant", content: m.text })),
+        }),
       });
       const data = await res.json();
       const replyText =
@@ -228,16 +233,7 @@ export default function FloatingMascot() {
     }
   };
 
-  const handleMascotClose = (e: React.MouseEvent | React.TouchEvent) => {
-    e.stopPropagation();
-    setIsClosing(true);
-    setIsChatOpen(false);
-    setTimeout(() => {
-      setIsHidden(true);
-    }, 300);
-  };
-
-  if (isHidden) return null;
+  const bubbleBelow = position !== null && position.y < 90;
 
   // Mascot position on screen
   const mascotStyle: React.CSSProperties = position
@@ -302,26 +298,30 @@ export default function FloatingMascot() {
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerCancel={handlePointerUp}
-        className={`group select-none cursor-grab active:cursor-grabbing transition-opacity duration-300 ease-in-out ${
-          isClosing ? "opacity-0 scale-75 transition-all duration-300" : "opacity-100"
-        }`}
+        className={`group select-none cursor-grab active:cursor-grabbing transition-opacity duration-300 ease-in-out opacity-100`}
       >
         <div className="relative">
-          {/* Close Mascot Icon (X) */}
-          <button
-            onClick={handleMascotClose}
-            type="button"
-            aria-label="Hide Mascot"
-            className="absolute -top-2 -right-2 z-20 p-1.5 bg-[#4A3426] hover:bg-[#6F4E37] text-white rounded-full shadow-md transition-all duration-200 opacity-80 hover:opacity-100 hover:scale-110"
-          >
-            <X className="w-3.5 h-3.5" />
-          </button>
-
-          {/* Chat Open Indicator Pulse Badge */}
+          {/* "How can I help you?" speech bubble – always shown while the chat is closed,
+              so visitors can tell the mascot is a chatbot. Sits above the mascot
+              (or below it when the mascot has been dragged to the top of the screen). */}
           {!isChatOpen && (
-            <div className="absolute top-0 left-0 z-20 p-1 bg-[#B88646] text-white rounded-full shadow-sm animate-pulse">
-              <MessageCircle className="w-3.5 h-3.5" />
-            </div>
+            <button
+              type="button"
+              onPointerDown={(e) => e.stopPropagation()}
+              onClick={(e) => { e.stopPropagation(); handleMascotClick(); }}
+              style={bubbleBelow ? { top: "100%", marginTop: 6 } : { bottom: "100%", marginBottom: 6 }}
+              className="absolute right-0 z-20 w-[190px] cursor-pointer select-none rounded-2xl bg-white px-4 py-2.5 text-left shadow-lg border border-[#E8DED1] hover:border-[#B88646] transition-colors"
+            >
+              <span className="flex items-center gap-1.5 text-[13px] font-semibold text-[#4A3426]">
+                <MessageCircle className="w-3.5 h-3.5 text-[#B88646] flex-shrink-0" />
+                How can I help you?
+              </span>
+              <span className="block text-[11px] text-[#7A6E65] mt-0.5">Ask me about any measurement</span>
+              <span
+                aria-hidden
+                className={`absolute right-12 w-3 h-3 rotate-45 bg-white border-[#E8DED1] ${bubbleBelow ? "-top-1.5 border-l border-t" : "-bottom-1.5 border-r border-b"}`}
+              />
+            </button>
           )}
 
           {/* Mascot Container with Idle Bobbing & Click Scale */}
@@ -400,7 +400,7 @@ export default function FloatingMascot() {
                         : "bg-[#6F4E37] text-white rounded-tr-xs"
                     }`}
                   >
-                    <p>{msg.text}</p>
+                    <div className="break-words">{isMascot ? <ChatText text={msg.text} /> : msg.text}</div>
                     <span
                       className={`block text-[10px] mt-1 text-right ${
                         isMascot ? "text-[#7A6E65]" : "text-white/70"

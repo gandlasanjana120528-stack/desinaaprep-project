@@ -1,15 +1,23 @@
 import Link from "next/link";
-import { ArrowRight, BookOpen, Map, Layers, Image, ChevronRight } from "lucide-react";
+import { ArrowRight, BookOpen, Map, Layers, Image } from "lucide-react";
 import GlobalSearch from "@/components/search/GlobalSearch";
-import { SECTORS, SAMPLE_MEASUREMENTS, INDIAN_STATES } from "@/lib/data";
+import { SECTORS, SAMPLE_MEASUREMENTS, INDIAN_STATES, SITE_STATS, MEASUREMENT_HEADLINE } from "@/lib/data";
+import IndiaMap from "@/components/IndiaMap";
 import MeasurementCard from "@/components/measurements/MeasurementCard";
 
 const QUICK_LINKS = [
-  { icon: BookOpen, label: "Browse Measurements", href: "/measurements", desc: "500+ traditional units documented" },
+  { icon: BookOpen, label: "Browse Measurements", href: "/measurements", desc: `${MEASUREMENT_HEADLINE} traditional units documented` },
   { icon: Map, label: "Explore Regions", href: "/regions", desc: "Coverage across all Indian states" },
-  { icon: Layers, label: "Browse by Sector", href: "/sectors", desc: "Agriculture, Trade, Architecture & more" },
+  { icon: Layers, label: "Browse by Sector", href: "/sectors", desc: "8 major sectors – Agriculture, Trade, Architecture & more" },
   { icon: Image, label: "Infographics", href: "/infographics", desc: "Visual guides to measurement hierarchies" }
 ];
+
+const SECTOR_EMOJI: Record<string, string> = {
+  "vedic-measurements": "📜", agriculture: "🌾", "trade-commerce": "⚖️", architecture: "🏛️",
+  medicine: "🌿", "textile-handloom": "🧵", "currency-money": "🪙", household: "🏠",
+  "transportation-distance": "🧭", "land-measurement": "🗺️", "livestock-dairy": "🐄",
+  "gold-jewellery": "💍", "religious-cultural": "🪔",
+};
 
 export default function HomePage() {
   // Hand-picked, different unit types that have accurate photos
@@ -22,7 +30,7 @@ export default function HomePage() {
     .map((slug) => SAMPLE_MEASUREMENTS.find((m) => m.slug === slug))
     .filter((m): m is (typeof SAMPLE_MEASUREMENTS)[number] => Boolean(m));
   const featuredMeasurements = picked.length === 3 ? picked : SAMPLE_MEASUREMENTS.slice(0, 3);
-  const featuredSectors = SECTORS.slice(0, 6);
+  const featuredSectors = SECTORS.filter((s) => s.kind !== "classical");
 
   return (
     <div>
@@ -30,7 +38,7 @@ export default function HomePage() {
       <section className="bg-[#4A3426] text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <span className="inline-block text-xs font-medium tracking-widest uppercase text-[#B88646] mb-4">
-            Indian Knowledge Systems Initiative
+            Indian Knowledge Systems Initiative · MoE
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
             India's Traditional<br />
@@ -46,7 +54,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-[#C8B8A2]">
             <span>Try searching:</span>
             {["Angula", "Mana", "Tola", "Hasta", "Khanduga"].map((term) => (
-              <Link key={term} href={`/measurements?q=${term}`}
+              <Link key={term} href={`/measurements?q=${encodeURIComponent(term)}`}
                 className="px-3 py-1 bg-white/10 hover:bg-[#B88646] rounded-full transition-colors text-xs"
               >
                 {term}
@@ -61,9 +69,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#E8DED1]">
             {[
-              { value: "500+", label: "Measurements Documented" },
-              { value: "28", label: "States Covered" },
-              { value: "8", label: "Occupational Sectors" },
+              { value: MEASUREMENT_HEADLINE, label: "Measurements Documented" },
+              { value: String(SITE_STATS.states), label: "States Covered" },
+              { value: String(SITE_STATS.sectors), label: "Occupational Sectors" },
               { value: "6", label: "Languages Indexed" }
             ].map(({ value, label }) => (
               <div key={label} className="py-6 px-6 text-center">
@@ -131,14 +139,10 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Map Placeholder */}
-          <div className="bg-white border-2 border-dashed border-[#E8DED1] rounded-xl p-12 mb-8 text-center">
-            <Map className="w-12 h-12 text-[#E8DED1] mx-auto mb-3" />
-            <p className="text-sm text-[#A09080] mb-1">Interactive India Map</p>
-            <p className="text-xs text-[#C8B8A2]">Full SVG map with clickable states — coming soon</p>
-            <Link href="/regions" className="inline-flex items-center gap-1 mt-4 text-sm text-[#6F4E37] font-medium">
-              Browse by list view <ChevronRight className="w-4 h-4" />
-            </Link>
+          {/* Interactive map – click a state to open it */}
+          <div className="bg-white border border-[#E8DED1] rounded-xl p-4 sm:p-6 mb-8">
+            <IndiaMap />
+            <p className="text-center text-xs text-[#7A6E65] mt-3">Click a state on the map to see its measurements</p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
@@ -166,13 +170,13 @@ export default function HomePage() {
               All sectors <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {featuredSectors.map((s) => (
               <Link key={s.id} href={`/sectors/${s.slug}`}
                 className="bg-[#FAF7F2] border border-[#E8DED1] rounded-lg p-4 text-center hover:bg-white hover:border-[#B88646] hover:shadow-md transition-all group"
               >
                 <div className="text-2xl mb-2">
-                  {s.slug === "vedic-measurements" ? "📜" : s.slug === "agriculture" ? "🌾" : s.slug === "trade-commerce" ? "⚖️" : s.slug === "architecture" ? "🏛️" : s.slug === "medicine" ? "🌿" : s.slug === "textile-handloom" ? "🧵" : s.slug === "currency-money" ? "🪙" : "📦"}
+                  {SECTOR_EMOJI[s.slug] ?? "📐"}
                 </div>
                 <div className="font-medium text-sm text-[#2E2A26] group-hover:text-[#6F4E37]">{s.name}</div>
                 <div className="text-xs text-[#A09080] mt-1">{s.measurement_count} units</div>

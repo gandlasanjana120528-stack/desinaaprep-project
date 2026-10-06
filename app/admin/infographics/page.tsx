@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { SAMPLE_INFOGRAPHICS } from "@/lib/data";
+import { INFOGRAPHICS_DATA as SAMPLE_INFOGRAPHICS } from "@/lib/infographicsData";
 import { Plus, Edit, Trash2, Upload } from "lucide-react";
 
 export default function AdminInfographicsPage() {
@@ -24,7 +24,7 @@ export default function AdminInfographicsPage() {
                 <td className="px-4 py-3 font-medium text-[#2E2A26]">{i.title}</td>
                 <td className="px-4 py-3"><span className="text-xs bg-[#FAF7F2] text-[#6F4E37] px-2 py-0.5 rounded border border-[#E8DED1]">{i.category}</span></td>
                 <td className="px-4 py-3 text-[#7A6E65] text-xs">{i.state || i.sector || "—"}</td>
-                <td className="px-4 py-3"><span className="text-xs text-[#A09080]">{i.image_url ? "Uploaded" : "Pending"}</span></td>
+                <td className="px-4 py-3"><span className="text-xs text-[#A09080]">{i.nodes?.length ? "Flowchart" : i.image_url ? "Uploaded" : "Pending"}</span></td>
                 <td className="px-4 py-3">
                   <div className="flex gap-2">
                     <button className="p-1.5 text-[#A09080] hover:text-[#6F4E37]"><Edit className="w-3.5 h-3.5" /></button>

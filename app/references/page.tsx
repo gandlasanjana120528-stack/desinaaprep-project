@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { SAMPLE_REFERENCES } from "@/lib/data";
-import { Search, BookOpen, FileText, Scroll, Building } from "lucide-react";
+import { Search, BookOpen, FileText, Scroll, Building, Globe, ExternalLink } from "lucide-react";
 import { Reference, ReferenceType } from "@/types";
 
 const TYPE_ICONS: Record<ReferenceType, React.ReactNode> = {
@@ -10,7 +10,7 @@ const TYPE_ICONS: Record<ReferenceType, React.ReactNode> = {
   ancient_text: <Scroll className="w-4 h-4" />,
   government_source: <Building className="w-4 h-4" />,
   journal: <FileText className="w-4 h-4" />,
-  website: <FileText className="w-4 h-4" />,
+  website: <Globe className="w-4 h-4" />,
   other: <FileText className="w-4 h-4" />
 };
 
@@ -29,7 +29,7 @@ const TYPE_COLORS: Record<ReferenceType, string> = {
   other: "bg-gray-100 text-gray-800"
 };
 
-const REF_TYPES: Array<ReferenceType | "all"> = ["all", "book", "research_paper", "ancient_text", "government_source"];
+const REF_TYPES: Array<ReferenceType | "all"> = ["all", "ancient_text", "book", "research_paper", "government_source", "website"];
 
 export default function ReferencesPage() {
   const [query, setQuery] = useState("");
@@ -37,8 +37,10 @@ export default function ReferencesPage() {
 
   const filtered: Reference[] = SAMPLE_REFERENCES.filter((r) => {
     const matchType = typeFilter === "all" || r.type === typeFilter;
-    const matchQ = !query || r.title.toLowerCase().includes(query.toLowerCase()) ||
-      (r.author && r.author.toLowerCase().includes(query.toLowerCase()));
+    const q = query.toLowerCase();
+    const matchQ = !q || r.title.toLowerCase().includes(q) ||
+      (r.author && r.author.toLowerCase().includes(q)) ||
+      (r.tags && r.tags.some((t) => t.toLowerCase().includes(q)));
     return matchType && matchQ;
   });
 
@@ -84,10 +86,21 @@ export default function ReferencesPage() {
                   </span>
                   {ref.year && <span className="text-xs text-[#A09080]">{ref.year < 0 ? `${Math.abs(ref.year)} BCE` : ref.year}</span>}
                 </div>
-                <h3 className="font-serif text-lg font-bold text-[#2E2A26] mb-1">{ref.title}</h3>
+                <h3 className="font-serif text-lg font-bold text-[#2E2A26] mb-1">
+                  {ref.url ? (
+                    <a href={ref.url} target="_blank" rel="noopener noreferrer" className="hover:text-[#6F4E37] hover:underline">{ref.title}</a>
+                  ) : ref.title}
+                </h3>
                 {ref.author && <p className="text-sm text-[#6F4E37] mb-2">— {ref.author}</p>}
                 {ref.publisher && <p className="text-xs text-[#A09080] mb-2">{ref.publisher}</p>}
                 {ref.description && <p className="text-sm text-[#7A6E65] leading-relaxed">{ref.description}</p>}
+                {ref.url && (
+                  <a href={ref.url} target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 mt-3 text-xs font-medium text-[#6F4E37] hover:underline break-all">
+                    <ExternalLink className="w-3.5 h-3.5 flex-shrink-0" />
+                    Visit source ({new URL(ref.url).hostname.replace(/^www\./, "")})
+                  </a>
+                )}
                 {ref.tags && ref.tags.length > 0 && (
                   <div className="flex flex-wrap gap-1.5 mt-3">
                     {ref.tags.map((t) => (

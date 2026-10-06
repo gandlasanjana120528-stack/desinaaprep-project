@@ -92,6 +92,13 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const question: string = body?.question?.trim() ?? "";
+    // Earlier turns of this chat, so follow-up questions and quiz answers make sense
+    const history: { role: "user" | "assistant"; content: string }[] = Array.isArray(body?.history)
+      ? body.history
+          .filter((h: any) => (h?.role === "user" || h?.role === "assistant") && typeof h?.content === "string")
+          .slice(-10)
+          .map((h: any) => ({ role: h.role, content: String(h.content).slice(0, 2000) }))
+      : [];
 
     if (!question) {
       return NextResponse.json({ reply: "Please ask me something!" });
@@ -105,7 +112,8 @@ export async function POST(req: NextRequest) {
     }
 
     // Find relevant units for context
-    const relevantUnits = findRelevantMeasurements(question, 40);
+    const recentUserText = history.filter((h) => h.role === "user").slice(-2).map((h) => h.content).join(" ");
+    const relevantUnits = findRelevantMeasurements(`${recentUserText} ${question}`, 40);
     const contextBlock =
       relevantUnits.length > 0
         ? `## Relevant measurements from database:\n${relevantUnits.map(formatUnit).join("\n\n")}`
@@ -149,6 +157,7 @@ ${contextBlock}
         model: "llama-3.3-70b-versatile",
         messages: [
           { role: "system", content: systemPrompt },
+          ...history,
           { role: "user", content: question },
         ],
         temperature: 0.6,

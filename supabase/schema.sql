@@ -10,16 +10,21 @@ CREATE TABLE IF NOT EXISTS measurements (
   name_hindi TEXT,
   local_names TEXT[],
   meaning TEXT,
-  category TEXT NOT NULL CHECK (category IN ('length','weight','volume','area','time','currency','count','temperature','other')),
+  category TEXT NOT NULL CHECK (category IN ('length','distance','weight','volume','capacity','area','area measurement','time','currency','count','temperature','other')),
   sector TEXT NOT NULL,
   origin TEXT,
   historical_context TEXT,
   modern_equivalent TEXT,
   conversion_formula TEXT,
+  measurement_type TEXT,
+  historical_period TEXT,
+  region_applicable TEXT,
   states TEXT[],
   districts TEXT[],
   used_in TEXT[],
+  "references" TEXT[],
   tags TEXT[],
+  image_url TEXT,
   created_at TIMESTAMPTZ DEFAULT NOW(),
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
@@ -70,8 +75,8 @@ CREATE TABLE IF NOT EXISTS infographics (
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- References
-CREATE TABLE IF NOT EXISTS references (
+-- References  ("references" is a reserved word in PostgreSQL, so it must be quoted)
+CREATE TABLE IF NOT EXISTS "references" (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   title TEXT NOT NULL,
   author TEXT,
@@ -104,3 +109,7 @@ CREATE POLICY "Public read access" ON measurements FOR SELECT USING (true);
 CREATE POLICY "Public read access" ON states FOR SELECT USING (true);
 CREATE POLICY "Public read access" ON districts FOR SELECT USING (true);
 CREATE POLICY "Public read access" ON sectors FOR SELECT USING (true);
+ALTER TABLE infographics ENABLE ROW LEVEL SECURITY;
+ALTER TABLE "references" ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Public read access" ON infographics FOR SELECT USING (true);
+CREATE POLICY "Public read access" ON "references" FOR SELECT USING (true);

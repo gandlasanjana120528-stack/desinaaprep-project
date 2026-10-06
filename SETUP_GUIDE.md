@@ -144,6 +144,7 @@ service cloud.firestore {
 
 | Problem | Fix |
 |---|---|
+| Forgot the admin password | Firebase Console → Authentication → Users → reset the password, or Add user |
 | `Invalid email or password` on admin login | Check the user exists in Firebase → Authentication → Users and that Email/Password sign-in is enabled |
 | Admin login does nothing / auth errors | Firebase keys in `.env.local` are wrong or missing. Restart `npm run dev` after editing |
 | Measurements page is empty | You haven't run the seed script (step 5), or Firestore rules block reads |

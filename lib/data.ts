@@ -181,7 +181,7 @@ const BASE_SAMPLE_MEASUREMENTS: Measurement[] = [
   }
 ];
 
-export const SAMPLE_MEASUREMENTS: Measurement[] = [
+export const RAW_MEASUREMENTS: Measurement[] = [
   ...WEST_BENGAL_MEASUREMENTS,
   ...JHARKHAND_MEASUREMENTS,
   ...BIHAR_MEASUREMENTS,
@@ -215,9 +215,78 @@ export const SAMPLE_MEASUREMENTS: Measurement[] = [
   ...BASE_SAMPLE_MEASUREMENTS
 ];
 
+// ─── Data clean-up rules (applied once, at load time) ─────────────────────────
+// Sectors that have been removed from the platform entirely.
+export const REMOVED_SECTORS = new Set(["storage-transport", "storage"]);
+
+// The site uses 8 major sectors (plus the separate Vedic collection).
+// Smaller sectors from the source spreadsheets are folded into the closest major one.
+export const SECTOR_ALIASES: Record<string, string> = {
+  trade: "trade-commerce",
+  "gold-jewellery": "trade-commerce",      // goldsmith's Ratti / Masha / Tola are trade weights
+  "livestock-dairy": "agriculture",         // herding and dairy belong with farming
+  "transportation-distance": "land-measurement", // Kos, Yojana … → Land & Distance
+  "religious-cultural": "household",        // ritual and festival measures of everyday life
+  time: "household",
+};
+
+// The Ratti (Gunja / Guriginja – the same Abrus seed) is a jeweller's and
+// physician's weight, not an agricultural unit, so it is dropped from Agriculture.
+const RATTI_NAMES = /^(ratti|gunja|guriginja)$/i;
+
+const STATE_NAME_FIXES: Record<string, string> = {
+  "jammu & kashmir": "Jammu and Kashmir",
+};
+
+const isUrl = (v?: string) => !!v && /^https?:\/\//i.test(v.trim());
+
+/** True for records that should not appear anywhere on the site. */
+export function isExcludedMeasurement(m: Pick<Measurement, "sector" | "name_english">): boolean {
+  if (REMOVED_SECTORS.has(m.sector)) return true;
+  if (m.sector === "agriculture" && RATTI_NAMES.test((m.name_english || "").trim())) return true;
+  return false;
+}
+
+/** Normalises one record (sector aliases, state names, URL-only history text). */
+export function normalizeMeasurement(m: Measurement): Measurement {
+  const sector = SECTOR_ALIASES[m.sector] ?? m.sector;
+  const states = m.states
+    ? Array.from(new Set(m.states.map((s) => STATE_NAME_FIXES[s.toLowerCase()] ?? s)))
+    : m.states;
+  let { historical_context, references } = m;
+  if (isUrl(historical_context)) {
+    const url = historical_context!.trim();
+    references = references?.includes(url) ? references : [...(references ?? []), url];
+    historical_context = undefined;
+  }
+  return { ...m, sector, states, historical_context, references };
+}
+
+// After merging sectors the same unit can appear twice for one state
+// (e.g. Tola from "Trade" and from "Gold"); keep the first, most complete one.
+function dedupe(list: Measurement[]): Measurement[] {
+  const seen = new Set<string>();
+  const key = (m: Measurement) =>
+    `${(m.states ?? []).join("|").toLowerCase()}::${m.sector}::${m.name_english.toLowerCase().trim()}`;
+  return list.filter((m) => {
+    const k = key(m);
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+}
+
+export const SAMPLE_MEASUREMENTS: Measurement[] = dedupe(
+  RAW_MEASUREMENTS.map(normalizeMeasurement).filter((m) => !isExcludedMeasurement(m))
+);
+
+const countFor = (pred: (m: Measurement) => boolean) => SAMPLE_MEASUREMENTS.filter(pred).length;
+const sameText = (a?: string, b?: string) => !!a && !!b && a.toLowerCase() === b.toLowerCase();
+
+
 // ─── Sample States ────────────────────────────────────────────────────────────
 
-export const INDIAN_STATES: State[] = [
+const RAW_STATES: State[] = [
   {
     id: "ts",
     slug: "telangana",
@@ -246,7 +315,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Amaravati",
     region: "South India",
     language: "Telugu",
-    description: "Andhra Pradesh possesses an ancient and rich metrological heritage documented across 12 major sectors including Seed & Crop (Agriculture), Trade & Commerce, Construction & Architecture, Medicine (Ayurveda), Textile & Handloom, Currency & Money, Household & Daily Life, Storage & Transportation, Land Measurement, Transportation & Distance, Livestock & Dairy, and Gold & Jewellery, drawing from classical treatises (Mānasāra, Mayamata, Charaka Samhita, Sushruta Samhita, Arthashastra, Śilpa Śāstra), Satavahana and Vijayanagara epigraphs, and Madras Presidency historical records.",
+    description: "Andhra Pradesh possesses an ancient and rich metrological heritage documented across major sectors including Seed & Crop (Agriculture), Trade & Commerce, Construction & Architecture, Medicine (Ayurveda), Textile & Handloom, Currency & Money, Household & Daily Life, Land Measurement, Transportation & Distance, Livestock & Dairy, and Gold & Jewellery, drawing from classical treatises (Mānasāra, Mayamata, Charaka Samhita, Sushruta Samhita, Arthashastra, Śilpa Śāstra), Satavahana and Vijayanagara epigraphs, and Madras Presidency historical records.",
     measurement_count: 192
   },
   {
@@ -256,7 +325,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Chennai",
     region: "South India",
     language: "Tamil",
-    description: "Tamil Nadu possesses a profound and ancient metrological heritage documented across 12 major sectors including Agriculture, Trade & Commerce, Architecture, Medicine (Siddha & Ayurveda), Textile & Handloom, Currency & Money, Household, Storage & Transportation, Land Measurement, Transportation & Distance, Livestock & Dairy, and Gold & Jewellery, drawing directly from Sangam literature, Chola epigraphs, Pallava-Nayak temple architecture treatises (Mānasāra, Mayamata, Śilpa Śāstra), Siddha pharmacy texts, and Madras Presidency historical records.",
+    description: "Tamil Nadu possesses a profound and ancient metrological heritage documented across major sectors including Agriculture, Trade & Commerce, Architecture, Medicine (Siddha & Ayurveda), Textile & Handloom, Currency & Money, Household, Land Measurement, Transportation & Distance, Livestock & Dairy, and Gold & Jewellery, drawing directly from Sangam literature, Chola epigraphs, Pallava-Nayak temple architecture treatises (Mānasāra, Mayamata, Śilpa Śāstra), Siddha pharmacy texts, and Madras Presidency historical records.",
     measurement_count: 204
   },
   {
@@ -266,7 +335,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Bengaluru",
     region: "South India",
     language: "Kannada",
-    description: "Karnataka possesses a rich traditional metrological heritage documented across 12 major sectors including Transportation & Distance, Land Measurement, Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop (Agriculture), Currency & Money, Storage & Transportation, Trade & Commerce, Textile & Handloom, Medicine (Ayurveda), and Construction & Architecture, drawing from ancient Sanskrit treatises (Charaka Samhita, Sushruta Samhita, Arthashastra, Mānasāra, Mayamata, Manusmriti, Aṣṭāṅga Hṛdaya, Śilpa Śāstra), Hoysala and Vijayanagara epigraphs, Karnataka State Gazetteers, and Mysore historical revenue records.",
+    description: "Karnataka possesses a rich traditional metrological heritage documented across major sectors including Transportation & Distance, Land Measurement, Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop (Agriculture), Currency & Money, Trade & Commerce, Textile & Handloom, Medicine (Ayurveda), and Construction & Architecture, drawing from ancient Sanskrit treatises (Charaka Samhita, Sushruta Samhita, Arthashastra, Mānasāra, Mayamata, Manusmriti, Aṣṭāṅga Hṛdaya, Śilpa Śāstra), Hoysala and Vijayanagara epigraphs, Karnataka State Gazetteers, and Mysore historical revenue records.",
     measurement_count: 245
   },
   {
@@ -276,7 +345,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Mumbai",
     region: "West India",
     language: "Marathi",
-    description: "Maharashtra possesses a rich traditional metrological heritage documented across 12 major sectors including Transportation & Distance, Land Measurement, Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop (Agriculture), Currency & Money, Storage & Transportation, Trade & Commerce, Textile & Handloom, Medicine (Ayurveda), and Construction & Architecture, drawing from ancient Sanskrit treatises (Mānasāra, Mayamata, Charaka Samhita, Sushruta Samhita, Arthashastra, Śilpa Śāstra), Maratha-era revenue records, and Bombay Presidency historical archives.",
+    description: "Maharashtra possesses a rich traditional metrological heritage documented across major sectors including Transportation & Distance, Land Measurement, Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop (Agriculture), Currency & Money, Trade & Commerce, Textile & Handloom, Medicine (Ayurveda), and Construction & Architecture, drawing from ancient Sanskrit treatises (Mānasāra, Mayamata, Charaka Samhita, Sushruta Samhita, Arthashastra, Śilpa Śāstra), Maratha-era revenue records, and Bombay Presidency historical archives.",
     measurement_count: 186
   },
   {
@@ -286,7 +355,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Gandhinagar",
     region: "West India",
     language: "Gujarati",
-    description: "Gujarat possesses a rich indigenous metrological heritage documented across 12 key sectors including Agriculture, Trade & Commerce, Construction & Architecture, Medicine (Ayurveda), Textile & Handloom, Currency & Money, Household & Daily Life, Storage & Transportation, Land Measurement, Transportation & Distance, Livestock & Dairy, and Gold & Jewellery.",
+    description: "Gujarat possesses a rich indigenous metrological heritage documented across key sectors including Agriculture, Trade & Commerce, Construction & Architecture, Medicine (Ayurveda), Textile & Handloom, Currency & Money, Household & Daily Life, Land Measurement, Transportation & Distance, Livestock & Dairy, and Gold & Jewellery.",
     measurement_count: 199
   },
   {
@@ -296,7 +365,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Jaipur",
     region: "North India",
     language: "Rajasthani",
-    description: "Rajasthan possesses a vast traditional metrological heritage documented across 12 distinct sectors including Seed & Crop (Agriculture), Trade & Commerce, Construction & Architecture, Medicine (Ayurveda), Textile & Handloom, Currency & Money, Household & Daily Life, Storage & Transportation, Land Measurement, Transportation & Distance, Livestock & Dairy, and Gold & Jewellery.",
+    description: "Rajasthan possesses a vast traditional metrological heritage documented across 12 distinct sectors including Seed & Crop (Agriculture), Trade & Commerce, Construction & Architecture, Medicine (Ayurveda), Textile & Handloom, Currency & Money, Household & Daily Life, Land Measurement, Transportation & Distance, Livestock & Dairy, and Gold & Jewellery.",
     measurement_count: 221
   },
   {
@@ -333,7 +402,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Kolkata",
     region: "East India",
     language: "Bengali",
-    description: "West Bengal possesses a rich indigenous metrological heritage documented across 13 distinct sectors including Trade & Commerce, Textile & Handloom (Jamdani & Baluchari silk), Medicine (Ayurveda/Kobirai), Construction & Architecture (Terracotta temples), Transportation & Distance, Land Measurement (Chatak, Katha, Bigha), Livestock & Dairy, Household & Daily Life (Sherpai/Kunke bowls), Gold & Jewellery (Bhori/Roti system), Seed & Crop Agriculture, Currency & Money (Kori cowrie ladder, Tanka), Storage & Transportation (Gola granaries, Nouka-bhar boatloads), and Religious & Cultural Sectors (Panjika almanac).",
+    description: "West Bengal possesses a rich indigenous metrological heritage documented across 13 distinct sectors including Trade & Commerce, Textile & Handloom (Jamdani & Baluchari silk), Medicine (Ayurveda/Kobirai), Construction & Architecture (Terracotta temples), Transportation & Distance, Land Measurement (Chatak, Katha, Bigha), Livestock & Dairy, Household & Daily Life (Sherpai/Kunke bowls), Gold & Jewellery (Bhori/Roti system), Seed & Crop Agriculture, Currency & Money (Kori cowrie ladder, Tanka), and Religious & Cultural Sectors (Panjika almanac).",
     measurement_count: 69
   },
   { id: "od", slug: "odisha", name: "Odisha", capital: "Bhubaneswar", region: "East India", language: "Odia", measurement_count: 49 },
@@ -355,7 +424,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Patna",
     region: "East India",
     language: "Hindi / Bhojpuri / Maithili / Magahi",
-    description: "Bihar possesses a deep metrological heritage documented across 13 major sectors including Trade & Commerce (Mauryan punch-marked coinage at Pataliputra, Karshapana, Satamana), Textile & Handloom (Bhagalpuri Tussar silk & Mithila Madhubani art), Medicine (Nalanda Mahavihara Ayurvedic Metrology, Karsha, Kudava, Prastha), Construction & Architecture (Arthashastra specifications for Mauryan Pataliputra, Dhanus, Danda, Lagga), Transportation & Distance (Ashokan royal highway Uttarapatha rest-stops, Yojana, Kos, Manzil), Land Measurement (Dhurki, Dhur, Kattha, Bigha), Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop Agriculture, Currency & Money, Storage & Transportation (Patna's Golghar granary), and Religious & Cultural Sectors.",
+    description: "Bihar possesses a deep metrological heritage documented across major sectors including Trade & Commerce (Mauryan punch-marked coinage at Pataliputra, Karshapana, Satamana), Textile & Handloom (Bhagalpuri Tussar silk & Mithila Madhubani art), Medicine (Nalanda Mahavihara Ayurvedic Metrology, Karsha, Kudava, Prastha), Construction & Architecture (Arthashastra specifications for Mauryan Pataliputra, Dhanus, Danda, Lagga), Transportation & Distance (Ashokan royal highway Uttarapatha rest-stops, Yojana, Kos, Manzil), Land Measurement (Dhurki, Dhur, Kattha, Bigha), Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop Agriculture, Currency & Money, and Religious & Cultural Sectors.",
     measurement_count: 100,
     districts: [
       { id: "ptn", slug: "patna", name: "Patna (Pataliputra)", state_id: "br", measurement_count: 24 },
@@ -374,7 +443,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Bhopal",
     region: "Central India",
     language: "Hindi",
-    description: "Madhya Pradesh possesses a rich traditional metrological heritage documented across 12 major sectors including Transportation & Distance, Land Measurement, Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop (Agriculture), Currency & Money, Storage & Transportation, Trade & Commerce, Textile & Handloom, Medicine (Ayurveda), and Construction & Architecture.",
+    description: "Madhya Pradesh possesses a rich traditional metrological heritage documented across major sectors including Transportation & Distance, Land Measurement, Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop (Agriculture), Currency & Money, Trade & Commerce, Textile & Handloom, Medicine (Ayurveda), and Construction & Architecture.",
     measurement_count: 92
   },
   {
@@ -384,7 +453,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Dispur",
     region: "Northeast India",
     language: "Assamese / Hindi",
-    description: "Assam possesses a rich indigenous measurement heritage across 10 major sectors documented directly from official land records (Dharitree portal), tea gardens, Muga and Eri silk weaving, Ahom-era architecture, livestock dairies, goldsmith trade (Bhori system), and Brahmaputra riverways.",
+    description: "Assam possesses a rich indigenous measurement heritage across major sectors documented directly from official land records (Dharitree portal), tea gardens, Muga and Eri silk weaving, Ahom-era architecture, livestock dairies, goldsmith trade (Bhori system), and Brahmaputra riverways.",
     measurement_count: 65
   },
   {
@@ -394,7 +463,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Chandigarh",
     region: "North India",
     language: "Haryanvi / Hindi",
-    description: "Haryana possesses a rich traditional measurement heritage across 13 major sectors documented directly from official revenue records, agricultural mandis, Panipat handloom weaving traditions, Kos Minar road monuments, livestock dairies, goldsmith trade, currency systems, granary storage, religious rituals, and Ayurvedic metrology.",
+    description: "Haryana possesses a rich traditional measurement heritage across major sectors documented directly from official revenue records, agricultural mandis, Panipat handloom weaving traditions, Kos Minar road monuments, livestock dairies, goldsmith trade, currency systems, religious rituals, and Ayurvedic metrology.",
     measurement_count: 58
   },
   {
@@ -404,7 +473,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Shimla",
     region: "North India",
     language: "Hindi / Pahari",
-    description: "Himachal Pradesh possesses a distinctive Western Himalayan metrological heritage documented across 13 major sectors including Trade & Commerce (Pahari bazaar weights, Ratti, Masha, Tola, Seer, Maund), Textile & Handloom (GI-tagged Kullu and Kinnauri shawls, wool yarn count Nm), Medicine (Ayurveda and Sowa-Rigpa Tibetan Amchi medicine, Srang), Construction & Architecture (Kath-Kuni earthquake-resistant timber-stone wall techniques), Transportation & Distance (Hindustan-Tibet pilgrim routes, Kos, Yojana), Land Measurement (Biswansi, Biswa, Bigha, Marla, Kanal), Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop Agriculture, Currency & Money (ancient Trigarta, Kulluta, Audumbara punch-marked coins, Chamba copper Chakli), Storage & Transportation (Doko baskets, Khachar caravan loads, Kothar granaries), and Religious & Cultural Sectors.",
+    description: "Himachal Pradesh possesses a distinctive Western Himalayan metrological heritage documented across major sectors including Trade & Commerce (Pahari bazaar weights, Ratti, Masha, Tola, Seer, Maund), Textile & Handloom (GI-tagged Kullu and Kinnauri shawls, wool yarn count Nm), Medicine (Ayurveda and Sowa-Rigpa Tibetan Amchi medicine, Srang), Construction & Architecture (Kath-Kuni earthquake-resistant timber-stone wall techniques), Transportation & Distance (Hindustan-Tibet pilgrim routes, Kos, Yojana), Land Measurement (Biswansi, Biswa, Bigha, Marla, Kanal), Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop Agriculture, Currency & Money (ancient Trigarta, Kulluta, Audumbara punch-marked coins, Chamba copper Chakli), and Religious & Cultural Sectors.",
     measurement_count: 73
   },
   {
@@ -414,7 +483,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Srinagar / Jammu",
     region: "North India",
     language: "Kashmiri / Dogri",
-    description: "Jammu & Kashmir possesses a unique Himalayan and Central Asian metrological heritage documented across 14 distinct sectors including Trade & Commerce, Textile & Handloom (Kashmiri hand-knotted carpets, KPSI, Talim notation, Pashmina wool weights), Medicine (Ayurveda and Unani), Construction & Architecture (Khatamband geometric wood ceilings, Taq and Dhajji Dewari timber-laced masonry), Transportation & Distance, Land Measurement (Karam survey chain, Sarsahi, Marla, Kanal), Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop Agriculture, Currency & Money (Dogra copper Paisa, Hari Singh Rupee), Storage & Transportation (Trakh, Kharwar, Shikara-loads), Religious & Cultural Sectors, and Time & Calendar.",
+    description: "Jammu & Kashmir possesses a unique Himalayan and Central Asian metrological heritage documented across 14 distinct sectors including Trade & Commerce, Textile & Handloom (Kashmiri hand-knotted carpets, KPSI, Talim notation, Pashmina wool weights), Medicine (Ayurveda and Unani), Construction & Architecture (Khatamband geometric wood ceilings, Taq and Dhajji Dewari timber-laced masonry), Transportation & Distance, Land Measurement (Karam survey chain, Sarsahi, Marla, Kanal), Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop Agriculture, Currency & Money (Dogra copper Paisa, Hari Singh Rupee), Religious & Cultural Sectors, and Time & Calendar.",
     measurement_count: 192
   },
   {
@@ -424,7 +493,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Ranchi",
     region: "East India",
     language: "Hindi / Nagpuri / Sadri / Santhali",
-    description: "Jharkhand possesses a rich heritage of traditional measurement systems documented across 13 major sectors including Trade & Commerce, Textile & Handloom (GI-certified Tussar silk), Medicine (Ayurveda), Construction & Architecture, Transportation & Distance, Land Measurement (Dhurki, Dhur, Katha, Bigha), Livestock & Dairy, Household & Daily Life, Gold & Jewellery (Santhal Rajohar silver units), Seed & Crop Agriculture, Currency & Money, Storage & Transportation, and Religious & Cultural Sectors.",
+    description: "Jharkhand possesses a rich heritage of traditional measurement systems documented across major sectors including Trade & Commerce, Textile & Handloom (GI-certified Tussar silk), Medicine (Ayurveda), Construction & Architecture, Transportation & Distance, Land Measurement (Dhurki, Dhur, Katha, Bigha), Livestock & Dairy, Household & Daily Life, Gold & Jewellery (Santhal Rajohar silver units), Seed & Crop Agriculture, Currency & Money, and Religious & Cultural Sectors.",
     measurement_count: 100,
     districts: [
       { id: "rnc", slug: "ranchi", name: "Ranchi", state_id: "jh", measurement_count: 18 },
@@ -442,7 +511,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Raipur",
     region: "Central India",
     language: "Chhattisgarhi / Hindi",
-    description: "Chhattisgarh possesses a rich traditional metrological heritage documented across 12 major sectors including Agriculture (Seed & Crop), Trade & Commerce, Textile & Handloom, Medicine (Ayurveda), Construction & Architecture, Transportation & Distance, Land Measurement, Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Currency & Money, and Storage & Transportation, drawing from classical Sanskrit treatises (Charaka Samhita, Sushruta Samhita, Arthashastra, Mayamata, Mānasāra), Central Provinces Gazetteers, and regional revenue settlement records.",
+    description: "Chhattisgarh possesses a rich traditional metrological heritage documented across major sectors including Agriculture (Seed & Crop), Trade & Commerce, Textile & Handloom, Medicine (Ayurveda), Construction & Architecture, Transportation & Distance, Land Measurement, Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Currency & Money, and, drawing from classical Sanskrit treatises (Charaka Samhita, Sushruta Samhita, Arthashastra, Mayamata, Mānasāra), Central Provinces Gazetteers, and regional revenue settlement records.",
     measurement_count: 88
   },
   {
@@ -452,7 +521,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Panaji",
     region: "West India",
     language: "Konkani",
-    description: "Goa possesses a distinct traditional metrological heritage documented across 12 major sectors including Seed & Crop (Agriculture), Trade & Commerce, Construction & Architecture, Medicine (Ayurveda), Textile & Handloom, Currency & Money, Household & Daily Life, Storage & Transportation, Land Measurement, Transportation & Distance, Livestock & Dairy, and Gold & Jewellery, drawing from ancient Sanskrit treatises (Mānasāra, Arthashastra, Charaka Samhita, Sushruta Samhita), local Konkani village customs, and Portuguese colonial-era administrative records.",
+    description: "Goa possesses a distinct traditional metrological heritage documented across major sectors including Seed & Crop (Agriculture), Trade & Commerce, Construction & Architecture, Medicine (Ayurveda), Textile & Handloom, Currency & Money, Household & Daily Life, Land Measurement, Transportation & Distance, Livestock & Dairy, and Gold & Jewellery, drawing from ancient Sanskrit treatises (Mānasāra, Arthashastra, Charaka Samhita, Sushruta Samhita), local Konkani village customs, and Portuguese colonial-era administrative records.",
     measurement_count: 194
   },
   {
@@ -462,7 +531,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Dehradun",
     region: "North India",
     language: "Garhwali / Kumaoni",
-    description: "Uttarakhand possesses a distinctive Himalayan metrological heritage across Garhwal and Kumaon documented across 13 major sectors including Trade & Commerce, Textile & Handloom (Pankhi & Thulma weaving), Medicine (Ayurveda), Architecture (Koti Banal earthquake-resistant construction), Transportation & Distance, Land Measurement (Nali, Mutthi), Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop Agriculture, Currency & Money, Storage & Transportation, and Religious & Cultural Sectors.",
+    description: "Uttarakhand possesses a distinctive Himalayan metrological heritage across Garhwal and Kumaon documented across major sectors including Trade & Commerce, Textile & Handloom (Pankhi & Thulma weaving), Medicine (Ayurveda), Architecture (Koti Banal earthquake-resistant construction), Transportation & Distance, Land Measurement (Nali, Mutthi), Livestock & Dairy, Household & Daily Life, Gold & Jewellery, Seed & Crop Agriculture, Currency & Money, and Religious & Cultural Sectors.",
     measurement_count: 77
   },
   {
@@ -512,7 +581,7 @@ export const INDIAN_STATES: State[] = [
     capital: "Gangtok",
     region: "Northeast India",
     language: "Nepali / Bhutia / Lepcha",
-    description: "Sikkim possesses a rich traditional metrological system reflecting Namgyal dynasty kingdom practices, trans-Himalayan trade routes, Lepcha and Bhutia indigenous traditions across 13 major sectors including Trade & Commerce, Textile & Handloom, Medicine, Architecture, Distance, Land Survey, Livestock, Daily Life, Gold, Agriculture, Currency, Storage, and Religious Sacred Geography.",
+    description: "Sikkim possesses a rich traditional metrological system reflecting Namgyal dynasty kingdom practices, trans-Himalayan trade routes, Lepcha and Bhutia indigenous traditions across major sectors including Trade & Commerce, Textile & Handloom, Medicine, Architecture, Distance, Land Survey, Livestock, Daily Life, Gold, Agriculture, Currency, and Religious Sacred Geography.",
     measurement_count: 83
   },
   {
@@ -527,34 +596,80 @@ export const INDIAN_STATES: State[] = [
   }
 ];
 
+export const INDIAN_STATES: State[] = RAW_STATES.map((st) => ({
+  ...st,
+  measurement_count: countFor((m) => !!m.states?.some((x) => sameText(x, st.name) || sameText(x, st.slug))),
+  districts: st.districts?.map((d) => ({
+    ...d,
+    measurement_count: countFor(
+      (m) => !!m.districts?.some((x) => sameText(x, d.name) || sameText(x, d.name.split(/\s*[(/]/)[0].trim()))
+    ),
+  })),
+}));
+
 // ─── Sectors ──────────────────────────────────────────────────────────────────
 
-export const SECTORS: Sector[] = [
-  { id: "vedic", slug: "vedic-measurements", name: "Vedic Measurements", icon: "Scroll", description: "Ancient canonical units across Length, Weight, Capacity, and Time codified in classical treatises", measurement_count: 40 },
-  { id: "agri", slug: "agriculture", name: "Seed & Crop (Agriculture)", icon: "Wheat", description: "Seed sowing quantities, grain harvest measures, and crop yield units", measurement_count: 84 },
-  { id: "trade", slug: "trade-commerce", name: "Trade & Commerce", icon: "Store", description: "Weight and volume units for bazaar, mandi, and commercial trade", measurement_count: 67 },
-  { id: "textile", slug: "textile-handloom", name: "Textile & Handloom", icon: "Scissors", description: "Length and count units for Banarasi silk, brocade, and loom weaving", measurement_count: 31 },
-  { id: "med", slug: "medicine", name: "Medicine (Ayurveda)", icon: "Stethoscope", description: "Ayurvedic drug measures, dosage units, and herbo-mineral preparations", measurement_count: 39 },
-  { id: "arch", slug: "architecture", name: "Construction & Architecture", icon: "Building2", description: "Length measures for temple, fort, home and urban planning", measurement_count: 72 },
-  { id: "trans-dist", slug: "transportation-distance", name: "Transportation & Distance", icon: "Compass", description: "Stage distance, Kos Minar road markers, and travel units", measurement_count: 24 },
-  { id: "land", slug: "land-measurement", name: "Land Measurement", icon: "Map", description: "Bigha, Biswa, Dhur, Jarib chain, and survey revenue units", measurement_count: 45 },
-  { id: "dairy", slug: "livestock-dairy", name: "Livestock & Dairy", icon: "Milk", description: "Milk, ghee, and khoya measures used by gwalas and dairy mandis", measurement_count: 18 },
-  { id: "hh", slug: "household", name: "Household & Daily Life", icon: "Home", description: "Everyday cooking, handful, pinch, and utility vessel volume units", measurement_count: 45 },
-  { id: "gold", slug: "gold-jewellery", name: "Gold & Jewellery", icon: "Gem", description: "Sunar gold, silver, gem weighing scales (Ratti, Tola, Suvarna)", measurement_count: 35 },
-  { id: "currency", slug: "currency-money", name: "Currency & Money", icon: "Coins", description: "Mughal Dam, Rupee, Damri, Paisa, and monetary denominations", measurement_count: 48 },
-  { id: "storage", slug: "storage-transport", name: "Storage & Transportation", icon: "Package", description: "Bulk granary storage, cartload, and warehouse consignment measures", measurement_count: 28 },
-  { id: "relig", slug: "religious-cultural", name: "Religious & Cultural", icon: "Sparkles", description: "Panchang ritual time, Ghati, Pal, Muhurta, and sacred geography units", measurement_count: 30 }
+const RAW_SECTORS: Sector[] = [
+  { id: "vedic", slug: "vedic-measurements", name: "Vedic Measurements", icon: "Scroll", kind: "classical", description: "Ancient canonical units across Length, Weight, Capacity, and Time codified in classical treatises" },
+  { id: "agri", slug: "agriculture", name: "Agriculture & Livestock", icon: "Wheat", description: "Seed sowing, grain harvest and crop yield measures, with milk, ghee and herd measures of livestock and dairy" },
+  { id: "trade", slug: "trade-commerce", name: "Trade & Commerce", icon: "Store", description: "Bazaar and mandi weights and volumes, including the goldsmith's Ratti, Masha and Tola" },
+  { id: "arch", slug: "architecture", name: "Construction & Architecture", icon: "Building2", description: "Length measures for temple, fort, home and urban planning" },
+  { id: "med", slug: "medicine", name: "Medicine (Ayurveda)", icon: "Stethoscope", description: "Ayurvedic drug measures, dosage units, and herbo-mineral preparations" },
+  { id: "textile", slug: "textile-handloom", name: "Textile & Handloom", icon: "Scissors", description: "Length and count units for yarn, cloth, silk and loom weaving" },
+  { id: "currency", slug: "currency-money", name: "Currency & Money", icon: "Coins", description: "Cowrie, Dam, Paisa, Anna, Rupee, Mohur and other monetary denominations" },
+  { id: "hh", slug: "household", name: "Household & Daily Life", icon: "Home", description: "Everyday cooking and vessel measures, with the ritual time and festival reckoning of daily life" },
+  { id: "land", slug: "land-measurement", name: "Land & Distance", icon: "Map", description: "Bigha, Guntha, Kani and survey units for land, and Kos, Yojana and stage distances for travel" },
 ];
+
+export const SECTORS: Sector[] = RAW_SECTORS.map((sec) => ({
+  ...sec,
+  measurement_count: countFor((m) => m.sector === sec.slug),
+}));
+
+/**
+ * Headline figure shown on the public pages ("3000+ measurements documented").
+ * Change it here to update the home, about and sector pages together.
+ * The exact live count is SITE_STATS.measurements (shown in the admin dashboard).
+ */
+export const MEASUREMENT_HEADLINE = "3000+";
+
+/** Live totals used by the home page, admin dashboard and about page. */
+export const SITE_STATS = {
+  measurements: SAMPLE_MEASUREMENTS.length,
+  states: RAW_STATES.length,
+  sectors: RAW_SECTORS.filter((s) => s.kind !== "classical").length, // 8 major sectors
+};
 
 // ─── References ───────────────────────────────────────────────────────────────
 
 export const SAMPLE_REFERENCES: Reference[] = [
-  { id: "1", title: "Arthashastra", author: "Kautilya", type: "ancient_text", year: -300, description: "Comprehensive treatise on statecraft, economic policy and military strategy; contains detailed descriptions of weights, measures and monetary systems of ancient India.", tags: ["weights", "measures", "economics"] },
+  // ── Classical & historical texts ──
+  { id: "1", title: "Arthashastra", author: "Kautilya (tr. R. Shamasastry, 1915)", type: "ancient_text", year: -300, url: "https://archive.org/stream/kautilyasarthash00sham/kautilyasarthash00sham_djvu.txt", description: "Treatise on statecraft and economics. Book II gives the Mauryan tables of weights, measures of length and divisions of time. Full English translation on the Internet Archive.", tags: ["weights", "measures", "economics"] },
+  { id: "1b", title: "Arthashastra (Wikisource edition)", author: "Kautilya (tr. R. Shamasastry)", type: "ancient_text", url: "https://en.wikisource.org/wiki/Arthashastra", description: "Public-domain, chapter-by-chapter text of the Shamasastry translation, convenient for citing individual books.", tags: ["weights", "measures", "primary-source"] },
   { id: "2", title: "Manasara Silpa Shastra", author: "Manasara", type: "ancient_text", description: "Ancient Sanskrit treatise on architecture and sculpture with extensive coverage of the Angula-based measurement system used in construction.", tags: ["architecture", "length", "angula"] },
+  { id: "6", title: "Lilavati", author: "Bhaskaracharya", type: "ancient_text", year: 1150, description: "12th century mathematical treatise with extensive tables of weights and measures used in India.", tags: ["mathematics", "weights"] },
+  { id: "7", title: "Useful Tables: Coins, Weights and Measures of British India", author: "James Prinsep (ed. Edward Thomas)", type: "book", year: 1858, publisher: "John Murray, London (digitised by Gokhale Institute, Pune)", url: "https://dspace.gipe.ac.in/xmlui/handle/10973/38650", description: "The standard 19th-century compilation of Indian coin weights, seers, maunds and regional measures, digitised by the Gokhale Institute of Politics and Economics.", tags: ["colonial", "coins", "weights"] },
   { id: "3", title: "Indian Weights and Measures", author: "V. A. Smith", type: "book", year: 1912, publisher: "Journal of the Royal Asiatic Society", description: "Colonial-era academic survey documenting traditional Indian weights and measures across provinces.", tags: ["weights", "history", "colonial"] },
   { id: "4", title: "Traditional Weights and Measures of Telangana", author: "T. Hanumantha Rao", type: "research_paper", year: 2018, description: "Contemporary research paper documenting the indigenous measurement systems of the Telangana region with field surveys.", tags: ["telangana", "field-survey"] },
   { id: "5", title: "Report on Traditional Measurement Systems", author: "Ministry of Culture, Govt. of India", type: "government_source", year: 2019, description: "Official government documentation of indigenous measurement practices across Indian states.", tags: ["government", "national"] },
-  { id: "6", title: "Lilavati", author: "Bhaskaracharya", type: "ancient_text", year: 1150, description: "12th century mathematical treatise with extensive tables of weights and measures used in India.", tags: ["mathematics", "weights"] }
+
+  // ── Government sources ──
+  { id: "8", title: "The Legal Metrology Act, 2009", author: "Government of India", type: "government_source", year: 2009, publisher: "India Code (Legislative Department)", url: "https://www.indiacode.nic.in/bitstream/123456789/2102/1/2009l.pdf", description: "The current law that fixes India's standard weights and measures; it replaced the Standards of Weights and Measures Acts of 1976 and 1985 that completed the move away from traditional units.", tags: ["metric", "law", "standards"] },
+  { id: "9", title: "Indian Knowledge Systems Division", author: "Ministry of Education, Govt. of India", type: "government_source", year: 2020, url: "https://iksindia.org/about.php", description: "The MoE division, set up in October 2020, that supports research and internships on Indian Knowledge Systems, including this project.", tags: ["iks", "moe", "internship"] },
+
+  // ── Archaeology & museums ──
+  { id: "10", title: "Cubical Weights of the Indus Civilisation", author: "Harappa.com (J. M. Kenoyer, Harappa Archaeological Research Project)", type: "website", url: "https://www.harappa.com/blog/cubical-weights", description: "Photographs and notes on the chert cube weights of Harappa, which followed a binary 1:2:4:8:16 series – the earliest standardised weights in South Asia.", tags: ["harappan", "weights", "archaeology"] },
+  { id: "11", title: "Harappan Stone Weight (museum object)", author: "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya, Mumbai", type: "website", url: "https://csmvs.in/collections/weight/", description: "Museum record of a Harappan cubical weight, noting that the same weight system continued into the Gangetic kingdoms and later market practice.", tags: ["harappan", "museum", "weights"] },
+
+  // ── Encyclopaedic references ──
+  { id: "12", title: "Indian units of measurement", author: "Wikipedia", type: "website", url: "https://en.wikipedia.org/wiki/Indian_units_of_measurement", description: "Overview of pre-Akbar, Akbar-era and British-era Indian units, with tables linking Ratti, Masha, Tola, Seer and Maund.", tags: ["overview", "weights", "length"] },
+  { id: "13", title: "Hindu units of time", author: "Wikipedia", type: "website", url: "https://en.wikipedia.org/wiki/Hindu_units_of_time", description: "Units of time from the Truti to the Kalpa as described in the Vedas, Puranas and Surya Siddhanta.", tags: ["time", "vedic"] },
+  { id: "14", title: "Kos (unit)", author: "Wikipedia", type: "website", url: "https://en.wikipedia.org/wiki/Kos_(unit)", description: "The Kos / Krosha distance unit, its Arthashastra value and its use in Kos Minars and parikrama routes.", tags: ["distance", "kos"] },
+  { id: "15", title: "Ratti (unit)", author: "Wikipedia", type: "website", url: "https://en.wikipedia.org/wiki/Ratti_(unit)", description: "The Ratti or Gunja seed weight (Abrus precatorius), the base of the jeweller's and Ayurvedic weight systems.", tags: ["ratti", "weight", "gold"] },
+  { id: "16", title: "Tola (unit)", author: "Wikipedia", type: "website", url: "https://en.wikipedia.org/wiki/Tola_(unit)", description: "The Tola, standardised in 1833 as 180 grains (11.66 g) – the weight of the silver rupee.", tags: ["tola", "weight", "gold"] },
+  { id: "17", title: "Indian 1-rupee coin", author: "Wikipedia", type: "website", url: "https://en.wikipedia.org/wiki/Indian_1-rupee_coin", description: "History of the rupee coin from the Mughal and Company periods; the silver rupee doubled as the one-Tola reference weight.", tags: ["currency", "tola", "rupee"] },
+  { id: "18", title: "Angula – definitions across Indian texts", author: "Wisdom Library", type: "website", url: "https://www.wisdomlib.org/definition/angula", description: "How the Angula is defined in the Manasara, Vayu Purana, Ayurveda and Jain texts, with its relation to Yava and Vitasti.", tags: ["angula", "length", "vastu"] },
+  { id: "19", title: "Vitasti – definitions across Indian texts", author: "Wisdom Library", type: "website", url: "https://www.wisdomlib.org/definition/vitasti", description: "The Vitasti (span of 12 Angulas) in Vastu, Shilpa and Puranic literature.", tags: ["vitasti", "length", "vastu"] },
 ];
 
 // ─── Infographics ─────────────────────────────────────────────────────────────

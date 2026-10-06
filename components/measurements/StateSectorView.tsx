@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useMemo, useCallback } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Measurement, Sector } from "@/types";
 import MeasurementCard from "@/components/measurements/MeasurementCard";
 import { Table, LayoutGrid, Sparkles, ExternalLink } from "lucide-react";
+import { displayMeasurementType } from "@/lib/format";
 
 interface StateSectorViewProps {
   stateName: string;
@@ -13,20 +15,14 @@ interface StateSectorViewProps {
 
 // Canonical ordering for sectors as requested
 const SECTOR_ORDER = [
-  "transportation-distance",
-  "land-measurement",
-  "livestock-dairy",
-  "household",
-  "gold-jewellery",
   "agriculture",
-  "currency-money",
-  "storage-transport",
-  "religious-cultural",
   "trade-commerce",
-  "textile-handloom",
-  "medicine",
   "architecture",
-  "time",
+  "medicine",
+  "textile-handloom",
+  "currency-money",
+  "household",
+  "land-measurement",
 ];
 
 // Display title lookup map for all possible sector keys
@@ -46,8 +42,6 @@ const SECTOR_TITLE_MAP: Record<string, string> = {
   "seed-crop": "Seed & Crop (Agriculture)",
   "currency-money": "Currency & Money",
   "currency": "Currency & Money",
-  "storage-transport": "Storage & Transportation",
-  "storage": "Storage & Transportation",
   "religious-cultural": "Religious & Cultural",
   "relig": "Religious & Cultural",
   "trade-commerce": "Trade & Commerce",
@@ -67,13 +61,32 @@ export default function StateSectorView({
   measurements,
   sectors,
 }: StateSectorViewProps) {
-  const [selectedSector, setSelectedSector] = useState<string>("all");
-  const [viewMode, setViewMode] = useState<"table" | "card">("table");
-  const [isMounted, setIsMounted] = useState(false);
+  // View + sector live in the URL (?view=table&sector=medicine) so that the
+  // browser Back button returns to exactly the same view. Cards are the default.
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const viewMode: "table" | "card" = searchParams.get("view") === "table" ? "table" : "card";
+  const selectedSector = searchParams.get("sector") || "all";
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const updateParams = useCallback(
+    (next: { view?: "table" | "card"; sector?: string }) => {
+      const params = new URLSearchParams(searchParams.toString());
+      if (next.view) {
+        if (next.view === "card") params.delete("view");
+        else params.set("view", next.view);
+      }
+      if (next.sector) {
+        if (next.sector === "all") params.delete("sector");
+        else params.set("sector", next.sector);
+      }
+      const qs = params.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    },
+    [pathname, router, searchParams]
+  );
+  const setViewMode = (v: "table" | "card") => updateParams({ view: v });
+  const setSelectedSector = (sec: string) => updateParams({ sector: sec });
 
   // Sector display name lookup map
   const sectorNameMap = useMemo(() => {
@@ -557,6 +570,8 @@ export default function StateSectorView({
     [stateName]
   );
 
+  const pillBorder = isGoa ? "#C1E0E6" : isMaharashtra ? "#B8D5E8" : isAndhra ? "#E0C8B0" : isKarnataka ? "#C5DBEC" : "#E8DED1";
+
   const primaryColor = useMemo(() => {
     const s = stateName.toLowerCase();
     if (s.includes("jammu") || s.includes("kashmir") || s === "jk") return "#0E4A5C";
@@ -614,107 +629,68 @@ export default function StateSectorView({
     <div className="space-y-6 w-full">
       {/* Sector Filter & View Switcher Box */}
       <div className="bg-white border border-[#E8DED1] rounded-xl p-5 shadow-sm space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#F0E6D8] pb-3">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4" style={{ color: primaryColor }} />
-            <h3 className="font-serif font-bold text-base text-[#2E2A26]">
-              Sectors in {stateName}
-            </h3>
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-[#F0E6D8] pb-4">
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4" style={{ color: primaryColor }} />
+              <h3 className="font-serif font-bold text-base text-[#2E2A26]">
+                Sectors in {stateName}
+              </h3>
+            </div>
+            {/* "All Sectors" sits right beside the heading */}
+            <button
+              onClick={() => setSelectedSector("all")}
+              aria-pressed={selectedSector === "all"}
+              style={
+                selectedSector === "all"
+                  ? { backgroundColor: primaryColor, color: "#FFFFFF", borderColor: primaryColor }
+                  : { backgroundColor: "#FAF7F2", color: primaryColor, borderColor: pillBorder }
+              }
+              className="px-4 py-1.5 rounded-full text-xs transition-all cursor-pointer border shadow-sm font-semibold"
+            >
+              All Sectors ({measurements.length})
+            </button>
           </div>
 
-          {/* View Mode Switcher Button (Top-Right) */}
-          <div className="flex items-center gap-1 bg-[#FAF7F2] border border-[#E8DED1] p-1 rounded-lg self-start sm:self-auto">
-            <button
-              onClick={() => setViewMode("table")}
-              style={
-                viewMode === "table"
-                  ? {
-                      backgroundColor: primaryColor,
-                      color: "#FFFFFF",
-                      borderColor: primaryColor,
-                    }
-                  : undefined
-              }
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
-                viewMode === "table"
-                  ? "shadow-sm font-semibold"
-                  : "text-[#7A6E65] hover:text-[#2E2A26] hover:bg-[#EAE2D5]"
-              }`}
-              title="Switch to Excel Table View"
-            >
-              <Table className="w-3.5 h-3.5" />
-              <span>Excel Table</span>
-            </button>
-
-            <button
-              onClick={() => setViewMode("card")}
-              style={
-                viewMode === "card"
-                  ? {
-                      backgroundColor: primaryColor,
-                      color: "#FFFFFF",
-                      borderColor: primaryColor,
-                    }
-                  : undefined
-              }
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
-                viewMode === "card"
-                  ? "shadow-sm font-semibold"
-                  : "text-[#7A6E65] hover:text-[#2E2A26] hover:bg-[#EAE2D5]"
-              }`}
-              title="Switch to Cards View"
-            >
-              <LayoutGrid className="w-3.5 h-3.5" />
-              <span>Cards</span>
-            </button>
+          {/* View Mode Switcher (Cards is the default) */}
+          <div className="flex items-center gap-1 bg-[#FAF7F2] border border-[#E8DED1] p-1 rounded-lg self-start md:self-auto">
+            {([
+              { mode: "card" as const, label: "Cards", Icon: LayoutGrid },
+              { mode: "table" as const, label: "Excel Table", Icon: Table },
+            ]).map(({ mode, label, Icon }) => (
+              <button
+                key={mode}
+                onClick={() => setViewMode(mode)}
+                aria-pressed={viewMode === mode}
+                style={viewMode === mode ? { backgroundColor: primaryColor, color: "#FFFFFF", borderColor: primaryColor } : undefined}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
+                  viewMode === mode ? "shadow-sm font-semibold" : "text-[#7A6E65] hover:text-[#2E2A26] hover:bg-[#EAE2D5]"
+                }`}
+              >
+                <Icon className="w-3.5 h-3.5" />
+                <span>{label}</span>
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Rounded Sector Pills */}
+        {/* Individual sector pills */}
         <div className="flex flex-wrap gap-2.5">
-          <button
-            onClick={() => setSelectedSector("all")}
-            style={
-              selectedSector === "all"
-                ? {
-                    backgroundColor: primaryColor,
-                    color: "#FFFFFF",
-                    borderColor: primaryColor,
-                  }
-                : {
-                    backgroundColor: "#FAF7F2",
-                    color: primaryColor,
-                    borderColor: isGoa ? "#C1E0E6" : isMaharashtra ? "#B8D5E8" : isAndhra ? "#E0C8B0" : isKarnataka ? "#C5DBEC" : "#E8DED1",
-                  }
-            }
-            className="px-4 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer border shadow-sm font-semibold"
-          >
-            All Sectors ({measurements.length})
-          </button>
-
           {activeSectorKeys.map((secKey) => {
             const count = sectorGroups.get(secKey)?.length || 0;
             const displayName = sectorNameMap.get(secKey) || secKey;
             const isSelected = selectedSector === secKey;
-
             return (
               <button
                 key={secKey}
                 onClick={() => setSelectedSector(secKey)}
+                aria-pressed={isSelected}
                 style={
                   isSelected
-                    ? {
-                        backgroundColor: primaryColor,
-                        color: "#FFFFFF",
-                        borderColor: primaryColor,
-                      }
-                    : {
-                        backgroundColor: "#FAF7F2",
-                        color: primaryColor,
-                        borderColor: isGoa ? "#C1E0E6" : isMaharashtra ? "#B8D5E8" : isAndhra ? "#E0C8B0" : isKarnataka ? "#C5DBEC" : "#E8DED1",
-                      }
+                    ? { backgroundColor: primaryColor, color: "#FFFFFF", borderColor: primaryColor }
+                    : { backgroundColor: "#FAF7F2", color: primaryColor, borderColor: pillBorder }
                 }
-                className="px-4 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer border shadow-sm font-semibold"
+                className="px-4 py-1.5 rounded-full text-xs transition-all cursor-pointer border shadow-sm font-semibold"
               >
                 {displayName} ({count})
               </button>
@@ -875,7 +851,7 @@ export default function StateSectorView({
                             (!isGoa && !isMaharashtra && !isAndhra && !isKarnataka) ? `${theme.badgeBg} ${theme.badgeText} border ${theme.badgeBorder}` : "border"
                           }`}
                         >
-                          {(m as any).measurement_type || m.category}
+                          {displayMeasurementType(m.measurement_type, m.category)}
                         </span>
                       </td>
 

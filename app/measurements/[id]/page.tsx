@@ -2,9 +2,11 @@
 
 import { useEffect, useState, useMemo } from "react";
 import { useParams } from "next/navigation";
-import { SAMPLE_MEASUREMENTS, getCategoryColor } from "@/lib/data";
+import { SAMPLE_MEASUREMENTS, SECTORS, getCategoryColor, isExcludedMeasurement } from "@/lib/data";
+import { displayMeasurementType, stateSlug } from "@/lib/format";
+import BackButton from "@/components/ui/BackButton";
 import Link from "next/link";
-import { ArrowLeft, MapPin, BookOpen, ChevronRight, Scale, Layers } from "lucide-react";
+import { MapPin, BookOpen, ChevronRight, Scale, Layers, ExternalLink } from "lucide-react";
 import { db } from "@/lib/firebase/client";
 import { doc, getDoc } from "firebase/firestore";
 import { Measurement } from "@/types";
@@ -34,6 +36,8 @@ function findMeasurement(slugOrId: string): Measurement | null {
   );
 }
 
+const sectorName = (slug?: string) => SECTORS.find((s) => s.slug === slug)?.name ?? slug?.replace(/-/g, " ") ?? "";
+
 export default function MeasurementDetailPage() {
   const params = useParams();
   const rawParam = params?.id;
@@ -59,7 +63,7 @@ export default function MeasurementDetailPage() {
       try {
         const docRef = doc(db, "measurements", slug);
         const snap = await getDoc(docRef);
-        if (snap.exists() && !dead) {
+        if (snap.exists() && !dead && !isExcludedMeasurement(snap.data() as Measurement)) {
           setM({ id: snap.id, ...snap.data() } as Measurement);
           setNotFound(false);
           return;
@@ -115,7 +119,7 @@ export default function MeasurementDetailPage() {
         <Link href="/sectors" className="hover:text-[#6F4E37]">Sectors</Link>
         <ChevronRight className="w-3 h-3" />
         <Link href={m.sector === "vedic-measurements" ? "/sectors/vedic-measurements" : `/sectors/${m.sector}`} className="hover:text-[#6F4E37] capitalize">
-          {m.sector?.replace(/-/g, " ")}
+          {sectorName(m.sector)}
         </Link>
         <ChevronRight className="w-3 h-3" />
         <span className="text-[#2E2A26] font-medium">{m.name_english}</span>
@@ -126,15 +130,18 @@ export default function MeasurementDetailPage() {
         <div className="lg:col-span-2">
           <div className="mb-6">
             <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className={`text-xs font-medium px-2.5 py-1 rounded-full capitalize ${getCategoryColor(m.category)}`}>{m.category}</span>
+              <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${getCategoryColor(m.category)}`}>{displayMeasurementType(m.measurement_type, m.category)}</span>
               <Link href={m.sector === "vedic-measurements" ? "/sectors/vedic-measurements" : `/sectors/${m.sector}`} className="text-xs text-[#7A6E65] bg-[#FAF7F2] px-2.5 py-1 rounded-full border border-[#E8DED1] capitalize hover:border-[#6F4E37] hover:text-[#2E2A26] transition-colors">
-                {m.sector?.replace(/-/g, " ")}
+                {sectorName(m.sector)}
               </Link>
             </div>
             <h1 className="font-serif text-4xl font-bold text-[#2E2A26] mb-2">{m.name_english}</h1>
             {m.name_sanskrit && <p className="text-xl text-[#6F4E37] font-serif mb-1">{m.name_sanskrit}</p>}
             {m.name_telugu && <p className="text-lg text-[#7A6E65]">{m.name_telugu}</p>}
           </div>
+
+          {/* Photo – shown large and uncropped */}
+          <MeasurementFigure m={m} />
 
           {/* Local names */}
           {m.local_names && m.local_names.length > 0 && (
@@ -222,18 +229,37 @@ export default function MeasurementDetailPage() {
               </div>
             </section>
           )}
+
+          {/* References */}
+          {m.references && m.references.length > 0 && (
+            <section className="mb-8">
+              <h2 className="font-serif text-xl font-bold text-[#2E2A26] mb-4">References</h2>
+              <ul className="space-y-2">
+                {m.references.map((r) => (
+                  <li key={r} className="text-sm text-[#2E2A26]">
+                    {/^https?:\/\//.test(r) ? (
+                      <a href={r} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[#6F4E37] hover:underline break-all">
+                        <ExternalLink className="w-3.5 h-3.5 flex-shrink-0" /> {r.replace(/^https?:\/\/(www\.)?/, "")}
+                      </a>
+                    ) : (
+                      <span className="italic text-[#7A6E65]">{r}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
         </div>
 
         {/* ── Sidebar ── */}
         <div className="space-y-6">
-          <MeasurementFigure m={m} />
           {/* Quick Facts */}
           <div className="bg-white border border-[#E8DED1] rounded-lg p-5">
             <h3 className="font-semibold text-[#2E2A26] mb-4">Quick Facts</h3>
             <dl className="space-y-3">
               {[
-                { label: "Category", value: m.category },
-                { label: "Sector", value: m.sector },
+                { label: "Type", value: displayMeasurementType(m.measurement_type, m.category) },
+                { label: "Sector", value: sectorName(m.sector) },
                 { label: "Origin", value: (m as any).origin || "Ancient India" },
                 { label: "English", value: m.name_english },
                 { label: "Sanskrit", value: m.name_sanskrit || "—" },
@@ -242,7 +268,7 @@ export default function MeasurementDetailPage() {
               ].map(({ label, value }) => (
                 <div key={label} className="flex gap-2">
                   <dt className="text-xs text-[#A09080] w-20 flex-shrink-0 pt-0.5">{label}</dt>
-                  <dd className="text-sm text-[#2E2A26] capitalize">{value}</dd>
+                  <dd className="text-sm text-[#2E2A26]">{value}</dd>
                 </div>
               ))}
             </dl>
@@ -257,7 +283,7 @@ export default function MeasurementDetailPage() {
               </h3>
               <div className="flex flex-wrap gap-1.5">
                 {m.states.map((s: string) => (
-                  <Link key={s} href={`/regions/${s.toLowerCase().replace(" ", "-")}`}
+                  <Link key={s} href={`/regions/${stateSlug(s)}`}
                     className="px-2.5 py-1 bg-[#FAF7F2] text-xs text-[#6F4E37] border border-[#E8DED1] rounded hover:border-[#6F4E37] transition-colors"
                   >
                     {s}
@@ -280,17 +306,12 @@ export default function MeasurementDetailPage() {
           )}
 
           <div className="space-y-2 px-1">
-            <Link
-              href={m.sector === "vedic-measurements" ? "/sectors/vedic-measurements" : `/sectors/${m.sector}`}
-              className="flex items-center gap-1.5 text-sm text-[#6F4E37] font-semibold hover:text-[#4A3426] transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" /> Back to {m.sector === "vedic-measurements" ? "Vedic Measurements" : "Sector"}
-            </Link>
+            <BackButton fallbackHref={`/sectors/${m.sector}`} />
             <Link
               href="/measurements"
               className="block text-xs text-[#A09080] hover:text-[#6F4E37] transition-colors"
             >
-              Browse all measurements →
+              Browse all measurements
             </Link>
           </div>
         </div>
@@ -307,7 +328,7 @@ export default function MeasurementDetailPage() {
               >
                 <h3 className="font-semibold text-[#2E2A26]">{r.name_english}</h3>
                 {r.name_sanskrit && <p className="text-sm text-[#6F4E37]">{r.name_sanskrit}</p>}
-                <p className="text-xs text-[#A09080] mt-2 capitalize">{r.category} · {r.sector}</p>
+                <p className="text-xs text-[#A09080] mt-2">{displayMeasurementType(r.measurement_type, r.category)}, {sectorName(r.sector)}</p>
               </Link>
             ))}
           </div>

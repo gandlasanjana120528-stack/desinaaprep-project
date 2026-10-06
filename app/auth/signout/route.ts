@@ -1,11 +1,11 @@
-import { NextResponse } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 
-// Sign-out is now handled client-side via Firebase Auth's signOut().
-// This route is kept as a fallback redirect only.
-export async function POST() {
-  return NextResponse.redirect(new URL("/admin/login", process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "http://localhost:3000"));
+// Sign-out is handled client-side via Firebase Auth's signOut().
+// This route only redirects to the admin login on the current domain.
+export async function POST(request: NextRequest) {
+  return NextResponse.redirect(new URL("/admin/login", request.url), 303);
 }
 
-export async function GET() {
-  return NextResponse.redirect("http://localhost:3000/admin/login");
+export async function GET(request: NextRequest) {
+  return NextResponse.redirect(new URL("/admin/login", request.url));
 }

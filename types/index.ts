@@ -89,6 +89,8 @@ export interface Sector {
   description: string;
   measurement_count?: number;
   overview?: string;
+  /** "classical" = a special collection (Vedic) shown apart from the 8 major sectors */
+  kind?: "major" | "classical";
   references?: string[];
 }
 

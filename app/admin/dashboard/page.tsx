@@ -1,13 +1,14 @@
 import { BookOpen, Map, Layers, Image, BookMarked, Users, TrendingUp, Plus } from "lucide-react";
 import Link from "next/link";
-import { SAMPLE_MEASUREMENTS, INDIAN_STATES, SECTORS } from "@/lib/data";
+import { SAMPLE_MEASUREMENTS, INDIAN_STATES, SECTORS, SAMPLE_REFERENCES, SITE_STATS } from "@/lib/data";
+import { INFOGRAPHICS_DATA } from "@/lib/infographicsData";
 
 const STATS = [
-  { label: "Measurements", value: "6", total: "500+", icon: BookOpen, href: "/admin/measurements", color: "bg-blue-50 text-blue-700" },
-  { label: "States", value: String(INDIAN_STATES.length), total: "28 states", icon: Map, href: "/admin/regions", color: "bg-green-50 text-green-700" },
+  { label: "Measurements", value: SITE_STATS.measurements.toLocaleString("en-IN"), total: "in the archive", icon: BookOpen, href: "/admin/measurements", color: "bg-blue-50 text-blue-700" },
+  { label: "States", value: String(INDIAN_STATES.length), total: "states covered", icon: Map, href: "/admin/regions", color: "bg-green-50 text-green-700" },
   { label: "Sectors", value: String(SECTORS.length), total: "All sectors", icon: Layers, href: "/admin/sectors", color: "bg-purple-50 text-purple-700" },
-  { label: "Infographics", value: "6", total: "planned", icon: Image, href: "/admin/infographics", color: "bg-orange-50 text-orange-700" },
-  { label: "References", value: "6", total: "sources", icon: BookMarked, href: "/admin/references", color: "bg-red-50 text-red-700" },
+  { label: "Infographics", value: String(INFOGRAPHICS_DATA.length), total: "flowcharts", icon: Image, href: "/admin/infographics", color: "bg-orange-50 text-orange-700" },
+  { label: "References", value: String(SAMPLE_REFERENCES.length), total: "sources", icon: BookMarked, href: "/admin/references", color: "bg-red-50 text-red-700" },
   { label: "Users", value: "1", total: "admins", icon: Users, href: "/admin/users", color: "bg-gray-50 text-gray-700" }
 ];
 
@@ -19,6 +20,8 @@ const QUICK_ACTIONS = [
   { label: "Add Reference", href: "/admin/references?action=new", icon: BookMarked },
   { label: "Add User", href: "/admin/users?action=new", icon: Users }
 ];
+
+const MAX_STATE = Math.max(1, ...INDIAN_STATES.map((s) => s.measurement_count || 0));
 
 export default function AdminDashboardPage() {
   const recent = SAMPLE_MEASUREMENTS.slice(0, 5);
@@ -99,7 +102,7 @@ export default function AdminDashboardPage() {
               <div key={s.id} className="text-center">
                 <div className="text-xs font-medium text-[#2E2A26] mb-1">{s.name}</div>
                 <div className="w-full bg-[#F0EAE0] rounded-full h-1.5 mb-1">
-                  <div className="bg-[#6F4E37] h-1.5 rounded-full" style={{ width: `${Math.min(100, ((s.measurement_count || 0) / 65) * 100)}%` }} />
+                  <div className="bg-[#6F4E37] h-1.5 rounded-full" style={{ width: `${Math.min(100, ((s.measurement_count || 0) / MAX_STATE) * 100)}%` }} />
                 </div>
                 <div className="text-xs text-[#A09080]">{s.measurement_count || 0}</div>
               </div>

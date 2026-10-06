@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
@@ -23,29 +23,14 @@ const ADMIN_NAV = [
 
 export default function AdminSidebar({ userEmail: initialEmail }: { userEmail: string }) {
   const [open, setOpen] = useState(false);
-  const [userEmail, setUserEmail] = useState(initialEmail);
   const pathname = usePathname();
   const router = useRouter();
-
-  // Fetch logged-in user email on client (safe even without Supabase configured)
-  useEffect(() => {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    if (!supabaseUrl || supabaseUrl === "your_supabase_project_url") return;
-    import("@/supabase/client").then(({ createClient }) => {
-      createClient()
-        .auth.getUser()
-        .then(({ data }: any) => {
-          if (data?.user?.email) setUserEmail(data.user.email);
-        });
-    });
-  }, []);
+  const userEmail = initialEmail;
 
   async function handleLogout() {
-    const { createClient } = await import("@/supabase/client");
-    const supabase = createClient();
-    await supabase.auth.signOut();
+    const [{ signOut }, { auth }] = await Promise.all([import("firebase/auth"), import("@/lib/firebase/client")]);
+    await signOut(auth);
     router.push("/admin/login");
-    router.refresh();
   }
 
   return (
